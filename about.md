@@ -4,15 +4,6 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+EarlyPrint is a loosely coupled collaborative effort—mainly at Northwestern and Washington University in St. Louis—to transform the transcriptions of the Text Creation Partnership into an annotated and deeply searchable cultural genome of the English speaking world between 1473 and the early 1700s. Its leaders have been Joseph Loewenstein and Martin Mueller. Contributions to the project have been made by faculty, librarians, IT professionals, and students at Amherst, Northwestern, Notre Dame, Nebraska-Lincoln, Tübingen, and Washington University in St. Louis, notably Anupam Basu, Peter Berek, Craig Berry, Tracy Bergstrom, Philip Burns, Elisabeth Chaghafi, Hannah Bredar, Daniel Johnson, Douglas Knox, Eric Lease Morgan, Kate Needham, Hannah Bredar, Stephen Pentecost, Brian Pytlik Zillig, and Lydia Zoells.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+Work bearing on EarlyPrint has been generously supported by five grants from the Andrew W. Mellon Foundation and a Digital Extension grant from the American Council of Learned Societies.

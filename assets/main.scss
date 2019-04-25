@@ -1,0 +1,29 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+
+// .home {
+//   width: 80vw;
+//   margin-left: calc(-50vw + 70%)
+// }
+.wrapper {
+  max-width: 1000px;
+}
+
+.fell-sc {
+  font-family: "IM Fell English SC", serif;
+}
+
+.fell {
+  font-family: "IM Fell English", serif;
+}
+
+.block-link:visited {
+  color: #111;
+}
+
+.block-link:hover, .block-link:focus {
+  text-decoration: none;
+}
