@@ -2,8 +2,9 @@
 layout: post
 title:  "Introduction to EEBO-TCP"
 date:   2019-05-10 09:28:16 -0500
-author: Alireza Taheri Araghi
+author: Alireza Taheri Araghi et al.
 categories: eebo-tcp
+summary: A brief introduction to Early English Books Online and the Text Creation Partnership
 ---
 ## Digitizing 227 Years of English Print
 

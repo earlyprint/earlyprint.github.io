@@ -17,7 +17,7 @@ title: Early Modern Print
 subtitle: Curating and Exploring Early Printed English
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  A collaborative effort—centered doubly at Northwestern and Washington University in St. Louis—to transform the early English print record, from 1473 to the early 1700s, into an annotated and deeply searchable cultural archive.
+  A collaborative effort—centered doubly at Northwestern University and Washington University in St. Louis—to transform the early English print record, from 1473 to the early 1700s, into an annotated and deeply searchable cultural archive.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
