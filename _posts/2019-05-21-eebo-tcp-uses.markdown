@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Uses of EEBO-TCP"
-date:   2019-05-10 09:28:16 -0500
+date:   2019-05-21 09:28:16 -0500
 author: Meredith Kelling et al.
 tags: eebo-tcp
 summary: A discussion of the many scholarly research opportunities that have arisen and might arise from Early English Books Online and the Text Creation Partnership

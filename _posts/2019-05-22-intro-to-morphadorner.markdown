@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Introduction to MorphAdorner"
-date:   2019-05-10 09:28:16 -0500
+date:   2019-05-22 09:28:16 -0500
 author: Meredith Kelling et al.
 tags: morphadorner nupos
 summary: A description of MorphAdorner, a natural language processing package which was developed at Northwestern University and which powers EarlyPrint
