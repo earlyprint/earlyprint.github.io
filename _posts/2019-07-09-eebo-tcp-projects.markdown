@@ -7,8 +7,6 @@ tags: eebo-tcp
 summary: A brief look at projects and analytic tools that rely on EEBO-TCP for their datasets.
 ---
 
-##Distant Reading for Close Analysis: Projects Building on EEBO-TCP
-
 
 As scholarly citation of EEBO-TCP has increased in frequency (as described in an earlier blog post), so have the number of other projects that rely on EEBO-TCP for their datasets. 
 
