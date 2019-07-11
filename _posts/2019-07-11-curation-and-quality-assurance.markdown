@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title:  "Curation and Quality Assurance"
@@ -18,9 +17,9 @@ Defects cluster heavily in texts transcribed from poor images. Texts in the top 
 |--|--|--|--|--|--|
 |A| 0-25|0|0|0|0|
 |B|25-50|1|8|10|3|
-|C|50-75|10|18|35|16
-|D|75-90|35|557|100|35
-|F|90-100|100|168|2857|46
+|C|50-75|10|18|35|16|
+|D|75-90|35|557|100|35|
+|F|90-100|100|168|2857|46|
 
 Humans have a deeply ingrained habit of judging a barrel by its worst apples. The reputation of the TCP archive in some scholarly circles has suffered from that habit. The 18th century Shakespeare editor Edmond Malone said somewhere something like “the text of our author is not as corrupt as people think.” Something similar could be said of the TCP texts. That said, very few TCP texts have been proofread from cover to cover, and many of them require some editorial attention before they can be certified as good enough for most scholarly purposes.
 
@@ -32,7 +31,7 @@ Three generations of undergraduates at Amherst, Northwestern, and Washington Uni
 |---|---|---|---|---|
 |25,000 uncurated TCP texts|1|8|35|100|
 |510 playtexts before curation|5|14|62|126|
-|510 playtexts after curation|0|1.3|6.4|47.2
+|510 playtexts after curation|0|1.3|6.4|47.2|
 
 This reduction of textual defects by an order of magnitude (from a median value of 14 to a median value of 1.3) is something that is visible to the average reader. The length of most plays stays within a range of 20,000 to 25,000 words. So the error rate per play drops from ~30 to ~ 3.
 
@@ -46,11 +45,11 @@ However, these numbers don't tell the full story. While we can measure the rates
 
 Printer errors occur in the process of printing the original book and would have been corrected by writers or printers had they caught them. It is part of our editorial policy to correct such errors when we find them. The TCP corpus contains many instances of printers testifying to the shortcomings of their trade. Quite often they ask for the reader's help, as in the following plea from the Errata section of Harding's  _Sicily and Naples_, a mid-seventeenth century play:
 
-> -- Reader. Before thou proceed’st farther, mend with thy pen these few escapes of the presse: The delight & pleasure I dare promise thee to finde in the whole, will largely make amends for thy paines in correcting some two or three syllables.
+> &mdash; Reader. Before thou proceed’st farther, mend with thy pen these few escapes of the presse: The delight & pleasure I dare promise thee to finde in the whole, will largely make amends for thy paines in correcting some two or three syllables.
 
 Samuel Garey's  _Great Brittans little calendar_  concludes with the terse and elegant Latin epigraph:
 
-> -- Candido lectori: Humanum eſt errare, errata hic corrige (lector) quae penna, aut praelo lapſa fuiſſe vides._
+> &mdash; Candido lectori: Humanum eſt errare, errata hic corrige (lector) quae penna, aut praelo lapſa fuiſſe vides._
 
 That is an appeal to the gentle reader to correct "lapses of the pen or press", since to err is human.
 
