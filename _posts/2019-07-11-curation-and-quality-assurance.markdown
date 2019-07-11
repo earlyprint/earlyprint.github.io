@@ -14,7 +14,7 @@ Defects cluster heavily in texts transcribed from poor images. Texts in the top 
 
 ##### Defect rates per 10,000 words for 25,000 TCP texts
 |Grade|Percentile|Min|median|Max|% of all defects|
-|--|--|--|--|--|--|
+|---|---|---|---|---|---|
 |A| 0-25|0|0|0|0|
 |B|25-50|1|8|10|3|
 |C|50-75|10|18|35|16|
