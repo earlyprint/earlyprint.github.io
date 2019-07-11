@@ -50,7 +50,8 @@ There is an irreducible amount of human labour involved in matching pages to tra
 
 In the Early Print project we have followed a strict policy of mapping third-party images to the TCP page ids that are based on EEBO image numbers. We have a procedure (and expect to put it on the Web soon) that creates a manifest for each text by listing a unique identifier of the page followed by its first and last five words and a data entry field where a user can enter the image numbers of the set to be matched. Here are the first lines of the manifest for The Jew of Malta:
 
-A06991-001-b	The Famous TRAGEDY OF THE the Church . 1633 . 7 
-A06991-002-b	TO MY VVORTHY FRIEND , none more able to taxe 
+>A06991-001-b	The Famous TRAGEDY OF THE the Church . 1633 . 7
+
+>A06991-002-b	TO MY VVORTHY FRIEND , none more able to taxe
 
 That manifest is the input for a script that creates the matching of text and image in the EarlyPrint text. This first step of creating a digital combo is a very tedious piece of data janitoring. But once it has been done properly, it makes life much easier for readers and editors. It is not difficult or time consuming to replace an image set if another becomes available.
