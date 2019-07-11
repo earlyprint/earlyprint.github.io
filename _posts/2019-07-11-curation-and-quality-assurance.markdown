@@ -12,7 +12,8 @@ The texts of the Text Creation Partnership co-exist in various states of (im)per
 Defects cluster heavily in texts transcribed from poor images. Texts in the top quartile have no defects. Texts in the bottom quartile account for 81% of all defects. Texts in the interquartile range have between 1 and 35 defects per 10,000 words and account for 19% of all defects. The following table uses quartiles, the conventional academic grading scheme, and everyday language to show the distribution of textual corruption in the TCP Archive.
 
 
-##### Defect rates per 10,000 words for 25,000 TCP texts
+#### Defect rates per 10,000 words for 25,000 TCP texts
+
 |Grade|Percentile|Min|median|Max|% of all defects|
 |---|---|---|---|---|---|
 |A| 0-25|0|0|0|0|
@@ -25,7 +26,7 @@ Humans have a deeply ingrained habit of judging a barrel by its worst apples. Th
 
 Three generations of undergraduates at Amherst, Northwestern, and Washington University in St. Louis demonstrated that undergraduates are very good at performing the essential tasks of “textkeeping”. They worked on some 500 plays of texts before 1642 and corrected ~ 50,000 defects. Playbooks from before 1642 on average have higher defect rates than TCP texts as a whole, partly because earlier texts have more defects and partly because many playbooks were poorly printed to begin with. The table below shows the difference between TCP texts in general and playbooks in particular as well as the difference that undergraduate curators made to the quality of the texts they curated:
 
-##### Defects rates per 10,000 words for 510 playbooks before and after curation
+#### Defects rates per 10,000 words for 510 playbooks before and after curation
 
 |Corpus|25th percentile|Median|75th percentile|90th percentile|
 |---|---|---|---|---|
