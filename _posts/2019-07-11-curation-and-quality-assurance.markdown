@@ -5,6 +5,7 @@ date:   2019-07-11 11:12:00
 author: Martin Mueller
 tags: quality assurance tcp
 summary: A short history and overview of the accuracy of TCP texts
+categories: Posts
 ---
 
 The texts of the Text Creation Partnership co-exist in various states of (im)perfection. They contain known as well as unknown defects. Known defects are individual characters, words, lines, chunks or pages that were explicitly marked as illegible or missing by the professional typists who transcribed the texts from digital scans of microfilm images. The quality of their work is largely a function of the quality of the digital image they had before them.

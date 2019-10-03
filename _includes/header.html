@@ -1,9 +1,9 @@
 <header class="site-header" role="banner">
 
-  <div class="wrapper">
+  <div class="mh3 fell">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
-    <!-- <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a> -->
+    <a class="site-title i" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
 
     {%- if page_paths -%}
       <nav class="site-nav">
@@ -24,6 +24,20 @@
             <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
             {%- endif -%}
           {%- endfor -%}
+          <a class="page-link" href="https://texts.earlyprint.org/">EP Lib</a>
+          <a class="page-link" href="https://earlyprint.wustl.edu/">EP Lab</a>
+          {% for category in site.categories %}
+            <div class="dropdown">
+              <button class="dropbtn">{{ category[0] }}
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                {% for post in category[1] %}
+                  <a href="{{ post.url }}">{{ post.title | truncatewords: 4 }}</a>
+                {% endfor %}
+              </div>
+            </div>
+          {% endfor %}
           <!-- <span class="page-link hide-child">Read More
             <div class="child ba pa2">
             {%- for post in site.posts -%}

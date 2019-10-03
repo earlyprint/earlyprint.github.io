@@ -5,6 +5,7 @@ date:   2019-07-11 09:39:16
 author: Martin Mueller
 tags: eebo-tcp
 summary: A short history of TCP texts and the imperfections in them caused by the process
+categories: Posts
 ---
 ## A very short history and survey of surrogate images
 
