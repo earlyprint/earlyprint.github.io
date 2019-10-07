@@ -4,10 +4,10 @@ layout: default
 
 <div class="home">
 
-<article class="vh-50 dt w-100">
+<article class="vh-50 dt w-100 vh-75">
     <div class="dtc v-mid">
     <div class="fl w-100 w-50-ns pa3">
-      <h1 class="fw6 f3 f2-ns lh-title mt0 mb3 fell-sc">
+      <h1 class="fw6 f1 f1-ns lh-title mt0 mb3 fell i">
         {{ site.title }}
       </h1>
       <h2 class="fw2 f4 lh-copy mt0 mb3 fell-sc">
@@ -22,17 +22,17 @@ layout: default
     </div>
 
     <div class="fl w-100 w-50-ns">
-      <a class="fell i f3 tc block-link fl w-90 ma3 near-black br3 no-underline grow pv2 ph3 bg-near-white"
+      <a class="fell i f3 tc block-link fl w-90 ma3 light-gray br3 no-underline grow pv2 ph3"
         href="https://texts.earlyprint.org">
         Read and correct the texts
-        <div class="sans-serif f6 fs-normal">via the Early Modern Library.</div>
+        <div class="sans-serif f6 fs-normal">via the Early Print Library.</div>
       </a>
     </div>
     <div class="fl w-100 w-50-ns">
-      <a class="fell i f3 tc block-link fl w-90 ma3 near-black br3 no-underline grow pv2 ph3 bg-near-white"
+      <a class="fell i f3 tc block-link fl w-90 ma3 light-gray br3 no-underline grow pv2 ph3"
         href="https://earlyprint.wustl.edu/">
         Search and analyze the texts
-        <div class="sans-serif f6 fs-normal">via the Early Modern Lab tools.</div>
+        <div class="sans-serif f6 fs-normal">via the Early Print Lab tools.</div>
       </a>
     </div>
 
@@ -45,16 +45,15 @@ layout: default
 
   {{ content }}
 
-  {%- if site.posts.size > 0 -%}
+  <!-- {%- if site.posts.size > 0 -%}
     <article class="fl w-100 bt b--black-10 mt5">
       <h2 class="post-list-header pt3 fell-sc">{{ page.list_title | default: "Read More" }}</h2>
       <ul class="post-list">
         {%- for post in site.posts -%}
         <li>
-          <!-- {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%} -->
 
           <h3 class="mb0">
-            <a class="post-link fell f4 near-black block-link dim" href="{{ post.url | relative_url }}">
+            <a class="post-link fell f4 near-black link dim" href="{{ post.url | relative_url }}">
               {{ post.title | escape }}
             </a>
           </h3>
@@ -68,7 +67,6 @@ layout: default
       </ul>
     </article>
 
-    <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
-  {%- endif -%}
+  {%- endif -%} -->
 
 </div>

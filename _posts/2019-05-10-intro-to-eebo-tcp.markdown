@@ -5,6 +5,7 @@ date:   2019-05-10 09:28:16 -0500
 author: Alireza Taheri Araghi et al.
 tags: eebo-tcp
 summary: A brief introduction to Early English Books Online and the Text Creation Partnership
+categories: Intros
 ---
 ## Digitizing 227 Years of English Print
 

@@ -1,9 +1,9 @@
 <header class="site-header" role="banner">
 
-  <div class="wrapper">
+  <div class="mh3 fell">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
-    <!-- <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a> -->
+    <a class="site-title i" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
 
     {%- if page_paths -%}
       <nav class="site-nav">
@@ -18,21 +18,21 @@
 
         <div class="trigger">
           <a class="page-link" href="/">Home</a>
-          {%- for path in page_paths -%}
-            {%- assign my_page = site.pages | where: "path", path | first -%}
-            {%- if my_page.title -%}
-            <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-            {%- endif -%}
-          {%- endfor -%}
-          <!-- <span class="page-link hide-child">Read More
-            <div class="child ba pa2">
-            {%- for post in site.posts -%}
-              <a class="page-link" href="{{ post.url | relative_url }}">
-                {{ post.title | escape }}
+          <a class="page-link" href="/about">About</a>
+          <a class="page-link" href="https://texts.earlyprint.org/">EP Lib</a>
+          <a class="page-link" href="https://earlyprint.wustl.edu/">EP Lab</a>
+          {% for category in site.categories %}
+            <div class="dropdown">
+              <a class="page-link dropbtn" href="/{{category[0] | downcase}}">{{ category[0] }}
+                <i class="fa fa-caret-down"></i>
               </a>
-            {%- endfor -%}
+              <div class="dropdown-content">
+                {% for post in category[1] %}
+                  <a href="{{ post.url }}">{{ post.title | truncatewords: 4 }}</a>
+                {% endfor %}
+              </div>
             </div>
-          </span> -->
+          {% endfor %}
         </div>
       </nav>
     {%- endif -%}

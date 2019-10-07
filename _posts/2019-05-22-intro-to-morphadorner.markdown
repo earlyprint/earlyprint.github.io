@@ -5,6 +5,7 @@ date:   2019-05-22 09:28:16 -0500
 author: Meredith Kelling et al.
 tags: morphadorner nupos
 summary: A description of MorphAdorner, a natural language processing package which was developed at Northwestern University and which powers EarlyPrint
+categories: Intros
 ---
 
 Search and analysis of the Early Print Library depends on a software package called **MorphAdorner,** developed by Phil Burns at Northwestern University during the mid 2000s.  In order to understand what MorphAdorner does, it is worth detailing the basic challenges and scope of natural language processing, by which machines are able to "read" textual data for a variety of interpretive purposes. For a computer program, text often begins as a string of characters that includes features such as whitespace and punctuation; a computer program that reads or produces textual data does not “naturally” observe the distinctions that humans make between such items as words, sentences, and paragraphs. Thus the following two lines of verse:

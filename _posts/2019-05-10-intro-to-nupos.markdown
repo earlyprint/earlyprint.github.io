@@ -5,6 +5,7 @@ date:   2019-05-10 09:27:16 -0500
 author: Alireza Taheri Araghi et al.
 tags: eebo-tcp nupos morphadorner
 summary: A summary of the Northwestern University Part of Speech (NUPOS) tagset used in the MorphAdorner software
+categories: Intros
 ---
 NUPOS (Northwestern University Part of Speech tagset) is Martin Mueller’s part-of-speech tagset "designed to accommodate the major morphosyntactic features of written English from Chaucer to the present day" ([see Mueller 2009](http://panini.northwestern.edu/mmueller/nupos.pdf)). While NUPOS can, in theory, be used with any trainable tagger, so far, it has been used only with MorphAdorner, a Natural Language Processing (NLP) suite developed by Phillip Burns. The program locates word boundaries in its source texts (encoded in XML) and "adorns" each word with five morphological tags: three spelling tags, the NUPOS part of speech (POS) tag, and the lemma headword. In this section we will briefly introduce each one of these attributes.
 
