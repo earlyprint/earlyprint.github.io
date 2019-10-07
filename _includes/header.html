@@ -18,19 +18,14 @@
 
         <div class="trigger">
           <a class="page-link" href="/">Home</a>
-          {%- for path in page_paths -%}
-            {%- assign my_page = site.pages | where: "path", path | first -%}
-            {%- if my_page.title -%}
-            <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-            {%- endif -%}
-          {%- endfor -%}
+          <a class="page-link" href="/about">About</a>
           <a class="page-link" href="https://texts.earlyprint.org/">EP Lib</a>
           <a class="page-link" href="https://earlyprint.wustl.edu/">EP Lab</a>
           {% for category in site.categories %}
             <div class="dropdown">
-              <button class="dropbtn">{{ category[0] }}
+              <a class="page-link dropbtn" href="/{{category[0] | downcase}}">{{ category[0] }}
                 <i class="fa fa-caret-down"></i>
-              </button>
+              </a>
               <div class="dropdown-content">
                 {% for post in category[1] %}
                   <a href="{{ post.url }}">{{ post.title | truncatewords: 4 }}</a>
@@ -38,15 +33,6 @@
               </div>
             </div>
           {% endfor %}
-          <!-- <span class="page-link hide-child">Read More
-            <div class="child ba pa2">
-            {%- for post in site.posts -%}
-              <a class="page-link" href="{{ post.url | relative_url }}">
-                {{ post.title | escape }}
-              </a>
-            {%- endfor -%}
-            </div>
-          </span> -->
         </div>
       </nav>
     {%- endif -%}

@@ -105,7 +105,7 @@
     position: absolute;
     top: 9px;
     right: $spacing-unit / 2;
-    background-color: $background-color;
+    background-color: darken($grey-color, 20%);
     border: 1px solid $grey-color-light;
     border-radius: 5px;
     text-align: right;
@@ -129,7 +129,7 @@
       text-align: center;
 
       > svg {
-        fill: $grey-color-dark;
+        fill: $grey-color-light;
       }
     }
 
@@ -143,9 +143,18 @@
       padding-bottom: 5px;
     }
 
-    .page-link {
+    .dropbtn i {
+      display: none;
+    }
+
+    .dropdown .dropbtn {
+      padding: 0px 0px;
+    }
+
+    .page-link, .dropdown {
       display: block;
       padding: 5px 10px;
+      float: none;
 
       &:not(:last-child) {
         margin-right: 0;
