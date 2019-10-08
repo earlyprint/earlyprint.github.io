@@ -46,12 +46,6 @@ We feel it is pertinent expand a bit more on our tag scores here and how to poss
 
 ![Distribution of tag scores](/assets/img/discograph2.png "Distribution of tag scores")
 
-## “These go to 11”
-
-The first set of results Disco Engine produces is a weighted combination of TF-IDF, LDA, and Tag scores. By default the three scores are given equal weight. For each result, score information is accessible by clicking the plus/minus sign: the raw scores, the allocated weight, and the weighted scores. In our example, the closest text to _The Shepheardes Calender_ is Spenser’s _Colin Clouts_ (A12773) with scores of 0.423 (TF-IDF), 0.935 (Mallet, LDA), and 0.970 (Tag).
-
-Users who decide that the preset equal weight of 0.333 is not the right distribution of scores have the option to customize the weight of each score using sliders that go from zero up to 11 (in homage to algorithmic guitarist, Nigel Tufnel). After setting the sliders to the desired weight and clicking the “Find Texts!” button, the Engine will refresh the search based on the new weights. The user who regards tag scores as irrelevant can choose to dial them down.
-
 
 <!-- Footnotes themselves at the bottom. -->
 ## Notes
