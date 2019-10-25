@@ -11,11 +11,11 @@ permalink: /eplab/
 <h3><a href="https://earlyprint.wustl.edu/toolwebgrok.html">EEBO-TCP Key Words in Context</a></h3>
 <p><a href="https://earlyprint.wustl.edu/toolwebgrok.html"><img alt="Screenshot of visualization" src="/assets/img/webGrok.png"></a></p>
 
-<h3><a href="https://earlyprint.wustl.edu/tooleeboestctexts.html">EEBO-TCP and ESTC Text Counts</a></h3>
-<p><a href="https://earlyprint.wustl.edu/tooleeboestctexts.html"><img alt="Screenshot of visualization" src="/assets/img/eeboEstcCounts_SM.png"></a></p>
+<h3><a href="/2013/11/18/tool_eebo_estc_texts.html">EEBO-TCP and ESTC Text Counts</a></h3>
+<p><a href="/2013/11/18/tool_eebo_estc_texts.html"><img alt="Screenshot of visualization" src="/assets/img/eeboEstcCounts_SM.png"></a></p>
 
-<h3><a href="https://earlyprint.wustl.edu/toolwordsperyear.html">EEBO-TCP Words Per Year</a></h3>
-<p><a href="https://earlyprint.wustl.edu/toolwordsperyear.html"><img alt="Screenshot of visualization" src="/assets/img/textLengths_SM.png"></a></p>
+<h3><a href="/2013/11/18/tool_words_per_year.html">EEBO-TCP Words Per Year</a></h3>
+<p><a href="/2013/11/18/tool_words_per_year.html"><img alt="Screenshot of visualization" src="/assets/img/textLengths_SM.png"></a></p>
 </div>
 
 
