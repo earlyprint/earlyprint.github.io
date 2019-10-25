@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-10-25T11:29:39-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">EarlyPrint</title><subtitle>A collaborative effort—centered doubly at Northwestern University and Washington University in St. Louis—to transform the early English print record, from 1473 to the early 1700s, into an annotated and deeply searchable cultural archive.</subtitle><entry><title type="html">Curation and Quality Assurance</title><link href="http://localhost:4000/posts/2019/07/11/curation-and-quality-assurance.html" rel="alternate" type="text/html" title="Curation and Quality Assurance" /><published>2019-07-11T06:12:00-05:00</published><updated>2019-07-11T06:12:00-05:00</updated><id>http://localhost:4000/posts/2019/07/11/curation-and-quality-assurance</id><content type="html" xml:base="http://localhost:4000/posts/2019/07/11/curation-and-quality-assurance.html">&lt;p&gt;The texts of the Text Creation Partnership co-exist in various states of (im)perfection. They contain known as well as unknown defects. Known defects are individual characters, words, lines, chunks or pages that were explicitly marked as illegible or missing by the professional typists who transcribed the texts from digital scans of microfilm images. The quality of their work is largely a function of the quality of the digital image they had before them.&lt;/p&gt;
+
+&lt;p&gt;Defects cluster heavily in texts transcribed from poor images. Texts in the top quartile have no defects. Texts in the bottom quartile account for 81% of all defects. Texts in the interquartile range have between 1 and 35 defects per 10,000 words and account for 19% of all defects. The following table uses quartiles, the conventional academic grading scheme, and everyday language to show the distribution of textual corruption in the TCP Archive.&lt;/p&gt;
+
+&lt;h4 id=&quot;defect-rates-per-10000-words-for-25000-tcp-texts&quot;&gt;Defect rates per 10,000 words for 25,000 TCP texts&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Grade&lt;/th&gt;
+      &lt;th&gt;Percentile&lt;/th&gt;
+      &lt;th&gt;Min&lt;/th&gt;
+      &lt;th&gt;median&lt;/th&gt;
+      &lt;th&gt;Max&lt;/th&gt;
+      &lt;th&gt;% of all defects&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;A&lt;/td&gt;
+      &lt;td&gt;0-25&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;B&lt;/td&gt;
+      &lt;td&gt;25-50&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;C&lt;/td&gt;
+      &lt;td&gt;50-75&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;18&lt;/td&gt;
+      &lt;td&gt;35&lt;/td&gt;
+      &lt;td&gt;16&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;D&lt;/td&gt;
+      &lt;td&gt;75-90&lt;/td&gt;
+      &lt;td&gt;35&lt;/td&gt;
+      &lt;td&gt;557&lt;/td&gt;
+      &lt;td&gt;100&lt;/td&gt;
+      &lt;td&gt;35&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;F&lt;/td&gt;
+      &lt;td&gt;90-100&lt;/td&gt;
+      &lt;td&gt;100&lt;/td&gt;
+      &lt;td&gt;168&lt;/td&gt;
+      &lt;td&gt;2857&lt;/td&gt;
+      &lt;td&gt;46&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Humans have a deeply ingrained habit of judging a barrel by its worst apples. The reputation of the TCP archive in some scholarly circles has suffered from that habit. The 18th century Shakespeare editor Edmond Malone said somewhere something like “the text of our author is not as corrupt as people think.” Something similar could be said of the TCP texts. That said, very few TCP texts have been proofread from cover to cover, and many of them require some editorial attention before they can be certified as good enough for most scholarly purposes.&lt;/p&gt;
+
+&lt;p&gt;Three generations of undergraduates at Amherst, Northwestern, and Washington University in St. Louis demonstrated that undergraduates are very good at performing the essential tasks of “textkeeping”. They worked on some 500 plays of texts before 1642 and corrected ~ 50,000 defects. Playbooks from before 1642 on average have higher defect rates than TCP texts as a whole, partly because earlier texts have more defects and partly because many playbooks were poorly printed to begin with. The table below shows the difference between TCP texts in general and playbooks in particular as well as the difference that undergraduate curators made to the quality of the texts they curated:&lt;/p&gt;
+
+&lt;h4 id=&quot;defects-rates-per-10000-words-for-510-playbooks-before-and-after-curation&quot;&gt;Defects rates per 10,000 words for 510 playbooks before and after curation&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Corpus&lt;/th&gt;
+      &lt;th&gt;25th percentile&lt;/th&gt;
+      &lt;th&gt;Median&lt;/th&gt;
+      &lt;th&gt;75th percentile&lt;/th&gt;
+      &lt;th&gt;90th percentile&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;25,000 uncurated TCP texts&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;35&lt;/td&gt;
+      &lt;td&gt;100&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;510 playtexts before curation&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;14&lt;/td&gt;
+      &lt;td&gt;62&lt;/td&gt;
+      &lt;td&gt;126&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;510 playtexts after curation&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1.3&lt;/td&gt;
+      &lt;td&gt;6.4&lt;/td&gt;
+      &lt;td&gt;47.2&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;This reduction of textual defects by an order of magnitude (from a median value of 14 to a median value of 1.3) is something that is visible to the average reader. The length of most plays stays within a range of 20,000 to 25,000 words. So the error rate per play drops from ~30 to ~ 3.&lt;/p&gt;
+
+&lt;h2 id=&quot;unknown-defects&quot;&gt;Unknown defects&lt;/h2&gt;
+
+&lt;p&gt;However, these numbers don’t tell the full story. While we can measure the rates of known defects (missing letters, words, punctuation marks, lines, and pages) in TCP texts because the transcribers marked these gaps, we have no immediate data about two kinds of “unknown” defects: transcription or printer errors. Typical errors include:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;typographical errors, whether the printer’s or transcriber’s: ‘aſſliction’ =&amp;gt; ‘affliction’; ‘hnsband’ =&amp;gt; ‘hnsban’d&lt;/li&gt;
+  &lt;li&gt;words wrongly joined: ‘thyspels’ =&amp;gt; ‘thy spels’&lt;/li&gt;
+  &lt;li&gt;words wrongly split: ‘neeren esse’ =&amp;gt; ‘neerenesse’&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Printer errors occur in the process of printing the original book and would have been corrected by writers or printers had they caught them. It is part of our editorial policy to correct such errors when we find them. The TCP corpus contains many instances of printers testifying to the shortcomings of their trade. Quite often they ask for the reader’s help, as in the following plea from the Errata section of Harding’s  &lt;em&gt;Sicily and Naples&lt;/em&gt;, a mid-seventeenth century play:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;— Reader. Before thou proceed’st farther, mend with thy pen these few escapes of the presse: The delight &amp;amp; pleasure I dare promise thee to finde in the whole, will largely make amends for thy paines in correcting some two or three syllables.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Samuel Garey’s  &lt;em&gt;Great Brittans little calendar&lt;/em&gt;  concludes with the terse and elegant Latin epigraph:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;— Candido lectori: Humanum eſt errare, errata hic corrige (lector) quae penna, aut praelo lapſa fuiſſe vides._&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;That is an appeal to the gentle reader to correct “lapses of the pen or press”, since to err is human.&lt;/p&gt;
+
+&lt;p&gt;Transcriber errors refer to mistakes made by the TCP transcribers. While the TCP spot-checked a sample number of pages to confirm this rate, the transcriptions have not been fully proofread against high-quality images. To date, four texts in SHC have been proofread against good facsimile images, but most texts will require further editorial attention before they can be certified as good enough for most scholarly purposes. In our digital environment, most unknown defects can be easily spotted and corrected, and those corrections are reviewed, approved, and logged in the same way as changes to known defects. In our experience, there is roughly one unknown defect lurking for every five known defects.&lt;/p&gt;</content><author><name>Martin Mueller</name></author><category term="quality" /><category term="assurance" /><category term="tcp" /><summary type="html">The texts of the Text Creation Partnership co-exist in various states of (im)perfection. They contain known as well as unknown defects. Known defects are individual characters, words, lines, chunks or pages that were explicitly marked as illegible or missing by the professional typists who transcribed the texts from digital scans of microfilm images. The quality of their work is largely a function of the quality of the digital image they had before them.</summary></entry><entry><title type="html">Digital Images for EarlyPrint Texts</title><link href="http://localhost:4000/posts/2019/07/11/digital-images-for-earlyprint-texts.html" rel="alternate" type="text/html" title="Digital Images for EarlyPrint Texts" /><published>2019-07-11T04:39:16-05:00</published><updated>2019-07-11T04:39:16-05:00</updated><id>http://localhost:4000/posts/2019/07/11/digital-images-for-earlyprint-texts</id><content type="html" xml:base="http://localhost:4000/posts/2019/07/11/digital-images-for-earlyprint-texts.html">&lt;h2 id=&quot;a-very-short-history-and-survey-of-surrogate-images&quot;&gt;A very short history and survey of surrogate images&lt;/h2&gt;
+
+&lt;p&gt;Beginning in 1938 and continuing for the next half century, Early Modern books were systematically microfilmed. University Microfilms, an offshoot of the University of Michigan, was the major agent in this project, which was made possible by the census of books before 1642 in Pollard and Redgrave’s Short Title Catalogue of 1926 and its continuation in the 1940’s by Donald Wing, who completed the census for the rest of the 17th century.&lt;/p&gt;
+
+&lt;p&gt;In the decades after World War II an increasing percentage of pre 17th-century books were freely available in research libraries to users who had the patience to work with microfilm readers. Around 2000, Proquest, the successor of University Microfilms, decided to digitize the microfilm images and make them available over the Web to members of institutions who could afford the non-trivial subscription cost. All of a sudden scholars at these institutions could get at any of 130,00 books at 2am and in their pajamas. That was a game changer for many.&lt;/p&gt;
+
+&lt;p&gt;Over the following decade, the quality of digital images increased greatly, and the cost of making, storing, and distributing them dropped sharply. As a result our expectations of what counts as a good enough image have gone up. The microfilm images of the last century no longer meet expectations. The time has come to start a new project that over the course of one or two decades will produce new, public domain, and much higher-quality images of the Early Modern print heritage. This can be done in a distributed fashion. If needless duplication is avoided, the costs are bearable. One could imagine a funding model in which the process is driven by user demands and users would contribute to the cost of making images that then become available to everybody.&lt;/p&gt;
+
+&lt;p&gt;The emerging imaging protocol IIIF can create an environment in which images from many libraries are accessible to users as if they came from a single collection. Modern browsers have quite remarkable capabilities for image manipulation. A run-of-the mill laptop and recent run-of-the mill digital images add up to a laboratory in which the material evidence for most textual problems can be satisfactorily examined.&lt;/p&gt;
+
+&lt;p&gt;In recent years Rare Book Libraries have made quite a few image sets available over the Internet. Some of them are only available from the library’s website. Thus you can download The Troublesome Reign of King John from Yale’s Beinecke Library or Mary Wroth’s own copy of Urania from Penn’s Kislak Centre. It is not easy to estimate how many such free treasures are available from the 200 or so libraries that have significant holdings in Early Modern print materials.&lt;/p&gt;
+
+&lt;p&gt;Some libraries have put part of their collections on the Internet Archive, which holds not quite 3,000 good quality pre-1700 imprints. The Hathi Trust lists about 3,400 English titles from that period. Together those two aggregators probably hold about 2,000 image sets that map to TCP texts and could provide the image set for a “digital combo.” It is a long way from 2,000 to 53,000, but 2,000 is a good start, and every book along the road adds value to users.&lt;/p&gt;
+
+&lt;h2 id=&quot;making-digital-combos-and-the-problem-of-citation&quot;&gt;Making digital combos and the problem of citation&lt;/h2&gt;
+
+&lt;p&gt;How do you make a digital combo and how do you cite the resulting work? There are lots of little devils hiding in the details of answers to those questions. The microfilms that are the sources of EEBO images were produced from the holdings of many libraries, but most of them come from a small group of libraries, in particular the British Museum and the Huntington Library. Microfilms were kept on reels, with a number assigned to each reel and each 35 mm image on it. A reference like 16252:5 refers to item 5 in image set 16252 (no longer kept on a physical reel). It serves as a unique identifier for an EEBO image. It happens to be the image set from which the first TCP text was transcribed: “The passionate morrice” with the proud file_id A00001. 16252 and A0001 map to the STC number 23867.5 and to the ESTC number S115782. ‘5’ is the identifier of the double page image. Most EEBO images have two pages on one image.&lt;/p&gt;
+
+&lt;p&gt;It may be that EEBO image numbers will survive the images themselves and become arbitrary, but familiar and convenient identifiers, not unlike the Stephanus numbers that for centuries have served as a citation scheme for Plato. The Estiennes (Stephanus in Latin) were a French publishing family responsible for the way in which we cite both the Bible and Plato. In the 1550’s Robert Estienne published Bibles that made the chapter and verse citation scheme canonical. In his 1578 edition of Plato his son Henri used the common practice of dividing a page into quintiles loosely identified by letters from ‘a’ to ‘e’ printed in the margin. Thus 81a refers to something at the top of page 81 and 375c refers to something somewhere in the middle of that page. From the perspective of text content this is an entirely arbitrary system, and there are no clear boundaries between the quintiles. It is a crude but very reliable navigation system that takes you within 50 words of any destination if other editions of Plato add those numbers to their texts, as most of them continue to do to this day.&lt;/p&gt;
+
+&lt;p&gt;The EEBO image numbers are baked into the TCP transcriptions, where every page break is marked with a &lt;pb&gt;&lt;/pb&gt; element that includes a reference to the EEBO image_id. It also includes page references, where they are available. But often they are not, texts may have more than one pagination sequence, and a single pagination system may contain errors. In practice EEBO image numbers are the only identifiers that work reliably across the entire world of Early Modern print and will locate any word or phrase within a two-page span. Since a TCP transcription will record two page breaks for every image (barring the occasional cases of single-page images), you can double the precision of a reference by adding –a and –b flags to the first and second occurrence of a page. The EarlyPrint texts use these flags.&lt;/p&gt;
+
+&lt;p&gt;A TCP text is a digital surrogate of an item whose most authoritative description is (or ought to be) found in the English Short Title Catalogue. ESTC numbers are much less widely used than their precursors, the STC, Wing, or Thomason numbers deeply familiar to generations of scholars with a philological or bibliographical bent. But a promised forthcoming revision of the ESTC catalogue, which will have a collaborative component for user contributors, may change this. A generation of scholars that first encounters old books in the form of EEBO images on the screen of a smartphone may find ESTC numbers a useful hook to hang information on. References that combine an ESTC number with an EEBO image ID would do quite well as universal identifiers, e.g S115782-5-a. They would be as arbitrary but as convenient, as Stephanus references to Plato, and as precise as the customary page references in humanities books and journals.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-same-is-same-enough-for-matching-text-and-image&quot;&gt;How “same” is same enough for matching text and image?&lt;/h2&gt;
+
+&lt;p&gt;We still have some work to do on provenance data for the image sets on this site. The majority of them come from the Thomas Pennant Barton Collection in the Boston Public Library, which has made them available to the Internet Archive. Several dozen image sets are digital scans of early 20th-century photographic facsimiles in the Tudor Facsimile Texts series. For most practical purposes, they are as good as newly made images. A handful of plays by James Shirley and the 1647 Beaumont and Fletcher Folio were digitized by the Northwestern Library.&lt;/p&gt;
+
+&lt;p&gt;The relationship of an EarlyPrint text page to its corresponding image is not entirely straightforward. Remember that a page of transcribed TCP text is not a documentary edition of a page image. It is a digital surrogate that aims at representing the semantic and structural properties of an allographic textual object. The transcription represents some information from the page image literally (orthography), translates some information into XML elements, and entirely ignores some information. The purpose of a corresponding page image is to let you check the accuracy with which the transcription represents the text as a conceptual object. Another purpose is to give you a sense of what the text looked like in its original milieu.&lt;/p&gt;
+
+&lt;p&gt;In order for an image set to be a suitable companion for an EarlyPrint text, the words on the image set must align page by page and line by line with the image set from which the TCP text was transcribed. These conditions can be met in three different ways. First, the new image set may derive from the same copy that produced the image set from which the TCP was transcribed. For instance, the text of Dr Faustus was transcribed from a copy of the 1603 edition in the Bodleian Library. Our image set is a digital scan of the Tudor Facsimile edition, which is based on the Bodleian copy.&lt;/p&gt;
+
+&lt;p&gt;In a much more common scenario, the new image comes from a different copy of the edition that served as the basis for the TCP text. Different copies of the ‘same’ edition in an Early Modern are not necessarily identical in all respects. Things happen in a press run, and copies may be assembled at different stages of correction. If the transcribed text differs from the page image, it does not mean that the transcriber made an error. On the other hand, if the transcriber worked from a poor image and the new image from another copy is much clearer, the odds are that the new image can help improve the transcription. But you have to be on your guard. There may be a pedagogical advantage in using different instances of an edition: it draws attention to the fact ‘same’ is a slippery word.&lt;/p&gt;
+
+&lt;p&gt;The third scenario may strike some book historians as problematical. The image set comes from a reprint that may have a slightly different titlepage but in all other respects uses the plates or pages of the earlier edition. There is a 1654 edition of two plays by Thomas May, Agrippina and Cleopatra. A very casual look at that book reveals that it has combined two quite differently printed texts, and each of them maps line by line and page by page to the EEBO images from which the TCP texts were transcribed. The TCP copy of Fair Em was transcribed from a 1591 copy in the Bodleian. The Boston Public has an edition dated 1631. The EEBO and Boston images are virtually identical, but there are occasional spelling differences. The same is true of Solimon and Perseda. The TCP copy was transcribed from a copy in the British Library dated ‘[1592?]’. The copy in the Boston Public Library squeezes “Newly corrected and amended” onto the old title page.&lt;/p&gt;
+
+&lt;p&gt;In such cases you gain more than you lose by associating the text with page images from almost the same edition until a closer match becomes available, as long as you tell users where the images come from. Some counter examples suggest that it is not difficult to draw a line between images that do or do not make suitable matches. Lording Barry’s Ram Alley was transcribed from a Bodleian copy of a 1611 edition, while the Tudor Facsimile is based on a 1611 copy in the British Library. These are very similar editions, but their page breaks diverge after the first page. The same is true for Every Man out of his Humor, where the TCP transcription and Boston Public Library copy both are editions from 1600 but they are clearly different, and their page breaks diverge from the beginning.&lt;/p&gt;
+
+&lt;h2 id=&quot;aligning-text-and-image&quot;&gt;Aligning text and image&lt;/h2&gt;
+
+&lt;p&gt;There is an irreducible amount of human labour involved in matching pages to transcribed text. What with missing or duplicate pages on the text side and missing or duplicate pages on the image, not to speak of blank pages, you need a pair of human hands and eyes to make sure that each image aligns with the text. For most texts that is a matter of minutes, but if a text is very long or if the page order is disrupted on both sides, it can take an hour or more.&lt;/p&gt;
+
+&lt;p&gt;In the Early Print project we have followed a strict policy of mapping third-party images to the TCP page ids that are based on EEBO image numbers. We have a procedure (and expect to put it on the Web soon) that creates a manifest for each text by listing a unique identifier of the page followed by its first and last five words and a data entry field where a user can enter the image numbers of the set to be matched. Here are the first lines of the manifest for The Jew of Malta:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A06991-001-b	The Famous TRAGEDY OF THE the Church . 1633 . 7&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A06991-002-b	TO MY VVORTHY FRIEND , none more able to taxe&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;That manifest is the input for a script that creates the matching of text and image in the EarlyPrint text. This first step of creating a digital combo is a very tedious piece of data janitoring. But once it has been done properly, it makes life much easier for readers and editors. It is not difficult or time consuming to replace an image set if another becomes available.&lt;/p&gt;</content><author><name>Martin Mueller</name></author><category term="eebo-tcp" /><summary type="html">A very short history and survey of surrogate images</summary></entry><entry><title type="html">Distant Reading for Close Analysis: Projects Building on EEBO-TCP</title><link href="http://localhost:4000/posts/2019/07/09/eebo-tcp-projects.html" rel="alternate" type="text/html" title="Distant Reading for Close Analysis: Projects Building on EEBO-TCP" /><published>2019-07-09T00:00:00-05:00</published><updated>2019-07-09T00:00:00-05:00</updated><id>http://localhost:4000/posts/2019/07/09/eebo-tcp-projects</id><content type="html" xml:base="http://localhost:4000/posts/2019/07/09/eebo-tcp-projects.html">&lt;p&gt;As scholarly citation of EEBO-TCP has increased in frequency (as described in &lt;a href=&quot;https://earlyprint.org/2019/05/21/eebo-tcp-uses.html&quot;&gt;an earlier blog post&lt;/a&gt;), so have the number of other projects that rely on EEBO-TCP for their datasets.&lt;/p&gt;
+
+&lt;p&gt;Some of these projects have built linguistic tools, like Lexicons of Early Modern English (&lt;a href=&quot;https://leme.library.utoronto.ca/&quot;&gt;LEME&lt;/a&gt;) (begun in 1986 but ever-evolving), which has used early dictionaries digitized by EEBO-TCP to populate its collection of words. Some create collections of texts: &lt;a href=&quot;http://versemiscellaniesonline.bodleian.ox.ac.uk/&quot;&gt;Verse Miscellanies Online&lt;/a&gt; was produced in partnership with EEBO-TCP, assembling a literary subcorpus beginning with Tottel’s Miscellany and enhancing the EEBO-TCP files with descriptive tagging and annotations. The University of Oxford Text Archive (&lt;a href=&quot;https://ota.ox.ac.uk/&quot;&gt;OTA&lt;/a&gt;) has created (among other resources) a TCP catalog that includes not only EEBO, but also the eighteenth-century English print corpus ECCO, and the early American corpus of texts known as Evans. Rather than searching in a “flat” Google-like field, users are able to filter in specific areas: title, availability, date, and term. OTA has assigned subject fields to every text in their catalog.&lt;/p&gt;
+
+&lt;p&gt;There are several corpus-analysis tools: Similar in mission to Early Print, Visualizing English Print (&lt;a href=&quot;http://graphics.cs.wisc.edu/WP/vep/&quot;&gt;VEP&lt;/a&gt;) converts EEBO-TCP to plain text and assembles targeted subcorpora. They provide, for example, an &lt;a href=&quot;http://graphics.cs.wisc.edu/WP/vep/vep-early-modern-science-collection/&quot;&gt;Early Modern Science Collection&lt;/a&gt;, and they also allow users to create their own corpora. In addition, VEP provides visualization tools to promote the analysis of those corpora.&lt;/p&gt;
+
+&lt;p&gt;Distant Reading Early Modernity (&lt;a href=&quot;http://dream.voyant-tools.org/dream/?corpus=dream&quot;&gt;DREaM&lt;/a&gt;) harnesses users’ queries to develop enhanced corpora. The project normalizes 44,000 fully transcribed texts and enrich their metadata, particularly enhancing publication records, by connecting the EEBO-TCP metadata to OCLC’s Linked Open Data. DREaM’s data asserts itself with varying levels of confidence so that users can direct their attention advisedly. DREaM shares its enriched dataset and enables batch downloads of full-text corpora.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://cqpweb.lancs.ac.uk/&quot;&gt;CQPweb&lt;/a&gt; is another corpus analysis tool that provides users a “Workbench”. The Workbench facilitates concordancing; the analysis of collocations; and the preparation of distribution tables and charts, frequency lists; and search by keywords or key tags.  (EEBO-TCP is just one of many datasets accessible to this tool.)  The Workbench can operate on even more metadata than EEBO-TCP offers, including part of speech, lemma, and semantic tags.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://wordhoard.northwestern.edu/userman/index.html&quot;&gt;Wordhoard&lt;/a&gt;, also attentive to philology, relies on an EEBO-TCP-based canon to perform analyses of how words are used; inputting a particular word will elicit the variants of that word alongside their parts of speech. In Wordhoard, users can also analyze for qualitative information, such as how frequently a word is used by men vs. women.&lt;/p&gt;
+
+&lt;p&gt;Corpus-level inquiry can issue into more subject-specific projects. Alice Eardly has written about the utility - and challenges - of using EEBO-TCP to look at early modern women’s writing (&lt;a href=&quot;https://www.jstor.org/stable/41349055&quot;&gt;“Hester Pulter’s “Indivisibles” and the Challenges of Annotating Early Modern Women’s Poetry”&lt;/a&gt;, &lt;em&gt;Studies in English Literature&lt;/em&gt;, 1500-1900, Vol. 52, No. 1, The English Renaissance (Winter 2012), pp. 117-141), and indeed, the &lt;a href=&quot;https://www.wwp.northeastern.edu/&quot;&gt;Women Writer’s Project&lt;/a&gt; and the &lt;a href=&quot;http://recirc.nuigalway.ie&quot;&gt;RECIRC&lt;/a&gt; project both tackle these issues head-on while (as part of their work) mining EEBO-TCP not only for women’s writing, but for commentary on women’s issues. Similarly, Heather Froelich recently embarked on a project that looked to the Historical Thesaurus of the OED and EEBO-TCP to create a corpus of linguistic terms related to ‘whorishness and unchastity’, with the intent that we might expand our semantic understanding of the concepts.&lt;/p&gt;
+
+&lt;p&gt;Matthew Steggle’s &lt;a href=&quot;https://www.taylorfrancis.com/books/9781315577180&quot;&gt;&lt;em&gt;Digital Humanities and the Lost Dramas of Early Modern England: Ten Case Studies&lt;/em&gt;&lt;/a&gt; (Routledge, 2015) uses EEBO-TCP as its principal tool in conducting an analysis of the titles of ten lost plays, with the aim of clarifying their subject matter. Steggle’s case studies all concern themselves deeply with the technique and procedure of going about such a project; he is transparent about his process throughout, and hopes to demonstrate some of the potentiality of digital humanities.&lt;/p&gt;
+
+&lt;p&gt;Other highly inclusive projects have used EEBO-TCP as a supplementary source of data.  The Map of Early Modern London (&lt;a href=&quot;https://mapoflondon.uvic.ca/acknowledgements.htm&quot;&gt;MoEML&lt;/a&gt;) recreates a rather granular depiction of London at the time of Shakespeare, collecting details from a variety of sources including EEBO-TCP, where collected plays, poems, and pamphlets assume an intimate knowledge of the city’s topography. MoEML traces London’s “spatial imaginary,” plotting “people, historical documents, literary works, and recent critical research onto topography and the built environment”.&lt;/p&gt;
+
+&lt;p&gt;All of these projects provide users with layers of engagement. Interfaces that are used for research often also invite the user to contribute to the development of the project through correction, annotation, enrichment of metadata, and curation of subcorpora. Through these additional activities, the “distant reading” that the projects allow users to engage in also facilitates close reading opportunities, enriching the project and the user’s work at the same time.&lt;/p&gt;</content><author><name>Emily Barth et al.</name></author><category term="eebo-tcp" /><summary type="html">As scholarly citation of EEBO-TCP has increased in frequency (as described in an earlier blog post), so have the number of other projects that rely on EEBO-TCP for their datasets. Some of these projects have built linguistic tools, like Lexicons of Early Modern English (LEME) (begun in 1986 but ever-evolving), which has used early dictionaries digitized by EEBO-TCP to populate its collection of words. Some create collections of texts: Verse Miscellanies Online was produced in partnership with EEBO-TCP, assembling a literary subcorpus beginning with Tottel’s Miscellany and enhancing the EEBO-TCP files with descriptive tagging and annotations. The University of Oxford Text Archive (OTA) has created (among other resources) a TCP catalog that includes not only EEBO, but also the eighteenth-century English print corpus ECCO, and the early American corpus of texts known as Evans. Rather than searching in a “flat” Google-like field, users are able to filter in specific areas: title, availability, date, and term. OTA has assigned subject fields to every text in their catalog. There are several corpus-analysis tools: Similar in mission to Early Print, Visualizing English Print (VEP) converts EEBO-TCP to plain text and assembles targeted subcorpora. They provide, for example, an Early Modern Science Collection, and they also allow users to create their own corpora. In addition, VEP provides visualization tools to promote the analysis of those corpora. Distant Reading Early Modernity (DREaM) harnesses users’ queries to develop enhanced corpora. The project normalizes 44,000 fully transcribed texts and enrich their metadata, particularly enhancing publication records, by connecting the EEBO-TCP metadata to OCLC’s Linked Open Data. DREaM’s data asserts itself with varying levels of confidence so that users can direct their attention advisedly. DREaM shares its enriched dataset and enables batch downloads of full-text corpora. CQPweb is another corpus analysis tool that provides users a “Workbench”. The Workbench facilitates concordancing; the analysis of collocations; and the preparation of distribution tables and charts, frequency lists; and search by keywords or key tags. (EEBO-TCP is just one of many datasets accessible to this tool.) The Workbench can operate on even more metadata than EEBO-TCP offers, including part of speech, lemma, and semantic tags. Wordhoard, also attentive to philology, relies on an EEBO-TCP-based canon to perform analyses of how words are used; inputting a particular word will elicit the variants of that word alongside their parts of speech. In Wordhoard, users can also analyze for qualitative information, such as how frequently a word is used by men vs. women. Corpus-level inquiry can issue into more subject-specific projects. Alice Eardly has written about the utility - and challenges - of using EEBO-TCP to look at early modern women’s writing (“Hester Pulter’s “Indivisibles” and the Challenges of Annotating Early Modern Women’s Poetry”, Studies in English Literature, 1500-1900, Vol. 52, No. 1, The English Renaissance (Winter 2012), pp. 117-141), and indeed, the Women Writer’s Project and the RECIRC project both tackle these issues head-on while (as part of their work) mining EEBO-TCP not only for women’s writing, but for commentary on women’s issues. Similarly, Heather Froelich recently embarked on a project that looked to the Historical Thesaurus of the OED and EEBO-TCP to create a corpus of linguistic terms related to ‘whorishness and unchastity’, with the intent that we might expand our semantic understanding of the concepts. Matthew Steggle’s Digital Humanities and the Lost Dramas of Early Modern England: Ten Case Studies (Routledge, 2015) uses EEBO-TCP as its principal tool in conducting an analysis of the titles of ten lost plays, with the aim of clarifying their subject matter. Steggle’s case studies all concern themselves deeply with the technique and procedure of going about such a project; he is transparent about his process throughout, and hopes to demonstrate some of the potentiality of digital humanities. Other highly inclusive projects have used EEBO-TCP as a supplementary source of data. The Map of Early Modern London (MoEML) recreates a rather granular depiction of London at the time of Shakespeare, collecting details from a variety of sources including EEBO-TCP, where collected plays, poems, and pamphlets assume an intimate knowledge of the city’s topography. MoEML traces London’s “spatial imaginary,” plotting “people, historical documents, literary works, and recent critical research onto topography and the built environment”. All of these projects provide users with layers of engagement. Interfaces that are used for research often also invite the user to contribute to the development of the project through correction, annotation, enrichment of metadata, and curation of subcorpora. Through these additional activities, the “distant reading” that the projects allow users to engage in also facilitates close reading opportunities, enriching the project and the user’s work at the same time.</summary></entry><entry><title type="html">Introduction to Discovery Engine: His Noble Numbers</title><link href="http://localhost:4000/intros/how-to/2019/05/24/intro-to-disco-engine.html" rel="alternate" type="text/html" title="Introduction to Discovery Engine: His Noble Numbers" /><published>2019-05-24T09:28:16-05:00</published><updated>2019-05-24T09:28:16-05:00</updated><id>http://localhost:4000/intros/how-to/2019/05/24/intro-to-disco-engine</id><content type="html" xml:base="http://localhost:4000/intros/how-to/2019/05/24/intro-to-disco-engine.html">&lt;p&gt;Let’s say you are interested in &lt;em&gt;The Shepheardes Calender&lt;/em&gt; and you are wondering whether there are other early modern English texts similar to Spenser’s odd, but not entirely idiosyncratic work. Scholars of Spenser, of the history of pastoral, and of Elizabethan literary culture have unearthed a dozen or so sources and perhaps a couple of dozen analogues, but might that list be supplemented? Might one uncover unexpected similarities in texts scattered across a corpus of early printed books that contains more than 60,000 texts, many of them unfamiliar and under-investigated?&lt;/p&gt;
+
+&lt;p&gt;There are many methods used for calculating (textual) similarity and document clustering (Euclidean distance, TF-IDF, cosine, and topic modeling, to name a few). To calculate distances from a user-selected reference text the Disco Engine selects three: 1) TF-IDF, 2) topic-modelling, and 3) a new similarity metric based on the formatting tags embedded in the XML encoding of the TCP corpus. The outcome of the query comes as four lists, the latter three based on the metrics just mentioned and the first a combined metric that merges those three accorded to a fixed weighting.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-does-it-work&quot;&gt;How does it work?&lt;/h2&gt;
+
+&lt;p&gt;For the sake of consistency, we will use Spenser’s &lt;em&gt;The Shepheardes Calender&lt;/em&gt; as our reference text. If you type “Spenser” and “Calender” in the &lt;em&gt;Author&lt;/em&gt; and_ Title_ fields respectively, and click the “Find ID!” button, you will be given only one result: &lt;em&gt;The Shepheardes Calender&lt;/em&gt;. You will notice that each item of the search result (here only one) begins with an ID, in this case “A12782”. This is the TCP ID specific to &lt;em&gt;The Shepheardes Calender&lt;/em&gt;. To find similarities, you can enter “A12782” into the “TCP ID” field and hit the “Find Texts!” button. Alternatively, you can simply click on the ID. This will generate four lists of similar texts: the first is a list assembled based on aggregated similarity scores, the remaining three lists produced by each of the three constituent similarity metrics. (You can control the length of the lists we output by adjusting the first slider, “n results.” The number of results defaults to 50 for each search, but n can be lowered to 1 or increased to 100.) Each item in the four lists is preceded by a plus/minus sign. Clicking on that sign will expose weighting information for the aggregated similarity metrics; for the constituent similarity metrics, clicking on the +/- sign will expose a plot of the chief words on which the similarity score is based.&lt;/p&gt;
+
+&lt;h2 id=&quot;tf-idf-results&quot;&gt;TF-IDF Results&lt;/h2&gt;
+
+&lt;p&gt;TF-IDF stands for &lt;em&gt;term frequency-inverse document frequency&lt;/em&gt;. It is a statistical measure often used to determine how important a word is to a particular document within a corpus. The TF-IDF value for a word increases proportionally to the frequency of the word in the document (TF), but is lowered by the number of documents it appears in (IDF). When we search for TF-IDF &lt;em&gt;similarity&lt;/em&gt;, we are seeking convergences between the TF-IDF for &lt;em&gt;all&lt;/em&gt; the words in the reference text and those in potential target texts.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; The first entry for a similarity search is always a trivial one: in our example, the text with the highest similarity score is &lt;em&gt;The Shepheardes Calender&lt;/em&gt; itself with the TF-IDF similarity of 1.000. The less trivial second-ranked text is Spenser’s &lt;em&gt;Colin Clouts Come Home Againe&lt;/em&gt; with a TF-IDF similarity measure of 0.423.&lt;/p&gt;
+
+&lt;p&gt;As mentioned above, next to each item on the Disco Engine results list is a plus/minus sign. Clicking on it will reveal more information on the words upon which the text was scored. Opening the second result on the TF-IDF list, for instance, will reveal a scatter plot. The X (horizontal) axis corresponds to the TF-IDF values of words in the &lt;em&gt;reference&lt;/em&gt; text (the text we are looking to find similars for) and the Y (vertical) axis plots the values for the text being compared (here, &lt;em&gt;Colin Clouts Come Home Againe&lt;/em&gt;, with the TCP ID of A12773).&lt;/p&gt;
+
+&lt;p&gt;The plot displays those words that have been the basis of the similarity between the two documents. Each word is represented by a green dot. Hovering the mouse over the dot will reveal the corresponding word and its TF-IDF scores in both documents (in other words, the values on the X and Y axes).&lt;/p&gt;
+
+&lt;p&gt;A diagonal divides the plot area into two sections. Words sitting below the diagonal score higher in the reference text (&lt;em&gt;The Shepheardes Calender&lt;/em&gt; in our example) and words above the diagonal have a higher TF-IDF score in the document being compared (here, &lt;em&gt;Colin Clouts Come Home Againe&lt;/em&gt;). Words located closer to the diagonal, have closer TF-IDF values in both texts. This means that the words further from the origin (and closer to the diagonal) have a larger share in driving the similarity score. In our example, “Colin,” the name of Spenser’s pastoral persona, has the largest TF-IDF score in both texts: 0.275 in A12782 and 0.352 in A12773.&lt;/p&gt;
+
+&lt;h2 id=&quot;lda-mallet-results&quot;&gt;LDA (Mallet) Results&lt;/h2&gt;
+
+&lt;p&gt;For its second similarity measure, the Disco Engine uses topic modelling, a statistical model used for document classification, extracting information, and analysing large textual corpora. We use Latent Dirichlet Allocation (LDA) one of the most popular topic models now in use. (The Disco Engine implements LDA by means of &lt;a href=&quot;http://mallet.cs.umass.edu/&quot;&gt;MALLET&lt;/a&gt;, “a Java-based package for statistical natural language processing” from University of Massachusetts Amherst.) For a very useful introduction to topic modeling, see &lt;a href=&quot;http://www.scottbot.net/HIAL/index.html@p=19113.html&quot;&gt;Scott Weingart’s excellent blog-tutorial&lt;/a&gt;.&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;As with the TF-IDF, each LDA result can be expanded to reveal a scatter plot that shows how different topics score in both documents. Consider the second result on the LDA list, William Browne’s &lt;em&gt;The shepheards pipe&lt;/em&gt;: by mousing over the scatter plot, we will find that topics 93 and 21 distinguish themselves from the others with highest LDA similarity scores. For instance, topic 21, which includes the words &lt;em&gt;mind&lt;/em&gt;,_ still, love, grace, bear, foe, heart, hart, tell, seek,_ and &lt;em&gt;begin&lt;/em&gt;, scores 0.244 in the reference text and 0.231 in the text being compared, which is to say that—once we remove non-distinctive words, so-called “stop words”—the words allocated to topic 21 constitute nearly the same proportion of the total collection of words in each text, just shy of a quarter of the distinctive words in each text. The pop-up windows in the plot list the words related to each topic.&lt;/p&gt;
+
+&lt;h2 id=&quot;tag-scores&quot;&gt;Tag Scores&lt;/h2&gt;
+
+&lt;p&gt;The previous two scores (TF-IDF and LDA) treat the texts being compared as “bags of words”: they ignore word order and sentence structure entirely. They also ignore the format of the printed text, as well as such structural features as line and paragraph breaks, most of which are recorded as tags in the XML files in which the TCP tags are encoded. Hypothesizing that such structural features might be richly signifying, we compare the frequency of structural tags in the reference text with those of other texts in the corpus. However, just as we don’t assess word sequence in the other similarity scores, we don’t assess tag-sequence in this one: we treat the XML document as a “bag of tags.”&lt;/p&gt;
+
+&lt;p&gt;By clicking on the plus/minus sign by each search result, the user can see the chart that plots the tags driving the tag similarity scores. In our example, the text A02249 (Pierre Gringore’s [&lt;em&gt;The Castle of Labor&lt;/em&gt;]) is structurally closest to &lt;em&gt;The Shepheardes Calender&lt;/em&gt; with a score of 0.990. By mousing over the green dots on the scatter plot point furthest from plot origin, we can see that the “l” (“new line”) tag drives the similarity far more than the other tags in the document (“p”, “lg”, and “pb”).&lt;/p&gt;
+
+&lt;p&gt;We feel it is pertinent expand a bit more on our tag scores here and how to possibly (not) interpret them. While the TF-IDF and LDA scores point to similarities more intuitively clear—for instance the resemblance of two pastoral poems—the tag scores cluster a reference text with others that may be thematically different or even unrelated. We should also emphasize the caveat that because of our bag-of-tags approach, the tag similarity scores do not account for the sequential distribution of tags in texts. To illustrate this, it may be helpful to compare the distribution of each of these three scores (Images 1, 2 and 3). It is worth noting that the TF-IDF and LDA graphs define similar curves much different than the tag-scores graph. While a hypothetical TF-IDF or LDA score even as low as 0.4 would mean a rather small (more accurate?) bundle of similar texts (which translates to “the higher the score, the more similar the texts”), tag scores cluster texts in the opposite directions: they tend to skew closer to 1.0—i.e., to identical; our hypothesis is that there is much less variation between texts structurally than there is lexically and topically. Although we keep a wary eye on the tag scores, we wonder it they make us think more critically about what we mean when we talk about similarity between two texts. If two texts differ on the syntactic and lexical level, do they still manifest some kind of kinship if they are structured in similar ways?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/discograph3.png&quot; alt=&quot;Distribution of TF-IDF scores&quot; title=&quot;Distribution of TF-IDF scores&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/discograph1.png&quot; alt=&quot;Distribution of LDA scores&quot; title=&quot;Distribution of LDA scores&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/discograph2.png&quot; alt=&quot;Distribution of tag scores&quot; title=&quot;Distribution of tag scores&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- Footnotes themselves at the bottom. --&gt;
+&lt;h2 id=&quot;notes&quot;&gt;Notes&lt;/h2&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+
+      &lt;p&gt;For more on TF-IDF, see &lt;a href=&quot;https://programminghistorian.org/en/lessons/analyzing-documents-with-tfidf#tf-idf-definition-and-background&quot;&gt;Matt Lavin’s Programming Historian tutorial&lt;/a&gt; on the subject, especially the section on “Definition and Background.” &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+
+      &lt;p&gt;LDA, and topic modeling in general, are “stochastic” methods that do not produce the same results each time an identical process is run. For more mathematical detail on topic modeling and why we are not concerned about stochasticity for the purposes of the Disco Engine, see two pieces that Weingart links to: Ted Underwood’s “&lt;a href=&quot;https://tedunderwood.com/2012/04/07/topic-modeling-made-just-simple-enough/&quot;&gt;Topic Modeling Made Just Simple Enough&lt;/a&gt;,” and David Blei’s “&lt;a href=&quot;http://www.cs.columbia.edu/~blei/papers/Blei2012.pdf&quot;&gt;Probabilistic Topic Models&lt;/a&gt;.” &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Alireza Taheri Araghi et al.</name></author><category term="eebo-tcp" /><summary type="html">Let’s say you are interested in The Shepheardes Calender and you are wondering whether there are other early modern English texts similar to Spenser’s odd, but not entirely idiosyncratic work. Scholars of Spenser, of the history of pastoral, and of Elizabethan literary culture have unearthed a dozen or so sources and perhaps a couple of dozen analogues, but might that list be supplemented? Might one uncover unexpected similarities in texts scattered across a corpus of early printed books that contains more than 60,000 texts, many of them unfamiliar and under-investigated?</summary></entry><entry><title type="html">Introduction to MorphAdorner</title><link href="http://localhost:4000/intros/2019/05/22/intro-to-morphadorner.html" rel="alternate" type="text/html" title="Introduction to MorphAdorner" /><published>2019-05-22T09:28:16-05:00</published><updated>2019-05-22T09:28:16-05:00</updated><id>http://localhost:4000/intros/2019/05/22/intro-to-morphadorner</id><content type="html" xml:base="http://localhost:4000/intros/2019/05/22/intro-to-morphadorner.html">&lt;p&gt;Search and analysis of the Early Print Library depends on a software package called &lt;strong&gt;MorphAdorner,&lt;/strong&gt; developed by Phil Burns at Northwestern University during the mid 2000s.  In order to understand what MorphAdorner does, it is worth detailing the basic challenges and scope of natural language processing, by which machines are able to “read” textual data for a variety of interpretive purposes. For a computer program, text often begins as a string of characters that includes features such as whitespace and punctuation; a computer program that reads or produces textual data does not “naturally” observe the distinctions that humans make between such items as words, sentences, and paragraphs. Thus the following two lines of verse:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I sing of May-poles, Hock-carts, Wassails, Wakes,  \&lt;br /&gt;
+Of Bride-grooms, Brides, and of their Bridall-cakes.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;are represented by a computer as one continuous string of data that includes the spaces between words, the punctuation, and the line breaks. Space and punctuation alone are not infallible markers of word or sentence boundaries; they are at best the most rudimentary sign of distinctions between words and sentences with key exceptions in both Early Modern and contemporary usages of English.&lt;/p&gt;
+
+&lt;p&gt;The process of text tokenization is one in which a text is split into discrete “tokens” for the purposes of establishing, within a given machine reading software program, the existence of language features, such as words. The simplest approach to tokenization is to split a text string into tokens along its whitespace sequences, in order to create a series of tokens that are, for the most part, what human readers will identify as words; a simple string of text such as: “I sing of May-poles” would split the string on the whitespace to produce four new strings, or tokens: “I”, “sing”, “of”, and “May-poles”. It is because these words within a text string are now counted as discrete elements that tokenization makes a corpus more manageable for machine reading, corpus searching, and various counting and other analytical procedures that one might want to do, especially over a larger corpus. It is, for example, only through word tokenization that one is able to unambiguously search a corpus for distinct words.&lt;/p&gt;
+
+&lt;p&gt;These capabilities are augmented through the use of a markup language, which allows for the encoding of long, unwieldy strings of text with annotation to build a taxonomy of a text’s given parts. Markup languages affix tags to various textual features, which in turn can facilitate different kinds of search, analysis, and displays of digitized text. XML (Extensible Markup Language) is a general-purpose markup standard, and the &lt;a href=&quot;https://tei-c.org/&quot;&gt;Text Encoding Initiative (TEI)&lt;/a&gt; provides guidelines for marking up humanities-oriented texts in XML. The TEI provides a vocabulary for tagging common document structures to identify title pages, chapters, paragraphs, etc. It provides optional mechanisms for linguistic annotation. The TEI encourages a common approach to marking up documents where possible, and also provides support for documented customization.&lt;/p&gt;
+
+&lt;p&gt;Linguistic markup in TEI-XML can apply individual tags to word- and punctuation-level structures, and these tags can themselves be annotated with attributes that associate the word with particular linguistic categories or offer alternate versions of the word. MorphAdorner’s primary function is to annotate text in this way. In particular, MorphAdorner has been designed to mark up Early Modern English texts to annotate variant spellings with regularized forms, and also to identify root forms of words that vary in expression for grammatical reasons. Some common examples of Early Modern word spellings regularized for modern readers include “loue,” which regularizes to “love” and “bee” to “be.” MorphAdorner also regularizes capitalization, such that a “The” which begins a sentence is counted the same as a “the” in lowercase type.&lt;/p&gt;
+
+&lt;p&gt;At this juncture, it is important to point out that the matters of how to tokenize, tag, and annotate a digital text are often heavily debated. The MorphAdorned XML represents a tokenization of the text, with each token annotated by part of speech, lemma (dictionary headword), and in some cases a regularized version of spelling.&lt;/p&gt;
+
+&lt;p&gt;As a first step, MorphAdorner uses a number of heuristics to identify sentence boundaries in a text. In the simplest common case, a period ends a sentence and a capital letter begins a new sentence. But of course not every capital letter begins a sentence, and not every period ends one. MorphAdorner includes a curated list of early modern abbreviations along with some generic rules to try to identify unknown abbreviations. It also makes some preliminary guesses at parts of speech in order to try to ensure that each sentence has a verb, and in order to consider the possibility that a capital letter might be attributable to a proper noun rather than the beginning of a sentence.&lt;/p&gt;
+
+&lt;p&gt;As MorphAdorner splits the text into sentences, it also makes use of spacing, punctuation, and other patterns to identify tokens. Then it iterates over each sentence and assigns parts of speech to each word. This is an involved process that draws on prior hand-annotated training data to take into account early modern word frequencies, spelling variations, and local patterns of succession in neighboring parts of speech, among other things.&lt;/p&gt;
+
+&lt;p&gt;There are complexities and adjustments that cross layers of analysis along the way. It turns out that we often don’t want to simply interpret every space as a word divider, especially in a heterogenous corpus of early modern English. Just as we can see “have” and “haue” as two different spellings of the same word, why not also recognize “tomorrow” and “to morrow” as essentially variant spellings of the same word, rather than three unrelated words, two of them happening to be neighbors in a particular context?&lt;/p&gt;
+
+&lt;p&gt;Perhaps even more interestingly, what we now know as reflexive pronouns (“myself,” “themselves”) have common early modern orthographic variants (“my self”, “them selues”). It’s not just tokenization and orthography that get mixed up here; arguably one might want to be open to a historical analysis of the grammar that would allow for both two-word and one-word part of speech analysis. For now, for the sake of a plausible degree of consistency and intelligibility, the MorphAdorned XML tokenizes, regularizes, and annotates these as if they were functionally single-word reflexive pronouns. The original spelling with a space is preserved, so someone interested in the phenomenon could make use of the XML’s consistent regularization to study it.&lt;/p&gt;
+
+&lt;p&gt;Like spaces, apostrophes don’t have a singular interpretation when tokenizing and analyzing words. An apostrophe can appear within a word as a kind of orthographic variant marking an elided letter, perhaps as a hint at pronunciation, as in “heau’nly” or “admir’d” or “liv’st.” But an apostrophe can also mark an elision in the contraction of two words, such as “th’one” or “th’uttermost.” And in practice apostrophes can be apparently misplaced, appearing as in “thi’nclination,” or might not appear at all, as in apostrophe-less contractions of “thone” for “the one.”&lt;/p&gt;
+
+&lt;p&gt;Hyphens are also not unambiguous. The original TCP transcriptions did not observe all line breaks, but did record end-of-line hyphenation. MorphAdorner does try to silently remove these hyphens when they seem to have no function except at the line break, based on evidence of the frequency of corresponding unhyphenated tokens in other parts of the corpus. Plenty of hyphens should be preserved, as in “lambe-like” or “all-seeing.” Yet hyphens also appear as orthographic variants and can affect assumptions about tokenization. For example, one can find instances of “common wealth,” “common-wealth,” and “commonwealth.” The primary transcription in XML keeps faithful track of these differences, but analytic annotations offer an opportunity to relate these to each other as variant forms of, arguably, a single word.&lt;/p&gt;
+
+&lt;p&gt;The MorphAdorned XML is subject to improvement; it’s not perfectly consistent, but it is a major step toward a consistent, curated, machine-assisted analysis of a major corpus of early modern printed English text.&lt;/p&gt;
+
+&lt;p&gt;The reproduction of a text and the choices that are made as to how to break up strings of data into tokens, how to tag such tokens, and how to reproduce the text for digital readers with options for spelling are also matters that center on the question of what counts as textual “content” and what counts as textual “form,” a distinction that is almost always roughly made. As a result, various approaches to natural language processing exist to meet a variety of needs. Tools that use natural language processing range from the automated reading and scoring of textual work, text mining, deep learning linguistic processing, foreign language aid and translation, the retrieval and extraction of qualitative data, and the processing of recorded speech; natural language processing is central to the management of textual data on the whole.&lt;/p&gt;
+
+&lt;p&gt;MorphAdorner was developed by scholars at Northwestern to meet the more specific purposes of processing a corpus such as EEBO-TCP, for which users are more likely to be scholars in the humanities with a range of tasks that include literary analysis and undergraduate- or graduate-level pedagogy.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; In the first place, MorphAdorner identifies its goals apart from other natural language processing tools:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;We use the term “adornment” in preference to terms such as “annotation” or “tagging” which carry too many alternative and confusing meanings. Adornment harkens back to the medieval sense of manuscript adornment or illumination – attaching pictures and marginal comments to texts.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;MorphAdorner is therefore explicitly committed to the preservation of the original text (via TEI standards) in XML, while also tagging each word in a corpus with several other useful attributes for work in corpus linguistics: standard spellings, parts of speech, and lemmata. Additionally, speech tagging as developed for MorphAdorner is far more intricate than that used by most natural language processing tools, which are often built using the Penn Treebank Part of Speech tagging system of &lt;a href=&quot;https://www.eecis.udel.edu/~vijay/cis889/ie/pos-set.pdf&quot;&gt;42 distinct grammatical parts of speech and punctuation&lt;/a&gt;. MorphAdorner uses its own system,  “NUPOS” (Northwestern University Part of Speech tagset, developed by Martin Mueller and adapted from the CLAWS tagsets developed at Lancaster University). NUPOS  taxonomizes words into seventeen major word classes, then into thirty four word classes, and finally divides words into about 150  English parts of speech, each of which is housed in one word class. This system allows for much more granular analysis of a text’s linguistic features through processes such as grouping, sorting, and counting words. The full list of tags is available on MorphAdorner’s &lt;a href=&quot;http://morphadorner.northwestern.edu/morphadorner/documentation/nupos/&quot;&gt;documentation section of their website&lt;/a&gt;, and more information is available in “Introduction to NUPOS” documentation [ link to Ali?].&lt;/p&gt;
+
+&lt;p&gt;The XML notation makes it relatively easy to discern between the original text and the annotations the MorphAdorner has chosen to encode. Here, Herrick’s “Bride-grooms” is thusly tagged:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;        &amp;lt;w lemma=&quot;bridegroom&quot; pos=&quot;n2&quot; reg=&quot;Bridegrooms&quot;&amp;gt;Bride-grooms&amp;lt;/w&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;…where the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;w&amp;gt;&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;/w&amp;gt;&lt;/code&gt; are XML tags that wrap the word and attendant annotations, “lemma” is the lemma form, “pos” is the part of speech (plural noun), and “reg” indicates the regularized spelling of the word, respectively. Here, a reader can see that preordained choices are being made on the matter of regularization.&lt;/p&gt;
+
+&lt;p&gt;MorphAdorner reads XML texts and tokenizes according to sentence and word boundaries (so, splitting on whitespace and punctuation), and produces a new XML file that adorns each word/token with five attributes: the lemma, or dictionary headword and word class; the part of speech according to the NUPOS schema; the “token spelling,” or the spelling as it appears in the original digitized text; the “standard original spelling,” or a version of the spelling in which typographical conventions of earlier digitization processes are normalized (this is the spelling that most often and most closely resembles the spelling on the physical page or digitized scan); and the “standard modern spelling” that regularizes the word according to modern orthographical standards. It is easy enough to imagine that the XML documents produced via MorphAdorner processing are extremely long compared to the original digitized texts. Each word, wrapped in the &lt;w&gt; tag, contains the five tags that provide the information outlined above, in addition to the information marked in the original XML file, such as line break and italicization. At first glance it seems a dense script for the human eye to read, but after a moment, one can more readily identify each word's original token spelling, and then the accompanying tags—bountiful adornments that make it possible for Early Print to execute its various search operations and to return results that provide immediately useful bibliographic information and key words in context as lemmata or regularized and original spellings of words.&lt;/w&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;      &amp;lt;l xml:id=&quot;A43441-e930&quot;&amp;gt;
+       &amp;lt;w lemma=&quot;i&quot; pos=&quot;pns&quot;&amp;gt;I&amp;lt;/w&amp;gt;
+       &amp;lt;w lemma=&quot;sing&quot; pos=&quot;vvb&quot;&amp;gt;sing&amp;lt;/w&amp;gt;
+       &amp;lt;w lemma=&quot;of&quot; pos=&quot;acp&quot;&amp;gt;of&amp;lt;/w&amp;gt;
+       &amp;lt;hi&amp;gt;
+        &amp;lt;w lemma=&quot;maypole&quot; pos=&quot;n2&quot; reg=&quot;Maypoles&quot;&amp;gt;May-poles&amp;lt;/w&amp;gt;
+        &amp;lt;pc&amp;gt;,&amp;lt;/pc&amp;gt;
+        &amp;lt;w lemma=&quot;hock-cart&quot; pos=&quot;n2&quot;&amp;gt;Hock-carts&amp;lt;/w&amp;gt;
+        &amp;lt;pc&amp;gt;,&amp;lt;/pc&amp;gt;
+        &amp;lt;w lemma=&quot;wassail&quot; pos=&quot;n2&quot;&amp;gt;Wassails&amp;lt;/w&amp;gt;
+        &amp;lt;pc&amp;gt;,&amp;lt;/pc&amp;gt;
+        &amp;lt;w lemma=&quot;wake&quot; pos=&quot;n2&quot;&amp;gt;Wakes&amp;lt;/w&amp;gt;
+        &amp;lt;pc&amp;gt;,&amp;lt;/pc&amp;gt;
+       &amp;lt;/hi&amp;gt;
+      &amp;lt;/l&amp;gt;
+      &amp;lt;l&amp;gt;
+       &amp;lt;w lemma=&quot;of&quot; pos=&quot;acp&quot;&amp;gt;Of&amp;lt;/w&amp;gt;
+       &amp;lt;hi&amp;gt;
+        &amp;lt;w lemma=&quot;bridegroom&quot; pos=&quot;n2&quot; reg=&quot;Bridegrooms&quot;&amp;gt;Bride-grooms&amp;lt;/w&amp;gt;
+        &amp;lt;pc&amp;gt;,&amp;lt;/pc&amp;gt;
+        &amp;lt;w lemma=&quot;bride&quot; pos=&quot;n2&quot;&amp;gt;Brides&amp;lt;/w&amp;gt;
+       &amp;lt;/hi&amp;gt;
+       &amp;lt;pc rendition=&quot;#follows-hi&quot;&amp;gt;,&amp;lt;/pc&amp;gt;
+       &amp;lt;w lemma=&quot;and&quot; pos=&quot;cc&quot;&amp;gt;and&amp;lt;/w&amp;gt;
+       &amp;lt;w lemma=&quot;of&quot; pos=&quot;acp&quot;&amp;gt;of&amp;lt;/w&amp;gt;
+       &amp;lt;w lemma=&quot;their&quot; pos=&quot;po&quot;&amp;gt;their&amp;lt;/w&amp;gt;
+       &amp;lt;w lemma=&quot;bridall-cake&quot; pos=&quot;n2&quot; rendition=&quot;#hi&quot;&amp;gt;Bridall-cakes&amp;lt;/w&amp;gt;
+       &amp;lt;pc unit=&quot;sentence&quot;&amp;gt;.&amp;lt;/pc&amp;gt;
+      &amp;lt;/l&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+
+      &lt;p&gt;MorphAdorner’s website includes extensive documentation on the use of the tools as well as the history of their development: http://morphadorner.northwestern.edu/morphadorner/. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Meredith Kelling et al.</name></author><category term="morphadorner" /><category term="nupos" /><summary type="html">Search and analysis of the Early Print Library depends on a software package called MorphAdorner, developed by Phil Burns at Northwestern University during the mid 2000s. In order to understand what MorphAdorner does, it is worth detailing the basic challenges and scope of natural language processing, by which machines are able to “read” textual data for a variety of interpretive purposes. For a computer program, text often begins as a string of characters that includes features such as whitespace and punctuation; a computer program that reads or produces textual data does not “naturally” observe the distinctions that humans make between such items as words, sentences, and paragraphs. Thus the following two lines of verse:</summary></entry><entry><title type="html">The Uses of EEBO-TCP</title><link href="http://localhost:4000/posts/2019/05/21/eebo-tcp-uses.html" rel="alternate" type="text/html" title="The Uses of EEBO-TCP" /><published>2019-05-21T09:28:16-05:00</published><updated>2019-05-21T09:28:16-05:00</updated><id>http://localhost:4000/posts/2019/05/21/eebo-tcp-uses</id><content type="html" xml:base="http://localhost:4000/posts/2019/05/21/eebo-tcp-uses.html">&lt;p&gt;&lt;img src=&quot;/assets/img/TCP-uses.png&quot; alt=&quot; A cursory search of two major online databases of academic publications, ProQuest and ProjectMUSE, reveals that scholarly citation of EEBO in academic journals has steadily increased during the past two decades.&quot; title=&quot; A cursory search of two major online databases of academic publications, ProQuest and ProjectMUSE, reveals that scholarly citation of EEBO in academic journals has steadily increased during the past two decades.&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Figure 1: A cursory search of two major online databases of academic publications, ProQuest and ProjectMUSE, reveals that scholarly citation of EEBO in academic journals has steadily increased during the past two decades.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The ability to access an incredibly comprehensive series of titles in pre-1700 English print makes possible the previously unimaginable in scholarly inquiry. Before EEBO-TCP and the ability to search within its contents, the wrangling together of subcorpora for scholarly inquiry constituted a time-consuming and laborious process which few could have afforded: consider, for example, the case of “&lt;a href=&quot;https://ubmd.com/about-ubmd/news.host.html/content/shared/university/news/news-center-releases/2005/02/7138.detail.html&quot;&gt;Reason the Unreasonable&lt;/a&gt;,” an English honors thesis that won EEBO’s own undergraduate essay competition in 2005 for its study of the last words of condemned Early Modern women as sourced in various texts, including broadsides and other ephemera, on the subject of women felons. Such a study would have been hardly possible without the student’s ability to access texts and generate a meaningful subcorpus at her own desktop, to say nothing of the unlikelihood of traveling to various libraries and collecting these materials within the short time constraints imposed by undergraduate semester schedules. The very nature of a comprehensive corpus such as EEBO-TCP, with its collection of approximately sixty thousand volumes by image sets and in fully encoded and searchable XML text editions makes it possible for users to not only uncover previously unexamined texts, but also to compare texts using advanced search functions–such as &lt;a href=&quot;https://quod.lib.umich.edu/t/text/help/xcsearch-boolean.html&quot;&gt;Boolean&lt;/a&gt;, &lt;a href=&quot;https://quod.lib.umich.edu/t/text/help/xcsearch-proximity.html&quot;&gt;proximity&lt;/a&gt;, &lt;a href=&quot;https://quod.lib.umich.edu/t/text/help/xcsearch-bib.html&quot;&gt;bibliographic&lt;/a&gt;, and &lt;a href=&quot;https://quod.lib.umich.edu/t/text/help/xcsearch-ww.html&quot;&gt;word index&lt;/a&gt; searches–to find lively ways of examining the horizons of Early Modern print through unexpected comparisons of texts.&lt;/p&gt;
+
+&lt;p&gt;As such, documenting the uses of the EEBO-TCP corpus is a dual challenge in uncovering its uses and describing the kinds of newer scholarly practices that are made possible through its existence and accessibility to scholars. The most obvious place to begin documenting the uses of EEBO-TCP in scholarly research, publication, and teaching is perhaps in a cursory look at online databases for scholarly publications. A search within two of the larger databases, ProQuest Lion and ProjectMUSE, revealed nearly six hundred unique article publications that cited or mentioned “EEBO.” The most common journals publishing these pieces are, perhaps unsurprisingly, the leading journals in Early Modern and Eighteenth Century English language and literary studies: ELH, SEL, Renaissance Quarterly, Shakespeare Quarterly, Shakespeare Studies, Spenser Studies, Studies in Philology, Eighteenth Century Studies, Eighteenth Century Fiction. &lt;em&gt;Pedagogy&lt;/em&gt; also commonly appears, demonstrating that EEBO’s use as a resource for teaching the use of digital tools in a humanities classroom. This search, however, does not exactly reveal the use of EEBO-TCP as opposed to EEBO; those who cite “EEBO” might simply be reading image scans on the EEBO website of specific texts, rather than downloading and/or analyzing EEBO-TCP files, though the acts of searching on the website necessarily involve its hunting through the EEBO-TCP corpus to produce results.&lt;/p&gt;
+
+&lt;p&gt;The prevalence of citing EEBO has steadily increased over the past 15 years (see Figure 1, above), continuing the upward tick of scholarly usage first thoroughly documented in a 2013 study of EEBO-TCP users conducted by Judith Siefring and Jonathan Blaney (&lt;a href=&quot;http://eebo.chadwyck.com/about/downloads/UK_EEBO_TCP_research_2013.pdf&quot;&gt;Sustaining the EEBO-TCP Corpus in Transition: Report on the TIDSR Benchmarking Study&lt;/a&gt;).&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; This study surveyed over 200 EEBO-TCP users during 2012 to garner an understanding of their uses of EEBO and their general research and teaching habits, useful for giving the roughest of contours to understanding EEBO-TCP’s uses at six years’ remove. In 2013, 72% percent of active users reported that “EEBO is important to my field or discipline”; 59% reported that “EEBO makes new research possible”; and 26% reported that “EEBO is important to my teaching.” Users reported most often using EEBO as a “reference resource” (75% percent of users); to “consult image sets” (69%); to “consult full-text transcriptions” (65%); as a “research resource for manual analysis” (61%); for “full-text searches across the corpus” (55%); to “download image sets” (55%); “pursue personal interests/ research” (53%); “find materials to consult in person” (51%); to “find teaching materials” (41%); to “download full-text transcriptions” (38%); to “reuse/re-editing for new purposes” (12%); and finally, as a “source for quantitative analysis” (11%).&lt;/p&gt;
+
+&lt;p&gt;There are a few things to consider when extrapolating from this 2013 data into the many unknowns of how much users and their needs may have increased or shifted over the course of the past five years (a significant amount of time, it would seem, for the acceptance of digital tools and methods within “traditional” scholarly textual research). In the first place, the above, extremely rudimentary study of scholarly citation of EEBO might demonstrate that EEBO continues to be used regularly by scholars for their own research (into texts as it is traditionally conceived), as an online resource for textual analysis; in other words, that the texts as reproduced in EEBO-TCP are analyzed as copies of the originals housed in often distant archives, and the contours of research follow traditional methods of literary and cultural scholarship that assess individual texts through close reading. But as Blaney and Siefring have elsewhere analyzed, there is a distinct possibility that usage of digital resources, like EEBO-TCP, is often “hidden” in citational practices; as they state in a 2017 article: “many believe digital resources are, or are perceived to be, less reliable or not as good as ‘real’ (i.e. conventional print) resources.”&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; In other words, we are not able to capture the full range of traditional textual analysis that has relied on EEBO-TCP, for the reasons that practices of citing EEBO and preconceived notions that undergird citation of digital resources both apparently remain matters of debate amongst scholars.&lt;/p&gt;
+
+&lt;p&gt;At the same time, a persistent rise in the use of digital tools and methods to construct new kinds of analysis has expanded the question of the use of such databases beyond their application as digitized reference texts. A search for articles within the two aforementioned databases that included mention of both “EEBO” and “distant reading,” for example, returned only seven articles, but all of them published in (2) or after (5) 2013—a small but noticeable uptick, but by no means an adequate way of assessing the impacts of the field of Digital Humanities upon EEBO-TCP’s user identities and their requirements. It would be most interesting to know, more specifically, how the availability of searchable text files, XML files, and EEBO-TCP metadata has increased the number of scholars who use these resources for distant reading approaches to corpus analysis, or for any other uses that might fall under the 2013 category of using EEBO-TCP as “a source for quantitative analysis.” Scholarly use of distant reading tools, search and analyses across a broader corpus rather than within individual texts, and machine learning tools such as natural language processing have generated both new means of accessing EEBO-TCP as well as new means of presenting and analyzing the corpus beyond traditional academic deliverables, such as journal articles and book chapters.&lt;/p&gt;
+
+&lt;p&gt;Additionally, the relatively recent presence of journals devoted to computational studies of text and culture (including of the “digital humanities”), such as Journal for Cultural Analytics (founded in 2016) and Digital Humanities Quarterly (founded in 2007) is a sign of increased avenues for publication of computational approaches to text; a 2018 entitled “Linked Reading: Digital Historicism and Early Modern Discourses of Race around Shakespeare’s Othello” is a prime example of EEBO-TCP’s being used for such scholarship.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; Cultural Analytics in particular foregrounds the data used by authors in their publications so that readers may peruse and analyze data on their own; part of a remarkable shift in the circulation of scholarly work that illuminates the research and analysis practices that are often veiled in the processes of scholarly publication. Here, the conversation circulated between an article’s author(s) and its audience would seem to lengthen the “live” nature of a published piece, as readers are impliedly invited to communicate with authors and with each other through the perusal of online data repositories and by email (Cultural Analytics publishes bylines that include author email addresses in hyperlinks).&lt;/p&gt;
+
+&lt;p&gt;The means of tracking EEBO-TCP’s use will need to account for the shifts inherent in scholarly fields that draw on digital tools and methods towards ongoing projects and potentially away from traditional methods of humanistic inquiry and publication. The Text Creation Partnership has kept track of live and past projects that use TCP in these various ways. Scholarly online editions reliant on EEBO-TCP corpora include Oxford University’s Holinshed Project, Washington University’s Spenser Archive, and Texas A&amp;amp;M’s Digital Donne. Online projects that draw on EEBO-TCP in addition to other digital resources as part of a cohesive digital project include Witches of Early Modern England, a cross-corpora search platform for finding texts relating to early modern witchcraft; Early Printed Poetry Miscellanies, 1557-1621: A Digitised Edition, a digitization of Elizabethan poetry anthologies; Lexicons of Early Modern English, a historical database of Early Modern dictionaries; the Map of Early Modern London, a series of interoperable projects mapping Early Modern London by people, places, organizations, and bibliography; the Virtual St. Paul’s Cathedral Project, which uses 3-D visual and acoustic modelling technology to digitally reproduce the experience of listening to John Donne’s Gunpowder Day sermon in 1622; Shakosphere, a tool for networking data about Early Modern authorship, print and publication actors; and Early Modern Print, an EEBO-TCP text mining resource with tools for N-gram browsing and searching for keywords in context.&lt;/p&gt;
+
+&lt;p&gt;These are all ongoing funded research projects that may involve a variety of principal investigators and other participants, generally leading to written reports and analysis for the audience of a various online project, conference audiences, as well as for article publication. Blogs managed by these projects, or by individual digital humanists (Ted Underwood and Scott Weingart are prime examples of deeply engaged DH bloggers), as well as social media (predominantly Twitter) are both places to examine the bustle of activity centered on the use of EEBO-TCP data. And considering that many of these projects have their own users who mine the materials of a project as presented for their own research, and in many cases contribute to the project through corrections, annotations, add-a-thons, and other means of enriching a project’s data and metadata, the uses of EEBO-TCP ought to be said to have expanded into layers of more immediate and more indirect users; a user of, say, Early Modern Print does not even have to use EEBO-TCP interfaces to initially connect with its data. In other words, EEBO-TCP’s uses are expansive and not always easy to track the way one might comb over visiting logs for a particular physical archive, or peruse publications on a particular subject, due in no small part to the transformative effects of digital tools and methods upon traditional practices and products of humanistic inquiry.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+
+      &lt;p&gt;Siefring, J. &amp;amp; Meyer, E.T. (2013). Sustaining the EEBO-TCP Corpus in Transition: Report on the TIDSR Benchmarking Study. London: JISC. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+
+      &lt;p&gt;Blaney, Jonathan, and Judith Seifring. A Culture of Non-Citation: Assessing the digital impact of British History Online and the Early English Books Online Text Creation Partnership. Digital Humanities Quarterly, 11.1, 2017. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+
+      &lt;p&gt;James Jaehoon Lee, Blaine Greteman, Jason Lee, and David Eichmann, “Linked Reading: Digital Historicism and Early Modern Discourses of Race around Shakespeare’s Othello,” Journal of Cultural Analytics. Jan. 25, 2018. DOI: 10.31235/osf.io/tg23u &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Meredith Kelling et al.</name></author><category term="eebo-tcp" /><summary type="html"></summary></entry><entry><title type="html">Introduction to EEBO-TCP</title><link href="http://localhost:4000/intros/2019/05/10/intro-to-eebo-tcp.html" rel="alternate" type="text/html" title="Introduction to EEBO-TCP" /><published>2019-05-10T09:28:16-05:00</published><updated>2019-05-10T09:28:16-05:00</updated><id>http://localhost:4000/intros/2019/05/10/intro-to-eebo-tcp</id><content type="html" xml:base="http://localhost:4000/intros/2019/05/10/intro-to-eebo-tcp.html">&lt;h2 id=&quot;digitizing-227-years-of-english-print&quot;&gt;Digitizing 227 Years of English Print&lt;/h2&gt;
+
+&lt;h3 id=&quot;eebo-early-modern-english-scanned&quot;&gt;EEBO: Early Modern English Scanned&lt;/h3&gt;
+
+&lt;p&gt;Early English Books Online (&lt;a href=&quot;https://eebo.chadwyck.com/home&quot;&gt;EEBO&lt;/a&gt;) is a resource for studying early English print as well as early modern British culture.The EEBO database provides “images of virtually every work printed in England, Ireland, Scotland, Wales and British North America and works in English printed elsewhere from 1473–1700.” (&lt;a href=&quot;https://eebo.chadwyck.com/about/about.htm&quot;&gt;About EEBO&lt;/a&gt;) EEBO began in the 1930s as a microfilm project when the young publisher Eugene B. Power founded University Microfilms (now ProQuest) and began photographing and microfilming English books published before 1701. A similar project by a rival company was carried out on printed materials of the eighteenth century based on “The Eighteenth Century Short Title Catalogue.” Over twenty years ago, ProQuest started to digitize and make available its microfilms of early print to create the database that we now know as EEBO.&lt;/p&gt;
+
+&lt;p&gt;Although the black-and-white microfilms that form the basis of EEBO go back four score years and the images are not without imperfections, since its launch the database has remarkably facilitated access to the early modern printed English texts.&lt;/p&gt;
+
+&lt;p&gt;The EEBO database reproduces titles from four collections:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Pollard &amp;amp; Redgrave’s Short-Title Catalogue (1475-1640). First published in 1927, with a second edition released between 1976 and 1991, STC catalogues works printed in the British Isles, its colonies, or elsewhere in the world provided they were in English or another British language.&lt;/li&gt;
+  &lt;li&gt;Wing’s Short-Title Catalogue (1641-1700). This catalogue was compiled by Donald Wing between 1945 and 1951. A revised edition appeared between 1972 and 1998.&lt;/li&gt;
+  &lt;li&gt;Thomason Tracts (1640-1661). A collection of pamphlets, broadsides, books, and other types of writing mostly printed in London from 1640 to 1661. Curated by George Thomason, the 22,000 items in the collection represent about 80 percent of what was published in England in the period.&lt;/li&gt;
+  &lt;li&gt;Early English Books Tract Supplement. This collection comprises 16th- and 17th-century broadsides and pamphlets collected as “scrapbooks” or tract volumes categorized by such criteria as dates or topics. Mainly from the British Library, the tract volumes make it possible for the reader “to see the materials in the same order as they would when leafing through the original volume.” (About EEBO)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;gaps-and-asymmetries&quot;&gt;Gaps and Asymmetries&lt;/h3&gt;
+
+&lt;p&gt;To say  that EEBO fully represents the British print culture would be misleading, if not outright wrong. EEBO does not contain every book printed in English within the time-frame of the collection. Books might have gone missing before the microfilming project began. EEBO does not include all the extant copies of an edition and, as the Early Modern English scholars are aware, different copies of the same edition may significantly vary from one to another. Wing’s catalogue leaves out periodicals which STC includes and does not offer as comprehensive metadata as STC does. Also because STC excludes non-English materials, large numbers of Latin books imported into England from the fifteenth century on are not part of the catalogue. That said, the database is not monolingual either as it “covers more than 30 languages from Algonquin to Welsh.” (There are a few books in Latin and Persian with minimal or no English in them.)&lt;/p&gt;
+
+&lt;h4 id=&quot;read-more&quot;&gt;Read more:&lt;/h4&gt;
+
+&lt;p&gt;“&lt;a href=&quot;https://onlinelibrary.wiley.com/doi/full/10.1111/j.1741-4113.2009.00632.x&quot;&gt;The Use and Misuse of Early English Books Online&lt;/a&gt;,” by Ian Gadd.&lt;/p&gt;
+
+&lt;p&gt;“&lt;a href=&quot;https://folgerpedia.folger.edu/History_of_Early_English_Books_Online&quot;&gt;History of Early English Books Online&lt;/a&gt;”&lt;/p&gt;
+
+&lt;h3 id=&quot;some-eebo-numbers&quot;&gt;Some EEBO Numbers&lt;/h3&gt;
+&lt;p&gt;More than 132,000 titles.&lt;br /&gt;
+More than 17 million scanned pages.&lt;br /&gt;
+Currently scanning 100,000 more pages.&lt;br /&gt;
+More than 30 languages:&lt;br /&gt;
+9496 records in Latin&lt;br /&gt;
+742 records in Romance (other)&lt;br /&gt;
+619 records in French&lt;br /&gt;
+309 records in Ancient Greek&lt;br /&gt;
+282 records in Modern Greek&lt;br /&gt;
+204 records in Welsh&lt;br /&gt;
+172 records in Dutch&lt;br /&gt;
+146 records in Middle French&lt;br /&gt;
+138 records in Italian&lt;br /&gt;
+111 records in Hebrew&lt;br /&gt;
+88 records in German&lt;br /&gt;
+82 records in Scots&lt;br /&gt;
+60 records in Spanish&lt;br /&gt;
+36 records in Arabic&lt;br /&gt;
+19 records in Gaelic (Irish)&lt;br /&gt;
+13 records in Algonquin&lt;br /&gt;
+10 records in Aramaic&lt;br /&gt;
+10 records in North American Indian (other)&lt;br /&gt;
+9 records in Gaelic (Scots)&lt;br /&gt;
+8 records in Persian&lt;br /&gt;
+7 records in Portuguese&lt;br /&gt;
+6 records in Syriac&lt;br /&gt;
+5 records in Newari&lt;br /&gt;
+3 records in Old French&lt;br /&gt;
+2 records in Pahlavi&lt;br /&gt;
+2 records in Polish&lt;br /&gt;
+2 records in Turkish&lt;br /&gt;
+1 records in Chinese&lt;br /&gt;
+1 records in Ethiopic&lt;br /&gt;
+1 records in Lithuanian&lt;br /&gt;
+1 records in Malay&lt;/p&gt;
+
+&lt;h3 id=&quot;what-is-tcp-early-modern-machine-friendly&quot;&gt;What is TCP?: Early Modern, Machine-friendly&lt;/h3&gt;
+
+&lt;p&gt;The &lt;a href=&quot;http://www.textcreationpartnership.org/&quot;&gt;Text Creation Partnership&lt;/a&gt; (TCP) is an academic endeavor aiming to create standardized, machine-readable, searchable texts of early English print. The partnership aims to “transcribe and mark up the text from the millions of page images in ProQuest’s Early English Books Online, Gale Cengage’s Eighteenth Century Collections Online (ECCO), and Readex’s Evans Early American Imprints.” (&lt;a href=&quot;http://www.textcreationpartnership.org/home/&quot;&gt;About TCP&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;Because they are machine-readable and tagged, TCP texts make quoting and searching of the EEBO materials considerably easier. The component parts of TCP texts are distinguishable by form (drama, prose, verse) and function (TOC, dedication). The &lt;a href=&quot;https://quod.lib.umich.edu/e/eebogroup/&quot;&gt;TCP search tools&lt;/a&gt; have been designed to facilitate working with early modern spelling irregularities. Simple, &lt;a href=&quot;https://eebo.chadwyck.com/help/bool.htm#bool&quot;&gt;Boolean&lt;/a&gt; (with AND, OR, NOT operators), &lt;a href=&quot;https://eebo.chadwyck.com/help/bool.htm#prox&quot;&gt;proximity&lt;/a&gt; (search terms with certain distance of one another), and citation search tools are available.&lt;/p&gt;
+
+&lt;p&gt;ٍEligibility for digitization and encoding of a title depends on whether the author’s name appears in the New Cambridge Bibliography of English Literature (NCBEL). If anonymous, a work may still be selected if the title appears in the NCBEL bibliography. Because NCBEL contains both canonical and less lauded titles, its selection as guideline would result in a more variegated collection.&lt;/p&gt;
+
+&lt;p&gt;The Text Creation Partnership is funded by more than 150 libraries that own the outcome of the work. All of the TCP’s production, however, will ultimately be in the public domain.&lt;/p&gt;
+
+&lt;p&gt;Read more: “&lt;a href=&quot;https://earlyprint.wustl.edu/exploreeebotcp.html&quot;&gt;EEBO and EEBO-TCP: A Brief Introduction&lt;/a&gt;,” by Joseph Loewenstein.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;EEBO-TCP Partnership&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The collaboration between, University of Michigan, Oxford University, and ProQuest began in 1999 with the aim of  of creating &lt;a href=&quot;https://en.wikipedia.org/wiki/Text_Encoding_Initiative&quot;&gt;TEI&lt;/a&gt;-compliant &lt;a href=&quot;https://validator.w3.org/docs/sgml.html&quot;&gt;SGML&lt;/a&gt;/&lt;a href=&quot;https://en.wikipedia.org/wiki/XML&quot;&gt;XML&lt;/a&gt; texts from 25,000 of EEBO books. The project came in two phases.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Text Encoding Initiative (TEI)&lt;/strong&gt; is a set of open-source guidelines for “encoding machine-readable texts in the humanities and social sciences” to represent structural and conceptual features of texts. TEI guidelines are developed and maintained by the TEI Consortium, an international organization founded in 1987.&lt;/p&gt;
+
+&lt;p&gt;Read more on TEI: “&lt;a href=&quot;https://tei-c.org/&quot;&gt;Text Encoding Initiative&lt;/a&gt;”&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Standard Generalized Markup Language (SGML)&lt;/strong&gt; is a standard for how to define a markup language or tagset. (HTML is an example of a markup language). SGML itself is not a document language, but a description of how to specify one.&lt;/p&gt;
+
+&lt;p&gt;Read more on SGML: “&lt;a href=&quot;https://searchmicroservices.techtarget.com/definition/SGML-Standard-Generalized-Markup-Language&quot;&gt;SGML (Standard Generalized Markup Language)&lt;/a&gt;”&lt;br /&gt;
+“&lt;a href=&quot;https://en.wikipedia.org/wiki/Standard_Generalized_Markup_Language&quot;&gt;Standard Generalized Markup Language&lt;/a&gt;”&lt;br /&gt;
+“&lt;a href=&quot;https://www.w3.org/TR/REC-html40/intro/sgmltut.html#h-3.1&quot;&gt;On SGML and HTML&lt;/a&gt;”&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Extensible Markup Language (XML)&lt;/strong&gt; “is a markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable.” Like HTML, XML contains markup language to describe the formal structure of a page or a file.&lt;/p&gt;
+
+&lt;p&gt;Read more on XML: “&lt;a href=&quot;https://en.wikipedia.org/wiki/XML&quot;&gt;XML&lt;/a&gt;”&lt;br /&gt;
+“&lt;a href=&quot;https://searchmicroservices.techtarget.com/definition/XML-Extensible-Markup-Language&quot;&gt;XML (Extensible Markup Language)&lt;/a&gt;”&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;EEBO-TCP Phase 1&lt;/strong&gt;:
+The first phase of the EEBO-TCP work ran from 2000 to 2009 and resulted in the successful conversion of 25,363 selected texts from the EEBO corpus. “Since January 2015 these EEBO-TCP Phase I texts became freely available on the websites of the University of Michigan Library and the Bodleian Libraries at the University of Oxford.” (About EEBO)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;EEBO-TCP Phase 2:&lt;/strong&gt;
+EEBO-TCP Phase 2 begun in 2010 seeking “to convert each unique first edition in EEBO: around 45,000 books on top of the 25,000 completed in Phase I.” (About TCP-EEBO) Starting July 1, 2015, ProQuest will have the rights to distribute EEBO-TCP Phase II texts for five years. Until the texts pass into the public domain in 2020, they are accessible to subscribing users and partner libraries.&lt;/p&gt;</content><author><name>Alireza Taheri Araghi et al.</name></author><category term="eebo-tcp" /><summary type="html">Digitizing 227 Years of English Print</summary></entry><entry><title type="html">Introduction to NUPOS</title><link href="http://localhost:4000/intros/2019/05/10/intro-to-nupos.html" rel="alternate" type="text/html" title="Introduction to NUPOS" /><published>2019-05-10T09:27:16-05:00</published><updated>2019-05-10T09:27:16-05:00</updated><id>http://localhost:4000/intros/2019/05/10/intro-to-nupos</id><content type="html" xml:base="http://localhost:4000/intros/2019/05/10/intro-to-nupos.html">&lt;p&gt;NUPOS (Northwestern University Part of Speech tagset) is Martin Mueller’s part-of-speech tagset “designed to accommodate the major morphosyntactic features of written English from Chaucer to the present day” (&lt;a href=&quot;http://panini.northwestern.edu/mmueller/nupos.pdf&quot;&gt;see Mueller 2009&lt;/a&gt;). While NUPOS can, in theory, be used with any trainable tagger, so far, it has been used only with MorphAdorner, a Natural Language Processing (NLP) suite developed by Phillip Burns. The program locates word boundaries in its source texts (encoded in XML) and “adorns” each word with five morphological tags: three spelling tags, the NUPOS part of speech (POS) tag, and the lemma headword. In this section we will briefly introduce each one of these attributes.&lt;/p&gt;
+
+&lt;h2 id=&quot;spelling&quot;&gt;Spelling&lt;/h2&gt;
+
+&lt;p&gt;As the most basic encoding of a word, spelling may, at first, seem to be a simple entity. But when we speak of the spelling in texts from periods before spelling became regularized, it can be helpful to distinguish several different qualifiers for the term “spelling.”&lt;/p&gt;
+
+&lt;p&gt;1) &lt;strong&gt;Token spelling&lt;/strong&gt;: This is the spelling of the word “as it appears in the original digital source for the text” with “any typographical conventions that might be used in the source as markup for various purposes.” For example an original text might contain the token &lt;code class=&quot;highlighter-rouge&quot;&gt;common|lie&lt;/code&gt; where the vertical bar &lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt; has been used to mark up a soft hyphen at the end of the line.&lt;/p&gt;
+
+&lt;p&gt;The token spelling tries to remain faithful to the original digital source and for that reason it may contain non-uniform characters variously used when the texts were set, typographically, or marked up, digitally.&lt;/p&gt;
+
+&lt;p&gt;2) &lt;strong&gt;Standard original spelling&lt;/strong&gt;: In this version, the typographical and markup conventions are normalized. In most context, this spelling is what one might think of when the general term “the spelling of the word” is used. Standard original spelling is usually the same as the token spelling. The standard original spelling for the previous example would be:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;common|lie --&amp;gt; commonlie
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;3) &lt;strong&gt;Standard modern spelling&lt;/strong&gt;: Without modernizing the morphological form, this spelling is the standard modern orthographic form of the original spelling. For example, a spelling like “lovyth” is regularized to “loveth”, but “loveth” is not regularized to “loves”. The spelling, “loveth” itself is recognized as a standard archaic form. The standard modern spelling of the example above is as follows:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;common|lie --&amp;gt; commonlie --&amp;gt; commonly
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;word-classes&quot;&gt;Word Classes&lt;/h2&gt;
+
+&lt;p&gt;Each word part in NUPOS has a “word class” and a “major word class”. There are 34 word classes and 17 major word classes. Each word class has a very short string (1-3 letters) as name –for example “np” for proper noun– and belongs to only one major word class –in this case the class “noun.”&lt;/p&gt;
+
+&lt;h2 id=&quot;parts-of-speech&quot;&gt;Parts of Speech&lt;/h2&gt;
+
+&lt;p&gt;The fine-grained NUPOS tagset has 241 English parts of speech in its current version (not counting punctuation). Each POS belongs to one and only one word class, so parts of speech represent subdivisions of word classes.&lt;/p&gt;
+
+&lt;h2 id=&quot;lexical-units-and-word-parts-a-digression&quot;&gt;Lexical Units and Word Parts (a digression)&lt;/h2&gt;
+
+&lt;p&gt;Before addressing other tagging attributes of words, such as word class, part of speech, and lemma, we need to turn our attention to one specific complexity of texts—contractions.&lt;/p&gt;
+
+&lt;p&gt;Contractions are treated as single lexical words and are given their three different spellings as explained above. But in terms of other attributes, they are separated into their constituent parts and tagged accordingly. This means that in NUPOS, a lexical unit might have two parts (or conceivably even more). For example, a contraction like “who’s” is considered a bigram and tagged thus:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;
+   &lt;td&gt;&lt;strong&gt;word part&lt;/strong&gt;
+   &lt;/td&gt;
+   &lt;td&gt;&lt;strong&gt;major word class&lt;/strong&gt;
+   &lt;/td&gt;
+   &lt;td&gt;&lt;strong&gt;word class&lt;/strong&gt;
+   &lt;/td&gt;
+   &lt;td&gt;&lt;strong&gt;part of speech&lt;/strong&gt;
+   &lt;/td&gt;
+   &lt;td&gt;&lt;strong&gt;lemma&lt;/strong&gt;
+   &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td&gt;1
+   &lt;/td&gt;
+   &lt;td&gt;wh-word
+   &lt;/td&gt;
+   &lt;td&gt;crq
+   &lt;/td&gt;
+   &lt;td&gt;q-crq
+   &lt;/td&gt;
+   &lt;td&gt;who (crq)
+   &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td&gt;2
+   &lt;/td&gt;
+   &lt;td&gt;verb
+   &lt;/td&gt;
+   &lt;td&gt;va
+   &lt;/td&gt;
+   &lt;td&gt;vbz
+   &lt;/td&gt;
+   &lt;td&gt;be (va)
+   &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;lemmata&quot;&gt;Lemmata&lt;/h2&gt;
+
+&lt;p&gt;A lemma is defined as a dictionary “headword” plus its word class. For example, the verb “love” in Shakespeare has the headword “love” and the word class “v”. (He uses this lemma 1,135 times in a variety of contexts. As many as 153 instances of those usages are in the third person, singular, present, of which 150 instances are spelled “loves” and three “loveth.”)&lt;/p&gt;
+
+&lt;p&gt;The noun “love”, has a separate lemma. In general, for headwords like “love”, their word class is listed alongside the lemma. Thus for a word like “love” the two listed lemmata are “love (n)” and “love (v)”.&lt;/p&gt;
+
+&lt;h2 id=&quot;nupos-pos-tag-list-for-english&quot;&gt;NUPOS POS tag list for English&lt;/h2&gt;
+
+&lt;p&gt;A list of all the non-punctuation parts of speech defined by NUPOS can be found here:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://morphadorner.northwestern.edu/morphadorner/documentation/nupos/&quot;&gt;http://morphadorner.northwestern.edu/morphadorner/documentation/nupos/&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“NUPOS.” &lt;a href=&quot;http://morphadorner.northwestern.edu/morphadorner/documentation/nupos/&quot;&gt;http://morphadorner.northwestern.edu/morphadorner/documentation/nupos/&lt;/a&gt;. Accessed September 26, 2018.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Alireza Taheri Araghi et al.</name></author><category term="eebo-tcp" /><category term="nupos" /><category term="morphadorner" /><summary type="html">NUPOS (Northwestern University Part of Speech tagset) is Martin Mueller’s part-of-speech tagset “designed to accommodate the major morphosyntactic features of written English from Chaucer to the present day” (see Mueller 2009). While NUPOS can, in theory, be used with any trainable tagger, so far, it has been used only with MorphAdorner, a Natural Language Processing (NLP) suite developed by Phillip Burns. The program locates word boundaries in its source texts (encoded in XML) and “adorns” each word with five morphological tags: three spelling tags, the NUPOS part of speech (POS) tag, and the lemma headword. In this section we will briefly introduce each one of these attributes.</summary></entry><entry><title type="html">About Key Words in Context</title><link href="http://localhost:4000/how-to/2014/10/20/howto_kwic.html" rel="alternate" type="text/html" title="About Key Words in Context" /><published>2014-10-20T10:00:00-05:00</published><updated>2014-10-20T10:00:00-05:00</updated><id>http://localhost:4000/how-to/2014/10/20/howto_kwic</id><content type="html" xml:base="http://localhost:4000/how-to/2014/10/20/howto_kwic.html">&lt;p&gt;A program to generate collocations from the EEBO-TCP corpus by Anupam Basu.  For questions, comments, bug reports contact the Humanities Digital Workshop or Anupam at abasu@artsci.wustl.edu.&lt;/p&gt;
+
+&lt;p&gt;Select a corpus, enter one or more search terms separated by a semicolon, and click &lt;b&gt;View Words&lt;/b&gt;.  Searches are very literal; for example, entering love without spaces before and after the word will yield different results from entering  love with spaces before and after the word.&lt;/p&gt;
+
+&lt;p&gt;You can (and in some cases, you’ll need to) narrow you search by adjusting the year range slider, by entering one or more authors (last names are best; to enter more than one author, separate their names with semicolon), and/or by entering one or more titles.&lt;/p&gt;
+
+&lt;p&gt;You don’t have to enter the entire title; instead, a word or two will often work.&lt;/p&gt;</content><author><name>Alireza Taheri Araghi et al.</name></author><category term="ep-lab" /><summary type="html">A program to generate collocations from the EEBO-TCP corpus by Anupam Basu. For questions, comments, bug reports contact the Humanities Digital Workshop or Anupam at abasu@artsci.wustl.edu.</summary></entry><entry><title type="html">Using the N-gram Browser</title><link href="http://localhost:4000/how-to/2014/10/20/howto_ngram_browser.html" rel="alternate" type="text/html" title="Using the N-gram Browser" /><published>2014-10-20T10:00:00-05:00</published><updated>2014-10-20T10:00:00-05:00</updated><id>http://localhost:4000/how-to/2014/10/20/howto_ngram_browser</id><content type="html" xml:base="http://localhost:4000/how-to/2014/10/20/howto_ngram_browser.html">&lt;h2 id=&quot;using-the-n-gram-browser&quot;&gt;Using the N-gram Browser&lt;/h2&gt;
+
+&lt;h4 id=&quot;basic-usage&quot;&gt;Basic Usage&lt;/h4&gt;
+
+&lt;p&gt;The main browser screen presents users with a very simple combination of
+menu choices. To use the n-gram browser, select the appropriate database
+from the drop-down menu depending on whether you want to explore the raw
+EEBO-TCP corpus or one of the versions with algorithmically standardized
+spelling and part-of-speech (POS) tagging. Enter a word or phrase in the
+text-entry field and click search to generate a line-graph of relative
+frequencies over time. You can enter multiple words or phrases separated
+by commas to generate plots that allow you to compare trends. For
+example, entering “love, loue” in the search box for the unmodified
+corpus will generate separate lines for both variations that allow you
+to compare how their relative usages varied over the years. Similarly, a
+query involving different terms – say a search for “god, king” in the
+standardized spelling unigram corpus – would produce two lines that
+allow one to compare trends. A check box allows you to view a smoothed
+graph which tends to absorb minor local fluctuations or a step-plot that
+shows exact values for every year. The degree of smoothing depends on
+the number of years over which the rolling average is calculated and can
+be controlled from a drop-down menu.&lt;/p&gt;
+
+&lt;p&gt;The interface also allows you to share particular n-gram-plots by
+emailing them to others, or by tweeting them. You can also share these
+plots or come back to them later simply by copying or bookmarking the
+URL of the graph. We would like to collect any especially interesting
+patterns that you might come across, so please submit any interesting
+searches for archiving on the site as well.&lt;/p&gt;
+
+&lt;h4 id=&quot;advanced-usage-harnessing-the-power-of-regular-expressions&quot;&gt;Advanced Usage: Harnessing the Power of Regular Expressions&lt;/h4&gt;
+
+&lt;p&gt;The basic search options cover most search cases where one is interested
+in unique words or phrases. However, let’s say we are more interested in
+the emergence of a concept than the actual history of orthographic
+variation. The two separate trend lines for “love” and “loue” are not
+very useful in this instance. What we need is a single line that will
+capture both spelling variations as part of one search. We can of course
+switch to one of the standardized spelling versions of the EEBO-TCP
+corpus in the hope that any occurrences of “loue” will have been
+standardized to “love” in it. In the case of this rather simple variant,
+this is probably a fair assumption to make, but the process of
+standardizing early modern spelling to its modern equivalent is a
+fraught and difficult one and an active area of research in natural
+language processing. Early modern spelling is, computationally speaking,
+a moving and very difficult target. The quirks of early modern
+orthography arise out of a multitude of factors. If there is a
+fundamental impetus towards standardization on the one hand, the
+processes of standardization are influenced by a variety of factors,
+from debates on linguistic and cultural borrowing, to socio-economic
+conditions of the early book trade and the material constraints of
+typesetting and printing. Thus, while the accuracy of algorithmic
+standardization is increasing as we refine and reconfigure our
+techniques (and we will continue to update our standardized database as
+we build new versions), there will be many instances where automated
+spelling correction fails to meet our needs.&lt;/p&gt;
+
+&lt;p&gt;In other instances we might be interested in all variations of a word –
+“loved” as well as “beloved” – or clusters of words that we might take
+to represent related concepts – both “noble” and “aristocrat” (perhaps
+even “aristocratic”). In fact, beyond the surface level of poking at the
+database to reveal obvious trends, I suspect that most searches
+emanating from or leading to interesting research questions will take
+such complicated forms.&lt;/p&gt;
+
+&lt;p&gt;While it is impossible to pre-empt all such possible searches, regular
+expressions allow us to build arbitrarily complex queries for the n-gram
+browser. Regular expressions are a powerful technique for constructing
+complex searches within text data. While there are several subtly
+different ‘flavors’ implemented across different operating systems,
+command-line programs, and programming languages, regular expressions
+essentially constitute of a set of simple rules that can be combined
+together to build complex search patterns.&lt;/p&gt;
+
+&lt;h4 id=&quot;using-regular-expressions-in-the-n-gram-browser-1&quot;&gt;Using Regular Expressions in the N-gram Browser &lt;sup&gt;&lt;a href=&quot;#ftn1&quot; id=&quot;body_ftn1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h4&gt;
+
+&lt;p&gt;The N-gram browser allows you to directly enter regular expression
+searches in the search box. To indicate that your search consists of a
+regular expression, you should begin and end it with the “/” character.
+The N-gram browser will show you the words that matched your search, so
+you can refine your regular expression as needed.&lt;/p&gt;
+
+&lt;p&gt;Let’s say we want to capture both “love” and “loue” as part of the same
+query in the original spelling browser – we can write it as a simple
+regular expression &lt;code class=&quot;highlighter-rouge&quot;&gt;/lo[uv]e/&lt;/code&gt;. If we want to make sure that we capture
+possible variants of “king” in our search, we might use the regular
+expression &lt;code class=&quot;highlighter-rouge&quot;&gt;/k[iy]nge?/&lt;/code&gt;, which captures not only “king”, but also
+“kyng,” “kynge,” and “kinge” as part of the same graph.&lt;/p&gt;
+
+&lt;p&gt;Regular expressions, while essentially constituted of simple rules, are
+a vast subject beyond the scope of this short introduction to the n-gram
+browser. But they are well worth learning for any humanities scholar
+working with digitized and searchable texts. There are several great
+learning resources on regular expressions both on the web and in print
+form, but here are a few examples elucidating the basic rules
+involved: &lt;sup&gt;&lt;a href=&quot;#ftn2&quot; id=&quot;body_ftn2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td&gt;
+[abc]
+&lt;/td&gt;
+&lt;td&gt;
+A single character of: a, b, or c
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+[\^abc]
+&lt;/td&gt;
+&lt;td&gt;
+Any single character except: a, b, or c
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+[a-z]
+&lt;/td&gt;
+&lt;td&gt;
+Any single character in the range a-z
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+[a-zA-Z]
+&lt;/td&gt;
+&lt;td&gt;
+Any single character in the range a-z or A-Z
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+^
+&lt;/td&gt;
+&lt;td&gt;
+Start of line
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+$
+&lt;/td&gt;
+&lt;td&gt;
+End of line
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+\A
+&lt;/td&gt;
+&lt;td&gt;
+Start of string
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+\z
+&lt;/td&gt;
+&lt;td&gt;
+End of string
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+.
+&lt;/td&gt;
+&lt;td&gt;
+Any single character
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+\s
+&lt;/td&gt;
+&lt;td&gt;
+Any whitespace character
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+\S
+&lt;/td&gt;
+&lt;td&gt;
+Any non-whitespace character
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+\d
+&lt;/td&gt;
+&lt;td&gt;
+Any digit
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+\D
+&lt;/td&gt;
+&lt;td&gt;
+Any non-digit
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+\w
+&lt;/td&gt;
+&lt;td&gt;
+Any word character (letter, number, underscore)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+\W
+&lt;/td&gt;
+&lt;td&gt;
+Any non-word character
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+\b
+&lt;/td&gt;
+&lt;td&gt;
+Any word boundary
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+(...)
+&lt;/td&gt;
+&lt;td&gt;
+Capture everything enclosed
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+(a|b)
+&lt;/td&gt;
+&lt;td&gt;
+a or b
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+a?
+&lt;/td&gt;
+&lt;td&gt;
+Zero or one of a
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+a\*
+&lt;/td&gt;
+&lt;td&gt;
+Zero or more of a
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+a+
+&lt;/td&gt;
+&lt;td&gt;
+One or more of a
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+a{3}
+&lt;/td&gt;
+&lt;td&gt;
+Exactly 3 of a
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+a{3,}
+&lt;/td&gt;
+&lt;td&gt;
+3 or more of a
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+a{3,6}
+&lt;/td&gt;
+&lt;td&gt;
+Between 3 and 6 of a
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;searching-parts-of-speech-with-regular-expressions&quot;&gt;Searching Parts of Speech with Regular Expressions&lt;/h4&gt;
+
+&lt;p&gt;The standardized spelling databases allow searching for parts of speech
+using regular expressions. The basic format for searching for a word
+combined with a part-of-speech is “word_pos” so that we might search
+for “army_n1” etc. We use the NU-POS tagset developed by Martin Mueller
+and used by Morphadorner to tag the corpus. Thus a word like “man” would
+be tagged “n1” as a singular noun while men would be tagged “n2” (plural
+noun). If we wanted either word used as nouns (as opposed to, for
+example, “man the post”), we could use the following regular expression:
+“/m[ae]n_n.+/”. This specifies that the second character of the match
+could either be “a” or “e” and the part of speech should begin with “n”
+and have exactly one character after that.&lt;/p&gt;
+
+&lt;p&gt;Using the POS search facility effectively can lead to really powerful
+queries and insights but it does take a bit of getting used to. One
+should not only be comfortable with regular expressions but with the
+NUPOS tag set as well.&lt;sup&gt;&lt;a href=&quot;#ftn3&quot; id=&quot;body_ftn3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;sup&gt;&lt;a href=&quot;#body_ftn1&quot; id=&quot;ftn1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; For a detailed overview of regular expressions, see
+Jeffrey E. F Friedl, &lt;em&gt;Mastering Regular Expressions&lt;/em&gt; (Sebastopol, CA: O’Reilly, 2006).&lt;/p&gt;
+
+&lt;p&gt;&lt;sup&gt;&lt;a href=&quot;#body_ftn2&quot; id=&quot;ftn2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; Examples taken from &lt;a href=&quot;http://www.rubular.com/&quot;&gt;http://www.rubular.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;sup&gt;&lt;a href=&quot;#body_ftn3&quot; id=&quot;ftn3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; For a detailed introduction to the NUPOS tagset,
+please see &lt;a href=&quot;http://wordhoard.northwestern.edu/userman/nupos.pdf&quot;&gt;http://wordhoard.northwestern.edu/userman/nupos.pdf&lt;/a&gt;&lt;/p&gt;</content><author><name>Anupam Basu</name></author><category term="ep-lab" /><summary type="html">Using the N-gram Browser</summary></entry></feed>

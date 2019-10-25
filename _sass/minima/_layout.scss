@@ -314,6 +314,7 @@
     @include media-query($on-laptop) {
       @include relative-font-size(1.375);
     }
+    font-family: "IM Fell English", serif;
   }
 
   h4 {
