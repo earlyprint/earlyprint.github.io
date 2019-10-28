@@ -72,7 +72,6 @@ categories:
 <input type="text" class="spellingInput" id="spelling2">
 <span class="controlLabelPos">pos:</span>
 <span id="posContainer2"><input type="text" id="pos2" class="pos"/></span>
-</select>
 </div>
 
 <div id="entry3">
@@ -81,7 +80,6 @@ categories:
 <input type="text" class="spellingInput" id="spelling3">
 <span class="controlLabelPos">pos:</span>
 <span id="posContainer3"><input type="text" id="pos3" class="pos"/></span>
-</select>
 </div>
 
 <div id="buttonDiv">
