@@ -29,7 +29,7 @@ $(document).ready(
                 
         $('#errorMessages').html('');
         
-        $("#slider-range").slider({
+        $("#slider_range").slider({
             range: true,
             min: 1473,
             max: 1700,
@@ -285,12 +285,15 @@ $(document).ready(
             $("#progressMessage").css("display", "none");
             $("body").css("background-color", "white");
         
-            $('#slider-range').css('display', 'block');
+            $('#slider_range').css('display', 'block');
             $('#slider-container').css('display', 'block');
         }
         else {
-            $('#slider-range').css('display', 'none');
-            $('#slider-container').css('display', 'none');
+            //$('#slider_range').css('display', 'none');
+            //$('#slider-container').css('display', 'none');
+        
+            $('#slider_range').css('display', 'block');
+            $('#slider-container').css('display', 'block');
         }
     }
 );

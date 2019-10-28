@@ -107,10 +107,12 @@ categories:
 </div>
 <div id="resultsArea">
 </div>
+
 <div id="slider-container">
-<div id="slider-range"></div>
+<div id="slider_range"></div>
 <div id="slider-message">Use the slider to narrow the date range</div>
 </div>
+
 <br/>
 <div id="clickToSubmitContainer">
 </div>
@@ -385,6 +387,7 @@ zz -- unknown or unparsable token<br/>
 
 <link rel="stylesheet" type="text/css" href="/assets/tools/css/eeboSpellingBrowser.css?v=1500">
 <script src="/assets/tools/js/jquery-1.11.0.min.js?v=1500"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css?v=1500" />
 <script type="text/javascript" src="/assets/tools/jquery-ui-1.11.1.custom/jquery-ui.min.js?v=1500"></script>
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script type="text/javascript" src="/assets/tools/js/tinycolor.js?v=1500"></script>
