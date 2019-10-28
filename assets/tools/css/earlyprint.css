@@ -1,0 +1,285 @@
+        
+body {
+    width: 960px;
+    color: #4d312d;
+    background-color: #ffffff;
+    font-size: 14px;
+    font-family: 'Droid Serif', serif;
+    margin: auto;
+    padding-top: 1em;
+}
+            
+.clearDiv {
+    clear: both;
+}
+
+.brandingHeader { 
+}
+
+.brandingLeft {
+    float: left;
+}
+
+.brandingMiddleAndRight {
+}
+
+.brandingMiddle {
+    float: left;
+    padding-left: 2em;
+    padding-right: 2em;
+    text-align: center;
+}
+
+.brandingRight {
+    float: right;
+}
+
+.siteTitle {
+    font-family: 'IM Fell English SC', serif;
+    font-size: 4.5em;
+}
+
+.siteSubTitle {
+    font-family: 'IM Fell English SC', serif;
+    font-size: 2em;
+}
+
+.siteAuthor {
+    font-family: 'IM Fell English SC', serif;
+    font-size: 1.25em;
+}
+   
+.indentSpacer {
+    display: inline-block;
+    width: 70.5em;
+}
+   
+#goButton {
+    margin-top: 0.2em;
+    width: 14em;
+    font-weight: bold;
+}
+
+/* ---------------------------------------------------------------------
+    from http://multimedia.journalism.berkeley.edu/tutorials/css-layout/nav-menu/
+------------------------------------------------------------------------ */
+
+/* START NAV MENU */
+nav {
+    height: 42px;
+    margin-top: 1em;
+    background-color: #3d2b29;
+    border: 2px solid #3d2b29;
+}
+ 
+ 
+nav ul {
+    font-weight: bold;
+    font-family: 'IM Fell English SC', serif;
+    font-size: 1.75em;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ 
+nav ul li {
+    display: block;
+    position: relative;
+    float: left;
+    z-index: 1500;
+}
+ 
+nav li ul {
+  display: none;
+}
+ 
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 20px;
+    background-color: #3d2b29;
+    color: #ffffff;
+    white-space: nowrap;
+ 
+}
+ 
+nav ul li a:hover {
+    text-decoration: none;
+    color: #112693;
+    background-color: #ffffff;
+}
+ 
+nav li:hover ul {
+    font-weight: bold;
+    font-family: 'IM Fell English SC', serif;
+    font-size: 1em;
+    display: block;
+    position: absolute;
+}
+ 
+nav li:hover li {
+    float: none;
+    height: 42px;
+    border: 2px solid #3d2b29;
+}
+ 
+nav li:hover a {
+}
+ 
+nav li:hover li a:hover {
+    text-decoration: none;
+    color: #112693;
+    background-color: #ffffff;
+}
+ 
+nav ul li ul li {
+    background-color: #3d2b29;
+}
+ 
+nav ul li ul li a {
+    text-align:left; 
+    font-size: 0.75em;
+}
+ 
+#socialMediaLinks {
+    display: block;
+    float: right;
+    margin-right: 0.5em;
+    margin-top: 3px;
+}
+
+/* --------------------------------------------------------------------- */   
+
+.siteTitle > a {
+    text-decoration: none;
+    color: #4d312d;
+}
+
+.siteTitle > a:hover {
+    text-decoration: none;
+    color: #112693;
+}
+
+.content {
+    margin-top: 1em;
+}
+
+.content a {
+    color: #112693;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.content a:hover {
+    color: #8f1a09;
+    text-decoration: none;
+}
+
+.queryTerms a {
+    text-decoration: underline;
+}
+
+.queryTerms a:hover {
+    text-decoration: underline;
+}
+
+.footer_ccby {
+    text-align: left;
+    margin-top: 1em;
+    margin-bottom: 5em;
+    font-family: 'IM Fell English SC', serif;
+    font-size: 1.25em;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 5em;
+    font-family: 'IM Fell English SC', serif;
+    font-size: 1.25em;
+}
+
+h1 {
+    font-family: 'IM Fell English SC', serif;
+    font-size: 2em;
+}
+
+h2 {
+    font-family: 'IM Fell English SC', serif;
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+h3 {
+    font-family: 'IM Fell English SC',serif;
+    font-size: 2em;
+    margin-bottom: 5px;
+    text-align: center; 
+}
+
+h4 {
+    font-size: 1.25em;
+}
+
+#eeboFrame {
+    padding-bottom: 3em;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+
+.indexLeftPane {
+    width: 550px;
+    float: left;
+}
+
+.indexRightPane {
+    width: 350px;
+    float: left;
+    margin-left: 60px;
+}
+
+.projectLeftPane {
+    width: 45%;
+    float: left;
+    padding-right: 3em;
+}
+
+.projectRightPane {
+    width: 50%;
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+td {
+    /*padding-right: 5em;*/
+}
+
+.small {
+}
+
+.italics {
+    font-style: italic;
+}
+
+.page div ul {
+    list-style-type: none;
+    margin-left: -3em;
+}
+
+.instructions > li {
+    margin-left: 40px;
+    margin-bottom: 5px;
+}
+
+.docLink {
+    margin-left: 30px;
+}

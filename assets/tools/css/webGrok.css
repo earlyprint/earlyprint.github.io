@@ -1,0 +1,203 @@
+
+em {
+    font-style: normal;
+    font-weight: bold;
+}
+
+td em {
+    background-color: #ffff00;
+}
+
+#runningQueryMessage {
+    display: none;
+    position: fixed;
+    top: 200px;
+    left: 200px;
+    height: 100px;
+    line-height: 100px;
+    width: 400px;
+    background: white;
+    text-align: center;
+    box-shadow: 0px 5px 5px #888888;
+    border-top: 1px solid #888888;
+    border-left: 1px solid #888888;
+    border-right: 2px solid #888888;
+    border-bottom: 2px solid #888888;
+    font-size: 125%;
+    font-weight: bold;
+    color: blue;
+}
+
+#results {
+    /*font-size: 12px;*/
+    font-size: 10px;
+    font-family: monospace;
+    width: 2000px;
+}
+
+.solrErrorMessage {
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+}
+
+.key {
+    padding-right: 5px;
+}
+
+.date {
+    padding-right: 10px;
+}
+
+.author {
+    padding-right: 10px;
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.title {
+    padding-right: 10px;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.match_left {
+    text-align: right;
+    padding-left: 25px;
+}
+
+.match {
+    /*font-weight: bold;*/
+}
+
+.match_right {
+    font-weight
+}
+
+.error {
+    font-weight: bold;
+    color: red;
+    font-family: san-serif;
+    font-size: 14px;
+}
+
+#yearSlider {
+    margin-top: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.formColumn1 {
+    width: 200px;
+}
+
+input {
+    width: 300px;
+}
+
+select {
+    width: 308px;
+}
+
+button {
+    width: 308px;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#leftContent {
+    float: left;
+    width:  525px;
+}
+
+#rightContent {
+    margin-left: 550px;
+    vertical-align: top;
+}
+
+.instructions {
+    border: 1px solid black;
+    padding: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 350px;
+    height: 200px;
+}
+
+#clearContent {
+    clear: both;
+    height: 25px;
+}
+
+#resultsInformation {
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+#topPagingWidget {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+#bottomPagingWidget {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+
+/* --------------------------------------------------------------------- */
+
+.wrapper {
+    width: 1160px;
+    max-width: 1160px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#leftContent table {
+    border: 0px solid #ffffff;
+}
+
+#leftContent tr {
+    border: 0px solid #ffffff;
+}
+
+#leftContent td {
+    border: 0px solid #ffffff;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#resultsTable {
+    margin-bottom: 30px;
+    width: 1100px;
+    text-align: left;
+    font-size: 10px;
+    font-family: monospace;
+    border-spacing: 0px;
+    border: 0px solid #ffffff;
+}
+
+#resultsTable tr {
+    background-color: #ffffff;
+    box-sizing: none;
+    border: 0px solid #ffffff;
+}
+
+#resultsTable td {
+    padding-top: 0px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+    padding-right: 10px;
+    border: 0px solid #ffffff;
+}
