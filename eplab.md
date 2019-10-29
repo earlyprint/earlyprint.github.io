@@ -1,7 +1,7 @@
 ---
 layout: page
 title: EP Lab
-permalink: /eplab/
+permalink: /lab/
 ---
 
 <div style="display: float; float: right; margin-left: 2em;">

@@ -17,15 +17,23 @@
         </label>
 
         <div class="trigger">
-          <a class="page-link" href="/">Home</a>
-          <a class="page-link" href="/about">About</a>
           <a class="page-link" target="_blank" href="https://texts.earlyprint.org/">EP Lib</a>
-          <a class="page-link" target="_blank" href="/eplab/">EP Lab</a>
+          <a class="page-link" href="/about">About</a>
+          <a class="page-link" href="/">Home</a>
+          <!-- <a class="page-link" href="/eplab/">EP Lab</a> -->
           {% for category in site.categories %}
+            {% assign category_url = category[0] | downcase %}
+            {% assign page_url = page.url | split:"/" %}
             <div class="dropdown">
-              <a class="page-link dropbtn" href="/{{category[0] | downcase}}">{{ category[0] }}
-                <i class="fa fa-caret-down"></i>
-              </a>
+              {% if category[0] == "Lab" %}
+                <a class="{% if category_url != page_url[1] %}page-link {% endif %} dropbtn{% if category_url == page_url[1] %} page-link-active{% endif %}" href="/{{category[0] | downcase}}">EP Lab
+                  <i class="fa fa-caret-down"></i>
+                </a>
+              {% else %}
+                <a class="{% if category_url != page_url[1] %}page-link {% endif %} dropbtn{% if category_url == page_url[1] %} page-link-active{% endif %}" href="/{{category[0] | downcase}}" href="/{{category[0] | downcase}}">{{ category[0] }}
+                  <i class="fa fa-caret-down"></i>
+                </a>
+              {% endif %}
               <div class="dropdown-content">
                 {% for post in category[1] %}
                   <a href="{{ post.url }}">{{ post.title | truncatewords: 4 }}</a>

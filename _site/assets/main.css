@@ -222,15 +222,18 @@ table {
     text-decoration: none; }
     .site-nav .page-link:not(:last-child) {
       margin-right: 20px; }
+  .site-nav .page-link-active {
+    background-color: #f9f9f9;
+    color: #111;
+    line-height: 1.5;
+    text-decoration: none; }
   .site-nav .dropdown {
-    float: right;
+    float: left;
     overflow: hidden; }
   .site-nav .dropdown .dropbtn {
     border: none;
     outline: none;
-    color: #e8e8e8;
     padding: 14px 16px;
-    background-color: inherit;
     font-family: inherit;
     margin: 0; }
   .site-nav .dropdown-content {
@@ -239,8 +242,7 @@ table {
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    right: 0; }
+    z-index: 1; }
   .site-nav .dropdown-content a {
     float: none;
     color: black;
