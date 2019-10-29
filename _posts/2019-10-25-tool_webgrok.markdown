@@ -2,10 +2,9 @@
 layout: post
 title:  EEBO-TCP Key Words in Context
 date:   2014-08-14 10:00:00 -0500
-author: Anupam Basu
-tags: 
+tags:
 summary: EEBO-TCP Key Words in Context
-categories:
+categories: Lab
 ---
 
 <div class='page'>
@@ -24,7 +23,7 @@ Corpus:
 <option value="plaintext_reg" selected>Regularized spellings</option>
 <option value="plaintext">Original spellings</option>
 <option value="plaintext_lem">Lemmatized and regularized</option>
-</select> 
+</select>
 </td>  
 </tr>
 
@@ -68,9 +67,9 @@ Titles:
 <tr>
 <td class="formColumn1">
 &nbsp;
-</td> 
+</td>
 <td class="formColumn2">  
-<button type="button" onclick="javascript:runGrok();">View Words</button> 
+<button type="button" onclick="javascript:runGrok();">View Words</button>
 </td>    
 </tr>
 

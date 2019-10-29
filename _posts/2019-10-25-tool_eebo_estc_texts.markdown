@@ -2,14 +2,13 @@
 layout: post
 title:  EEBO-TCP and ESTC Text Counts
 date:   2013-11-18 10:00:00 -0500
-author: Anupam Basu
-tags: 
+tags:
 summary: EEBO-TCP and ESTC Text Counts
-categories:
+categories: Lab
 ---
 
 <div id="eeboFrame" width="100%">
-        
+
 <div id="barplot" style="width:1000px;margin:0 auto;"></div>
 
 <div id="slider_range_estc" style="width:700px;margin:0 auto;text-align:center;font-size:10pt;">
@@ -24,13 +23,13 @@ categories:
 
 <input id="estc_checkbox" type="checkbox" value="ESTC" checked="checked">Show ESTC data<br>
 
-</form> 
+</form>
 
 </div>
 
 <div id="credits">EEBO-TCP data preparation and visualization design and development by Anupam Basu.</div>
-        
-</div> 
+
+</div>
 
 <!-- COPY JS FROM THE APPLICATION -->
 

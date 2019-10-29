@@ -2,10 +2,9 @@
 layout: post
 title:  EEBO-TCP N-gram Browser
 date:   2014-01-17 10:00:00 -0500
-author: Anupam Basu
-tags: 
+tags:
 summary: EEBO-TCP N-gram Browser
-categories:
+categories: Lab
 ---
 
 <div id="eeboFrame" width="100%">
@@ -13,7 +12,7 @@ categories:
 <!-- COPY HTML FROM THE APPLICATION -->
 
 <div class="hideShow"><a id="instructionToggle" href="javascript:showHideInstructions();">show instructions</a></div>
-        
+
 <div id="eeboInstructions">
 
 <p class="instructions">Select an ngram size and spelling type, enter search terms and pos (parts of speech, optional), select (or not) the graph smoothing and rolling average options, and click Draw Graph.</p>
@@ -374,13 +373,13 @@ zz -- unknown or unparsable token<br/>
 </div>
 <br/>
 <div id="credits">EEBO-TCP data preparation by Anupam Basu, made possible by <a href="http://morphadorner.northwestern.edu/">Morphadorner</a>, developed by <a href="http://www.linkedin.com/in/philiprobertburns">Philip R. "Pib" Burns</a> of Northwestern University.  Interactive visualization by Stephen Pentecost.</div>
-    
+
 <div id="mouseoverPopup"></div>
- 
+
 
 <!-- END HTML FROM THE APPLICATION -->
-    
-</div> 
+
+</div>
 
 <!-- COPY JS FROM THE APPLICATION -->
 
@@ -393,8 +392,3 @@ zz -- unknown or unparsable token<br/>
 <script type="text/javascript" src="/assets/tools/js/tinycolor.js?v=1500"></script>
 <script type="text/javascript" src="/assets/tools/js/nupos.js?v=1500"></script>
 <script type="text/javascript" src="/assets/tools/js/eeboSpellingBrowser.js?v=1500"></script>
-
-
-
-
- 

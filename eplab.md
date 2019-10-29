@@ -5,17 +5,17 @@ permalink: /eplab/
 ---
 
 <div style="display: float; float: right; margin-left: 2em;">
-<h3><a href="/2014/01/17/tool_ngram_browser.html?requestFromClient={&quot;1&quot;:{&quot;spe&quot;:&quot;love,loue&quot;,&quot;reg&quot;:&quot;&quot;,&quot;lem&quot;:&quot;&quot;,&quot;pos&quot;:&quot;&quot;,&quot;originalPos&quot;:&quot;&quot;},&quot;2&quot;:{&quot;spe&quot;:&quot;&quot;,&quot;reg&quot;:&quot;&quot;,&quot;lem&quot;:&quot;&quot;,&quot;pos&quot;:&quot;&quot;,&quot;originalPos&quot;:&quot;&quot;},&quot;3&quot;:{&quot;spe&quot;:&quot;&quot;,&quot;reg&quot;:&quot;&quot;,&quot;lem&quot;:&quot;&quot;,&quot;pos&quot;:&quot;&quot;,&quot;originalPos&quot;:&quot;&quot;},&quot;databaseType&quot;:&quot;unigrams&quot;,&quot;smoothing&quot;:&quot;True&quot;,&quot;rollingAverage&quot;:&quot;20_year&quot;, &quot;instructionToggle&quot;: &quot;show&quot;}">EEBO N-gram Browser</a></h3>
-<p><a href="/2014/01/17/tool_ngram_browser.html?requestFromClient={&quot;1&quot;:{&quot;spe&quot;:&quot;love,loue&quot;,&quot;reg&quot;:&quot;&quot;,&quot;lem&quot;:&quot;&quot;,&quot;pos&quot;:&quot;&quot;,&quot;originalPos&quot;:&quot;&quot;},&quot;2&quot;:{&quot;spe&quot;:&quot;&quot;,&quot;reg&quot;:&quot;&quot;,&quot;lem&quot;:&quot;&quot;,&quot;pos&quot;:&quot;&quot;,&quot;originalPos&quot;:&quot;&quot;},&quot;3&quot;:{&quot;spe&quot;:&quot;&quot;,&quot;reg&quot;:&quot;&quot;,&quot;lem&quot;:&quot;&quot;,&quot;pos&quot;:&quot;&quot;,&quot;originalPos&quot;:&quot;&quot;},&quot;databaseType&quot;:&quot;unigrams&quot;,&quot;smoothing&quot;:&quot;True&quot;,&quot;rollingAverage&quot;:&quot;20_year&quot;, &quot;instructionToggle&quot;: &quot;show&quot;}"><img alt="Screenshot of visualization" src="/assets/img/spellingBrowser_SM.png"></a></p>
+<h3><a href="/lab/tool_ngram_browser.html?requestFromClient={&quot;1&quot;:{&quot;spe&quot;:&quot;love,loue&quot;,&quot;reg&quot;:&quot;&quot;,&quot;lem&quot;:&quot;&quot;,&quot;pos&quot;:&quot;&quot;,&quot;originalPos&quot;:&quot;&quot;},&quot;2&quot;:{&quot;spe&quot;:&quot;&quot;,&quot;reg&quot;:&quot;&quot;,&quot;lem&quot;:&quot;&quot;,&quot;pos&quot;:&quot;&quot;,&quot;originalPos&quot;:&quot;&quot;},&quot;3&quot;:{&quot;spe&quot;:&quot;&quot;,&quot;reg&quot;:&quot;&quot;,&quot;lem&quot;:&quot;&quot;,&quot;pos&quot;:&quot;&quot;,&quot;originalPos&quot;:&quot;&quot;},&quot;databaseType&quot;:&quot;unigrams&quot;,&quot;smoothing&quot;:&quot;True&quot;,&quot;rollingAverage&quot;:&quot;20_year&quot;, &quot;instructionToggle&quot;: &quot;show&quot;}">EEBO N-gram Browser</a></h3>
+<p><a href="/lab/tool_ngram_browser.html?requestFromClient={&quot;1&quot;:{&quot;spe&quot;:&quot;love,loue&quot;,&quot;reg&quot;:&quot;&quot;,&quot;lem&quot;:&quot;&quot;,&quot;pos&quot;:&quot;&quot;,&quot;originalPos&quot;:&quot;&quot;},&quot;2&quot;:{&quot;spe&quot;:&quot;&quot;,&quot;reg&quot;:&quot;&quot;,&quot;lem&quot;:&quot;&quot;,&quot;pos&quot;:&quot;&quot;,&quot;originalPos&quot;:&quot;&quot;},&quot;3&quot;:{&quot;spe&quot;:&quot;&quot;,&quot;reg&quot;:&quot;&quot;,&quot;lem&quot;:&quot;&quot;,&quot;pos&quot;:&quot;&quot;,&quot;originalPos&quot;:&quot;&quot;},&quot;databaseType&quot;:&quot;unigrams&quot;,&quot;smoothing&quot;:&quot;True&quot;,&quot;rollingAverage&quot;:&quot;20_year&quot;, &quot;instructionToggle&quot;: &quot;show&quot;}"><img alt="Screenshot of visualization" src="/assets/img/spellingBrowser_SM.png"></a></p>
 
-<h3><a href="/2014/08/14/tool_webgrok.html">EEBO-TCP Key Words in Context</a></h3>
-<p><a href="/2014/08/14/tool_webgrok.html"><img alt="Screenshot of visualization" src="/assets/img/webGrok.png"></a></p>
+<h3><a href="/lab/tool_webgrok.html">EEBO-TCP Key Words in Context</a></h3>
+<p><a href="/lab/tool_webgrok.html"><img alt="Screenshot of visualization" src="/assets/img/webGrok.png"></a></p>
 
-<h3><a href="/2013/11/18/tool_eebo_estc_texts.html">EEBO-TCP and ESTC Text Counts</a></h3>
-<p><a href="/2013/11/18/tool_eebo_estc_texts.html"><img alt="Screenshot of visualization" src="/assets/img/eeboEstcCounts_SM.png"></a></p>
+<h3><a href="/lab/tool_eebo_estc_texts.html">EEBO-TCP and ESTC Text Counts</a></h3>
+<p><a href="/lab/tool_eebo_estc_texts.html"><img alt="Screenshot of visualization" src="/assets/img/eeboEstcCounts_SM.png"></a></p>
 
-<h3><a href="/2013/11/18/tool_words_per_year.html">EEBO-TCP Words Per Year</a></h3>
-<p><a href="/2013/11/18/tool_words_per_year.html"><img alt="Screenshot of visualization" src="/assets/img/textLengths_SM.png"></a></p>
+<h3><a href="/lab/tool_words_per_year.html">EEBO-TCP Words Per Year</a></h3>
+<p><a href="/lab/tool_words_per_year.html"><img alt="Screenshot of visualization" src="/assets/img/textLengths_SM.png"></a></p>
 </div>
 
 
@@ -31,4 +31,3 @@ Early Print began as a means to an end. As part of analytic work on an edition o
 We intend to make this site and its underlying databases responsive to others’ research needs. The portal itself can only serve as glimpse into the potential uses of the database. We hope that the kind of exploration it allows will help develop further, more involved research questions that require more sustained engagement and analysis of the database and the texts that lie behind it. In this sense *Early Print*is not so much a complete project as it is a provocation – a new unfamiliar scale and perspective on a familiar body of texts – one that would encourage scholars to come forward with their own projects and think about ways of collaborating and integrating corpus-scale analysis seamlessly into the ways we already read and think about early modern print culture.
 
 The site is supported by the Humanities Digital Workshop at Washington University. Dr. Basu was assisted by Steve Pentecost, with advice from Douglas Knox and Joseph Loewenstein.
-
