@@ -17,9 +17,9 @@
         </label>
 
         <div class="trigger">
-          <a class="page-link" target="_blank" href="https://texts.earlyprint.org/">EP Lib</a>
-          <a class="page-link" href="/about">About</a>
-          <a class="page-link" href="/">Home</a>
+          <div class="dropdown">
+            <a class="page-link dropbtn" target="_blank" href="https://texts.earlyprint.org/">EP Lib</a>
+          </div>
           <!-- <a class="page-link" href="/eplab/">EP Lab</a> -->
           {% for category in site.categories %}
             {% assign category_url = category[0] | downcase %}
@@ -41,6 +41,12 @@
               </div>
             </div>
           {% endfor %}
+          <div class="dropdown">
+            <a class="page-link dropbtn" href="/about">About</a>
+          </div>
+          <!-- <div class="dropdown">
+            <a class="page-link dropbtn" href="/">Home</a>
+          </div> -->
         </div>
       </nav>
     {%- endif -%}
