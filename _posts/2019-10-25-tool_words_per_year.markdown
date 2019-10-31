@@ -2,10 +2,9 @@
 layout: post
 title:  EEBO-TCP Words Per Year
 date:   2013-11-18 10:00:00 -0500
-author: Anupam Basu
-tags: 
+tags:
 summary: EEBO-TCP Words Per Year
-categories:
+categories: Lab
 ---
 
 <h3>EEBO-TCP Words Per Year</h3>
@@ -26,8 +25,8 @@ categories:
 <br/>
 <br/>
 <div id="credits">EEBO-TCP data preparation and visualization design and development by <a href="people.html">Anupam Basu</a>.</div>
-    
-</div> 
+
+</div>
 
 <!-- COPY JS FROM THE APPLICATION -->
 

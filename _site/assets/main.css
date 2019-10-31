@@ -11,9 +11,8 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: 400 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font: 400 16px/1.5 Georgia;
   color: #111;
-  background-color: #ffffff;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -22,11 +21,16 @@ body {
   font-kerning: normal;
   display: flex;
   min-height: 100vh;
-  flex-direction: column;
+  flex-direction: column; }
+
+.background {
   background-image: url(https://earlyprint.org/assets/img/press.jpeg);
   background-size: cover;
   background-position: center center;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  opacity: 0.75;
+  z-index: -1000;
+  position: absolute; }
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -123,13 +127,16 @@ pre {
   margin-left: auto;
   padding-right: 30px;
   padding-left: 30px;
-  background-color: rgba(255, 255, 255, 0.96); }
+  background-color: white; }
   @media screen and (max-width: 800px) {
     .wrapper {
       max-width: -webkit-calc(1000px - (30px));
       max-width: calc(1000px - (30px));
       padding-right: 15px;
       padding-left: 15px; } }
+
+.transparent {
+  background-color: rgba(255, 255, 255, 0.96); }
 
 /**
  * Clearfix
@@ -222,15 +229,18 @@ table {
     text-decoration: none; }
     .site-nav .page-link:not(:last-child) {
       margin-right: 20px; }
+  .site-nav .page-link-active {
+    background-color: #f9f9f9;
+    color: #111;
+    line-height: 1.5;
+    text-decoration: none; }
   .site-nav .dropdown {
-    float: right;
+    float: left;
     overflow: hidden; }
   .site-nav .dropdown .dropbtn {
     border: none;
     outline: none;
-    color: #e8e8e8;
     padding: 14px 16px;
-    background-color: inherit;
     font-family: inherit;
     margin: 0; }
   .site-nav .dropdown-content {
@@ -239,8 +249,7 @@ table {
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    right: 0; }
+    z-index: 1; }
   .site-nav .dropdown-content a {
     float: none;
     color: black;

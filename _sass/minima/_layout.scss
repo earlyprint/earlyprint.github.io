@@ -53,8 +53,15 @@
     }
   }
 
+  .page-link-active {
+    background-color: #f9f9f9;
+    color: $text-color;
+    line-height: $base-line-height;
+    text-decoration: none;
+  }
+
   .dropdown {
-    float: right;
+    float: left;
     overflow: hidden;
   }
 
@@ -62,9 +69,9 @@
     // font-size: 16px;
     border: none;
     outline: none;
-    color: $grey-color-light;
+    // color: $grey-color-light;
     padding: 14px 16px;
-    background-color: inherit;
+    // background-color: inherit;
     font-family: inherit;
     margin: 0;
   }
@@ -76,7 +83,7 @@
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    right: 0;
+    // right: 0;
   }
 
   .dropdown-content a {
