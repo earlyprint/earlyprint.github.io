@@ -16,7 +16,7 @@ dl, dd, ol, ul, figure {
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
-  background-color: $background-color;
+  // background-color: $background-color;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
@@ -26,10 +26,16 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+}
+
+.background {
   background-image: url(https://earlyprint.org/assets/img/press.jpeg);
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
+  opacity: 0.75;
+  z-index: -1000;
+  position: absolute;
 }
 
 
