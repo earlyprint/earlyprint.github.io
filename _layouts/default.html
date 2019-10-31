@@ -8,8 +8,9 @@
 
     {%- include header.html -%}
 
+    {% assign page_url = page.url | split:"/" %}
     <main class="page-content" aria-label="Content">
-      <div class="wrapper">
+      <div class="wrapper{% if page_url[1] != 'lab' %} transparent{% endif %}">
         {{ content }}
       </div>
     </main>

@@ -127,13 +127,16 @@ pre {
   margin-left: auto;
   padding-right: 30px;
   padding-left: 30px;
-  background-color: rgba(255, 255, 255, 0.96); }
+  background-color: white; }
   @media screen and (max-width: 800px) {
     .wrapper {
       max-width: -webkit-calc(1000px - (30px));
       max-width: calc(1000px - (30px));
       padding-right: 15px;
       padding-left: 15px; } }
+
+.transparent {
+  background-color: rgba(255, 255, 255, 0.96); }
 
 /**
  * Clearfix
