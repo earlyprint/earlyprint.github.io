@@ -26,17 +26,21 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-}
-
-.background {
   background-image: url(https://earlyprint.org/assets/img/press.jpeg);
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  opacity: 0.75;
-  z-index: -1000;
-  position: absolute;
 }
+
+// .background {
+//   background-image: url(https://earlyprint.org/assets/img/press.jpeg);
+//   background-size: cover;
+//   background-position: center center;
+//   background-attachment: fixed;
+//   opacity: 0.75;
+//   z-index: -10;
+//   position: absolute;
+// }
 
 
 

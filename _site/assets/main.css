@@ -21,16 +21,11 @@ body {
   font-kerning: normal;
   display: flex;
   min-height: 100vh;
-  flex-direction: column; }
-
-.background {
+  flex-direction: column;
   background-image: url(https://earlyprint.org/assets/img/press.jpeg);
   background-size: cover;
   background-position: center center;
-  background-attachment: fixed;
-  opacity: 0.75;
-  z-index: -1000;
-  position: absolute; }
+  background-attachment: fixed; }
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
