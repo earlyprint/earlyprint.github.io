@@ -12,7 +12,7 @@ permalink: /lab/
 <p><a href="/lab/tool_webgrok.html"><img alt="Screenshot of visualization" src="/assets/img/webGrok.png"></a></p>
 
 <h3><a href="/lab/tool_discovery_engine.html">The Discovery Engine</a></h3>
-<p><a href="/lab/tool_discovery_engine.html"><img alt="Screenshot of visualization" src="/assets/img/webGrok.png"></a></p>
+<p><a href="/lab/tool_discovery_engine.html"><img alt="Screenshot of visualization" src="/assets/img/disco_engine.png"></a></p>
 
 <h3><a href="/lab/tool_eebo_estc_texts.html">Text Counts</a></h3>
 <p><a href="/lab/tool_eebo_estc_texts.html"><img alt="Screenshot of visualization" src="/assets/img/eeboEstcCounts_SM.png"></a></p>
