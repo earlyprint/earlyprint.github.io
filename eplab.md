@@ -34,3 +34,5 @@ Early Print began as a means to an end. As part of analytic work on an edition o
 We intend to make this site and its underlying databases responsive to others’ research needs. The portal itself can only serve as glimpse into the potential uses of the database. We hope that the kind of exploration it allows will help develop further, more involved research questions that require more sustained engagement and analysis of the database and the texts that lie behind it. In this sense *Early Print*is not so much a complete project as it is a provocation – a new unfamiliar scale and perspective on a familiar body of texts – one that would encourage scholars to come forward with their own projects and think about ways of collaborating and integrating corpus-scale analysis seamlessly into the ways we already read and think about early modern print culture.
 
 The site is supported by the Humanities Digital Workshop at Washington University. Dr. Basu was assisted by Steve Pentecost, with advice from Douglas Knox and Joseph Loewenstein.
+
+<link rel="stylesheet" type="text/css" href="/assets/tools/css/common_tool_styles.css?v=1500"/>

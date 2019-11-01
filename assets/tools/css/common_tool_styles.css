@@ -20,3 +20,31 @@
     display: inline-block;
     width: 100px;
 }
+
+/* unvisited link */
+article a:link {
+    color: #4f091b;
+    font-weight: bold;
+    background-color: #ffffff;
+}
+
+/* visited link */
+article a:visited {
+    color: #4f091b;
+    font-weight: bold;
+    background-color: #ffffff;
+}
+
+/* mouse over link */
+article a:hover {
+    color: #4f091b;
+    font-weight: bold;
+    background-color: #f7faa5;
+}
+
+/* selected link */
+article a:active {
+    color: #4f091b;
+    font-weight: bold;
+    background-color: #ffffff;
+}
