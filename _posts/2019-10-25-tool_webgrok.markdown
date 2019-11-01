@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  EEBO-TCP Key Words in Context
+title:  Key Words in Context
 date:   2014-08-14 10:00:00 -0500
 tags:
 summary: EEBO-TCP Key Words in Context
@@ -123,6 +123,7 @@ Titles:
 <link rel="stylesheet" type="text/css" href="/assets/tools/js/jQRangeSlider-5.7.0/css/classic.css?v=1500">
 <link rel="stylesheet" type="text/css" href="/assets/tools/css/webGrok.css?v=1500">
 <script src="/assets/tools/js/webGrok.js?v=1500" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="/assets/tools/css/common_tool_styles.css?v=1500"/>
 
 </div>
 <div class='small italics'>2015-02-10</div>

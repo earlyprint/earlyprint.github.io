@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  EEBO-TCP and ESTC Text Counts
+title:  Text Counts
 date:   2013-11-18 10:00:00 -0500
 tags:
 summary: EEBO-TCP and ESTC Text Counts
@@ -42,3 +42,5 @@ categories: Lab
 <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js?v=1500"></script>
 
 <script src="/assets/tools/eebo_estc_english_texts_per_year.js?v=1500"></script>
+
+<link rel="stylesheet" type="text/css" href="/assets/tools/css/common_tool_styles.css?v=1500"/>

@@ -90,18 +90,22 @@ td em {
     margin-top: 30px;
     padding-top: 20px;
     padding-bottom: 20px;
+    font: 14px sans-serif;
 }
 
 .formColumn1 {
     width: 200px;
+    font: 14px sans-serif;
 }
 
 input {
     width: 300px;
+    font: 14px sans-serif;
 }
 
 select {
     width: 308px;
+    font: 14px sans-serif;
 }
 
 button {
@@ -109,6 +113,7 @@ button {
     font-weight: bold;
     padding-top: 5px;
     padding-bottom: 5px;
+    font: 14px sans-serif;
 }
 
 #leftContent {
@@ -128,6 +133,7 @@ button {
     overflow-x: hidden;
     width: 350px;
     height: 200px;
+    font: 14px sans-serif;
 }
 
 #clearContent {
@@ -200,4 +206,8 @@ button {
     padding-left: 0px;
     padding-right: 10px;
     border: 0px solid #ffffff;
+}
+
+table tr:nth-child(2n) {
+    background-color: #ffffff;
 }

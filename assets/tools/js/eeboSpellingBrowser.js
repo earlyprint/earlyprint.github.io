@@ -20,12 +20,22 @@ var EEBO_MOUSEOVER_LINE = false;
 
 var EEBO_DEBUG = '';
 
+var GLOBAL_URL_PARAMS = '';
+
 /*  --------------------------------------------------------------------
     DOCUMENT LOAD.
     -------------------------------------------------------------------- */
 
 $(document).ready(
+
     function() {
+        GLOBAL_URL_PARAMS = new URLSearchParams(window.location.search);
+
+        if (GLOBAL_URL_PARAMS.has('requestFromClient') == false) {
+            
+            window.location.assign('/lab/tool_ngram_browser.html?requestFromClient={"1":{"spe":"love,loue","reg":"","lem":"","pos":"","originalPos":""},"2":{"spe":"","reg":"","lem":"","pos":"","originalPos":""},"3":{"spe":"","reg":"","lem":"","pos":"","originalPos":""},"databaseType":"unigrams","smoothing":"True","rollingAverage":"20_year", "instructionToggle": "show"}');
+        }
+        
                 
         $('#errorMessages').html('');
         
@@ -827,8 +837,6 @@ function actuallyDrawTheGraph(isRedraw) {
         for (var b = 0; b < data.length; b++) {
             data_for_this_path.push({"year": data[b]['year'], "y": data[b][words_to_graph[a]]});
         }
-
-        console.log('data_for_this_path', data_for_this_path);
 
         svg.append("path")
             .datum(data_for_this_path)

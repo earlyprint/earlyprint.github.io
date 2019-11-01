@@ -1,13 +1,11 @@
 ---
 layout: post
-title:  EEBO-TCP Words Per Year
+title:  Words Per Year
 date:   2013-11-18 10:00:00 -0500
 tags:
 summary: EEBO-TCP Words Per Year
 categories: Lab
 ---
-
-<h3>EEBO-TCP Words Per Year</h3>
 
 <div id="eeboFrame" width="100%">
 
@@ -35,3 +33,4 @@ categories: Lab
 <script src="https://code.jquery.com/jquery-1.9.1.js?v=1500"></script>
 <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js?v=1500"></script>
 <script src="/assets/tools/eebo_years_nwords.min.js?v=1500"></script>
+<link rel="stylesheet" type="text/css" href="/assets/tools/css/common_tool_styles.css?v=1500"/>

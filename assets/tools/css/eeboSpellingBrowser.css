@@ -4,11 +4,16 @@
     display: inline-block;
     width: 100px;
 }
+.controlLabel_1 {
+    font: 14px sans-serif;
+    display: inline-block;
+    width: 120px;
+}
 
 .controlLabelGram {
     font: 14px sans-serif;
     display: inline-block;
-    width: 110px;
+    width: 183px;
 }
 
 .radioLabel {
@@ -194,7 +199,7 @@ select {
 }
 
 #rollingAverage {
-    width: 113px;
+    width: 153px;
 }
 
 #queryButton {

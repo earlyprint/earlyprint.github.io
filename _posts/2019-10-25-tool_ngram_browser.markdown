@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  EEBO-TCP N-gram Browser
+title:  N-gram Browser
 date:   2014-01-17 10:00:00 -0500
 tags:
 summary: EEBO-TCP N-gram Browser
@@ -59,7 +59,7 @@ categories: Lab
 
 <div id="entry1">
 <span class="controlLabelGram">gram 1:</span>
-<span class="controlLabel">search term:</span>
+<span class="controlLabel_1">search term:</span>
 <input type="text" class="spellingInput" id="spelling1">
 <span class="controlLabelPos">pos:</span>
 <span id="posContainer1"><input type="text" id="pos1" class="pos"/></span>
@@ -67,7 +67,7 @@ categories: Lab
 
 <div id="entry2">
 <span class="controlLabelGram">gram 2:</span>
-<span class="controlLabel">search term:</span>
+<span class="controlLabel_1">search term:</span>
 <input type="text" class="spellingInput" id="spelling2">
 <span class="controlLabelPos">pos:</span>
 <span id="posContainer2"><input type="text" id="pos2" class="pos"/></span>
@@ -75,7 +75,7 @@ categories: Lab
 
 <div id="entry3">
 <span class="controlLabelGram">gram 3:</span>
-<span class="controlLabel">search term:</span>
+<span class="controlLabel_1">search term:</span>
 <input type="text" class="spellingInput" id="spelling3">
 <span class="controlLabelPos">pos:</span>
 <span id="posContainer3"><input type="text" id="pos3" class="pos"/></span>
@@ -85,7 +85,7 @@ categories: Lab
 
 <input type="checkbox" name="smoothing" value="smoothing" id="smoothing" onchange="javascript:handleSmoothingChange();"><span class="instructions">Graph smoothing&nbsp;&nbsp;&nbsp;</span>
 
-<span style="display:inline-block; width: 50px;">&nbsp;</span>
+<span style="display:inline-block; width: 25px;">&nbsp;</span>
 
 <span class="instructions">Rolling Average:&nbsp;</span>
 
@@ -392,3 +392,4 @@ zz -- unknown or unparsable token<br/>
 <script type="text/javascript" src="/assets/tools/js/tinycolor.js?v=1500"></script>
 <script type="text/javascript" src="/assets/tools/js/nupos.js?v=1500"></script>
 <script type="text/javascript" src="/assets/tools/js/eeboSpellingBrowser.js?v=1500"></script>
+<link rel="stylesheet" type="text/css" href="/assets/tools/css/common_tool_styles.css?v=1500"/>
