@@ -560,8 +560,8 @@ EEBO-TCP Phase 2 begun in 2010 seeking “to convert each unique first edition i
 
 &lt;div id=&quot;page_controls&quot;&gt;
 &lt;div class=&quot;controls_1&quot;&gt;
-&lt;div class=&quot;heading&quot;&gt;Find the TCP ID for a text&lt;/div&gt;     
-&lt;div&gt;  
+&lt;div class=&quot;heading&quot;&gt;Find the TCP ID for a text&lt;/div&gt;
+&lt;div&gt;
 
 &lt;input type=&quot;text&quot; id=&quot;which_to_do_1&quot; value=&quot;lookup_tcp_id&quot; style=&quot;display:none&quot; /&gt;
 &lt;span class=&quot;form_label_1&quot;&gt;Author:&lt;/span&gt; &lt;input type=&quot;text&quot; id=&quot;author_1&quot; /&gt;&lt;br /&gt;
@@ -573,8 +573,8 @@ EEBO-TCP Phase 2 begun in 2010 seeking “to convert each unique first edition i
 &lt;/div&gt;
 
 &lt;div class=&quot;controls_2&quot;&gt;
-&lt;div class=&quot;heading&quot;&gt;&lt;i&gt;Or&lt;/i&gt;, find texts similar to a TCP id&lt;/div&gt;        
-&lt;div&gt; 
+&lt;div class=&quot;heading&quot;&gt;&lt;i&gt;Or&lt;/i&gt;, find texts similar to a TCP id&lt;/div&gt;
+&lt;div&gt;
 
 &lt;input type=&quot;text&quot; id=&quot;which_to_do_2&quot; value=&quot;find_texts&quot; style=&quot;display:none&quot; /&gt;
 &lt;span class=&quot;form_label_2&quot;&gt;TCP ID:&lt;/span&gt; &lt;input type=&quot;text&quot; id=&quot;eebo_tcp_id_2&quot; /&gt; &lt;span id=&quot;extra_spacer_1&quot;&gt; &lt;/span&gt;
