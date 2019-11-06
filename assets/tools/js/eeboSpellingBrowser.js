@@ -22,6 +22,337 @@ var EEBO_DEBUG = '';
 
 var GLOBAL_URL_PARAMS = '';
 
+var SAVE_WIDTH = '';
+var SAVE_HEIGHT = '';
+var SAVE_GRAPH_WIDTH = 960;
+
+function handle_document_load() {
+
+    SAVE_WIDTH = window.innerWidth;
+    SAVE_HEIGHT = window.innerHeight;
+
+    console.log('SAVE_WIDTH', SAVE_WIDTH);
+
+    if (SAVE_WIDTH < 415) {
+        $('.wrapper').css({'width': '375px'});
+        $('#slider-container').css({'width': '200px'});
+
+        $('#radio_1_2').css({'margin-left': '103px'});
+        $('#radio_1_3').css({'margin-left': '103px'});
+        $('#radio_2_2').css({'margin-left': '103px'});
+        $('#radio_2_3').css({'margin-left': '103px'});
+
+        $('.controlLabelGram').css({'display': 'block'});
+
+        $('.controlLabel_1').css({'width': '105px'});
+        $('.controlLabelPos').css({'width': '105px'});
+
+        $('#graph_smoothing_label').css({'margin-right': '103px'});
+
+        $('#queryButton').css({'margin-left': '0px', 'margin-top': '10px'});
+
+        SAVE_GRAPH_WIDTH = 350;
+    }
+    else {
+
+        $('#radio_1_2').css({'margin-left': '0px'});
+        $('#radio_1_3').css({'margin-left': '0px'});
+        $('#radio_2_2').css({'margin-left': '0px'});
+        $('#radio_2_3').css({'margin-left': '0px'});
+
+        $('.controlLabelGram').css({'display': 'inline-block'});
+
+        $('.controlLabel_1').css({'width': '120px'});
+        $('.controlLabelPos').css({'width': '50px'});
+
+        $('#graph_smoothing_label').css({'margin-right': '20px'});
+
+        $('#queryButton').css({'margin-left': '20px', 'margin-top': '0px'});
+
+        if (SAVE_WIDTH < 801) {
+            $('.wrapper').css({'width': '665px'});
+            $('#slider-container').css({'width': '470px'});
+            SAVE_GRAPH_WIDTH = 615;
+        }
+        else {
+            if (SAVE_WIDTH < 1160) {
+                $('.wrapper').css({'width': '950px'});
+                $('#slider-container').css({'width': '715px'});
+                SAVE_GRAPH_WIDTH = 850;
+            }
+            else {
+                $('.wrapper').css({'width': '1160px'});
+                $('#slider-container').css({'width': '825px'});
+                SAVE_GRAPH_WIDTH = 960;
+            }
+        }
+    }
+
+    if (GLOBAL_URL_PARAMS == '') {
+        GLOBAL_URL_PARAMS = new URLSearchParams(window.location.search);
+    }
+
+    if (GLOBAL_URL_PARAMS.has('requestFromClient') == false) {
+        
+        window.location.assign('/lab/tool_ngram_browser.html?requestFromClient={"1":{"spe":"love,loue","reg":"","lem":"","pos":"","originalPos":""},"2":{"spe":"","reg":"","lem":"","pos":"","originalPos":""},"3":{"spe":"","reg":"","lem":"","pos":"","originalPos":""},"databaseType":"unigrams","smoothing":"True","rollingAverage":"20_year", "instructionToggle": "show"}');
+    }
+    
+            
+    $('#errorMessages').html('');
+    
+    $("#slider_range").slider({
+        range: true,
+        min: 1473,
+        max: 1700,
+        values: [1473, 1700],
+        slide: function( event, ui ) {
+            EEBO_FROM_YEAR = ui.values[0];
+            EEBO_TO_YEAR = ui.values[1];
+            actuallyDrawTheGraph(true);
+        }
+    }); 
+    
+    $('#pos1').autocomplete({
+        source: function(req, responseFn) {
+            var re = $.ui.autocomplete.escapeRegex(req.term);
+            var matcher = new RegExp( "^" + re, "i" );
+            var a = $.grep( nupos_tags, function(item,index){
+                return matcher.test(item);
+            });
+            responseFn( a );
+        }
+    });  
+    
+    $('#pos2').autocomplete({
+        source: function(req, responseFn) {
+            var re = $.ui.autocomplete.escapeRegex(req.term);
+            var matcher = new RegExp( "^" + re, "i" );
+            var a = $.grep( nupos_tags, function(item,index){
+                return matcher.test(item);
+            });
+            responseFn( a );
+        }
+    }); 
+    
+    $('#pos3').autocomplete({
+        source: function(req, responseFn) {
+            var re = $.ui.autocomplete.escapeRegex(req.term);
+            var matcher = new RegExp( "^" + re, "i" );
+            var a = $.grep( nupos_tags, function(item,index){
+                return matcher.test(item);
+            });
+            responseFn( a );
+        }
+    });
+    
+    $('.pos').focus(
+        function() {
+            $('#nuposPopup').css('display', 'block');
+        }
+    );
+    
+    $('.pos').focusout(
+        function() {
+            $('#nuposPopup').css('display', 'none');
+        }
+    );
+
+    $('input[type=radio][name=gramSize]').change(
+        function() {
+            
+            $('#entry1').css('display', 'none');
+            $('#entry2').css('display', 'none');
+            $('#entry3').css('display', 'none');
+            $('#buttonDiv').css('display', 'none');
+            
+            if ($(this).val() == '1') {
+                $('#entry1').css('display', 'block');
+                $('#buttonDiv').css('display', 'block');
+            }
+            
+            if ($(this).val() == '2') {
+                $('#entry1').css('display', 'block');
+                $('#entry2').css('display', 'block');
+                $('#buttonDiv').css('display', 'block');
+            }
+            
+            if ($(this).val() == '3') {
+                $('#entry1').css('display', 'block');
+                $('#entry2').css('display', 'block');
+                $('#entry3').css('display', 'block');
+                $('#buttonDiv').css('display', 'block');
+            }
+        }   
+    );
+    
+    $('input:radio[name=gramSize]').each(
+        function () { 
+            $(this).prop('checked', false); 
+        }
+    );
+    
+    $('input:radio[name=spellings]').each(
+        function () { 
+            $(this).prop('checked', false); 
+        }
+    );
+    
+    if (GLOBAL_URL_PARAMS.has('requestFromClient') == true) {
+
+        var cleanedRequest = decodeURIComponent(GLOBAL_URL_PARAMS.get('requestFromClient')).replace(/:""",/g, ':"\\"",');
+
+        var requestFromClient = JSON.parse(cleanedRequest);
+
+        requestFromClient['1']['spe'] = decodeURIComponent(requestFromClient['1']['spe']);
+        requestFromClient['1']['reg'] = decodeURIComponent(requestFromClient['1']['reg']);
+        requestFromClient['1']['lem'] = decodeURIComponent(requestFromClient['1']['lem']);
+
+        requestFromClient['2']['spe'] = decodeURIComponent(requestFromClient['2']['spe']);
+        requestFromClient['2']['reg'] = decodeURIComponent(requestFromClient['2']['reg']);
+        requestFromClient['2']['lem'] = decodeURIComponent(requestFromClient['2']['lem']);
+
+        requestFromClient['3']['spe'] = decodeURIComponent(requestFromClient['3']['spe']);
+        requestFromClient['3']['reg'] = decodeURIComponent(requestFromClient['3']['reg']);
+        requestFromClient['3']['lem'] = decodeURIComponent(requestFromClient['3']['lem']);
+        
+        EEBO_SAVE_REQUEST_FROM_CLIENT = requestFromClient;
+        
+        if (requestFromClient['instructionToggle'] == 'hide') {
+            $('#eeboInstructions').css('display', 'none');
+            $('#instructionToggle').html('show instructions');
+        }
+            
+        $('#pos1').val(requestFromClient['1']['originalPos']);
+        $('#pos2').val(requestFromClient['2']['originalPos']);
+        $('#pos3').val(requestFromClient['3']['originalPos']);
+    
+        $('input:radio[name=gramSize]').each(
+            function () { 
+                
+                if (requestFromClient['databaseType'] == 'unigrams' && $(this).val() == '1') {
+                    $(this).prop('checked', true);     
+                } 
+                
+                if (requestFromClient['databaseType'] == 'bigrams' && $(this).val() == '2') {
+                    $(this).prop('checked', true);     
+                } 
+                
+                if (requestFromClient['databaseType'] == 'trigrams' && $(this).val() == '3') {
+                    $(this).prop('checked', true);     
+                }
+            }
+        );
+
+        if (requestFromClient['1']['spe'] > '' || requestFromClient['2']['spe'] > '' || requestFromClient['3']['spe'] > '') {
+            $('input:radio[name=spellings][value=spe]').prop('checked', true);
+        }
+        else {
+            if (requestFromClient['1']['reg'] > '' || requestFromClient['2']['reg'] > '' || requestFromClient['3']['reg'] > '') {
+                $('input:radio[name=spellings][value=reg]').prop('checked', true);
+            }
+            else {
+                if (requestFromClient['1']['lem'] > '' || requestFromClient['2']['lem'] > '' || requestFromClient['3']['lem'] > '') {
+                    $('input:radio[name=spellings][value=lem]').prop('checked', true);
+                }
+                else {
+                    $('input:radio[name=spellings][value=spe]').prop('checked', true);
+                }
+            }
+        }
+
+        if (requestFromClient['1']['spe'] > '') {
+            $('#spelling1').val(requestFromClient['1']['spe']);
+        }
+        if (requestFromClient['1']['reg'] > '') {
+            $('#spelling1').val(requestFromClient['1']['reg']);
+        }
+        if (requestFromClient['1']['lem'] > '') {
+            $('#spelling1').val(requestFromClient['1']['lem']);
+        }
+        
+        if (requestFromClient['2']['spe'] > '') {
+            $('#spelling2').val(requestFromClient['2']['spe']);
+        }
+        if (requestFromClient['2']['reg'] > '') {
+            $('#spelling2').val(requestFromClient['2']['reg']);
+        }
+        if (requestFromClient['2']['lem'] > '') {
+            $('#spelling2').val(requestFromClient['2']['lem']);
+        }
+        
+        if (requestFromClient['3']['spe'] > '') {
+            $('#spelling3').val(requestFromClient['3']['spe']);
+        }
+        if (requestFromClient['3']['reg'] > '') {
+            $('#spelling3').val(requestFromClient['3']['reg']);
+        }
+        if (requestFromClient['3']['lem'] > '') {
+            $('#spelling3').val(requestFromClient['3']['lem']);
+        }
+        
+        if (requestFromClient['smoothing'] == 'False') {
+            $('#smoothing').prop('checked', false);  
+        }
+        else {
+            $('#smoothing').prop('checked', true);  
+        }
+        
+        $("#rollingAverage > option[value=" + requestFromClient['rollingAverage'] + "]").prop("selected",true);
+                
+        if (requestFromClient['databaseType'] == 'unigrams') {
+            $('#entry1').css('display', 'block');
+            $('#buttonDiv').css('display', 'block');
+        }
+        
+        if (requestFromClient['databaseType'] == 'bigrams') {
+            $('#entry1').css('display', 'block');
+            $('#entry2').css('display', 'block');
+            $('#buttonDiv').css('display', 'block');
+        }
+        
+        if (requestFromClient['databaseType'] == 'trigrams') {
+            $('#entry1').css('display', 'block');
+            $('#entry2').css('display', 'block');
+            $('#entry3').css('display', 'block');
+            $('#buttonDiv').css('display', 'block');
+        }
+        
+        //
+        //  ACTUALLY DRAW THE GRAPH
+        //
+        
+        $("body").css("background-color", "#DDDDDD");
+        $("#progressMessage").css("display", "block");
+        $("#progressMessage").css("top", $("#resultsArea").position().top + "px");
+        $("#progressMessage").css("left", ($("#resultsArea").position().left + 50) + "px");
+        
+        EEBO_FROM_YEAR = 1473;
+        EEBO_TO_YEAR = 1700;
+        
+        getDataFromServer(requestFromClient);
+        
+        if (EEBO_NGRAMS_SAVE_DATA.length > 0) {
+
+            if (requestFromClient['rollingAverage'] == 'none') {
+                actuallyDrawTheGraph(false);
+            }
+            else {
+                handleRollingAverageChange(true);
+            }
+        }
+        
+        $("#progressMessage").css("display", "none");
+        $("body").css("background-color", "white");
+    
+        $('#slider_range').css('display', 'block');
+        $('#slider-container').css('display', 'block');
+    }
+    else {
+        $('#slider_range').css('display', 'block');
+        $('#slider-container').css('display', 'block');
+    }
+}
+
 /*  --------------------------------------------------------------------
     DOCUMENT LOAD.
     -------------------------------------------------------------------- */
@@ -29,282 +360,18 @@ var GLOBAL_URL_PARAMS = '';
 $(document).ready(
 
     function() {
-        GLOBAL_URL_PARAMS = new URLSearchParams(window.location.search);
 
-        if (GLOBAL_URL_PARAMS.has('requestFromClient') == false) {
-            
-            window.location.assign('/lab/tool_ngram_browser.html?requestFromClient={"1":{"spe":"love,loue","reg":"","lem":"","pos":"","originalPos":""},"2":{"spe":"","reg":"","lem":"","pos":"","originalPos":""},"3":{"spe":"","reg":"","lem":"","pos":"","originalPos":""},"databaseType":"unigrams","smoothing":"True","rollingAverage":"20_year", "instructionToggle": "show"}');
-        }
-        
-                
-        $('#errorMessages').html('');
-        
-        $("#slider_range").slider({
-            range: true,
-            min: 1473,
-            max: 1700,
-            values: [1473, 1700],
-            slide: function( event, ui ) {
-                EEBO_FROM_YEAR = ui.values[0];
-                EEBO_TO_YEAR = ui.values[1];
-                actuallyDrawTheGraph(true);
-            }
-        }); 
-        
-        $('#pos1').autocomplete({
-            source: function(req, responseFn) {
-                var re = $.ui.autocomplete.escapeRegex(req.term);
-                var matcher = new RegExp( "^" + re, "i" );
-                var a = $.grep( nupos_tags, function(item,index){
-                    return matcher.test(item);
-                });
-                responseFn( a );
-            }
-        });  
-        
-        $('#pos2').autocomplete({
-            source: function(req, responseFn) {
-                var re = $.ui.autocomplete.escapeRegex(req.term);
-                var matcher = new RegExp( "^" + re, "i" );
-                var a = $.grep( nupos_tags, function(item,index){
-                    return matcher.test(item);
-                });
-                responseFn( a );
-            }
-        }); 
-        
-        $('#pos3').autocomplete({
-            source: function(req, responseFn) {
-                var re = $.ui.autocomplete.escapeRegex(req.term);
-                var matcher = new RegExp( "^" + re, "i" );
-                var a = $.grep( nupos_tags, function(item,index){
-                    return matcher.test(item);
-                });
-                responseFn( a );
-            }
-        });
-        
-        $('.pos').focus(
-            function() {
-                $('#nuposPopup').css('display', 'block');
-            }
-        );
-        
-        $('.pos').focusout(
-            function() {
-                $('#nuposPopup').css('display', 'none');
-            }
-        );
+        handle_document_load();
 
-        $('input[type=radio][name=gramSize]').change(
-            function() {
-                
-                $('#entry1').css('display', 'none');
-                $('#entry2').css('display', 'none');
-                $('#entry3').css('display', 'none');
-                $('#buttonDiv').css('display', 'none');
-                
-                if ($(this).val() == '1') {
-                    $('#entry1').css('display', 'block');
-                    $('#buttonDiv').css('display', 'block');
-                }
-                
-                if ($(this).val() == '2') {
-                    $('#entry1').css('display', 'block');
-                    $('#entry2').css('display', 'block');
-                    $('#buttonDiv').css('display', 'block');
-                }
-                
-                if ($(this).val() == '3') {
-                    $('#entry1').css('display', 'block');
-                    $('#entry2').css('display', 'block');
-                    $('#entry3').css('display', 'block');
-                    $('#buttonDiv').css('display', 'block');
-                }
-            }   
-        );
-        
-        $('input:radio[name=gramSize]').each(
-            function () { 
-                $(this).prop('checked', false); 
-            }
-        );
-        
-        $('input:radio[name=spellings]').each(
-            function () { 
-                $(this).prop('checked', false); 
-            }
-        );
-        
-        var vars = [], hash;
-        
-        var q = document.URL.split('?')[1];
-        if(q != undefined){
-            q = q.split('&');
-            for(var i = 0; i < q.length; i++){
-                hash = q[i].split('=');
-                vars.push(hash[1]);
-                vars[hash[0]] = hash[1];
-            }
-        }
-        
-        if (vars.length > 0) {
+        //window.addEventListener("orientationchange", function() {
+        //    console.log('orientationchange');
+        //    handle_document_load();
+        //}, false);
 
-            var cleanedRequest = decodeURIComponent(vars['requestFromClient']).replace(/:""",/g, ':"\\"",');
-
-            var requestFromClient = JSON.parse(cleanedRequest);
-
-            requestFromClient['1']['spe'] = decodeURIComponent(requestFromClient['1']['spe']);
-            requestFromClient['1']['reg'] = decodeURIComponent(requestFromClient['1']['reg']);
-            requestFromClient['1']['lem'] = decodeURIComponent(requestFromClient['1']['lem']);
-
-            requestFromClient['2']['spe'] = decodeURIComponent(requestFromClient['2']['spe']);
-            requestFromClient['2']['reg'] = decodeURIComponent(requestFromClient['2']['reg']);
-            requestFromClient['2']['lem'] = decodeURIComponent(requestFromClient['2']['lem']);
-
-            requestFromClient['3']['spe'] = decodeURIComponent(requestFromClient['3']['spe']);
-            requestFromClient['3']['reg'] = decodeURIComponent(requestFromClient['3']['reg']);
-            requestFromClient['3']['lem'] = decodeURIComponent(requestFromClient['3']['lem']);
-            
-            EEBO_SAVE_REQUEST_FROM_CLIENT = requestFromClient;
-            
-            if (requestFromClient['instructionToggle'] == 'hide') {
-                $('#eeboInstructions').css('display', 'none');
-                $('#instructionToggle').html('show instructions');
-            }
-                
-            $('#pos1').val(requestFromClient['1']['originalPos']);
-            $('#pos2').val(requestFromClient['2']['originalPos']);
-            $('#pos3').val(requestFromClient['3']['originalPos']);
-        
-            $('input:radio[name=gramSize]').each(
-                function () { 
-                    
-                    if (requestFromClient['databaseType'] == 'unigrams' && $(this).val() == '1') {
-                        $(this).prop('checked', true);     
-                    } 
-                    
-                    if (requestFromClient['databaseType'] == 'bigrams' && $(this).val() == '2') {
-                        $(this).prop('checked', true);     
-                    } 
-                    
-                    if (requestFromClient['databaseType'] == 'trigrams' && $(this).val() == '3') {
-                        $(this).prop('checked', true);     
-                    }
-                }
-            );
-
-            if (requestFromClient['1']['spe'] > '' || requestFromClient['2']['spe'] > '' || requestFromClient['3']['spe'] > '') {
-                $('input:radio[name=spellings][value=spe]').prop('checked', true);
-            }
-            else {
-                if (requestFromClient['1']['reg'] > '' || requestFromClient['2']['reg'] > '' || requestFromClient['3']['reg'] > '') {
-                    $('input:radio[name=spellings][value=reg]').prop('checked', true);
-                }
-                else {
-                    if (requestFromClient['1']['lem'] > '' || requestFromClient['2']['lem'] > '' || requestFromClient['3']['lem'] > '') {
-                        $('input:radio[name=spellings][value=lem]').prop('checked', true);
-                    }
-                    else {
-                        $('input:radio[name=spellings][value=spe]').prop('checked', true);
-                    }
-                }
-            }
-
-            if (requestFromClient['1']['spe'] > '') {
-                $('#spelling1').val(requestFromClient['1']['spe']);
-            }
-            if (requestFromClient['1']['reg'] > '') {
-                $('#spelling1').val(requestFromClient['1']['reg']);
-            }
-            if (requestFromClient['1']['lem'] > '') {
-                $('#spelling1').val(requestFromClient['1']['lem']);
-            }
-            
-            if (requestFromClient['2']['spe'] > '') {
-                $('#spelling2').val(requestFromClient['2']['spe']);
-            }
-            if (requestFromClient['2']['reg'] > '') {
-                $('#spelling2').val(requestFromClient['2']['reg']);
-            }
-            if (requestFromClient['2']['lem'] > '') {
-                $('#spelling2').val(requestFromClient['2']['lem']);
-            }
-            
-            if (requestFromClient['3']['spe'] > '') {
-                $('#spelling3').val(requestFromClient['3']['spe']);
-            }
-            if (requestFromClient['3']['reg'] > '') {
-                $('#spelling3').val(requestFromClient['3']['reg']);
-            }
-            if (requestFromClient['3']['lem'] > '') {
-                $('#spelling3').val(requestFromClient['3']['lem']);
-            }
-            
-            if (requestFromClient['smoothing'] == 'False') {
-                $('#smoothing').prop('checked', false);  
-            }
-            else {
-                $('#smoothing').prop('checked', true);  
-            }
-            
-            $("#rollingAverage > option[value=" + requestFromClient['rollingAverage'] + "]").prop("selected",true);
-                    
-            if (requestFromClient['databaseType'] == 'unigrams') {
-                $('#entry1').css('display', 'block');
-                $('#buttonDiv').css('display', 'block');
-            }
-            
-            if (requestFromClient['databaseType'] == 'bigrams') {
-                $('#entry1').css('display', 'block');
-                $('#entry2').css('display', 'block');
-                $('#buttonDiv').css('display', 'block');
-            }
-            
-            if (requestFromClient['databaseType'] == 'trigrams') {
-                $('#entry1').css('display', 'block');
-                $('#entry2').css('display', 'block');
-                $('#entry3').css('display', 'block');
-                $('#buttonDiv').css('display', 'block');
-            }
-            
-            //
-            //  ACTUALLY DRAW THE GRAPH
-            //
-            
-            $("body").css("background-color", "#DDDDDD");
-            $("#progressMessage").css("display", "block");
-            $("#progressMessage").css("top", $("#resultsArea").position().top + "px");
-            $("#progressMessage").css("left", ($("#resultsArea").position().left + 50) + "px");
-            
-            EEBO_FROM_YEAR = 1473;
-            EEBO_TO_YEAR = 1700;
-            
-            getDataFromServer(requestFromClient);
-            
-            if (EEBO_NGRAMS_SAVE_DATA.length > 0) {
-
-                if (requestFromClient['rollingAverage'] == 'none') {
-                    actuallyDrawTheGraph(false);
-                }
-                else {
-                    handleRollingAverageChange(true);
-                }
-            }
-            
-            $("#progressMessage").css("display", "none");
-            $("body").css("background-color", "white");
-        
-            $('#slider_range').css('display', 'block');
-            $('#slider-container').css('display', 'block');
-        }
-        else {
-            //$('#slider_range').css('display', 'none');
-            //$('#slider-container').css('display', 'none');
-        
-            $('#slider_range').css('display', 'block');
-            $('#slider-container').css('display', 'block');
-        }
+        window.addEventListener("resize", function() {
+            console.log('resize');
+            handle_document_load();
+        }, false);
     }
 );
 
@@ -784,8 +851,11 @@ function actuallyDrawTheGraph(isRedraw) {
 
     //  ----------------------------------------------------------------
 
+    //var margin = {top: 20, right: 80, bottom: 30, left: 80};
+    //var width = 960 - margin.left - margin.right;
+
     var margin = {top: 20, right: 80, bottom: 30, left: 80};
-    var width = 960 - margin.left - margin.right;
+    var width = SAVE_GRAPH_WIDTH - margin.left - margin.right;
     var height = 500 - margin.top - margin.bottom;
 
     var n = data.length;
@@ -818,10 +888,16 @@ function actuallyDrawTheGraph(isRedraw) {
                         .attr("height", height + margin.top + margin.bottom)
                         .append("g")
                         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    var n_ticks = 12;
+    if (SAVE_WIDTH < 415) {
+        n_ticks = 6;
+    }
+
     svg.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(xScale).tickFormat(d3.format("d")));
+        .call(d3.axisBottom(xScale).tickFormat(d3.format("d")).ticks(n_ticks));
 
     svg.append("g")
         .attr("class", "y axis")

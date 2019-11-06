@@ -43,15 +43,15 @@ categories: Lab
 <div id="entryArea">
 
 <span class="controlLabel">ngramSize:</span>
-<input type="radio" name="gramSize" value="1"><span class="radioLabel">unigrams</span>
-<input type="radio" name="gramSize" value="2"><span class="radioLabel">bigrams</span>
-<input type="radio" name="gramSize" value="3"><span class="radioLabel">trigrams</span>
+<input type="radio" name="gramSize" value="1" id="radio_1_1"><span class="radioLabel">unigrams</span>
+<input type="radio" name="gramSize" value="2" id="radio_1_2"><span class="radioLabel">bigrams</span>
+<input type="radio" name="gramSize" value="3" id="radio_1_3"><span class="radioLabel">trigrams</span>
 <br/>
 
 <span class="controlLabel">spellings:</span>
-<input type="radio" name="spellings" value="spe"><span class="radioLabel">original</span>
-<input type="radio" name="spellings" value="reg"><span class="radioLabel">regularized</span>
-<input type="radio" name="spellings" value="lem"><span class="radioLabel">lemmas</span>
+<input type="radio" name="spellings" value="spe" id="radio_2_1"><span class="radioLabel">original</span>
+<input type="radio" name="spellings" value="reg" id="radio_2_2"><span class="radioLabel">regularized</span>
+<input type="radio" name="spellings" value="lem" id="radio_2_3"><span class="radioLabel">lemmas</span>
 <br/>
 
 <br/>
@@ -83,11 +83,11 @@ categories: Lab
 
 <div id="buttonDiv">
 
-<input type="checkbox" name="smoothing" value="smoothing" id="smoothing" onchange="javascript:handleSmoothingChange();"><span class="instructions">Graph smoothing&nbsp;&nbsp;&nbsp;</span>
+<input type="checkbox" name="smoothing" value="smoothing" id="smoothing" onchange="javascript:handleSmoothingChange();"><span class="instructions" id="graph_smoothing_label">Graph smoothing&nbsp;&nbsp;&nbsp;</span>
 
 <span style="display:inline-block; width: 25px;">&nbsp;</span>
 
-<span class="instructions">Rolling Average:&nbsp;</span>
+<span class="instructions" id="rolling_average_label">Rolling Average:&nbsp;</span>
 
 <select id="rollingAverage" onchange="javascript:handleRollingAverageChange(false);">
 <option value="none">None</option>

@@ -1,9 +1,12 @@
 
+/*
 .controlLabel {
     font: 14px sans-serif;
     display: inline-block;
     width: 100px;
 }
+*/
+
 .controlLabel_1 {
     font: 14px sans-serif;
     display: inline-block;
@@ -13,7 +16,13 @@
 .controlLabelGram {
     font: 14px sans-serif;
     display: inline-block;
-    width: 183px;
+    width: 100px;
+}
+
+.controlLabelPos {
+    font: 14px sans-serif;
+    display: inline-block;
+    width: 50px;
 }
 
 .radioLabel {
