@@ -24,6 +24,7 @@
           {% for category in site.categories %}
             {% assign category_url = category[0] | downcase %}
             {% assign page_url = page.url | split:"/" %}
+            {% if category[0] == "Lab" %}
             <div class="dropdown">
               <a class="{% if category_url != page_url[1] %}page-link {% endif %} dropbtn{% if category_url == page_url[1] %} page-link-active{% endif %}" href="/{{category[0] | downcase}}" href="/{{category[0] | downcase}}">{{ category[0] }}
                 <i class="fa fa-caret-down"></i>
@@ -34,7 +35,18 @@
                 {% endfor %}
               </div>
             </div>
+            {% endif %}
           {% endfor %}
+          <div class="dropdown">
+            <a class="page-link dropbtn" href="/read-more">Read More
+              <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/how-to">How-To</a>
+              <a href="/intros">Intros</a>
+              <a href="/posts">Posts</a>
+            </div>
+          </div>
           <div class="dropdown">
             <a class="page-link dropbtn" href="/about">About</a>
           </div>
