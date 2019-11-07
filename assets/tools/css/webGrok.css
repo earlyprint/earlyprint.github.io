@@ -87,6 +87,7 @@ td em {
 }
 
 #yearSlider {
+    width: 175px;
     margin-top: 30px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -94,45 +95,30 @@ td em {
 }
 
 .formColumn1 {
-    width: 200px;
+    width: 120px;
     font: 14px sans-serif;
 }
 
 input {
-    width: 300px;
+    width: 175px;
     font: 14px sans-serif;
 }
 
 select {
-    width: 308px;
+    width: 175px;
     font: 14px sans-serif;
 }
 
 button {
-    width: 308px;
+    width: 175px;
     font-weight: bold;
     padding-top: 5px;
     padding-bottom: 5px;
     font: 14px sans-serif;
 }
 
-#leftContent {
-    float: left;
-    width:  525px;
-}
-
-#rightContent {
-    margin-left: 550px;
-    vertical-align: top;
-}
-
-.instructions {
-    border: 1px solid black;
-    padding: 10px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    width: 350px;
-    height: 200px;
+#instructions {
+    display: none;
     font: 14px sans-serif;
 }
 

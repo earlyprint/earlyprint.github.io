@@ -65,8 +65,6 @@ $(document).ready(
                                             defaultValues: {min: 1473, max: 1700}, 
                                             valueLabels: "show"});
 
-            //$("#yearSlider").css({'z-index': -1});
-
             $('#topPagingWidget').html('');
             $('#bottomPagingWidget').html('');
         }
@@ -278,5 +276,20 @@ function addEnterKeyEvents() {
         }
     );
 
+}
+
+function toggle_instructions() {
+
+    if ($('#instructions_link').html() == 'Show Instructions') {
+        $('#instructions_link').html('Hide Instructions');
+
+        console.log('window.outerWidth', window.outerWidth);
+
+        $('#instructions').css({'display': 'inline-block', 'width': (window.outerWidth - 100) + 'px'});
+    }
+    else {
+        $('#instructions_link').html('Show Instructions');
+        $('#instructions').css({'display': 'none'});
+    }
 }
 

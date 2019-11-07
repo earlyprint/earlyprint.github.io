@@ -12,6 +12,26 @@ categories: Lab
 
 <div id="leftContent">
 
+<a href="javascript:toggle_instructions()" id="instructions_link">Show Instructions</a><br/><br/>
+
+<div id="instructions">
+
+<p>This version of Key Words in Context supports the following types of queries:</p>
+
+<ul>
+<li><b>Single-term searches</b>:  Simply type in a word</li>
+<li><b>Wildcard searches</b>:  Use asterisk to represent any number of characters, or question mark to represent one character (i.e., sh*less, which will find "shirtless", "shameless", etc.</li>
+<li><b>Fuzzy searches</b>: Type in a word or words, followed by a tilde and a number.  The number indicates how fuzzy, in terms of number of letters, the search results should be.  For example, tree~1 should yield results for the words tree, trees, trete, true (and more), all of which are one letter different than tree.</li>
+<li><b>Regex searches</b>: Enter a regular expression, wrapped in '/' (e.g., /tree.*/).  Note that we assume that the regex starts with the first letter of the word and ends with the last letter (i.e., a regex like /tree./ is processed as if it was written /^tree.$/).</li>
+<li><b>Multi-word searches</b>:  Type in the words, wrapped in quotation marks (e.g., "mighty king")</li>
+<li><b>Proximity searches</b>: To find words which occur near each other, wrap the words in quotation marks, followed by a tilde and a number.  The number indicates how closely, in terms of number of words, the two words should appear.  For example. "band rabble"~4 should yield results like  "all his whole band and rabble", "the City-Rabble , These are my Band-dogs" and "a Shirtless Band Of Northern Rabble".</li>
+</ul>
+
+<p>When narrowing searches by author and/or title, it isn't necessary to enter the complete author name or title; instead, one work is often enough.</p>
+
+<p>You can use Key Words in Context to see if work by an author is available in data.  Leave the Search Pattern blank, enter part of the author's name in the Author field (e.g. Gower), and click View Words.  The results will be a list of the works by the author contained in our corpus.</p>
+</div>
+
 <table>
 
 <tr>
@@ -78,26 +98,6 @@ Titles:
 </div>
 
 <div id="rightContent">
-
-<div class="instructions">
-
-<p><b>Instructions</b></p>
-
-<p>This version of Key Words in Context supports the following types of queries:</p>
-
-<ul>
-<li><b>Single-term searches</b>:  Simply type in a word</li>
-<li><b>Wildcard searches</b>:  Use asterisk to represent any number of characters, or question mark to represent one character (i.e., sh*less, which will find "shirtless", "shameless", etc.</li>
-<li><b>Fuzzy searches</b>: Type in a word or words, followed by a tilde and a number.  The number indicates how fuzzy, in terms of number of letters, the search results should be.  For example, tree~1 should yield results for the words tree, trees, trete, true (and more), all of which are one letter different than tree.</li>
-<li><b>Regex searches</b>: Enter a regular expression, wrapped in '/' (e.g., /tree.*/).  Note that we assume that the regex starts with the first letter of the word and ends with the last letter (i.e., a regex like /tree./ is processed as if it was written /^tree.$/).</li>
-<li><b>Multi-word searches</b>:  Type in the words, wrapped in quotation marks (e.g., "mighty king")</li>
-<li><b>Proximity searches</b>: To find words which occur near each other, wrap the words in quotation marks, followed by a tilde and a number.  The number indicates how closely, in terms of number of words, the two words should appear.  For example. "band rabble"~4 should yield results like  "all his whole band and rabble", "the City-Rabble , These are my Band-dogs" and "a Shirtless Band Of Northern Rabble".</li>
-</ul>
-
-<p>When narrowing searches by author and/or title, it isn't necessary to enter the complete author name or title; instead, one work is often enough.</p>
-
-<p>You can use Key Words in Context to see if work by an author is available in data.  Leave the Search Pattern blank, enter part of the author's name in the Author field (e.g. Gower), and click View Words.  The results will be a list of the works by the author contained in our corpus.</p>
-
 </div>
 
 </div>
