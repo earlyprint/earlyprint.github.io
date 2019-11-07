@@ -25,6 +25,7 @@ var GLOBAL_URL_PARAMS = '';
 var SAVE_WIDTH = '';
 var SAVE_HEIGHT = '';
 var SAVE_GRAPH_WIDTH = 960;
+var SAVE_GRAPH_HEIGHT = 500;
 
 function handle_document_load() {
 
@@ -52,6 +53,7 @@ function handle_document_load() {
         $('#queryButton').css({'margin-left': '0px', 'margin-top': '10px'});
 
         SAVE_GRAPH_WIDTH = 350;
+        SAVE_GRAPH_HEIGHT = 185;
     }
     else {
 
@@ -69,21 +71,24 @@ function handle_document_load() {
 
         $('#queryButton').css({'margin-left': '20px', 'margin-top': '0px'});
 
-        if (SAVE_WIDTH < 801) {
+        if (SAVE_WIDTH < 815) {
             $('.wrapper').css({'width': '665px'});
             $('#slider-container').css({'width': '470px'});
             SAVE_GRAPH_WIDTH = 615;
+            SAVE_GRAPH_HEIGHT = 320;
         }
         else {
             if (SAVE_WIDTH < 1160) {
                 $('.wrapper').css({'width': '950px'});
                 $('#slider-container').css({'width': '715px'});
                 SAVE_GRAPH_WIDTH = 850;
+                SAVE_GRAPH_HEIGHT = 445;
             }
             else {
                 $('.wrapper').css({'width': '1160px'});
                 $('#slider-container').css({'width': '825px'});
                 SAVE_GRAPH_WIDTH = 960;
+                SAVE_GRAPH_HEIGHT = 500;
             }
         }
     }
@@ -856,7 +861,7 @@ function actuallyDrawTheGraph(isRedraw) {
 
     var margin = {top: 20, right: 80, bottom: 30, left: 80};
     var width = SAVE_GRAPH_WIDTH - margin.left - margin.right;
-    var height = 500 - margin.top - margin.bottom;
+    var height = SAVE_GRAPH_HEIGHT - margin.top - margin.bottom;
 
     var n = data.length;
 
