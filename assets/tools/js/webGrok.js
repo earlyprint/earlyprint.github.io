@@ -283,9 +283,14 @@ function toggle_instructions() {
     if ($('#instructions_link').html() == 'Show Instructions') {
         $('#instructions_link').html('Hide Instructions');
 
-        console.log('window.outerWidth', window.outerWidth);
+        var pane_width = window.outerWidth;
+        if (pane_width > parseInt($('#leftContent').width())) {
+            pane_width = $('#leftContent').width();
+        }
 
-        $('#instructions').css({'display': 'inline-block', 'width': (window.outerWidth - 100) + 'px'});
+        console.log('pane_width', pane_width, 'window.outerWidth', window.outerWidth, "$('#leftContent').width()", $('#leftContent').width(), (pane_width > parseInt($('#leftContent').width())));
+
+        $('#instructions').css({'display': 'inline-block', 'width': (pane_width - 50) + 'px'});
     }
     else {
         $('#instructions_link').html('Show Instructions');
