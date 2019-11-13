@@ -25,6 +25,7 @@ You can also filter and download metadata by searching and clicking "Download Me
       <th>STC No.</th>
       <!-- <th>Thomason Tracts No.</th> -->
       <th>VID</th>
+      <th>Download</th>
     </tr>
   </thead>
   <tbody></tbody>
@@ -38,11 +39,7 @@ You can also filter and download metadata by searching and clicking "Download Me
 <script>
 var columns = [
   { data: 'dlps',
-    name: 'TCP ID',
-    render: function(data, type, row) {
-      return `${data}<div><a href='https://bitbucket.org/shcdemo/${ data.slice(0,3) }/raw/master/${ data }.xml' target='_blank'>EP XML</a></div><div><a href='https://raw.githubusercontent.com/textcreationpartnership/${data}/master/${data}.xml' target='_blank'>TCP XML</a></div>`
-    },
-    width: '75px'
+    name: 'TCP ID'
   },
   /*{ data: 'author',
     name: 'Author'
@@ -64,6 +61,14 @@ var columns = [
     },
   { data: 'vid',
     name: 'VID'
+  },
+  {
+    data: 'dlps',
+    name: 'Download',
+    render: function(data, type, row) {
+      return `<div><a href='https://bitbucket.org/shcdemo/${ data.slice(0,3) }/raw/master/${ data }.xml' target='_blank'>EP XML</a></div><div><a href='https://raw.githubusercontent.com/textcreationpartnership/${data}/master/${data}.xml' target='_blank'>TCP XML</a></div>`
+    },
+    width: '75px'
   }
 ]
 $(document).ready( function () {
