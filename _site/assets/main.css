@@ -173,6 +173,9 @@ pre {
 /**
  * Tables
  */
+.dt-buttons {
+  padding: .5em .5em .5em .5em; }
+
 /**
  * Added by JRL
  */

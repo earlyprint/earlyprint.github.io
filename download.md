@@ -4,7 +4,9 @@ title: Download
 permalink: /download/
 ---
 
-Click on a link to download any of the *EarlyPrint* XML texts. You can also filter and download metadata by searching and clicking "Download as CSV."
+Search to filter the table, and click on a link to download any of the corrected and linguisticaly-annotated *EarlyPrint* XML texts, or the original *Text Creation Partnership* XML.
+
+You can also filter and download metadata by searching and clicking "Download Metadata as CSV" at the bottom of this page.
 
 <form class="fr">
   <label>Search in:</label>
@@ -15,13 +17,14 @@ Click on a link to download any of the *EarlyPrint* XML texts. You can also filt
   <thead>
     <tr class="header">
       <th>TCP ID</th>
-      <th>Author</th>
+      <!-- <th>Author</th> -->
       <th>Title</th>
       <th>Date</th>
       <th>Proquest ID</th>
       <th>ESTC ID</th>
-      <th>STC or Wing No.</th>
-      <th>Thomason Tracts No.</th>
+      <th>STC No.</th>
+      <!-- <th>Thomason Tracts No.</th> -->
+      <th>VID</th>
     </tr>
   </thead>
   <tbody></tbody>
@@ -34,15 +37,16 @@ Click on a link to download any of the *EarlyPrint* XML texts. You can also filt
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/b-1.6.1/b-html5-1.6.1/datatables.min.js"></script>
 <script>
 var columns = [
-  { data: 'tcp',
+  { data: 'dlps',
     name: 'TCP ID',
     render: function(data, type, row) {
-      return `<a href='https://bitbucket.org/shcdemo/${ data.slice(0,3) }/raw/master/${ data }.xml' _target='blank'>${ data }</a>`
-    }
-  },
-  { data: 'author',
-    name: 'Author'
+      return `${data}<div><a href='https://bitbucket.org/shcdemo/${ data.slice(0,3) }/raw/master/${ data }.xml' target='_blank'>EP XML</a></div><div><a href='https://raw.githubusercontent.com/textcreationpartnership/${data}/master/${data}.xml' target='_blank'>TCP XML</a></div>`
     },
+    width: '75px'
+  },
+  /*{ data: 'author',
+    name: 'Author'
+    },*/
   { data: 'title',
     name: 'Title'
     },
@@ -55,11 +59,11 @@ var columns = [
   { data: 'estc',
     name: 'ESTC ID'
     },
-  { data: 'stc_wing',
-    name: 'STC or Wing No.'
+  { data: 'stc',
+    name: 'STC No.'
     },
-  { data: 'thomason',
-    name: 'Thomason Tracts No.'
+  { data: 'vid',
+    name: 'VID'
   }
 ]
 $(document).ready( function () {
@@ -69,16 +73,17 @@ $(document).ready( function () {
     });
 
   $.ajax({
-    url: "/assets/metadata.csv"
+    url: "/assets/flatmetadata.csv"
     }).done(function(data) {
-      var d = $.csv.toObjects(data);
+      var d = $.csv.toObjects(data, {separator: "\t"});
       var table = $('#metadataTable').DataTable({
         pageLength: 25,
         deferRender: true,
         autoWidth: false,
+        scrollY: '500px',
         data: d,
-        dom: "l<'fr'B>tipr",
-        buttons: [ {extend: "csv", text: "Download as CSV"} ],
+        dom: "ltiBpr",
+        buttons: [ {extend: "csv", text: "Download Metadata as CSV"} ],
         columns: columns
         });
       var col = "TCP ID";
