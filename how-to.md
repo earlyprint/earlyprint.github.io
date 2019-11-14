@@ -31,10 +31,13 @@ This section showcases a series of tutorials in Jupyter Notebooks—interactive 
 
 ## Other Tutorials
 
+### Library
+
 {% for category in site.categories %}
   {% if category[0] == "How-To" %}
   <ul class="post-list">
     {%- for post in category[1] -%}
+    {% if post.tags[0] == "ep-library" %}
     <li>
       <h3 class="mb0">
         <a class="post-link fell f4 near-black link dim" href="{{ post.url | relative_url }}">
@@ -47,6 +50,32 @@ This section showcases a series of tutorials in Jupyter Notebooks—interactive 
         {{ post.excerpt }}
       {%- endif -%}
     </li>
+    {% endif %}
+    {%- endfor -%}
+  </ul>
+  {% endif %}
+{% endfor %}
+
+### Lab
+
+{% for category in site.categories %}
+  {% if category[0] == "How-To" %}
+  <ul class="post-list">
+    {%- for post in category[1] -%}
+    {% if post.tags[0] == "ep-lab" %}
+    <li>
+      <h3 class="mb0">
+        <a class="post-link fell f4 near-black link dim" href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}
+        </a>
+      </h3>
+      <span class="post-meta">{{ post.author }}</span>
+      <div class="post-meta">{{ post.summary }}</div>
+      {%- if site.show_excerpts -%}
+        {{ post.excerpt }}
+      {%- endif -%}
+    </li>
+    {% endif %}
     {%- endfor -%}
   </ul>
   {% endif %}

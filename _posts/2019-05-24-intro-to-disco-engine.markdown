@@ -3,7 +3,7 @@ layout: post
 title:  "Introduction to Discovery Engine: His Noble Numbers"
 date:   2019-05-24 09:28:16 -0500
 author: Alireza Taheri Araghi et al.
-tags: eebo-tcp
+tags: [ep-lab, eebo-tcp]
 summary: An introduction to the Discovery Engine, which allows you to probe similarities between texts in the EEBO-TCP corpus
 categories: [Intros, How-To]
 ---
