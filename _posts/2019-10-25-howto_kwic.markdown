@@ -2,9 +2,8 @@
 layout: post
 title:  "About Key Words in Context"
 date:   2014-10-20 10:00:00 -0500
-author: Alireza Taheri Araghi et al.
+author: Anupam Basu
 tags: ep-lab
-summary: Anupam Basu
 categories: How-To
 ---
 

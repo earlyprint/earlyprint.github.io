@@ -4,7 +4,7 @@ title:  "Using the N-gram Browser"
 date:   2014-10-20 10:00:00 -0500
 author: Anupam Basu
 tags: ep-lab
-summary: An introduction to the Discovery Engine, which allows you to probe similarities between texts in the EEBO-TCP corpus
+summary: A basic tutorial for the EEBO N-gram Browser
 categories: How-To
 ---
 
@@ -327,4 +327,3 @@ Jeffrey E. F Friedl, *Mastering Regular Expressions* (Sebastopol, CA: O’Reilly
 
 <sup><a href="#body_ftn3" id="ftn3">3</a></sup> For a detailed introduction to the NUPOS tagset,
 please see [http://wordhoard.northwestern.edu/userman/nupos.pdf](http://wordhoard.northwestern.edu/userman/nupos.pdf)
-
