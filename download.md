@@ -38,32 +38,32 @@ You can also filter and download metadata by searching and clicking "Download Me
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/b-1.6.1/b-html5-1.6.1/datatables.min.js"></script>
 <script>
 var columns = [
-  { data: 'dlps',
+  { data: 0,
     name: 'TCP ID'
   },
   /*{ data: 'author',
     name: 'Author'
     },*/
-  { data: 'title',
+  { data: 7,
     name: 'Title'
     },
-  { data: 'date',
+  { data: 11,
     name: 'Date'
     },
-  { data: 'proquest',
+  { data: 5,
     name: 'Proquest ID'
     },
-  { data: 'estc',
+  { data: 2,
     name: 'ESTC ID'
     },
-  { data: 'stc',
+  { data: 1,
     name: 'STC No.'
     },
-  { data: 'vid',
+  { data: 6,
     name: 'VID'
   },
   {
-    data: 'dlps',
+    data: 0,
     name: 'Download',
     render: function(data, type, row) {
       return `<div><a href='https://bitbucket.org/shcdemo/${ data.slice(0,3) }/raw/master/${ data }.xml' target='_blank'>EP XML</a></div><div><a href='https://raw.githubusercontent.com/textcreationpartnership/${data}/master/${data}.xml' target='_blank'>TCP XML</a></div>`
@@ -77,30 +77,31 @@ $(document).ready( function () {
     $('#metadataSelect').append(option);
     });
 
-  $.ajax({
-    url: "/assets/flatmetadata.csv"
-    }).done(function(data) {
-      var d = $.csv.toObjects(data, {separator: "\t"});
-      var table = $('#metadataTable').DataTable({
-        pageLength: 25,
-        deferRender: true,
-        autoWidth: false,
-        scrollY: '500px',
-        data: d,
-        dom: "ltiBpr",
-        buttons: [ {extend: "csv", text: "Download Metadata as CSV"} ],
-        columns: columns
-        });
-      var col = "TCP ID";
-      $('#metadataSelect').on('change', function() {
-        col = this.value;
-        table.search('').columns().search( '' ).column(`${col}:name`).search( $('#metadataInput').val() ).draw();
-      });
-      $('#metadataInput').on( 'keyup', function () {
-        table.column(`${col}:name`).search( this.value ).draw();
-      });
-
-      })
+  console.time("generateTable")
+  var table = $('#metadataTable').DataTable({
+    ajax: {
+      url: "/assets/flatmetadata.json",
+      dataSrc: ''
+      },
+    pageLength: 25,
+    deferRender: true,
+    autoWidth: false,
+    scrollY: '500px',
+    dom: "ltiBpr",
+    buttons: [ {extend: "csv", text: "Download Metadata as CSV"} ],
+    columns: columns,
+    "initComplete": function(settings, json) {
+      console.timeEnd("generateTable");
+    }
+    });
+  var col = "TCP ID";
+  $('#metadataSelect').on('change', function() {
+    col = this.value;
+    table.search('').columns().search( '' ).column(`${col}:name`).search( $('#metadataInput').val() ).draw();
+  });
+  $('#metadataInput').on( 'keyup', function () {
+    table.column(`${col}:name`).search( this.value ).draw();
+  });
 
 } );
 </script>
