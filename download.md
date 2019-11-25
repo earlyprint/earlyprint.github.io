@@ -17,14 +17,17 @@ You can also filter and download metadata by searching and clicking "Download Me
   <thead>
     <tr class="header">
       <th>TCP ID</th>
-      <!-- <th>Author</th> -->
+      <th>Author</th>
       <th>Title</th>
       <th>Date</th>
+      <th>Imprint</th>
+      <th>Signatures</th>
+      <th>Language</th>
+      <th>Keywords</th>
       <th>Proquest ID</th>
       <th>ESTC ID</th>
       <th>STC No.</th>
       <!-- <th>Thomason Tracts No.</th> -->
-      <th>VID</th>
       <th>Download</th>
     </tr>
   </thead>
@@ -41,14 +44,26 @@ var columns = [
   { data: 0,
     name: 'TCP ID'
   },
-  /*{ data: 'author',
+  { data: 6,
     name: 'Author'
-    },*/
+    },
   { data: 7,
     name: 'Title'
     },
   { data: 11,
     name: 'Date'
+    },
+  { data: 10,
+    name: 'Imprint'
+    },
+  { data: 12,
+    name: 'Signature'
+    },
+  { data: 13,
+    name: 'Language'
+    },
+  { data: 14,
+    name: 'Keywords'
     },
   { data: 5,
     name: 'Proquest ID'
@@ -59,22 +74,25 @@ var columns = [
   { data: 1,
     name: 'STC No.'
     },
-  { data: 6,
-    name: 'VID'
-  },
   {
-    data: 0,
+    data: 15,
     name: 'Download',
     render: function(data, type, row) {
-      return `<div><a href='https://bitbucket.org/shcdemo/${ data.slice(0,3) }/raw/master/${ data }.xml' target='_blank'>EP XML</a></div><div><a href='https://raw.githubusercontent.com/textcreationpartnership/${data}/master/${data}.xml' target='_blank'>TCP XML</a></div>`
+      var list = data.split(/ ; |, no\. /)
+      if (list[1] === 'phase 1') {
+        var textId = list[2].replace(')','');
+        return `<div><a href='https://bitbucket.org/shcdemo/${ textId.slice(0,3) }/raw/master/${ textId }.xml' target='_blank'>EP XML</a></div><div><a href='https://raw.githubusercontent.com/textcreationpartnership/${textId}/master/${textId}.xml' target='_blank'>TCP XML</a></div>`
+      } else { return 'Available January 2021' }
     },
     width: '75px'
   }
 ]
 $(document).ready( function () {
   columns.forEach(col => {
-    var option = $("<option></option>").val(col.name).text(col.name);
-    $('#metadataSelect').append(option);
+    if (col.name !== 'Download') {
+      var option = $("<option></option>").val(col.name).text(col.name);
+      $('#metadataSelect').append(option);
+    }
     });
 
   console.time("generateTable")
@@ -88,7 +106,7 @@ $(document).ready( function () {
     autoWidth: false,
     scrollY: '500px',
     dom: "ltiBpr",
-    buttons: [ {extend: "csv", text: "Download Metadata as CSV"} ],
+    buttons: [ {extend: "csv", text: "Download Metadata as CSV", filename: "earlyprint_metadata", exportOptions: {columns: [0,1,2,3,4,5,6,7,8,9,10]} } ],
     columns: columns,
     "initComplete": function(settings, json) {
       console.timeEnd("generateTable");
