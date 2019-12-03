@@ -81,7 +81,7 @@ you click on a word in the text while annotations are enabled, the
 Annotation panel will open with information about that word. You see
 something like the following:
 
-![](assets/img/editview1.png)
+![](/assets/img/editview1.png)
 
 The top line gives you the unique address of the word. While you may
 ignore it, there is some virtue in recognizing it as a human-readable
@@ -122,11 +122,10 @@ lemma, regularized spelling and part-of-speech of a word in the form of
 "attributes". These are displayed in the Annotation Panel, and they are
 likely to need adjustment once a spelling has changed. Here is an
 example of where the correction of a spelling requires changes in the
-lemma and standard spelling:\
+lemma and standard spelling:
 
 ![](/assets/img/anno_instructions1.png).
 
-\
 The Annotation Panel consists of a sequence of "key:value" pairs, where
 the key appears in bold face on the left (**Text**, **Standard**, etc)
 and you enter values on the line with greyed-out text above it
