@@ -124,7 +124,7 @@ likely to need adjustment once a spelling has changed. Here is an
 example of where the correction of a spelling requires changes in the
 lemma and standard spelling:
 
-![](/assets/img/anno_instructions1.png).
+![](/assets/img/anno_instructions1.png)
 
 The Annotation Panel consists of a sequence of "key:value" pairs, where
 the key appears in bold face on the left (**Text**, **Standard**, etc)
