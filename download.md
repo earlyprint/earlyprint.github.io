@@ -43,7 +43,7 @@ You can also filter and download metadata by searching and clicking "Download Me
 <script type="text/javascript" src="//cdn.datatables.net/plug-ins/1.10.20/dataRender/ellipsis.js"></script>
 <script>
 var columns = [
-  { data: 15,
+  { data: 0,
     name: 'TCP ID',
     render: function(data, type, row) {
       var list = data.split(/ ; |, no\. /);
@@ -56,36 +56,38 @@ var columns = [
     },
     width: '75px'
   },
-  { data: 6,
+  { data: 3,
     name: 'Author',
     width: '15%'
     },
-  { data: 7,
+  { data: 4,
     name: 'Title',
     render: $.fn.dataTable.render.ellipsis( 115, true ),
     width: '30%'
     },
-  { data: 11,
+  { data: 6,
     name: 'Date'
     },
-  { data: 10,
+  { data: 5,
     name: 'Imprint',
     render: $.fn.dataTable.render.ellipsis( 50, true ),
     width: '20%'
     },
-  { data: 13,
+  { data: 7,
     name: 'Lang.'
     },
-  { data: 14,
+  { data: 8,
     name: 'Keywords',
     render: $.fn.dataTable.render.ellipsis( 50, true ),
     width: '15%'
     },
-  { data: 2,
+  { data: 1,
     name: 'ESTC ID',
     render: function(data, type, row) {
       if (data !== '') {
-        var estc = data.split(' ')[1]
+        if (data.indexOf('ESTC') !== -1) {
+          var estc = data.split(' ')[1];
+        } else { var estc = data; }
         if (type !== 'display') {
           return estc
         } else {
@@ -96,15 +98,8 @@ var columns = [
       }
     }
     },
-  { data: 1,
-    name: 'STC No.',
-    render: function(data, type, row) {
-      if (data !== '') {
-        return data.split(' ')[1]
-      } else {
-        return data
-      }
-    }
+  { data: 2,
+    name: 'STC No.'
     }
 ]
 $(document).ready( function () {
