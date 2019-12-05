@@ -51,7 +51,7 @@ var columns = [
       if (type === 'display') {
         if (list[1] === 'phase 1') {
           return `<div>${ textId }</div><div><a href='https://bitbucket.org/shcdemo/${ textId.slice(0,3) }/raw/master/${ textId }.xml' target='_blank'>EP XML</a></div><div><a href='https://raw.githubusercontent.com/textcreationpartnership/${textId}/master/${textId}.xml' target='_blank'>TCP XML</a></div>`
-        } else { return `${ textId }\n(Available 01/2021)` }
+        } else { return `${ textId }\n(Avail. 01/2021)` }
       } else { return textId; }
     },
     width: '75px'
@@ -66,7 +66,19 @@ var columns = [
     width: '30%'
     },
   { data: 6,
-    name: 'Date'
+    name: 'Date',
+    render: function(data, type, row) {
+      if (type === 'sort') {
+        var match = data.match(/[\dl][^\d,\s]?\d[^\d,\s]?[\-\?\d][^\d]?[\-\?\d]/)
+        if (match) {
+          var number = match[0].replace('l', '1').replace('-', '?').replace(/[^\d\?]/, '')
+          return number;
+        } else {
+          return data;
+        }
+      }
+      else { return data; }
+    }
     },
   { data: 5,
     name: 'Imprint',
