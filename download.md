@@ -23,14 +23,10 @@ You can also filter and download metadata by searching and clicking "Download Me
       <th>Title</th>
       <th>Date</th>
       <th>Imprint</th>
-      <!-- <th>Signatures</th> -->
       <th>Lang.</th>
       <th>Keywords</th>
-      <!-- <th>Proquest ID</th> -->
-      <th>ESTC ID</th>
-      <th>STC No.</th>
-      <!-- <th>Thomason Tracts No.</th> -->
-      <!-- <th>Download</th> -->
+      <th>ESTC</th>
+      <th>STC/Wing</th>
     </tr>
   </thead>
   <tbody></tbody>
@@ -51,10 +47,10 @@ var columns = [
       if (type === 'display') {
         if (list[1] === 'phase 1') {
           return `<div>${ textId }</div><div><a href='https://bitbucket.org/shcdemo/${ textId.slice(0,3) }/raw/master/${ textId }.xml' target='_blank'>EP XML</a></div><div><a href='https://raw.githubusercontent.com/textcreationpartnership/${textId}/master/${textId}.xml' target='_blank'>TCP XML</a></div>`
-        } else { return `${ textId }\n(Avail. 01/2021)` }
+        } else { return `${ textId }\n(Available 01/2021)` }
       } else { return textId; }
     },
-    width: '75px'
+    width: '80px'
   },
   { data: 3,
     name: 'Author',
@@ -94,7 +90,7 @@ var columns = [
     width: '15%'
     },
   { data: 1,
-    name: 'ESTC ID',
+    name: 'ESTC',
     render: function(data, type, row) {
       if (data !== '') {
         if (data.indexOf('ESTC') !== -1) {
@@ -111,7 +107,7 @@ var columns = [
     }
     },
   { data: 2,
-    name: 'STC No.'
+    name: 'STC/Wing'
     }
 ]
 $(document).ready( function () {
