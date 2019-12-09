@@ -43,8 +43,16 @@ var columns = [
       var list = data.split(/ ; |, no\. /);
       var textId = list[2].replace(')','');
       if (tcp_ids_with_reports.has(textId)) {
-          return `<div>${ textId }</div><div><a href='https://ada.artsci.wustl.edu/all_to_all_html_outputs/${ textId }.html' target='_blank'>Text reuse report</a></div>`
-      } else { return `<div>${ textId }</div><div>Not available</div>`; }
+        if (list[1] === 'phase 1') {
+          return `<div>${ textId }</div><div><a href='https://ada.artsci.wustl.edu/all_to_all_html_outputs/${ textId }.html' target='_blank'>Text reuse report</a></div>`;
+        }
+        else {
+          return `${ textId }\n(Available 01/2021)`;
+        }
+      } 
+      else { 
+        return `<div>${ textId }</div><div>Not available</div>`; 
+      }
     },
     width: '80px'
   },
