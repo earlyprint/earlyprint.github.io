@@ -47,7 +47,7 @@ var columns = [
           return `<div>${ textId }</div><div><a href='https://ada.artsci.wustl.edu/all_to_all_html_outputs/${ textId }.html' target='_blank'>Text reuse report</a></div>`;
         }
         else {
-          return `${ textId }\n(Available 01/2021)`;
+          return `<div>${ textId }</div><div><a href='https://ada.artsci.wustl.edu/all_to_all_phase2/${ textId }.html' target='_blank'>Reuse report (pswd req)</a></div>`;
         }
       } 
       else { 
