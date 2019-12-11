@@ -13146,7 +13146,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">lxml</span> <span class="k">import</span> <span class="n">etree</span> <span class="c1"># This is the only part of lxml we need</span>
@@ -13198,7 +13198,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create your nsmap for the &#39;tei&#39; namespace</span>
@@ -13340,7 +13340,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">heavenly_tag</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">heavenly_tag</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;reg&quot;</span><span class="p">],</span> <span class="n">heavenly_tag</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;lemma&quot;</span><span class="p">],</span> <span class="n">heavenly_tag</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;pos&quot;</span><span class="p">])</span>
@@ -13380,7 +13380,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Every w element will have a lemma and pos attribute</span>
@@ -13406,7 +13406,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[(&#39;Paradise&#39;, &#39;Paradise&#39;, &#39;paradise&#39;, &#39;n1&#39;), (&#39;lost&#39;, &#39;lost&#39;, &#39;lose&#39;, &#39;vvn&#39;), (&#39;A&#39;, &#39;A&#39;, &#39;a&#39;, &#39;d&#39;), (&#39;POEM&#39;, &#39;POEM&#39;, &#39;poem&#39;, &#39;n1&#39;), (&#39;Written&#39;, &#39;Written&#39;, &#39;write&#39;, &#39;j_vn&#39;), (&#39;in&#39;, &#39;in&#39;, &#39;in&#39;, &#39;acp-p&#39;), (&#39;TEN&#39;, &#39;TEN&#39;, &#39;ten&#39;, &#39;crd&#39;), (&#39;BOOKS&#39;, &#39;BOOKS&#39;, &#39;book&#39;, &#39;n2&#39;), (&#39;By&#39;, &#39;By&#39;, &#39;by&#39;, &#39;acp-p&#39;), (&#39;JOHN&#39;, &#39;JOHN&#39;, &#39;JOHN&#39;, &#39;n1-nn&#39;)]
+<pre>[(&#39;Paradise&#39;, &#39;Paradise&#39;, &#39;paradise&#39;, &#39;n1&#39;), (&#39;lost&#39;, &#39;lost&#39;, &#39;lose&#39;, &#39;vvn&#39;), (&#39;A&#39;, &#39;A&#39;, &#39;a&#39;, &#39;d&#39;), (&#39;POEM&#39;, &#39;POEM&#39;, &#39;poem&#39;, &#39;n1&#39;), (&#39;Written&#39;, &#39;Written&#39;, &#39;write&#39;, &#39;j-vn&#39;), (&#39;in&#39;, &#39;in&#39;, &#39;in&#39;, &#39;acp&#39;), (&#39;TEN&#39;, &#39;TEN&#39;, &#39;ten&#39;, &#39;crd&#39;), (&#39;BOOKS&#39;, &#39;BOOKS&#39;, &#39;book&#39;, &#39;n2&#39;), (&#39;By&#39;, &#39;By&#39;, &#39;by&#39;, &#39;acp&#39;), (&#39;JOHN&#39;, &#39;JOHN&#39;, &#39;JOHN&#39;, &#39;nn1&#39;)]
 </pre>
 </div>
 </div>
@@ -13426,7 +13426,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">all_nouns</span> <span class="o">=</span> <span class="p">[</span><span class="n">w</span><span class="o">.</span><span class="n">text</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">all_word_tags</span> <span class="k">if</span> <span class="n">w</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;pos&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;n&#39;</span><span class="p">)]</span>
@@ -13447,7 +13447,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;Paradise&#39;, &#39;POEM&#39;, &#39;BOOKS&#39;, &#39;JOHN&#39;, &#39;MILTON&#39;, &#39;Order&#39;, &#39;LONDON&#39;, &#39;Peter&#39;, &#39;Parker&#39;, &#39;Creed&#39;, &#39;Church&#39;, &#39;Aldgate&#39;, &#39;Robert&#39;, &#39;Boulter&#39;, &#39;Turks&#39;, &#39;Head&#39;, &#39;Bishopsgate-street&#39;, &#39;Matthias&#39;, &#39;Walker&#39;, &#39;St.&#39;, &#39;Dunstons&#39;, &#39;Church&#39;, &#39;Fleet-street&#39;, &#39;PARADISE&#39;, &#39;BOOK&#39;, &#39;I.&#39;, &#39;Mans&#39;, &#39;Disobedience&#39;, &#39;Fruit&#39;, &#39;Tree&#39;, &#39;tast&#39;, &#39;Death&#39;, &#39;World&#39;, &#39;woe&#39;, &#39;loss&#39;, &#39;Eden&#39;, &#39;Man&#39;, &#39;Seat&#39;, &#39;Muse&#39;, &#39;top&#39;, &#39;Oreb&#39;, &#39;Sinai&#39;, &#39;Shepherd&#39;, &#39;Seed&#39;, &#39;Beginning&#39;, &#34;Heav&#39;ns&#34;, &#39;Earth&#39;, &#39;Rose&#39;, &#39;Chaos&#39;, &#39;Sion&#39;, &#39;Hill&#39;, &#34;Siloa&#39;s&#34;, &#39;Brook&#39;, &#39;Oracle&#39;, &#39;God&#39;, &#39;aid&#39;, &#39;Song&#39;, &#39;flight&#39;, &#39;Mount&#39;, &#39;Things&#39;, &#39;Pros●…&#39;, &#39;Rhime&#39;, &#39;Spirit&#39;, &#39;Temples&#39;, &#39;●…eart&#39;, &#39;wings&#39;, &#39;Dove&#39;, &#39;Abyss&#39;, &#39;highth&#39;, &#39;Argument&#39;, &#39;Providence&#39;, &#39;wayes&#39;, &#39;God&#39;, &#39;men&#39;, &#34;Heav&#39;n&#34;, &#39;view&#39;, &#39;Tract&#39;, &#39;Hell&#39;, &#39;cause&#39;, &#39;Parents&#39;, &#39;State&#39;, &#39;Creator&#39;, &#39;Will&#39;, &#39;restraint&#39;, &#39;Lords&#39;, &#39;World&#39;, &#39;fowl&#39;, &#39;revolt&#39;, &#39;Envy&#39;, &#39;Revenge&#39;, &#39;Mother&#39;, &#39;Mankinde&#39;, &#39;time&#39;, &#39;Pride&#39;, &#34;Heav&#39;n&#34;, &#39;Host&#39;, &#39;Rebel&#39;, &#39;Angels&#39;, &#39;aid&#39;, &#39;Glory&#39;]
+<pre>[&#39;Paradise&#39;, &#39;POEM&#39;, &#39;BOOKS&#39;, &#39;JOHN&#39;, &#39;MILTON&#39;, &#39;Order&#39;, &#39;LONDON&#39;, &#39;Peter&#39;, &#39;Parker&#39;, &#39;Creed&#39;, &#39;Church&#39;, &#39;Aldgate&#39;, &#39;Robert&#39;, &#39;Boulter&#39;, &#39;Turks&#39;, &#39;Head&#39;, &#39;Bishopsgate-street&#39;, &#39;Matthias&#39;, &#39;Walker&#39;, &#39;Dunstons&#39;, &#39;Church&#39;, &#39;Fleet-street&#39;, &#39;PARADISE&#39;, &#39;BOOK&#39;, &#39;Mans&#39;, &#39;Disobedience&#39;, &#39;Fruit&#39;, &#39;Tree&#39;, &#39;tast&#39;, &#39;Death&#39;, &#39;World&#39;, &#39;woe&#39;, &#39;loss&#39;, &#39;Eden&#39;, &#39;Man&#39;, &#39;Seat&#39;, &#39;Muse&#39;, &#39;top&#39;, &#39;Oreb&#39;, &#39;Sinai&#39;, &#39;Shepherd&#39;, &#39;Seed&#39;, &#39;Beginning&#39;, &#34;Heav&#39;ns&#34;, &#39;Earth&#39;, &#39;Rose&#39;, &#39;Chaos&#39;, &#39;Sion&#39;, &#39;Hill&#39;, &#34;Siloa&#39;s&#34;, &#39;Brook&#39;, &#39;Oracle&#39;, &#39;God&#39;, &#39;aid&#39;, &#39;Song&#39;, &#39;flight&#39;, &#39;Mount&#39;, &#39;Things&#39;, &#39;Pros●…&#39;, &#39;Rhime&#39;, &#39;Spirit&#39;, &#39;Temples&#39;, &#39;●…eart&#39;, &#39;wings&#39;, &#39;Dove&#39;, &#39;Abyss&#39;, &#39;highth&#39;, &#39;Argument&#39;, &#39;Providence&#39;, &#39;wayes&#39;, &#39;God&#39;, &#39;men&#39;, &#34;Heav&#39;n&#34;, &#39;view&#39;, &#39;Tract&#39;, &#39;Hell&#39;, &#39;cause&#39;, &#39;Parents&#39;, &#39;State&#39;, &#39;Creator&#39;, &#39;Will&#39;, &#39;restraint&#39;, &#39;Lords&#39;, &#39;World&#39;, &#39;fowl&#39;, &#39;revolt&#39;, &#39;Envy&#39;, &#39;Revenge&#39;, &#39;Mother&#39;, &#39;Mankinde&#39;, &#39;time&#39;, &#39;Pride&#39;, &#34;Heav&#39;n&#34;, &#39;Host&#39;, &#39;Rebel&#39;, &#39;Angels&#39;, &#39;aid&#39;, &#39;Glory&#39;, &#39;Peers&#39;, &#39;aim&#39;]
 </pre>
 </div>
 </div>
@@ -13467,7 +13467,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Counter</span><span class="p">(</span><span class="n">all_nouns</span><span class="p">)</span><span class="o">.</span><span class="n">most_common</span><span class="p">()[:</span><span class="mi">10</span><span class="p">]</span>
@@ -13483,7 +13483,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[13]:</div>
+    <div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -13492,11 +13492,11 @@ div#notebook {
 <pre>[(&#34;Heav&#39;n&#34;, 316),
  (&#39;God&#39;, 238),
  (&#39;Earth&#39;, 191),
- (&#39;Man&#39;, 118),
+ (&#39;Man&#39;, 119),
  (&#39;Hell&#39;, 104),
  (&#39;things&#39;, 98),
  (&#39;Eve&#39;, 97),
- (&#39;Adam&#39;, 88),
+ (&#39;Adam&#39;, 93),
  (&#39;Death&#39;, 87),
  (&#39;Son&#39;, 85)]</pre>
 </div>
@@ -13519,7 +13519,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">all_line_tags</span> <span class="o">=</span> <span class="n">paradiselost</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s2">&quot;.//tei:l&quot;</span><span class="p">,</span> <span class="n">namespaces</span><span class="o">=</span><span class="n">nsmap</span><span class="p">)</span>
@@ -13563,7 +13563,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">all_line_tags</span><span class="p">[:</span><span class="mi">20</span><span class="p">]:</span> <span class="c1">#Only the first 20 lines</span>
@@ -13623,7 +13623,7 @@ Wast present and with mighty wings outspread
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">all_line_tags</span><span class="p">[:</span><span class="mi">20</span><span class="p">]:</span> <span class="c1">#Only the first 20 lines</span>
@@ -13683,7 +13683,7 @@ Wast present , and with mighty wings outspread
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Since you’re seeking only the first line group, we can use find() instead of findall()</span>
@@ -13731,7 +13731,7 @@ Wast present , and with mighty wings outspread
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># An XPath query to find all &lt;w&gt; and &lt;pc&gt; tags, with</span>
@@ -13796,7 +13796,7 @@ Wast present , and with mighty wings outspread
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">all_divs</span> <span class="o">=</span> <span class="n">paradiselost</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s2">&quot;.//tei:div&quot;</span><span class="p">,</span> <span class="n">namespaces</span><span class="o">=</span><span class="n">nsmap</span><span class="p">)</span> <span class="c1"># Find all the divs</span>
@@ -13849,7 +13849,7 @@ Wast present , and with mighty wings outspread
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">title_page</span> <span class="o">=</span> <span class="n">paradiselost</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;.//tei:div[@type=&#39;title_page&#39;]&quot;</span><span class="p">,</span> <span class="n">namespaces</span><span class="o">=</span><span class="n">nsmap</span><span class="p">)</span>
@@ -13892,7 +13892,7 @@ Wast present , and with mighty wings outspread
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">book2</span> <span class="o">=</span> <span class="n">paradiselost</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;.//tei:div[@type=&#39;book&#39;][@n=&#39;2&#39;]&quot;</span><span class="p">,</span> <span class="n">namespaces</span><span class="o">=</span><span class="n">nsmap</span><span class="p">)</span> <span class="c1">#Find only Book 2</span>
@@ -13934,7 +13934,7 @@ Wast present , and with mighty wings outspread
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">all_books</span> <span class="o">=</span> <span class="n">paradiselost</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s2">&quot;.//tei:div[@type=&#39;book&#39;]&quot;</span><span class="p">,</span> <span class="n">namespaces</span><span class="o">=</span><span class="n">nsmap</span><span class="p">)</span> <span class="c1"># Find all of the books</span>
@@ -13990,7 +13990,7 @@ Wast present , and with mighty wings outspread
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Begin by getting all regularized nouns in every book as a list</span>
