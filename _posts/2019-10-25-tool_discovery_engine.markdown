@@ -30,7 +30,17 @@ categories: Lab
 <input type="text" id="which_to_do_2" value="find_texts" style="display:none">
 <span class="form_label_2">TCP ID:</span> <input type="text" id="eebo_tcp_id_2"> <span id="extra_spacer_1"> </span>
 <br/>
-<span class="form_label_2">n results:</span> <span>1</span> <input type="range" min="1" max="100" value="50" class="slider" id="n_results" name="n_results"> <span>100</span><br/>
+<span class="form_label_2">n results:</span> <!--<span>1</span> <input type="range" min="1" max="100" value="50" class="slider" id="n_results" name="n_results"> <span>100</span>-->
+    <select id="n_results">
+      <option value="10">10</option>
+      <option value="20">20</option>
+      <option value="35" selected>35</option>
+      <option value="50">50</option>
+      <option value="75">75</option>
+      <option value="100">100</option>
+    </select>
+<br/>
+
 <br/>
 <span class="form_label_2"> </span> <button onclick="javascript:handle_button(2);">Find Texts!</button>
 
