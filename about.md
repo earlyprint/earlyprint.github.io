@@ -8,6 +8,24 @@ permalink: /about/
 
 ## Team
 
+**Martin Mueller, co-PI,** taught at Brandeis University (1965-67) and  the University of Toronto (1967-76) before moving to Northwestern University, where he taught until his retirement in 2013. His primary research field has been the uses of ancient epic and tragedy by European writers since the Renaissance. He has also written on Homer and Shakespeare. More recently he has become interested in the uses of information technology for traditional philological inquiries.  Together with Ahuvia Kahane, he is the editor of [The Chicago Homer](http://www.library.northwestern.edu/homer), a multilingual web site that uses the search and display capabilities of digital media to make distinctive features of Early Greek epic accessible to readers with and without Greek. He is also the general editor of [WordHoard](http://panini.northwestern.edu/wordhoard.northwestern.edu), an application for the close reading and scholarly analysis of deeply tagged texts.
+
+**Joseph Loewenstein, co-PI,** specializes in the relation between the book trade and the field of literary practice.  The author of *Ben Jonson and Possessive Authorship*, *The Author’s Due: Printing and the Prehistory of Copyright*, and *Responsive Readings: Versions of Echo in Pastoral, Epic, and the Jonsonian Masque*.  Professor Loewenstein was a contributing editor to *The Cambridge Ben Jonson* and is one of the editors of the *Oxford Edition of the Collected Works of Edmund Spenser*.  He directs the Humanities Digital Workshop at Washington University in St. Louis as well as the university’s Interdisciplinary Project in the Humanities.
+
+**Anupam Basu**
+
+**John R. Ladd** is a postdoctoral fellow at the Kaplan Institute for the Humanities at Northwestern University, where he uses archival research and digital methods to investigate the ways early modern material practices and social networks shape literary forms. His current project, *Network Poetics: Studies in Early Modern Literary Collaboration*, reflects these interests by arguing that despite the rise of authorial individuation throughout the early modern period, collaborative, networked forms of writing persist and continue to take new shapes even after the Restoration. John's writing has appeared in *Milton Studies*, *The Spenser Review*, and *The Programming Historian*, and he previously worked as research fellow for the [Six Degrees of Francis Bacon](http://sixdegreesoffrancisbacon.com/) digital project.
+
+**Craig Berry**
+
+**Philip R. "Pib" Burns** possesses fifty years of experience with humanities computing, natural language processing, databases, statistical analysis guidance, and computer programming in support of research and educational activities. In addition to EarlyPrint, he has participated in the Mellon-funded WordHoard, Monk, MorphAdorner, and Bamboo humanities computing projects. Philip's educational background is in mathematics, computer science, and English literature. His MorphAdorner suite provides the bulk of the natural language processing for EarlyPrint.
+
+**Doug Knox**
+
+**Stephen Pentecost** is Senior Digital Humanities Specialist at Washington University in St. Louis, where he supports projects in textual editing, archive creation, textual criticism, and musical composition.
+
+**Kate Needham**
+
 ## Additional Credits
 
 Each text is derived from an EEBO-TCP transcription. Most of the texts
