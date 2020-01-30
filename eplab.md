@@ -8,9 +8,9 @@ permalink: /lab/
 <h3><a href="/lab/tool_ngram_browser.html?requestFromClient={&quot;1&quot;:{&quot;spe&quot;:&quot;love,loue&quot;,&quot;reg&quot;:&quot;&quot;,&quot;lem&quot;:&quot;&quot;,&quot;pos&quot;:&quot;&quot;,&quot;originalPos&quot;:&quot;&quot;},&quot;2&quot;:{&quot;spe&quot;:&quot;&quot;,&quot;reg&quot;:&quot;&quot;,&quot;lem&quot;:&quot;&quot;,&quot;pos&quot;:&quot;&quot;,&quot;originalPos&quot;:&quot;&quot;},&quot;3&quot;:{&quot;spe&quot;:&quot;&quot;,&quot;reg&quot;:&quot;&quot;,&quot;lem&quot;:&quot;&quot;,&quot;pos&quot;:&quot;&quot;,&quot;originalPos&quot;:&quot;&quot;},&quot;databaseType&quot;:&quot;unigrams&quot;,&quot;smoothing&quot;:&quot;True&quot;,&quot;rollingAverage&quot;:&quot;20_year&quot;, &quot;instructionToggle&quot;: &quot;show&quot;}">N-gram Browser</a></h3>
 <p><a href="/lab/tool_ngram_browser.html?requestFromClient={&quot;1&quot;:{&quot;spe&quot;:&quot;love,loue&quot;,&quot;reg&quot;:&quot;&quot;,&quot;lem&quot;:&quot;&quot;,&quot;pos&quot;:&quot;&quot;,&quot;originalPos&quot;:&quot;&quot;},&quot;2&quot;:{&quot;spe&quot;:&quot;&quot;,&quot;reg&quot;:&quot;&quot;,&quot;lem&quot;:&quot;&quot;,&quot;pos&quot;:&quot;&quot;,&quot;originalPos&quot;:&quot;&quot;},&quot;3&quot;:{&quot;spe&quot;:&quot;&quot;,&quot;reg&quot;:&quot;&quot;,&quot;lem&quot;:&quot;&quot;,&quot;pos&quot;:&quot;&quot;,&quot;originalPos&quot;:&quot;&quot;},&quot;databaseType&quot;:&quot;unigrams&quot;,&quot;smoothing&quot;:&quot;True&quot;,&quot;rollingAverage&quot;:&quot;20_year&quot;, &quot;instructionToggle&quot;: &quot;show&quot;}"><img alt="Screenshot of visualization" src="/assets/img/spellingBrowser_SM.png"></a></p>
 
-<h3><a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/am_ix/search/">Blacklab -- Phase I</a></h3>
+<h3><a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/am_ix/search/">Linguistic Search -- EEBO-TCP Phase I</a></h3>
 
-<h3><a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/">Blacklab -- Phases I & II</a></h3>
+<h3><a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/">Linguistic Search -- Phases I & II</a></h3>
 
 <h3><a href="/lab/tool_webgrok.html">Key Words in Context</a></h3>
 <p><a href="/lab/tool_webgrok.html"><img alt="Screenshot of visualization" src="/assets/img/webGrok.png"></a></p>
