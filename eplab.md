@@ -12,9 +12,6 @@ permalink: /lab/
 
 <h3><a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/">Linguistic Search -- Phases I & II</a></h3>
 
-<h3><a href="/lab/tool_webgrok.html">Key Words in Context</a></h3>
-<p><a href="/lab/tool_webgrok.html"><img alt="Screenshot of visualization" src="/assets/img/webGrok.png"></a></p>
-
 <h3><a href="/lab/tool_discovery_engine.html">The Discovery Engine</a></h3>
 <p><a href="/lab/tool_discovery_engine.html"><img alt="Screenshot of visualization" src="/assets/img/disco_engine.png"></a></p>
 
