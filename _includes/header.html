@@ -35,6 +35,7 @@
                 {% for post in category[1] %}
                   <a href="{{ post.url }}">{{ post.title | truncatewords: 4 }}</a>
                 {% endfor %}
+                <a href="/download">Download Metadata</a>
               </div>
             </div>
             {% endif %}
@@ -48,9 +49,6 @@
               <a href="/intros">Intros</a>
               <a href="/posts">Posts</a>
             </div>
-          </div>
-          <div class="dropdown">
-            <a class="page-link dropbtn" href="/download">Download</a>
           </div>
           <div class="dropdown">
             <a class="page-link dropbtn" href="/about">About</a>
