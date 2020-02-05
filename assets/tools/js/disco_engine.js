@@ -1,6 +1,7 @@
 
 var GLOBAL_URL_PARAMS = '';
-
+//var HOSTNAME = 'https://talus.artsci.wustl.edu';
+var HOSTNAME = 'http://localhost';
 
 $( document ).ready(function() {
 
@@ -26,10 +27,11 @@ $( document ).ready(function() {
 
         $('#results').html('<h2 style="color:blue;">Working . . . </h2>');
 
-        $.get('https://talus.artsci.wustl.edu/all_3_prototype/run_query.php?' + GLOBAL_URL_PARAMS.toLocaleString())
+        $.get(HOSTNAME + '/all_3_prototype/run_query.php?' + GLOBAL_URL_PARAMS.toLocaleString())
             .done(
                 function(data) {
-                   $('#results').html(data);
+
+                    $('#results').html(data);
 
                     $('a').each(
                         function() {
@@ -40,6 +42,12 @@ $( document ).ready(function() {
                             }
                         }
                     );
+
+                    console.log('indexOf', document.location.href.indexOf('find_texts'));
+
+                    if (document.location.href.indexOf('find_texts') > -1) {
+                        open_tab('tfidf_content');
+                    }
                 }
             );
     }
@@ -223,4 +231,25 @@ function toggle_row(id) {
         $('#graph_' + id).css('display', 'none');
         $('#link_' + id).html('+');
     }
+}
+
+function open_tab(tab_id) {
+
+    console.log('open_tab', tab_id);
+
+    $('.tabcontent').each(
+        function() {
+            $(this).css('display', 'none');
+        }
+    );
+
+    $('.tablinks').each(
+        function() {
+            $(this).removeClass('active')
+        }
+    );
+
+    $('#' + tab_id).css('display', 'block');
+    
+    $('#' + tab_id + '_link').addClass('active');
 }
