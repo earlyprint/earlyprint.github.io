@@ -3,9 +3,9 @@ layout: post
 title:  "Introduction to Linguistic Search"
 date:   2020-02-03 09:30:00 -0500
 author: Stephen Pentecost
-tags: lingustic-search blacklab cql
+tags: [ep-lab, lingustic-search, blacklab, cql]
 summary: An introduction to Lingustic Search, powered by Blacklab
-categories: Intros
+categories: [How-To, Intros]
 ---
 
 ## Introduction to Linguistic Search
@@ -145,9 +145,9 @@ results is always preceded by a line like
 all documents
 
 This exposes the syntax of the query that is passed to the underlying
-search engine: 
+search engine:
 
-> \[ reg = "most" \| reg = "all" \] \[ pos = "vvg" \] 
+> \[ reg = "most" \| reg = "all" \] \[ pos = "vvg" \]
 
 which is a
 CQL (Corpus Query Language) query. Corpus Query Language is a standard

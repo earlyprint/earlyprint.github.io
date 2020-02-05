@@ -35,6 +35,7 @@
                 {% for post in category[1] %}
                   <a href="{{ post.url }}">{{ post.title | truncatewords: 4 }}</a>
                 {% endfor %}
+                <a href="/download">Download Metadata</a>
               </div>
             </div>
             {% endif %}
@@ -50,7 +51,14 @@
             </div>
           </div>
           <div class="dropdown">
-            <a class="page-link dropbtn" href="/download">Download</a>
+            <a class="page-link dropbtn" href="/read-more">Community
+              <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="https://texts.earlyprint.org/exist/apps/shc/home.html#loginDialog">Become a Contributor</a>
+              <a href="https://twitter.com/early_print" target="_blank">Twitter</a>
+              <a href="mailto:martinmueller@northwestern.edu,jfloewen@wustl.edu?subject=Early Print" target="_blank">Email</a>
+            </div>
           </div>
           <div class="dropdown">
             <a class="page-link dropbtn" href="/about">About</a>
