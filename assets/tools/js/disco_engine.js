@@ -1,7 +1,7 @@
 
 var GLOBAL_URL_PARAMS = '';
-//var HOSTNAME = 'https://talus.artsci.wustl.edu';
-var HOSTNAME = 'http://localhost';
+var HOSTNAME = 'https://talus.artsci.wustl.edu';
+//var HOSTNAME = 'http://localhost';
 
 $( document ).ready(function() {
 
