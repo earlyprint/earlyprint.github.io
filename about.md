@@ -16,7 +16,7 @@ permalink: /about/
 
 **John R. Ladd** is a postdoctoral fellow at the Kaplan Institute for the Humanities at Northwestern University, where he uses archival research and digital methods to investigate the ways early modern material practices and social networks shape literary forms. His current project, *Network Poetics: Studies in Early Modern Literary Collaboration*, reflects these interests by arguing that despite the rise of authorial individuation throughout the early modern period, collaborative, networked forms of writing persist and continue to take new shapes even after the Restoration. John's writing has appeared in *Milton Studies*, *The Spenser Review*, and *The Programming Historian*, and he previously worked as research fellow for the [Six Degrees of Francis Bacon](http://sixdegreesoffrancisbacon.com/) digital project.
 
-**Craig Berry** is a Software Project Manager and independent scholar who holds a Ph.D. in English from Northwestern University. He has published numerous articles, mostly on Chaucer and Spenser, one of which won the 1995 Isabel MacCaffrey Prize from the International Spenser Society. He has served as Secretary-Treasurer of the Spenser Society and is currently Digital Projects Editor at *The Spenser Review*. His digital work includes contributions to *The Chicago Homer* and preparing the text of *The Variorum Spenser* for the WordHoard database. He currently maintains the software behind the EarlyPrint Library. 
+**Craig Berry** is a Software Project Manager and independent scholar who holds a Ph.D. in English from Northwestern University. He has published numerous articles, mostly on Chaucer and Spenser, one of which won the 1995 Isabel MacCaffrey Prize from the International Spenser Society. He has served as Secretary-Treasurer of the Spenser Society and is currently Digital Projects Editor at *The Spenser Review*. His digital work includes contributions to *The Chicago Homer* and preparing the text of *The Variorum Spenser* for the WordHoard database. He currently maintains the software behind the EarlyPrint Library.
 
 **Philip R. "Pib" Burns** possesses fifty years of experience with humanities computing, natural language processing, databases, statistical analysis guidance, and computer programming in support of research and educational activities. In addition to EarlyPrint, he has participated in the Mellon-funded WordHoard, Monk, MorphAdorner, and Bamboo humanities computing projects. Philip's educational background is in mathematics, computer science, and English literature. His MorphAdorner suite provides the bulk of the natural language processing for EarlyPrint.
 
@@ -57,6 +57,8 @@ three students, Heejin \"Gabby\" Ro, Yixin \"Arthur\" Xiao, and Keren
 Yi. Over a period of three weeks in January 2016 they corrected many
 textual defects in 118 plays, consulting printed originals at Smith
 College and the Houghton Library.
+
+*EarlyPrint*'s improvements to the EEBO-TCP archive would not be possible without the time and effort of the many contributors who have submitted annotations and corrections via the EP Library site.
 
 Craig Berry designed and built the correction tool
 [Annolex](http://annolex.at.northwestern.edu). Annolex was a prototype
