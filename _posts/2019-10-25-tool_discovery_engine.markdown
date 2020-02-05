@@ -18,7 +18,7 @@ categories: Lab
 <span class="form_label_1">Author:</span> <input type="text" id="author_1"><br/>
 <span class="form_label_1">Title:</span> <input type="text" id="title_1"><br/>
 <br/>
-<span class="form_label_1"> </span> <button onclick="javascript:handle_button(1);">Find ID!</button><br/>
+<span class="form_label_1"> </span> <button onclick="javascript:handle_button(1);">Find ID</button><br/>
 
 </div>
 </div>
@@ -42,7 +42,7 @@ categories: Lab
 <br/>
 
 <br/>
-<span class="form_label_2"> </span> <button onclick="javascript:handle_button(2);">Find Texts!</button>
+<span class="form_label_2"> </span> <button onclick="javascript:handle_button(2);">Find Texts</button>
 
 </div>
 </div>
