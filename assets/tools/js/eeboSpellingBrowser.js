@@ -1204,125 +1204,20 @@ function handleRollingAverageChange(fromDocumentLoad) {
     -------------------------------------------------------------------- */
 
 function linkToGrok(word, corpus) {
-    
-    //var grokSearchTerm = EEBO_GROK_KEYS[word];
-    
-    var vars = [], hash;
-        
-    var q = document.URL.split('?')[1];
-    if(q != undefined){
-        q = q.split('&');
-        for(var i = 0; i < q.length; i++){
-            hash = q[i].split('=');
-            vars.push(hash[1]);
-            vars[hash[0]] = hash[1];
-        }
-    }
-        
-    var requestFromClient = JSON.parse(decodeURI(vars['requestFromClient']));
-        
-    var numberOfGrams = 0;
-            
-    if (requestFromClient['1']['spe'] > '') {
-        numberOfGrams = numberOfGrams + 1;
-    }
-    if (requestFromClient['1']['reg'] > '') {
-        numberOfGrams = numberOfGrams + 1;
-    }
-    if (requestFromClient['1']['lem'] > '') {
-        numberOfGrams = numberOfGrams + 1;
-    }
-    
-    if (requestFromClient['2']['spe'] > '') {
-        numberOfGrams = numberOfGrams + 1;
-    }
-    if (requestFromClient['2']['reg'] > '') {
-        numberOfGrams = numberOfGrams + 1;
-    }
-    if (requestFromClient['2']['lem'] > '') {
-        numberOfGrams = numberOfGrams + 1;
-    }
-    
-    if (requestFromClient['3']['spe'] > '') {
-        numberOfGrams = numberOfGrams + 1;
-    }
-    if (requestFromClient['3']['reg'] > '') {
-        numberOfGrams = numberOfGrams + 1;
-    }
-    if (requestFromClient['3']['lem'] > '') {
-        numberOfGrams = numberOfGrams + 1;;
-    }
-    
-    var hasPos1 = false;
-    var hasPos2 = false;
-    var hasPos3 = false;
-    
-    if (requestFromClient['1']['originalPos'] > '') {
-        hasPos1 = true;
-    }
-    if (requestFromClient['2']['originalPos'] > '') {
-        hasPos2 = true;
-    }
-    if (requestFromClient['3']['originalPos'] > '') {
-        hasPos3 = true;
-    }   
-    
-    var wordParts = word.split(' '); 
-    
-    var grokSearchTerm = ''; 
-    
-    if (numberOfGrams == 1) {   
-        grokSearchTerm =  wordParts[0];
-    }
-    
-    if (numberOfGrams == 2) { 
-        grokSearchTerm =  wordParts[0];
-        if (hasPos1 == true) {
-            grokSearchTerm = grokSearchTerm + ' ' + wordParts[2];
-        }
-        else {
-            grokSearchTerm = grokSearchTerm + ' ' + wordParts[1];
-        }
-        grokSearchTerm = '"' + grokSearchTerm + '"';
-    }
-    
-    if (numberOfGrams == 3) { 
-        grokSearchTerm =  wordParts[0];
-        if (hasPos1 == true) {
-            grokSearchTerm = grokSearchTerm + ' ' + wordParts[2];
-            if (hasPos2 == true) {
-                grokSearchTerm = grokSearchTerm + ' ' + wordParts[4];
-            }
-            else {
-                grokSearchTerm = grokSearchTerm + ' ' + wordParts[3];
-            }
-        }
-        else {
-            grokSearchTerm = grokSearchTerm + ' ' + wordParts[1];
-            if (hasPos2 == true) {
-                grokSearchTerm = grokSearchTerm + ' ' + wordParts[3];
-            }
-            else {
-                grokSearchTerm = grokSearchTerm + ' ' + wordParts[2];
-            }
-        }
-        grokSearchTerm = '"' + grokSearchTerm + '"';
-    }
 
-    var grokCorpus = '';
+    var blacklab_field = '';
     if (corpus == '/data/eebo_tcp/plaintext') {
-        grokCorpus = 'plaintext';
+        blacklab_field = 'word';
     }
     if (corpus == '/data/eebo_tcp/plaintext_reg') {
-        grokCorpus = 'plaintext_reg';
+        blacklab_field = 'reg';
     }
     if (corpus == '/data/eebo_tcp/plaintext_lem') {
-        grokCorpus = 'plaintext_lem';
+        blacklab_field = 'lemma';
     }
     
-    window.open('http://earlyprint.wustl.edu/toolwebgrok.html?corpus=' + grokCorpus + '&searchPattern=' + grokSearchTerm + '&startYear=1473&endYear=1700&authors=&titles=&page=1');
-
-    //window.open('http://localhost/earlyprint/toolwebgrok.html?corpus=' + grokCorpus + '&searchPattern=' + grokSearchTerm + '&startYear=1473&endYear=1700&authors=&titles=&page=1');
+    window.open('http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/hits?number=20&first=0&patt=[' + 
+                    blacklab_field + '="' + word + '"]');
 }
 
 function handleSaveButton(windowLocation) {
