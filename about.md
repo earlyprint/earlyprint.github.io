@@ -20,11 +20,11 @@ permalink: /about/
 
 **Philip R. "Pib" Burns** possesses fifty years of experience with humanities computing, natural language processing, databases, statistical analysis guidance, and computer programming in support of research and educational activities. In addition to EarlyPrint, he has participated in the Mellon-funded WordHoard, Monk, MorphAdorner, and Bamboo humanities computing projects. Philip's educational background is in mathematics, computer science, and English literature. His MorphAdorner suite provides the bulk of the natural language processing for EarlyPrint.
 
-**Doug Knox**
+**Douglas Knox** is assistant director of the Humanities Digital Workshop at Washington University in St. Louis. He has worked with dozens of projects across disciplines including history, literature, classics, art history, and music. He enjoys thinking creatively about exploratory data analysis and critically about methodology. Before coming to Wash U he directed digital publication projects at the Newberry Library in Chicago. He was managing editor of the *Encyclopedia of Chicago* and led the project that created a full-text digital version of the [Chicago Foreign Language Press Survey](http://flps.newberry.org).
 
 **Stephen Pentecost** is Senior Digital Humanities Specialist at Washington University in St. Louis, where he supports projects in textual editing, archive creation, textual criticism, and musical composition.
 
-**Kate Needham**
+**Kate Needham** is a Ph.D student in English Literature at Yale University studying early modern English translators. She began working on the project as an undergraduate research assistant and has now led undergraduate workshops on the EarlyPrint Library, supervised teams of summer interns, and planned classroom activities using Early Print tools.
 
 ## Additional Credits
 
