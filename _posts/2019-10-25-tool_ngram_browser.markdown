@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title:  N-gram Browser
 date:   2014-01-17 10:00:00 -0500
 tags:
