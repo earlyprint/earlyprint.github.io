@@ -16,7 +16,7 @@ $( document ).ready(function() {
     }
 
     if (GLOBAL_URL_PARAMS.has('eebo_tcp_id')) {
-        $('#eebo_tcp_id_2').val(GLOBAL_URL_PARAMS.get('eebo_tcp_id'));
+        $('#eebo_tcp_id_2').val(GLOBAL_URL_PARAMS.get('eebo_tcp_id').toUpperCase());
     }
 
     if (GLOBAL_URL_PARAMS.has('n_results')) {
@@ -66,7 +66,7 @@ function handle_button(n) {
     if (n == 2) {
 
         GLOBAL_URL_PARAMS.set('which_to_do', 'find_texts'); 
-        GLOBAL_URL_PARAMS.set('eebo_tcp_id',  $('#eebo_tcp_id_2').val());
+        GLOBAL_URL_PARAMS.set('eebo_tcp_id',  $('#eebo_tcp_id_2').val().toUpperCase());
         GLOBAL_URL_PARAMS.set('n_results', $('#n_results').val());
         GLOBAL_URL_PARAMS.set('tfidf_weight', '6');
         GLOBAL_URL_PARAMS.set('mallet_weight', '6');
@@ -77,7 +77,7 @@ function handle_button(n) {
 }
 
 function handle_link(tcp_id) {
-    $('#eebo_tcp_id_2').val(tcp_id);
+    $('#eebo_tcp_id_2').val(tcp_id.toUpperCase());
     handle_button(2);
 }
 
