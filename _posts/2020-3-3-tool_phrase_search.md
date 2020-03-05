@@ -10,7 +10,7 @@ categories: Lab
 <small>This simple interface allows you to search for a phrase by translating your text into the corpus query language syntax used by *EarlyPrint*'s [Linguistic Search](http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/). Typing a phrase will create two unique search queries: one that looks for phrases of similar **content** and another that looks for phrases of similar **form**. For more detailed exploration of these patterns, use this interface as a starting point for a closer look from within [Linguistic Search](http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/).</small>
 
 <form class="bg-light-blue h4 mw7 center pa4 br2-ns ba b--black-10">
-      <input class="f6 f5-l input-reset bn fl black-80 bg-white pa3 lh-solid w-100 w-75-m w-80-l br2-ns br--left-ns" type="text" placeholder="Type any phrase, i.e. 'to be or not to be' or 'for whom the bell tolls'" id="searchBox" />
+      <input class="f6 f5-l input-reset bn fl black-80 bg-white pa3 lh-solid w-100 w-75-m w-80-l br2-ns br--left-ns" type="text" placeholder="Type any phrase, e.g. 'for whom the bell tolls'" id="searchBox" />
       <button class="f6 f5-l button-reset fl pv3 tc bn bg-animate bg-black-70 hover-bg-black white pointer w-100 w-25-m w-20-l br2-ns br--right-ns" type="submit" id="submitSearch">Search</button>
 </form>
 
