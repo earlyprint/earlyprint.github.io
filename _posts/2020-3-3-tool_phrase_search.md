@@ -46,10 +46,16 @@ categories: Lab
   const errorTemplate = () =>
   html`<p>No results! Try a different phrase.</p>
   <p>Sometimes an alternate spelling may work. If you're having trouble, use the more detailed <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/" target="_blank">Linguistic Search</a> interface.</p>`;
+  const singleWordTemplate = () =>
+  html`<p>Your search has too few words!</p>
+  <p> You've either entered just one word, or else your phrase doesn't contain enough distinct nouns or verbs to be searchable. If you'd like to search for a single word or a more specific phrase, use the detailed <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/" target="_blank">Linguistic Search</a> interface.</p>`;
   const formResults = document.getElementById('formResults');
   const contentResults = document.getElementById('contentResults');
 
   const searchByForm = (string) => {
+    if (string.split(" ").length <= 1) {
+      render(singleWordTemplate(), formResults);
+    } else {
     let pattern = string.split(" ").map(word => `[reg="${word}"]`).join("");
 
     let request = new Request(`https://ada.artsci.wustl.edu/proxy_blacklab/all/hits?number=20&patt=${pattern}&outputformat=json`);
@@ -89,6 +95,7 @@ categories: Lab
       console.error(error);
     });
   }
+  }
 
   const searchByContent = (string) => {
     let pattern = string.split(" ").map(word => `[reg="${word}"]`).join("");
@@ -109,6 +116,9 @@ categories: Lab
         let match = response.hits[0].match;
         let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         let imp_words = match.lemma.filter((l,idx) => match.pos[idx].startsWith("n") || match.pos[idx].startsWith("v") )
+        if (imp_words.length <= 1) {
+          render(singleWordTemplate(), contentResults);
+        } else {
         let patt_1 = imp_words.map((l,idx,arr) => `${alphabet[idx]}:[lemma="${arr.join("|")}"]`).join("[]{0,3} ");
         let combos = Array.from(alphabet).slice(0,imp_words.length).map((a,i,arr) => arr.slice(i+1).map(b => [a, b])).flat(1)
         let patt_2 = combos.map(c => `${c[0]}.lemma != ${c[1]}.lemma`).join(" & ");
@@ -129,6 +139,7 @@ categories: Lab
         }).catch(error => {
           console.error(error);
         });
+      }
       }
 
     }).catch(error => {
