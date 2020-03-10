@@ -4,36 +4,110 @@ title: EP Lab
 permalink: /lab/
 ---
 
-<div style="display: float; float: right; margin-left: 2em;">
-<h3><a href="/lab/tool_ngram_browser.html?requestFromClient={&quot;1&quot;:{&quot;spe&quot;:&quot;love,loue&quot;,&quot;reg&quot;:&quot;&quot;,&quot;lem&quot;:&quot;&quot;,&quot;pos&quot;:&quot;&quot;,&quot;originalPos&quot;:&quot;&quot;},&quot;2&quot;:{&quot;spe&quot;:&quot;&quot;,&quot;reg&quot;:&quot;&quot;,&quot;lem&quot;:&quot;&quot;,&quot;pos&quot;:&quot;&quot;,&quot;originalPos&quot;:&quot;&quot;},&quot;3&quot;:{&quot;spe&quot;:&quot;&quot;,&quot;reg&quot;:&quot;&quot;,&quot;lem&quot;:&quot;&quot;,&quot;pos&quot;:&quot;&quot;,&quot;originalPos&quot;:&quot;&quot;},&quot;databaseType&quot;:&quot;unigrams&quot;,&quot;smoothing&quot;:&quot;True&quot;,&quot;rollingAverage&quot;:&quot;20_year&quot;, &quot;instructionToggle&quot;: &quot;show&quot;}">N-gram Browser</a></h3>
-<p><a href="/lab/tool_ngram_browser.html?requestFromClient={&quot;1&quot;:{&quot;spe&quot;:&quot;love,loue&quot;,&quot;reg&quot;:&quot;&quot;,&quot;lem&quot;:&quot;&quot;,&quot;pos&quot;:&quot;&quot;,&quot;originalPos&quot;:&quot;&quot;},&quot;2&quot;:{&quot;spe&quot;:&quot;&quot;,&quot;reg&quot;:&quot;&quot;,&quot;lem&quot;:&quot;&quot;,&quot;pos&quot;:&quot;&quot;,&quot;originalPos&quot;:&quot;&quot;},&quot;3&quot;:{&quot;spe&quot;:&quot;&quot;,&quot;reg&quot;:&quot;&quot;,&quot;lem&quot;:&quot;&quot;,&quot;pos&quot;:&quot;&quot;,&quot;originalPos&quot;:&quot;&quot;},&quot;databaseType&quot;:&quot;unigrams&quot;,&quot;smoothing&quot;:&quot;True&quot;,&quot;rollingAverage&quot;:&quot;20_year&quot;, &quot;instructionToggle&quot;: &quot;show&quot;}"><img alt="Screenshot of visualization" src="/assets/img/spellingBrowser_SM.png"></a></p>
+<div class="post-content">
 
-<h3><a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/am_ix/search/">Linguistic Search -- EEBO-TCP Phase I</a></h3>
+    <p><em>The EarlyPrint Lab</em> offers a range of tools for the computational
+exploration and analysis of English print culture before 1700. We apply
+these tools to a corpus of more than 60,000 early English printed
+documents, roughly 1.65 billion words. We intend the <em>Lab</em> as a
+provocation, not a finished toolkit. By exposing the corpus of early
+printed texts at scale we hope to defamiliarize familiar texts and
+invite exploration of unfamiliar ones.</p>
 
-<h3><a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/">Linguistic Search -- Phases I & II</a></h3>
-
-<h3><a href="/lab/tool_discovery_engine.html">The Discovery Engine</a></h3>
-<p><a href="/lab/tool_discovery_engine.html"><img alt="Screenshot of visualization" src="/assets/img/disco_engine.png"></a></p>
-
-<h3><a href="/lab/tool_eebo_estc_texts.html">Text Counts</a></h3>
-<p><a href="/lab/tool_eebo_estc_texts.html"><img alt="Screenshot of visualization" src="/assets/img/eeboEstcCounts_SM.png"></a></p>
-
-<h3><a href="/lab/tool_words_per_year.html">Words Per Year</a></h3>
-<p><a href="/lab/tool_words_per_year.html"><img alt="Screenshot of visualization" src="/assets/img/textLengths_SM.png"></a></p>
+<div id="toolbar">
+    <div id="thumbnail"><a href="http://localhost:4000/lab/tool_ngram_browser.html"><img src="/assets/thumbs/n_gram.png"/></a></div>
+    <div id="spacer"> </div>
+    <div id="thumbnail"><a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/am_ix/search/"><img src="/assets/thumbs/phase_I.png"/></a></div>
+    <div id="spacer"> </div>
+    <div id="thumbnail"><a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/"><img src="/assets/thumbs/phase_I_II.png"/></a></div>
+    <div id="spacer"> </div>
+    <div id="thumbnail"><a href="https://earlyprint.org/lab/tool_discovery_engine.html?which_to_do=find_texts&eebo_tcp_id=A43441&n_results=35&tfidf_weight=6&mallet_weight=6&tag_weight=6"><img src="/assets/thumbs/disco.png"/></a></div>
+    <div id="spacer"> </div>
+    <div id="thumbnail"><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[placeholder for catalog]</div>
+    <div id="spacer"> </div>
+    <div id="thumbnail"><a href="https://earlyprint.org/lab/tool_eebo_estc_texts.html"><img src="/assets/thumbs/text_counts.png"/></a></div>
+    <div id="spacer"> </div>
+    <div id="thumbnail"><a href="https://earlyprint.org/lab/tool_words_per_year.html"><img src="/assets/thumbs/words_per_year.png"/></a></div>
+    <div id="spacer"> </div>
+    <div id="thumbnail"><a href="https://earlyprint.org/lab/tool_phrase_search.html"><img src="/assets/thumbs/phrase_search.png"/></a></div>
+    <div id="spacer"> </div>
+    <div id="thumbnail"><a href="https://earlyprint.org/download/"><img src="/assets/thumbs/download.png"/></a></div>
 </div>
 
+<p>The tools and visualizations collected here offer perspectives on the
+corpus that invite users to probe early English discursive history in
+ways that complement the search capabilities of EEBO-TCP and the <em>Oxford
+English Dictionary</em>.</p>
 
-The *Early Print Lab* offers a range of tools for the computational exploration and analysis of English print culture before 1700. The site was designed to help scholars make sense of the incomparable textual archive produced by the [EEBO Text Creation Partnership](http://www.textcreationpartnership.org/home/), consisting of a set of transcriptions of the first two centuries of English print. While EEBO-TCP provides access to a massive collection of texts that promises to transform the way scholars approach this period, it also presents significant technical and conceptual challenges. The relative accuracy (given its scale) of the EEBO-TCP corpus that makes it such a valuable resource for scholars also makes it complex for computational analysis. The corpus faithfully reproduces the evolving and irregular orthographic and syntactic conventions of the early modern period, and retains much of the necessarily incomplete and irregular metadata drawn from the original title pages*.*Any computational approach to the EEBO-TCP corpus, therefore, needs to not only encounter the digital surrogates of early modern texts, but must take into account the material and ideological conditions that underlie this first information revolution.
-*Early Print* was conceived by Anupam Basu, Weil Fellow in Digital Humanities at Washington University; he aimed to render EEBO-TCP more susceptible to quantitative historical analyses by virtue of some intensive reprocessing of the TCP texts and their metadata. The tools and visualizations collected here do not provide an interface to the full texts, but they offer an aggregate view of the corpus that enables us to probe English lexical and orthographic history in ways that usefully complement the search capabilities of EEBO-TCP and the *Oxford English Dictionary*; they also help us to see early modern book culture in a new way, as a structured flow of words.
+<p>We begin with an <a href="https://earlyprint.org/lab/tool_ngram_browser.html?">N-gram
+browser</a> that
+enables one to examine the changing frequencies of words and word forms
+over time. Like all the tools in the EPLab, the database also allows one
+to browse by original spelling, regularized spelling, or lemma (the
+dictionary heading form of a word), and to filter one’s queries by date
+and by using part-of-speech (POS) tags. The N-gram browser links to and
+pairs with the Linguistic Search tool.</p>
 
-Our first set of visualizations afford a fresh view of the EEBO-TCP as a collection of publications. The first, a graph of [TCP books per year](/lab/tool_eebo_estc_texts.html), includes as reference the number of publications recorded in the *English Short-Title Catalogue* (an updated version of the Pollard & Redgrave and Wing short-title catalogues, on which the [EEBO microfilm collection was based](http://eebo.chadwyck.com/about/about.htm)), allowing us to get a sense of both changes in English print publication over time and of the relative size and comparability of the EEBO-TCP sample. The second is a [scatterplot showing each publication by word count over time](/lab/tool_words_per_year.html), producing, among other patterns, a striking visualization of the sharp increase in pamphlet production in the 1640s. We will continue to add more interactive visualizations to this section as we explore more of the EEBO-TCP metadata.
+<p>We offer a Linguistic Search tool which allows the researcher to search
+by individual word or by phrase. This tool allows search by original or
+regularized spelling, by lemma or by part-of-speech; searches can also
+be filtered by date, author, and title. The tool includes a query
+builder that will allow the curious researcher to construct searches
+that capture complex rhetorical patterns. We provide two instances of
+the Linguistic Search tool: <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/">the first instance</a> queries a corpus of
+roughly 61,000 texts corresponding to EEBO-TCP Phases I and II; <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/am_ix/search/">the
+second instance</a> queries the smaller Phase I corpus. This smaller corpus
+is a more polished textual resource.</p>
 
-The tool most likely to claim an afternoon’s attention is the [n-gram browser](/lab/tool_ngram_browser.html?) which provides an interface for viewing and comparing the changing frequencies of words and word forms over time. At its core lies a vast database of almost a billion n-grams extracted by year from EEBO-TCP. N-grams are short sequences of contiguous words extracted from text. They are the fundamental building blocks of many large scale computational and corpus-linguistic approaches to language and it is our hope that the dataset and initial tools provided here will provoke exploration and lead to involved research questions and collaborations. Although the metadata required for dating these texts is highly irregular and sometimes necessarily ambiguous or incomplete, we extract either exact or approximate dates wherever possible to visualize the development of n-grams over time. The database also allows one to browse regularized spellings, lemmas (the dictionary heading form of a word), and part-of-speech tags generated with *Morphadorner*, a suite of natural language processing tools developed at Northwestern University. The N-gram browser links to and is complemented by the lingustic search tool which allows one to search the EEBO-TCP corpus using various lexical properties (original spellings, regularized spellings, lemmatized spellings, parts of speech) and arbitrarily complex expressions, and to filter those searches by dates, authors, or titles.
+<p><a href="https://earlyprint.org/lab/tool_discovery_engine.html?which_to_do=find_texts&amp;eebo_tcp_id=A43441&amp;n_results=35&amp;tfidf_weight=6&amp;mallet_weight=6&amp;tag_weight=6">The Discovery Engine</a> allows the researcher to select a text from the
+corpus and to find others that resemble it by one or another measure.
+Because ‘resemblance’ is a slippery concept, we implement several
+differently suggestive measures. If you like Text A, you might like . . .</p>
 
-Early Print began as a means to an end. As part of analytic work on an edition of the *Collected Works of Edmund Spenser*, Loewenstein hoped to confer greater precision on the long-standing general assessment of the archaism of Spenser’s language, and asked Basu how we might measure the orthographic and lexical temporality, the conservatism and innovation of any given work or corpus against the larger tendencies of the print record. In pursuit of a study of the discursive construction of urban criminality, Dr. Basu wished to bring the resources of named entity recognition and topic extraction to EEBO-TCP, but the current state of the art in those fields were not up to the challenge of early modern orthography. *Early Print* was devised as a response to these research problems.
+<p>The Catalog offers information about individual texts in the corpus,
+including not only traditional catalog metadata (author, title, place of
+publication, etc.), but also formal metadata (word count, foreign
+language word count, paragraph count, line count,
+transcription error count). It also offers corpus-level views of
+document metadata. It enables the researcher to develop filtered
+groupings of the EarlyPrint corpus.</p>
 
-We intend to make this site and its underlying databases responsive to others’ research needs. The portal itself can only serve as glimpse into the potential uses of the database. We hope that the kind of exploration it allows will help develop further, more involved research questions that require more sustained engagement and analysis of the database and the texts that lie behind it. In this sense *Early Print*is not so much a complete project as it is a provocation – a new unfamiliar scale and perspective on a familiar body of texts – one that would encourage scholars to come forward with their own projects and think about ways of collaborating and integrating corpus-scale analysis seamlessly into the ways we already read and think about early modern print culture.
+<p>We also offer the first of what we expect to be a gallery of
+visualizations of the corpus.</p>
 
-The site is supported by the Humanities Digital Workshop at Washington University. Dr. Basu was assisted by Steve Pentecost, with advice from Douglas Knox and Joseph Loewenstein.
+<p>The first is a graph of <a href="https://earlyprint.org/lab/tool_eebo_estc_texts.html">TCP books per
+year</a>, paired for
+reference with a background graph of the number of publications recorded
+in the <em>English Short-Title Catalogue.</em> It suggests changes in English
+print publication over time and of the relative size and comparability
+of the EEBO-TCP “sample.”</p>
+
+<p>The second is a <a href="https://earlyprint.org/lab/tool_words_per_year.html">scatterplot showing word count per document over
+time</a>, producing,
+among other patterns, a striking visualization of the sharp increase in
+pamphlet production in the 1640s. But <em>caveat philologe</em>: some of that
+sharp increase is an artifact of the history of the archive, for George
+Thomason’s assiduousness in collecting Civil War pamphlets somewhat
+distorts EEBO as a sample of printed discourse.</p>
+
+<p><b><span style="color:red">Do we need to say something here about the Phase Search?</span></b></p>
+
+<p>Finally, we offer a convenient interface for those seeking to <a href="https://earlyprint.org/download/">download
+and examine the catalog metadata</a> either for the entire corpus or for a
+subset thereof.</p>
+
+<p><em>The EarlyPrint Lab</em> was conceived by Anupam Basu during his tenure as
+Weil Fellow in Digital Humanities at Washington University; he aimed to
+render EEBO-TCP more susceptible to quantitative historical analyses by
+virtue of some intensive reprocessing of the TCP texts and their
+metadata. Basu was assisted by Steve Pentecost, with advice from Douglas
+Knox, John Ladd, and Joseph Loewenstein. The <em>EarlyPrint Lab</em> site is
+supported by the Humanities Digital Workshop at Washington University.</p>
+
+<link rel="stylesheet" type="text/css" href="/assets/tools/css/common_tool_styles.css?v=1500">
+
+
+  </div>
+
 
 <link rel="stylesheet" type="text/css" href="/assets/tools/css/common_tool_styles.css?v=1500"/>

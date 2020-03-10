@@ -48,3 +48,21 @@ article a:active {
     font-weight: bold;
     background-color: #ffffff;
 }
+
+#toolbar {
+    float: right;
+    width: 40%; 
+    margin-left: 5%;
+    height: 1217px;
+}
+
+#thumbnail {
+    height: 122px;
+    width: 350px;
+    border: 1px solid black;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+#spacer {
+    height: 15px;
+}
