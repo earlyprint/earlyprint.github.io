@@ -15,23 +15,23 @@ printed texts at scale we hope to defamiliarize familiar texts and
 invite exploration of unfamiliar ones.</p>
 
 <div id="toolbar">
-    <div id="thumbnail"><a href="http://localhost:4000/lab/tool_ngram_browser.html"><img src="/assets/thumbs/n_gram.png"/></a></div>
+    <div id="thumbnail"><a href="http://localhost:4000/lab/tool_ngram_browser.html"><img src="/assets/thumbs/n_gram.png" alt="N-gram browser" title="N-gram browser"/></a></div>
     <div id="spacer"> </div>
-    <div id="thumbnail"><a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/am_ix/search/"><img src="/assets/thumbs/phase_I.png"/></a></div>
+    <div id="thumbnail"><a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/am_ix/search/"><img src="/assets/thumbs/phase_I.png" alt="Linguistic search -- phase I" title="Linguistic search -- phase I"/></a></div>
     <div id="spacer"> </div>
-    <div id="thumbnail"><a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/"><img src="/assets/thumbs/phase_I_II.png"/></a></div>
+    <div id="thumbnail"><a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/"><img src="/assets/thumbs/phase_I_II.png" alt="Linguistic search -- phase I and II" title="Linguistic search -- phase I and II"/></a></div>
     <div id="spacer"> </div>
-    <div id="thumbnail"><a href="https://earlyprint.org/lab/tool_discovery_engine.html?which_to_do=find_texts&eebo_tcp_id=A43441&n_results=35&tfidf_weight=6&mallet_weight=6&tag_weight=6"><img src="/assets/thumbs/disco.png"/></a></div>
+    <div id="thumbnail"><a href="https://earlyprint.org/lab/tool_discovery_engine.html?which_to_do=find_texts&eebo_tcp_id=A43441&n_results=35&tfidf_weight=6&mallet_weight=6&tag_weight=6"><img src="/assets/thumbs/disco.png" alt="Discovery engine" title="Discovery engine"/></a></div>
     <div id="spacer"> </div>
     <div id="thumbnail"><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[placeholder for catalog]</div>
     <div id="spacer"> </div>
-    <div id="thumbnail"><a href="https://earlyprint.org/lab/tool_eebo_estc_texts.html"><img src="/assets/thumbs/text_counts.png"/></a></div>
+    <div id="thumbnail"><a href="https://earlyprint.org/lab/tool_eebo_estc_texts.html"><img src="/assets/thumbs/text_counts.png" alt="TCP books per year" title="TCP books per year"/></a></div>
     <div id="spacer"> </div>
-    <div id="thumbnail"><a href="https://earlyprint.org/lab/tool_words_per_year.html"><img src="/assets/thumbs/words_per_year.png"/></a></div>
+    <div id="thumbnail"><a href="https://earlyprint.org/lab/tool_words_per_year.html"><img src="/assets/thumbs/words_per_year.png" alt="Word count per document over time" title="Word count per document over time" /></a></div>
     <div id="spacer"> </div>
-    <div id="thumbnail"><a href="https://earlyprint.org/lab/tool_phrase_search.html"><img src="/assets/thumbs/phrase_search.png"/></a></div>
+    <div id="thumbnail"><a href="https://earlyprint.org/lab/tool_phrase_search.html"><img src="/assets/thumbs/phrase_search.png" alt="Phrase search" title="Phrase search"/></a></div>
     <div id="spacer"> </div>
-    <div id="thumbnail"><a href="https://earlyprint.org/download/"><img src="/assets/thumbs/download.png"/></a></div>
+    <div id="thumbnail"><a href="https://earlyprint.org/download/"><img src="/assets/thumbs/download.png" alt="Download and examine catalog metadata" title="Download and examine catalog metadata"/></a></div>
 </div>
 
 <p>The tools and visualizations collected here offer perspectives on the
