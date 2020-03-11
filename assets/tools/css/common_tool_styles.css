@@ -56,12 +56,19 @@ article a:active {
     height: 1217px;
 }
 
-#thumbnail {
+.thumbnail {
     height: 122px;
     width: 350px;
     border: 1px solid black;
     box-shadow: 10px 10px 5px #888888;
 }
+
+.thumbnail:hover {
+    box-shadow: 11px 12px 6px #888;
+    left: -5px;
+    position: relative;
+}
+
 
 #spacer {
     height: 15px;
