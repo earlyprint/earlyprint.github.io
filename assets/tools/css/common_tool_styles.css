@@ -61,6 +61,8 @@ article a:active {
     width: 350px;
     border: 1px solid black;
     box-shadow: 10px 10px 5px #888888;
+    float: right;
+    margin-left: 1em;
 }
 
 .thumbnail:hover {
