@@ -90,7 +90,7 @@ sharp increase is an artifact of the history of the archive, for George
 Thomason’s assiduousness in collecting Civil War pamphlets somewhat
 distorts EEBO as a sample of printed discourse.</p>
 
-<p><b><span style="color:red">Do we need to say something here about the Phase Search?</span></b></p>
+<p><a href="https://earlyprint.org/lab/tool_phrase_search.html">Phrase Search</a> provides a simplified interface for researching phrases and short passages of text, by automatically creating search queries based on both a phrase's form and its content. It is designed as a starting point for generating complex queries in Linguistic Search.</p>
 
 <p>Finally, we offer a convenient interface for those seeking to <a href="https://earlyprint.org/download/">download
 and examine the catalog metadata</a> either for the entire corpus or for a
