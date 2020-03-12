@@ -6,19 +6,11 @@ permalink: /lab/
 
 <div class="post-content">
 
-    <p><b><em>The EarlyPrint Lab</em> offers a range of tools for the computational
-exploration and analysis of English print culture before 1700.</b></p>
-    <p>We apply
-these tools to a corpus of more than 60,000 early English printed
-documents, roughly 1.65 billion words. We intend the <em>Lab</em> as a
-provocation, not a finished toolkit. By exposing the corpus of early
-printed texts at scale we hope to defamiliarize familiar texts and
-invite exploration of unfamiliar ones.</p>
+    <p><b><em>The EarlyPrint Lab</em> offers a range of tools for the computational exploration and analysis of English print culture before 1700.</b></p>
 
-<p>The tools and visualizations collected here offer perspectives on the
-corpus that invite users to probe early English discursive history in
-ways that complement the search capabilities of EEBO-TCP and the <em>Oxford
-English Dictionary</em>.</p>
+    <p>We apply these tools to a corpus of more than 60,000 early English printed documents, roughly 1.65 billion words. We intend the <em>Lab</em> as a provocation, not a finished toolkit. By exposing the corpus of early printed texts at scale we hope to defamiliarize familiar texts and invite exploration of unfamiliar ones.</p>
+
+<p>The tools and visualizations collected here offer perspectives on the corpus that invite users to probe early English discursive history in ways that complement the search capabilities of EEBO-TCP and the <em>Oxford English Dictionary</em>.</p>
 
 <div class="float_image_div">
     <a href="http://localhost:4000/lab/tool_ngram_browser.html"><img class="thumbnail" src="/assets/thumbs/n_gram.png" alt="N-gram browser" title="N-gram browser"/></a>
