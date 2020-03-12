@@ -117,10 +117,9 @@ subset thereof.</p>
 
 <p><em>The EarlyPrint Lab</em> was conceived by Anupam Basu during his tenure as
 Weil Fellow in Digital Humanities at Washington University; he aimed to
-render EEBO-TCP more susceptible to quantitative historical analyses by
+render EEBO-TCP more tractable for quantitative historical analyses by
 virtue of some intensive reprocessing of the TCP texts and their
-metadata. Basu was assisted by Steve Pentecost, with advice from Douglas
-Knox, John Ladd, and Joseph Loewenstein. The <em>EarlyPrint Lab</em> site is
+metadata. Basu was assisted by John Ladd, Joseph Loewenstein, Douglas Knox, and Stephen Pentecost. The <em>EarlyPrint Lab</em> site is
 supported by the Humanities Digital Workshop at Washington University.</p>
 
 <link rel="stylesheet" type="text/css" href="/assets/tools/css/common_tool_styles.css?v=1500">
