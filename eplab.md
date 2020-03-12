@@ -26,9 +26,11 @@ and by using part-of-speech (POS) tags. The N-gram browser links to and
 pairs with the Linguistic Search tool.</p>
 
 <div class="float_image_div">
-    <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/am_ix/search/"><img class="thumbnail" src="/assets/thumbs/phase_I.png" alt="Linguistic search -- phase I" title="Linguistic search -- phase I"/></a>
 
     <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/"><img class="thumbnail" src="/assets/thumbs/phase_I_II.png" alt="Linguistic search -- phase I and II" title="Linguistic search -- phase I and II"/></a>
+
+    <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/am_ix/search/"><img class="thumbnail" src="/assets/thumbs/phase_I.png" alt="Linguistic search -- phase I" title="Linguistic search -- phase I"/></a>
+
 </div>
 
 <p>We offer a Linguistic Search tool which allows the researcher to search

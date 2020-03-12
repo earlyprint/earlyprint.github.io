@@ -29,18 +29,24 @@
               <a class="{% if category_url != page_url[1] %}page-link {% endif %} dropbtn{% if category_url == page_url[1] %} page-link-active{% endif %}" href="/{{category[0] | downcase}}" href="/{{category[0] | downcase}}">{{ category[0] }}
                 <i class="fa fa-caret-down"></i>
               </a>
-              <div class="dropdown-content">
-                <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/am_ix/search/">Linguistic Search -- EEBO-TCP Phase I</a>
-                <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/">Linguistic Search -- Phases I &amp; II</a>
-                <a href="https://earlyprint.org/lab/tool_discovery_engine.html?which_to_do=find_texts&eebo_tcp_id=A43441&n_results=35&tfidf_weight=6&mallet_weight=6&tag_weight=6">The Discovery Engine</a>
-                {% for post in category[1] %}
-                    {% if post.url == "/lab/tool_discovery_engine.html" %}
-                    {% else %}
-                        <a href="{{ post.url }}">{{ post.title | truncatewords: 4 }}</a>
-                    {% endif %}
-                {% endfor %}
-                <a href="/download">Download Metadata</a>
-              </div>
+                <div class="dropdown-content">
+                
+                    <a href="/lab/tool_ngram_browser.html">N-gram Browser</a>
+
+                    <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/">Linguistic Search -- EEBO-TCP Phases I &amp; II</a>
+
+                    <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/am_ix/search/">Linguistic Search -- EEBO-TCP Phase I</a>
+                        
+                    <a href="/lab/tool_phrase_search.html">Phrase Search</a>
+
+                    <a href="https://earlyprint.org/lab/tool_discovery_engine.html?which_to_do=find_texts&amp;eebo_tcp_id=A43441&amp;n_results=35&amp;tfidf_weight=6&amp;mallet_weight=6&amp;tag_weight=6">The Discovery Engine</a>
+                
+                    <a href="/lab/tool_words_per_year.html">Words Per Year</a>
+                
+                    <a href="/lab/tool_eebo_estc_texts.html">Text Counts</a>
+                    
+                    <a href="/download">Download Metadata</a>
+                </div>
             </div>
             {% endif %}
           {% endfor %}
