@@ -13,7 +13,7 @@ permalink: /lab/
 <p>The tools and visualizations collected here offer perspectives on the corpus that invite users to probe early English discursive history in ways that complement the search capabilities of EEBO-TCP and the <em>Oxford English Dictionary</em>.</p>
 
 <div class="float_image_div">
-    <a href="http://localhost:4000/lab/tool_ngram_browser.html"><img class="thumbnail" src="/assets/thumbs/n_gram.png" alt="N-gram browser" title="N-gram browser"/></a>
+    <a href="https://earlyprint.org/lab/tool_ngram_browser.html"><img class="thumbnail" src="/assets/thumbs/n_gram.png" alt="N-gram browser" title="N-gram browser"/></a>
 </div>
 
 <p>We begin with an <a href="https://earlyprint.org/lab/tool_ngram_browser.html?">N-gram
