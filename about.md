@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-*EarlyPrint* is a collaborative effort—centered doubly at Northwestern University and Washington University in St. Louis—to transform the early English print record, from 1473 to the early 1700s, into a linguistically annotated and deeply searchable text archive. Its leaders have been Joseph Loewenstein and Martin Mueller. Contributions to the project have been made by faculty, librarians, IT professionals, and students at Amherst, Northwestern, Notre Dame, Nebraska-Lincoln, Tübingen, and Washington University in St. Louis, notably Anupam Basu, Craig Berry, John Ladd, Philip Burns, Douglas Knox, Stephen Pentecost, Kate Needham, Elisabeth Chaghafi, Peter Berek, Tracy Bergstrom, Daniel Johnson, Eric Lease Morgan, Kate Needham, Hannah Bredar, Brian Pytlik Zillig, and Lydia Zoells.
+*EarlyPrint* is a collaborative effort—centered doubly at Northwestern University and Washington University in St. Louis—to transform the early English print record, from 1473 to the early 1700s, into a linguistically annotated and deeply searchable text archive. Its leaders have been Joseph Loewenstein and Martin Mueller. Contributions to the project have been made by faculty, librarians, IT professionals, and students at Amherst, Northwestern, Notre Dame, Nebraska-Lincoln, Tübingen, and Washington University in St. Louis, notably Anupam Basu, Craig Berry, John Ladd, Philip Burns, Douglas Knox, Stephen Pentecost, Kate Needham, Elisabeth Chaghafi, Peter Berek, Tracy Bergstrom, Daniel Johnson, Eric Lease Morgan, Hannah Bredar, Brian Pytlik Zillig, and Lydia Zoells.
 
 ## Team
 
@@ -24,7 +24,7 @@ permalink: /about/
 
 **Stephen Pentecost** is Senior Digital Humanities Specialist at Washington University in St. Louis, where he supports projects in textual editing, archive creation, textual criticism, and musical composition.
 
-**Kate Needham** is a Ph.D student in English Literature at Yale University studying early modern English translators. She began working on the project as an undergraduate research assistant and has now led undergraduate workshops on the EarlyPrint Library, supervised teams of summer interns, and planned classroom activities using Early Print tools.
+**Kate Needham** is a Ph.D candidate in English Literature at Yale University studying early modern English translators. She began working on the project as an undergraduate research assistant and has now led undergraduate workshops on the EarlyPrint Library, supervised teams of summer interns, and planned classroom activities using Early Print tools.
 
 ## Additional Credits
 
