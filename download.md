@@ -4,32 +4,28 @@ title: Download
 permalink: /download/
 ---
 
-Search to filter the table, and click on a link to download any of the corrected and linguisticaly-annotated *EarlyPrint* XML texts, or the original *Text Creation Partnership* XML. Some fields have been truncated for space, but the full field is available on mouseover and when searching and downloading the data.
+Search to filter the table, and click on a link to download any of the corrected and linguisticaly-annotated *EarlyPrint* XML texts, or the original *Text Creation Partnership* XML. Some fields have been truncated for space, but the full field is available on mouseover and when searching and downloading the data. We provide Library of Congress Subject Headings when available, in the "Keywords" column. Keep in mind that only a portion of the texts have been assigned subject headings.
 
-We provide Library of Congress Subject Headings when available, in the "Keywords" column. Keep in mind that only a portion of the texts have been assigned subject headings.
-
-You can also filter and download metadata by searching and clicking "Download Metadata as CSV" at the bottom of this page.
-
-<form class="fr">
+<!-- <form class="fr">
   <label>Search in:</label>
   <select id="metadataSelect"></select>
   <input type="text" id="metadataInput" />
-</form>
-<table id="metadataTable" class="display compact">
+</form> -->
+<table id="metadataTable" class="display f6 compact">
   <thead>
     <tr class="header">
-      <th>TCP ID</th>
-      <th>Author</th>
-      <th>Title</th>
-      <th>Date</th>
-      <th>Imprint</th>
-      <th>Lang.</th>
-      <th>Keywords</th>
-      <th>ESTC</th>
-      <th>STC/Wing</th>
+      <th>TCP ID <input style="width:inherit;" type="text" placeholder="Filter..." /></th>
+      <th>Author <input style="width:inherit;" type="text" placeholder="Filter..." /></th>
+      <th>Title <input style="width:inherit;" type="text" placeholder="Filter..." /></th>
+      <th>Date<input style="width:inherit;" type="text" placeholder="Filter..." /></th>
+      <th>Imprint<input style="width:inherit;" type="text" placeholder="Filter..." /></th>
+      <th>Lang.<input style="width:inherit;" type="text" placeholder="Filter..." /></th>
+      <th>Keywords<input style="width:inherit;" type="text" placeholder="Filter..." /></th>
+      <th>ESTC<input style="width:inherit;" type="text" placeholder="Filter..." /></th>
+      <th>STC/Wing<input style="width:inherit;" type="text" placeholder="Filter..." /></th>
     </tr>
   </thead>
-  <tbody></tbody>
+  <tbody class="f7"></tbody>
 </table>
 
 
@@ -54,40 +50,28 @@ var columns = [
   },
   { data: 3,
     name: 'Author',
-    width: '15%'
+    width: '10%'
     },
   { data: 4,
     name: 'Title',
-    render: $.fn.dataTable.render.ellipsis( 115, true ),
-    width: '30%'
+    render: $.fn.dataTable.render.ellipsis( 100, true ),
+    width: '250px'
     },
   { data: 6,
     name: 'Date',
-    render: function(data, type, row) {
-      if (type === 'sort') {
-        var match = data.match(/[\dl][^\d,\s]?\d[^\d,\s]?[\-\?\d][^\d]?[\-\?\d]/)
-        if (match) {
-          var number = match[0].replace('l', '1').replace('-', '?').replace(/[^\d\?]/, '')
-          return number;
-        } else {
-          return data;
-        }
-      }
-      else { return data; }
-    }
+    width: "80px"
     },
   { data: 5,
     name: 'Imprint',
-    render: $.fn.dataTable.render.ellipsis( 50, true ),
-    width: '20%'
+    render: $.fn.dataTable.render.ellipsis( 50, true )
     },
   { data: 7,
-    name: 'Lang.'
+    name: 'Lang.',
+    width: "40px"
     },
   { data: 8,
     name: 'Keywords',
-    render: $.fn.dataTable.render.ellipsis( 50, true ),
-    width: '15%'
+    render: $.fn.dataTable.render.ellipsis( 50, true )
     },
   { data: 1,
     name: 'ESTC',
@@ -104,19 +88,27 @@ var columns = [
       } else {
         return data
       }
-    }
+    },
+    width: "40px"
     },
   { data: 2,
-    name: 'STC/Wing'
+    name: 'STC/Wing',
+    width: "40px"
     }
 ]
 $(document).ready( function () {
-  columns.forEach(col => {
-    if (col.name !== 'Download') {
-      var option = $("<option></option>").val(col.name).text(col.name);
-      $('#metadataSelect').append(option);
-    }
-    });
+//  columns.forEach(col => {
+//    if (col.name !== 'Download') {
+//      var option = $("<option></option>").val(col.name).text(col.name);
+//      $('#metadataSelect').append(option);
+//    }
+//    });
+
+//  $('#metadataTable thead th').each( function () {
+//        var title = $(this).text();
+//	$(this).html( `<input type="text" placeholder="${title}" />` );
+//    } );
+
 
   console.time("generateTable")
   var table = $('#metadataTable').DataTable({
@@ -126,7 +118,7 @@ $(document).ready( function () {
       },
     pageLength: 25,
     deferRender: true,
-    autoWidth: false,
+    autoWidth: true,
     dom: "liBptiBpr",
     buttons: [ {extend: "csv", text: "Download Metadata as CSV", filename: "earlyprint_metadata", exportOptions: {orthogonal: 'filter'} } ],
     columns: columns,
@@ -134,14 +126,28 @@ $(document).ready( function () {
       console.timeEnd("generateTable");
     }
     });
-  var col = "TCP ID";
-  $('#metadataSelect').on('change', function() {
-    col = this.value;
-    table.search('').columns().search( '' ).column(`${col}:name`).search( $('#metadataInput').val() ).draw();
-  });
-  $('#metadataInput').on( 'keyup', function () {
-    table.column(`${col}:name`).search( this.value ).draw();
-  });
+
+    // Apply the search
+    table.columns().every( function () {
+        var that = this;
+
+        $( 'input', this.header() ).on( 'keyup change clear', function () {
+            if ( that.search() !== this.value ) {
+                that
+                    .search( this.value )
+                    .draw();
+            }
+        } );
+    } );
+//  var col = "TCP ID";
+//  $('#metadataSelect').on('change', function() {
+//    col = this.value;
+//    table.search('').columns().search( '' ).column(`${col}:name`).search( $('#metadataInput').val() ).draw();
+//  });
+//  $('#metadataInput').on( 'keyup', function () {
+//    table.column(`${col}:name`).search( this.value ).draw();
+//  });
 
 } );
 </script>
+
