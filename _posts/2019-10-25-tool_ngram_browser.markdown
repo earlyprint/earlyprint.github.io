@@ -34,7 +34,7 @@ categories: Lab
 
 <p class="instructions">Please note that we do put a limit on the complexity of queries.  If you exceed those limits, we return what we can, and provide a message to that effect.</p>
 
-<p class="instructions">For more about regular expressions, please see our post on <a href="howtoeebospellingbrowser.html">Using the N-gram Browser</a>.  For a full list of the nupos part-of-speech codes, please see  the section titled "Parts of Speech Table" in <a href="https://apps.lis.illinois.edu/wiki/display/MONK/Morphology+and+NUPOS">Morphology and NUPOS</a>, an article written by John Norstad.</p>
+<p class="instructions">For more about regular expressions, please see our post on <a href="howtoeebospellingbrowser.html">Using the N-gram Browser</a>. For more on part-of-speech tags, please see the <a href="http://morphadorner.northwestern.edu/morphadorner/documentation/nupos/">NUPOS documentation</a>.</p>
 
 <hr/>
 <br/>
