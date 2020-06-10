@@ -34,7 +34,7 @@ categories: Lab
 
 <p class="instructions">Please note that we do put a limit on the complexity of queries.  If you exceed those limits, we return what we can, and provide a message to that effect.</p>
 
-<p class="instructions">For more about regular expressions, please see our post on <a href="howtoeebospellingbrowser.html">Using the N-gram Browser</a>. For more on part-of-speech tags, please see the <a href="http://morphadorner.northwestern.edu/morphadorner/documentation/nupos/">NUPOS documentation</a>.</p>
+<p class="instructions">For more about regular expressions, please see our post on <a href="/how-to/howto_ngram_browser.html">Using the N-gram Browser</a>. For more on part-of-speech tags, please see the <a href="http://morphadorner.northwestern.edu/morphadorner/documentation/nupos/">NUPOS documentation</a>.</p>
 
 <hr/>
 <br/>
