@@ -13177,7 +13177,7 @@ div#notebook {
 <span class="n">parser</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">XMLParser</span><span class="p">(</span><span class="n">collect_ids</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="c1"># Parse your XML file into a &quot;tree&quot; object</span>
-<span class="n">tree</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;A50919.xml&#39;</span><span class="p">)</span>
+<span class="n">tree</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;A50919.xml&#39;</span><span class="p">,</span> <span class="n">parser</span><span class="p">)</span>
 
 <span class="c1"># Get the XML from the tree object</span>
 <span class="n">paradiselost</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>
