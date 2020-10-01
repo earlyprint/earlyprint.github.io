@@ -47,7 +47,7 @@ categories: Lab
 <input type="radio" name="gramSize" value="2" id="radio_1_2"><span class="radioLabel">bigrams</span>
 <input type="radio" name="gramSize" value="3" id="radio_1_3"><span class="radioLabel">trigrams</span>
 
-<button class="shareable_link" onclick="javascript:onShortenLink();">Shareable link</button>
+<button class="shareable_link" onclick="javascript:onShortenLink();">Shareable Link</button>
 <br/>
 
 <span class="controlLabel">spellings:</span>

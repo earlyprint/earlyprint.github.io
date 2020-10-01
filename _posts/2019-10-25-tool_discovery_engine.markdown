@@ -44,7 +44,7 @@ categories: Lab
 <br/>
 <span class="form_label_2"> </span> <button onclick="javascript:handle_button(2);">Find Texts</button>
 
-<button class="shareable_link" onclick="javascript:onShortenLink();">Shareable link</button>
+<button class="shareable_link" onclick="javascript:onShortenLink();">Shareable Link</button>
 
 </div>
 </div>
