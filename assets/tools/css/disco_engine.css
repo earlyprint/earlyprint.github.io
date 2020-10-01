@@ -239,3 +239,6 @@ input, button {
   border-top: none;
 }
 
+.shareable_link {
+    margin-left: 100px;
+}

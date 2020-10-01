@@ -46,6 +46,8 @@ categories: Lab
 <input type="radio" name="gramSize" value="1" id="radio_1_1"><span class="radioLabel">unigrams</span>
 <input type="radio" name="gramSize" value="2" id="radio_1_2"><span class="radioLabel">bigrams</span>
 <input type="radio" name="gramSize" value="3" id="radio_1_3"><span class="radioLabel">trigrams</span>
+
+<button class="shareable_link" onclick="javascript:onShortenLink();">Shareable link</button>
 <br/>
 
 <span class="controlLabel">spellings:</span>
@@ -384,12 +386,13 @@ zz -- unknown or unparsable token<br/>
 <!-- COPY JS FROM THE APPLICATION -->
 
 
-<link rel="stylesheet" type="text/css" href="/assets/tools/css/eeboSpellingBrowser.css?v=1500">
-<script src="/assets/tools/js/jquery-1.11.0.min.js?v=1500"></script>
-<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css?v=1500" />
-<script type="text/javascript" src="/assets/tools/jquery-ui-1.11.1.custom/jquery-ui.min.js?v=1500"></script>
+<link rel="stylesheet" type="text/css" href="/assets/tools/css/eeboSpellingBrowser.css?v=1501">
+<script src="/assets/tools/js/jquery-1.11.0.min.js?v=1501"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css?v=1501" />
+<script type="text/javascript" src="/assets/tools/jquery-ui-1.11.1.custom/jquery-ui.min.js?v=1501"></script>
 <script src="https://d3js.org/d3.v5.min.js"></script>
-<script type="text/javascript" src="/assets/tools/js/tinycolor.js?v=1500"></script>
-<script type="text/javascript" src="/assets/tools/js/nupos.js?v=1500"></script>
-<script type="text/javascript" src="/assets/tools/js/eeboSpellingBrowser.js?v=1500"></script>
-<link rel="stylesheet" type="text/css" href="/assets/tools/css/common_tool_styles.css?v=1500"/>
+<script type="text/javascript" src="/assets/tools/js/tinycolor.js?v=1501"></script>
+<script type="text/javascript" src="/assets/tools/js/nupos.js?v=1501"></script>
+<script type="text/javascript" src="/assets/tools/js/eeboSpellingBrowser.js?v=1501"></script>
+<script type="text/javascript" src="/assets/tools/js/shorten_link.js?v=1501"></script>
+<link rel="stylesheet" type="text/css" href="/assets/tools/css/common_tool_styles.css?v=1501"/>
