@@ -23,17 +23,17 @@ over time. Like all the tools in the EPLab, the database also allows one
 to browse by original spelling, regularized spelling, or lemma (the
 dictionary heading form of a word), and to filter one’s queries by date
 and by using part-of-speech (POS) tags. The N-gram browser links to and
-pairs with the Linguistic Search tool.</p>
+pairs with the Corpus Search tool.</p>
 
 <div class="float_image_div">
 
-    <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/"><img class="thumbnail" src="/assets/thumbs/phase_I_II.png" alt="Linguistic search -- phase I and II" title="Linguistic search -- phase I and II"/></a>
+    <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/"><img class="thumbnail" src="/assets/thumbs/phase_I_II.png" alt="Corpus Search -- phase I and II" title="Corpus Search -- phase I and II"/></a>
 
-    <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/am_ix/search/"><img class="thumbnail" src="/assets/thumbs/phase_I.png" alt="Linguistic search -- phase I" title="Linguistic search -- phase I"/></a>
+    <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/am_ix/search/"><img class="thumbnail" src="/assets/thumbs/phase_I.png" alt="Corpus Search -- phase I" title="Corpus Search -- phase I"/></a>
 
 </div>
 
-<p>We offer a Linguistic Search tool which allows the researcher to search
+<p>We offer a Corpus Search tool which allows the researcher to search
 by individual word or by phrase. This tool allows search by original or
 regularized spelling, by lemma or by part-of-speech; searches can also
 be filtered by date, author, and title. The tool includes a query
@@ -41,7 +41,7 @@ builder that will allow the curious researcher to construct searches
 that capture complex rhetorical patterns. 
 
 We provide two instances of
-the Linguistic Search tool: <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/">the first instance</a> queries a corpus of
+the Corpus Search tool: <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/">the first instance</a> queries a corpus of
 roughly 61,000 texts corresponding to EEBO-TCP Phases I and II; <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/am_ix/search/">the
 second instance</a> queries the smaller Phase I corpus. This smaller corpus
 is a more polished textual resource.</p>
@@ -52,7 +52,7 @@ is a more polished textual resource.</p>
     <a href="https://earlyprint.org/lab/tool_phrase_search.html"><img class="thumbnail" src="/assets/thumbs/phase_search.png" alt="Phrase search" title="Phrase search"/></a>
 </div>
 
-<p><a href="https://earlyprint.org/lab/tool_phrase_search.html">Phrase Search</a> provides a simplified interface for researching phrases and short passages of text, by automatically creating search queries based on both a phrase's form and its content. It is designed as a starting point for generating complex queries in Linguistic Search.</p>
+<p><a href="https://earlyprint.org/lab/tool_phrase_search.html">Phrase Search</a> provides a simplified interface for researching phrases and short passages of text, by automatically creating search queries based on both a phrase's form and its content. It is designed as a starting point for generating complex queries in Corpus Search.</p>
 
 <div style="clear:both;"></div>
 

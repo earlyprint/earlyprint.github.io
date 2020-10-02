@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Introduction to Linguistic Search"
+title:  "Introduction to Corpus Search"
 date:   2020-02-03 09:30:00 -0500
 author: Stephen Pentecost
 tags: [ep-lab, lingustic-search, blacklab, cql]
@@ -8,9 +8,9 @@ summary: An introduction to Lingustic Search, powered by Blacklab
 categories: [How-To, Intros]
 ---
 
-## Introduction to Linguistic Search
+## Introduction to Corpus Search
 
-Linguistic Search is powered by BlackLab, a tool for finding words or
+Corpus Search is powered by BlackLab, a tool for finding words or
 sequences of words in EEBO-TCP texts. In BlackLab, a “word” is more than
 just the letters from which it was formed: associated with a “word” are
 a number of properties (its regularized spelling, the lemmatized form of
@@ -26,9 +26,9 @@ present participle”): in this case, we’d be searching for “loving” no
 matter how it was originally spelled, but only when it was used as a
 verb.
 
-Linguistic Search also makes it possible to search for sequences of
+Corpus Search also makes it possible to search for sequences of
 words. For example, it’s quite easy to search for sequences of words
-like “most loving”. Linguistic Search also allows the user to group the
+like “most loving”. Corpus Search also allows the user to group the
 results various ways, to filter results by author, title and/or year of
 publication, and to export/download search results.
 
@@ -44,7 +44,7 @@ complete Phase I and II data comes from our copy of the TCP data, which
 we’ve annotated with the last public release of
 [*MorphAdorner*](http://morphadorner.northwestern.edu/morphadorner/).
 
-Linguistic Search offers three ways to search: by **Word or phrase**, by
+Corpus Search offers three ways to search: by **Word or phrase**, by
 using a **Query Builder**, or by writing **CQL** queries directly. These
 options are available through tabs at the top of all three search pages
 (**<span style="color:red">A</span>**):

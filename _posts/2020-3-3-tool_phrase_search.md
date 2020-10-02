@@ -7,7 +7,7 @@ summary: Search for variants of a phrase
 categories: Lab
 ---
 
-<small>This simple interface allows you to search for a phrase by translating your text into the corpus query language syntax used by *EarlyPrint*'s [Linguistic Search](http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/). Typing a phrase will create two unique search queries: one that looks for phrases of similar **content** and another that looks for phrases of similar **form**. For more detailed exploration of these patterns, use this interface as a starting point for a closer look from within [Linguistic Search](http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/).</small>
+<small>This simple interface allows you to search for a phrase by translating your text into the corpus query language syntax used by *EarlyPrint*'s [Corpus Search](http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/). Typing a phrase will create two unique search queries: one that looks for phrases of similar **content** and another that looks for phrases of similar **form**. For more detailed exploration of these patterns, use this interface as a starting point for a closer look from within [Corpus Search](http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/).</small>
 
 <form class="bg-light-blue h4 mw7 center pa4 br2-ns ba b--black-10">
       <input class="f6 f5-l input-reset bn fl black-80 bg-white pa3 lh-solid w-100 w-75-m w-80-l br2-ns br--left-ns" type="text" placeholder="Type any phrase, e.g. 'for whom the bell tolls'" id="searchBox" />
@@ -45,10 +45,10 @@ categories: Lab
     `;
   const errorTemplate = () =>
   html`<p>No results! Try a different phrase.</p>
-  <p>Sometimes an alternate spelling may work. If you're having trouble, use the more detailed <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/" target="_blank">Linguistic Search</a> interface.</p>`;
+  <p>Sometimes an alternate spelling may work. If you're having trouble, use the more detailed <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/" target="_blank">Corpus Search</a> interface.</p>`;
   const singleWordTemplate = () =>
   html`<p>Your search has too few words!</p>
-  <p> You've either entered just one word, or else your phrase doesn't contain enough distinct nouns or verbs to be searchable. If you'd like to search for a single word or a more specific phrase, use the detailed <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/" target="_blank">Linguistic Search</a> interface.</p>`;
+  <p> You've either entered just one word, or else your phrase doesn't contain enough distinct nouns or verbs to be searchable. If you'd like to search for a single word or a more specific phrase, use the detailed <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/" target="_blank">Corpus Search</a> interface.</p>`;
   const formResults = document.getElementById('formResults');
   const contentResults = document.getElementById('contentResults');
 
