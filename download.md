@@ -4,7 +4,7 @@ title: Download
 permalink: /download/
 ---
 
-Search to filter the table, and click on a link to download any of the corrected and linguisticaly-annotated *EarlyPrint* XML texts, or the *Oxford Text Archive* downloadable XML, HTML, and EPUB files, which include the original *Text Creation Partnership* XML. Some fields have been truncated for space, but the full field is available on mouseover and when searching and downloading the data. We provide Library of Congress Subject Headings when available, in the "Keywords" column. Keep in mind that only a portion of the texts have been assigned subject headings.
+Search to filter the table, and click on a link to download any of the corrected and linguisticaly-annotated *EarlyPrint* XML texts, or the *Oxford Text Archive* (OTA) downloadable XML, HTML, and EPUB files, which include the original *Text Creation Partnership* XML. Some fields have been truncated for space, but the full field is available on mouseover and when searching and downloading the data. We provide Library of Congress Subject Headings when available, in the "Keywords" column. Keep in mind that only a portion of the texts have been assigned subject headings.
 
 If you want to download the entire *EarlyPrint* corpus, the texts are available on our [public Bitbucket repository](https://bitbucket.org/eplib/eebotcp/src/master/).
 
