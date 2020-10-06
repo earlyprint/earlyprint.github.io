@@ -41,9 +41,7 @@ var columns = [
       var list = data.split(/ ; |, no\. /);
       var textId = list[2].replace(')','');
       if (type === 'display') {
-        if (list[1] === 'phase 1') {
-          return `<div>${ textId }</div><div><a href='https://bitbucket.org/shcdemo/${ textId.slice(0,3) }/raw/master/${ textId }.xml' target='_blank'>EP XML</a></div><div><a href='https://raw.githubusercontent.com/textcreationpartnership/${textId}/master/${textId}.xml' target='_blank'>TCP XML</a></div>`
-        } else { return `${ textId }\n(Available 01/2021)` }
+        return `<div>${ textId }</div><div><a href='https://bitbucket.org/eplib/${ textId.slice(0,3) }/raw/master/${ textId }.xml' target='_blank'>EP XML</a></div><div><a href='https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/${textId}' target='_blank'>OTA XML/HTML/EPUB</a></div>`
       } else { return textId; }
     },
     width: '80px'
