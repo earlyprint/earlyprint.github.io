@@ -3,7 +3,7 @@ layout: page
 title: About EarlyPrint Library
 permalink: /libabout/
 ---
-**The EarlyPrint Library substantial down payment on a larger project that aims at creating a deduplicated digital library of most English books published before 1700.** Each item in the EP Library will eventually be a complex digital surrogate including:
+**The EarlyPrint Library is a substantial down payment on a larger project that aims at creating a deduplicated digital library of most English books published before 1700.** Each item in the EP Library will eventually be a complex digital surrogate including:
 
 1. A reader provides a transcription that strikes a balance between being faithful to the printed source while being easy to read and use on the laptops and other mobile devices that are the "tables of memory" on which 21st-century scholars do much of their reading and writing.
 
