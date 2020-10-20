@@ -133,244 +133,164 @@ c to see all conjunctions pos<br/>
 d to see determiner pos<br/>
 j to see all adjectives pos<br/>
 n to see all nouns pos<br/>
-pi, pn, to see po for all pronouns pos<br/>
-pp to see all prepositions pos<br/>
+p to see po for all pronouns pos<br/>
+acp to see all prepositions pos<br/>
 uh to see all interjections pos<br/>
 v to see all verbs pos<br/>
 <br/><br/>
 The full set of part of speech tags is:
 <br/><br/>
-a-acp -- acp word as adverb<br/>
+ab -- an abbreviations<br/>
+acp -- prepositions some of which are also used as adverbs or conjunctions<br/>
+av.* -- all adverbs<br/>
 av -- adverb<br/>
-av-an -- noun-adverb as adverb<br/>
-av-c -- comparative adverb<br/>
-avc-jn -- comparative adj/noun as adverb<br/>
-av-d -- determiner/adverb as adverb<br/>
-av-dc -- comparative determiner/adverb as adverb<br/>
-av-ds -- superlative determiner as adverb<br/>
-av-dx -- negative determiner as adverb<br/>
+av-d -- determiners as adverb<br/>
 av-j -- adjective as adverb<br/>
-av-jc -- comparative adjective as adverb<br/>
-av-jn -- adj/noun as adverb<br/>
-av-js -- superlative adjective as adverb<br/>
-av-n1 -- noun as adverb<br/>
-av-s -- superlative adverb<br/>
-avs-jn -- superlative adj/noun as adverb<br/>
-av-vvg -- present participle as adverb<br/>
-av-vvn -- past participle as adverb<br/>
-av-x -- negative adverb<br/>
-c.* -- all conjunctions,<br/>
-c-acp -- acp word as conjunction<br/>
+av-n -- noun as adverb<br/>
+av-ord -- ordinal as adverb<br/>
+av-vg -- present participle as adverb<br/>
+av-vn -- past participle as adverb<br/>
+avc -- comparative adverb<br/>
+avc-d -- comparative determiner as adverb<br/>
+avc-j -- comparative adjective as adverb<br/>
+avs -- superlative adverb<br/>
+avs-d -- superlative determiner as adverb<br/>
+avs-j -- superlative adjective as adverb<br/>
+avx -- negative adverb<br/>
+avx-d -- negative determiner as adverb<br/>
+cc.* -- all conjunctions<br/>
 cc -- coordinating conjunction<br/>
-cc-acp -- acp word as coordinating conjunction<br/>
-c-crq -- wh-word as conjunction<br/>
 ccx -- negative conjunction<br/>
-crd -- numeral<br/>
-cs -- subordinating conjunction<br/>
-cst -- 'that' as conjunction<br/>
-d.* -- all determiners,<br/>
+crd -- cardinal number<br/>
+crd-m -- a monetary amount<br/>
+crq -- wh- words as interrogative or relative pronouns<br/>
+cs -- conjunction<br/>
+d.* -- all determiners<br/>
 d -- determiner<br/>
 dc -- comparative determiner<br/>
-dg -- determiner in possessive use<br/>
 ds -- superlative determiner<br/>
-dt -- article<br/>
-dx -- negative determiner as adverb<br/>
-fw-fr -- French word<br/>
-fw-ge -- German word<br/>
-fw-gr -- Greek word<br/>
-fw-it -- Italian word<br/>
-fw-la -- Latin word<br/>
-fw-mi -- word in unspecified other language<br/>
-j.* -- all adjectives,<br/>
+dx -- negative determiner<br/>
+emptycell -- a temporary token to mark empty cell eleents<br/>
+fan -- Anglo-Saxon word<br/>
+fdu -- Dutch word<br/>
+fes -- Spanish word<br/>
+ffr -- French wprd<br/>
+fge -- German word<br/>
+fgr -- Greek word<br/>
+fhe -- Hebrew word<br/>
+fin -- American Indian word<br/>
+fit -- italian word<br/>
+fla -- Latin word<br/>
+fmi -- dialect word or word in<br/>
+fsc -- Scottish word<br/>
+fwe -- Welsh word<br/>
+fxx -- word in a non-Roman script, mainly Greek or Hebrew<br/>
+j.* -- all adjectives<br/>
 j -- adjective<br/>
-j-av -- adverb as adjective<br/>
+j-av -- adjective from adverb<br/>
+j-mi -- adjective<br/>
+j-vg -- present participle as adjective<br/>
+j-vmd -- adjective from past modal verb<br/>
+j-vn -- past participle as adjective<br/>
 jc -- comparative adjective<br/>
-jc-jn -- comparative adj/noun<br/>
-jc-vvg -- present participles as comparative adjective<br/>
-jc-vvn -- past participle as comparative adjective<br/>
-j-jn -- adjective-noun<br/>
-jp -- proper adjective<br/>
+jc-vg -- comparative adjective from present participle<br/>
+jc-vn -- comparative adjective from past participle<br/>
+jnn -- proper adjective<br/>
 js -- superlative adjective<br/>
-js-jn -- superlative adj/noun<br/>
-js-vvg -- present participle as superlative adjective<br/>
-js-vvn -- past participle as superlative adjective<br/>
-j-vvg -- present participle as adjective<br/>
-j-vvn -- past participle as adjective,  <br/>
-n.* -- all nouns,<br/>
-n1 -- singular, noun<br/>
-n1-an -- noun-adverb as singular noun<br/>
-n1-j -- adjective as singular noun<br/>
-n2 -- plural noun<br/>
-n2-acp -- acp word as plural noun<br/>
-n2-an -- noun-adverb as plural noun<br/>
-n2-av -- adverb as plural noun<br/>
-n2-dx -- determiner/adverb negative as plural noun<br/>
-n2-j -- adjective as plural noun<br/>
-n2-jn -- adj/noun as plural noun<br/>
-n2-vdg -- present participle as plural noun, 'do'<br/>
-n2-vhg -- present participle as plural noun, 'have'<br/>
-n2-vvg -- present participle as plural noun<br/>
-n2-vvn -- past participle as plural noun<br/>
-ng1 -- singular possessive, noun<br/>
-ng1-an -- noun-adverb in singular possessive use<br/>
-ng1-j -- adjective as possessive noun<br/>
-ng1-jn -- adj/noun as possessive noun<br/>
-ng1-vvn -- past participle as possessive noun<br/>
-ng2 -- plural possessive, noun<br/>
-ng2-jn -- adj/noun as plural possessive noun<br/>
-n-jn -- adj/noun as noun<br/>
-njp -- proper adjective as noun<br/>
-njp2 -- proper adjective as plural noun<br/>
-njpg1 -- proper adjective as possessive noun<br/>
-njpg2 -- proper adjective as plural possessive noun<br/>
-np1 -- singular, proper noun<br/>
-np2 -- plural, proper noun<br/>
-npg1 -- singular possessive, proper noun<br/>
-npg2 -- plural possessive, proper noun<br/>
-np-n1 -- singular noun as proper noun<br/>
-np-n2 -- plural noun as proper noun<br/>
-np-ng1 -- singular possessive noun as proper noun<br/>
-n-vdg -- present participle as noun, 'do'<br/>
-n-vhg -- present participle as noun, 'have'<br/>
-n-vvg -- present participle as noun<br/>
-n-vvn -- past participle as noun<br/>
+js-vg -- superlative adjective from present participle<br/>
+js-vn -- <br/>
+n.* -- all nouns<br/>
+n1 -- singular noun<br/>
+n1-j -- adjective used as noun<br/>
+n1-mi -- miscellaneous word class used as noun<br/>
+n1-vg -- noun from present participle (gerund)<br/>
+n1-vm -- noun from modal verb present<br/>
+n1-vmd -- noun from modal verb past<br/>
+n1-vn -- noun from past participle (gerund)<br/>
+n2  -- plural noun<br/>
+n2-crq -- crq word used as noun<br/>
+n2-j -- adjective used as plural noun<br/>
+n2-mi -- miscellaneous wordclass used as plural noun<br/>
+n2-ord -- ordinal used as plural noun<br/>
+n2-uh -- exclamation used as plural noun<br/>
+n2-vg -- plural noun from present participle<br/>
+n2-vn -- <br/>
+ng1 -- single noun, genitive<br/>
+ng1-j -- <br/>
+ng1-mi -- miscellaneous wordclass used as genitive noun<br/>
+ng1-ord -- ordinal used as genitive noun<br/>
+ng1-vg -- genitive noun from present participle<br/>
+ng1-vn -- genitive noun from past participle<br/>
+ng2 -- genitive plural noun<br/>
+ng2-j -- adjective used as plural noun genitive<br/>
+ng2-vn -- past participle as genitive plural<br/>
+nn1 -- proper noun<br/>
+nn2 -- a plural name<br/>
+nng1 -- proper noun, genitive<br/>
+nng2 -- genitive plural proper noun<br/>
+nnp -- A particle that is part of a name<br/>
 ord -- ordinal number<br/>
-p-acp -- acp word as preposition<br/>
-pc-acp -- acp word as particle<br/>
-pi.*|^pn.*|^po.* -- all pronouns,<br/>
-pi -- singular, indefinite pronoun<br/>
-pi2 -- plural, indefinite pronoun<br/>
-pi2x -- plural, indefinite pronoun<br/>
-pig -- singular possessive, indefinite pronoun<br/>
-pigx -- possessive case, indefinite pronoun<br/>
-pix -- indefinite pronoun<br/>
-pn22 -- 2nd person, personal pronoun<br/>
-pn31 -- 3rd singular, personal pronoun<br/>
-png11 -- 1st singular possessive, personal pronoun<br/>
-png12 -- 1st plural possessive, personal pronoun<br/>
-png21 -- 2nd singular possessive, personal pronoun<br/>
-png22 -- 2nd person, possessive, personal pronoun<br/>
-png31 -- 3rd singular possessive, personal pronoun<br/>
-png32 -- 3rd plural possessive, personal pronoun<br/>
-pno11 -- 1st singular objective, personal pronoun<br/>
-pno12 -- 1st plural objective, personal pronoun<br/>
-pno21 -- 2nd singular objective, personal pronoun<br/>
-pno31 -- 3rd singular objective, personal pronoun<br/>
-pno32 -- 3rd plural objective, personal pronoun<br/>
-pns11 -- 1st singular subjective, personal pronoun<br/>
-pns12 -- 1st plural subjective, personal pronoun<br/>
-pns21 -- 2nd singular subjective, personal pronoun<br/>
-pns31 -- 3rd singular subjective, personal pronoun<br/>
-pns32 -- 3rd plural objective, personal pronoun<br/>
-po11 -- 1st singular, possessive pronoun<br/>
-po12 -- 1st plural, possessive pronoun<br/>
-po21 -- 2nd singular, possessive pronoun<br/>
-po22 -- 2nd person possessive pronoun<br/>
-po31 -- 3rd singular, possessive pronoun<br/>
-po32 -- 3rd plural, possessive pronoun<br/>
-pp.* -- all prepositions,<br/>
-pp -- preposition<br/>
-pp-f -- preposition 'of'<br/>
-px11 -- 1st singular reflexive pronoun<br/>
-px12 -- 1st plural reflexive pronoun<br/>
-px21 -- 2nd singular reflexive pronoun<br/>
-px22 -- 2nd plural reflexive pronoun<br/>
-px31 -- 3rd singular reflexive pronoun<br/>
-px32 -- 3rd plural reflexive pronoun<br/>
-pxg21 -- 2nd singular possessive, reflexive pronoun<br/>
-q-crq -- interrogative use, wh-word<br/>
-r-crq -- relative use, wh-word<br/>
-sy -- alphabetical or other symbol<br/>
-uh.* -- all interjections,<br/>
-uh -- interjection<br/>
-uh-av -- adverb as interjection<br/>
-uh-crq -- wh-word as interjection<br/>
-uh-dx -- negative interjection<br/>
-uh-j -- adjective as interjection<br/>
-uh-jn -- adjective/noun as interjection<br/>
-uh-n -- noun as interjection<br/>
-uh-v -- verb as interjection<br/>
-v.* -- all verbs,<br/>
-vb2 -- 2nd singular present of 'be'<br/>
-vb2-imp -- 2nd plural present imperative, 'be'<br/>
-vb2x -- 2nd singular present, 'be'<br/>
-vbb -- present tense, 'be'<br/>
-vbbx -- present tense negative, 'be'<br/>
-vbd -- past tense, 'be'<br/>
-vbd2 -- 2nd singular past of 'be'<br/>
-vbd2x -- 2nd singular past, 'be'<br/>
-vbdp -- plural past tense, 'be'<br/>
-vbdx -- past tense negative, 'be'<br/>
-vbg -- present participle, 'be'<br/>
-vbi -- infinitive, 'be'<br/>
-vbm -- 1st singular, 'be'<br/>
-vbmx -- 1st singular negative, 'be'<br/>
-vbn -- past participle, 'be'<br/>
-vbp -- plural present, 'be'<br/>
-vbz -- 3rd singular present, 'be'<br/>
-vbzx -- 3rd singular present negative, 'be'<br/>
-vd2 -- 2nd singular present of 'do'<br/>
-vd2-imp -- 2nd plural present imperative, 'do'<br/>
-vd2x -- 2nd singular present negative, 'do'<br/>
-vdb -- present tense, 'do'<br/>
-vdbx -- present tense negative, 'do'<br/>
-vdd -- past tense, 'do'<br/>
-vdd2 -- 2nd singular past of 'do'<br/>
-vdd2x -- 2nd singular past negative, verb<br/>
-vddp -- plural past tense, 'do'<br/>
-vddx -- past tense negative, 'do'<br/>
-vdg -- present participle, 'do'<br/>
-vdi -- infinitive, 'do'<br/>
-vdn -- past participle, 'do'<br/>
-vdp -- plural present, 'do'<br/>
-vdz -- 3rd singular present, 'do'<br/>
-vdzx -- 3rd singular present negative, 'do'<br/>
-vh2 -- 2nd singular present of 'have'<br/>
-vh2-imp -- 2nd plural present imperative, 'have'<br/>
-vh2x -- 2nd singular present negative, 'have'<br/>
-vhb -- present tense, 'have'<br/>
-vhbx -- present tense negative, 'have'<br/>
-vhd -- past tense, 'have'<br/>
-vhd2 -- 2nd singular past of 'have'<br/>
-vhdp -- plural past tense, 'have'<br/>
-vhdx -- past tense negative, 'have'<br/>
-vhg -- present participle, 'have'<br/>
-vhi -- infinitive, 'have'<br/>
-vhn -- past participle, 'have'<br/>
-vhp -- plural present, 'have'<br/>
-vhz -- 3rd singular present, 'have'<br/>
-vhzx -- 3rd singular present negative, 'have'<br/>
-vm2 -- 2nd singular present of modal verb<br/>
-vm2x -- 2nd singular present negative, modal verg<br/>
-vmb -- present tense, modal verb<br/>
-vmb1 -- 1st singular present, modal verb<br/>
-vmbx -- present tense negative, modal verb<br/>
-vmd -- past tense, modal verb<br/>
-vmd2 -- 2nd singular past of modal verb<br/>
-vmd2x -- 2nd singular present, modal verb<br/>
-vmdp -- plural past tense, modal verb<br/>
-vmdx -- past negative, modal verb<br/>
-vmi -- infinitive, modal verb<br/>
-vmn -- past participle, modal verb<br/>
-vmp -- plural present tense, modal verg<br/>
-vv2 -- 2nd singular present of verb<br/>
-vv2-imp -- 2nd present imperative, verb<br/>
-vv2x -- 2nd singular present negative, verb<br/>
-vvb -- present tense, verg<br/>
-vvbx -- present tense negative, verb<br/>
-vvd -- past tense, verb<br/>
-vvd2 -- 2nd singular past of verb<br/>
-vvd2x -- 2nd singular past negative, verb<br/>
-vvdp -- past plural, verb<br/>
-vvdx -- past tense negative, verb<br/>
-vvg -- present participle, verb<br/>
-vvi -- infinitive, verb<br/>
-vvn -- past participle, verb<br/>
-vvp -- plural present, verb<br/>
-vvz -- 3rd singular preseent, verb<br/>
-vvzx -- 3rd singular present negative, verb<br/>
+^pi.*|^pn.*|^po.* -- all pronouns<br/>
+pi -- indefinite pronoun<br/>
+pi-d -- determiner as indefinite pronoun<br/>
+pi2 -- determiner as indefinite plural pronoun<br/>
+pi2-d -- determiner as plural indefinite pronoun<br/>
+pi2x -- negative indefinite pronoun plural<br/>
+pig -- indefinite pronoun, genitive<br/>
+pig-d -- determiner as indefinite pronoun, genitive<br/>
+pig2-d -- determiner as indefinite pronoun, genitive plural<br/>
+pigx -- negative indefinity pronoun, genitive<br/>
+pigx-d -- determiner as negative indefinite pronoun, genitive<br/>
+pix -- negative indefinite pronoun<br/>
+pix-d -- negative determiner as indefinit pronoun<br/>
+pn -- personal pronoun<br/>
+png -- personal pronoun, genitive<br/>
+pno -- personal pronoun, objective<br/>
+pns -- personal pronoun, subjective<br/>
+po -- possessive pronoun<br/>
+pr -- a reflexive pronoun<br/>
+prg -- genitive of reflexive pronoun<br/>
+prt -- a particle<br/>
+sy -- a symbol<br/>
+uh.* -- all exclamations<br/>
+uh -- exclamation<br/>
+uh-av -- exclamation from adverb<br/>
+uh-crq -- exclamation from crq word<br/>
+uh-j -- <br/>
+uh-mi -- exclamation from miscellaneous wordclass<br/>
+uh-n -- noun as exclamation<br/>
+uh-v -- verb used as exclamation<br/>
+uhx -- negative exclamation<br/>
+v.* -- all verbs<br/>
+vm2 -- modal verb, 2nd person singular<br/>
+vmb -- modal verb, present<br/>
+vmbp -- plural present of modal verb<br/>
+vmbx -- negative modal verb<br/>
+vmd -- modal verb, past<br/>
+vmd2 -- modal verb, past, 2nd person singular<br/>
+vmd2x -- <br/>
+vmdp -- <br/>
+vmdx -- modal verb, past, negative<br/>
+vv2 -- verb, present, 2nd person singular<br/>
+vvb -- verb, present<br/>
+vvbx -- verb,  present, negative<br/>
+vvd -- verb, past<br/>
+vvd2 -- verb, past, 2nd person singular<br/>
+vvdp -- verb, past, plural<br/>
+vvdx -- verb, past, negative<br/>
+vvg -- verb, present participle<br/>
+vvi -- <br/>
+vvm -- first person singular of 'be'<br/>
+vvmx -- <br/>
+vvn -- verb, past participle<br/>
+vvnx -- <br/>
+vvp -- verb, present, plural<br/>
+vvz -- verb, 3rd person singular<br/>
+vvzx -- <br/>
+wd -- this tag is introduced in manual review to identify tokens that the automatic parser got wrong<br/>
 xx -- negative<br/>
-zz -- unknown or unparsable token<br/>
+z0 -- <br/>
+zz -- this tag is introduced in manual review to identify tokens that the automatic parser got wrong<br/>
 <br/>
 </div>
 <br/>
@@ -392,7 +312,7 @@ zz -- unknown or unparsable token<br/>
 <script type="text/javascript" src="/assets/tools/jquery-ui-1.11.1.custom/jquery-ui.min.js?v=1501"></script>
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script type="text/javascript" src="/assets/tools/js/tinycolor.js?v=1501"></script>
-<script type="text/javascript" src="/assets/tools/js/nupos.js?v=1501"></script>
+<script type="text/javascript" src="/assets/tools/js/eebotcp_nupos.js?v=1501"></script>
 <script type="text/javascript" src="/assets/tools/js/test_eeboSpellingBrowser.js?v=1501"></script>
 <script type="text/javascript" src="/assets/tools/js/shorten_link.js?v=1501"></script>
 <link rel="stylesheet" type="text/css" href="/assets/tools/css/common_tool_styles.css?v=1501"/>
