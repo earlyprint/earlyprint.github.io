@@ -128,15 +128,15 @@ Generating the graph.  Thank you for waiting.
 <br/><br/>
 If you type one or two letters into a pos input field, you'll see a subset of the pos tags available for use in queries.  And, of course, you may leave the pos input field(s) blank, and the browser will disregard part-of-speech when graphing search terms.  Try typing:
 <br/><br/>
-a to see all adverbs pos<br/>
-c to see all conjunctions pos<br/>
+a to see all adverb pos<br/>
+c to see all conjunction pos<br/>
 d to see determiner pos<br/>
-j to see all adjectives pos<br/>
-n to see all nouns pos<br/>
-p to see po for all pronouns pos<br/>
-acp to see all prepositions pos<br/>
-uh to see all interjections pos<br/>
-v to see all verbs pos<br/>
+j to see all adjective pos<br/>
+n to see all noun pos<br/>
+p to see all pronoun pos<br/>
+acp to see all preposition pos<br/>
+uh to see all interjection pos<br/>
+v to see all verb pos<br/>
 <br/><br/>
 The full set of part of speech tags is:
 <br/><br/>
