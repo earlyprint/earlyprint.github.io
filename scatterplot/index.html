@@ -1,0 +1,32 @@
+---
+layout: plain
+permalink: /scatterplot/
+---
+        <link rel="stylesheet" type="text/css" href="includes/index.css"/>
+	<link rel="stylesheet" href="includes/css-loader.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="includes/typeahead.bundle.min.js"></script>
+        <script src="includes/index.js"></script>
+	    <div id="about" class="hide-about">
+		    <div id="about-text">
+			    <p>In this experimental scatter plot, each point represents a distinct <em>EarlyPrint</em> text. The position of the points is based on LDA topic models (created using <a href="http://mallet.cs.umass.edu/topics.php">MALLET</a>) that have been visualized using <a href="https://arxiv.org/abs/1602.00370">LargeVis</a>. LargeVis attempts to position points based on their similarity to one another, organizing them into clusters.</p>
+			    <p>The topic modeling data used here is the same that drives our <a href="https://earlyprint.org/lab/tool_discovery_engine.html?which_to_do=find_texts&eebo_tcp_id=A43441&n_results=35&tfidf_weight=6&mallet_weight=6&tag_weight=6">Discovery Engine</a>. Importantly, LargeVis is designed to show clusters in the data, but there may be additional ways of clustering or sorting the data that LargeVis is not showing. The topic models may be good at grouping together certain genres or themes, but not good at showing other known categories of text. This scatter plot is meant as an illustration of certain clusters in the corpus, but it is <strong>not</strong> a final authority on all possible text clusters.</p>
+			    <p>You can use the menu on the left to highlight texts that contain specific terms from their Library of Congress subject headings. Note that there is a lot of overlap between the subject headings and the topic modeling clusters. This suggests that human catalogers and topic modeling are turning up some of the same general categories. If you choose groups of related subject terms (e.g. "Bible," "Sermons," and "Church of England") you'll see that there are large communities and "islands" for common categories of texts in the corpus. There are islands of political texts, religious texts, poetry, drama, and more. We encourage you to use this as an exploratory tool, a first step toward visualizing topics in the <em>EarlyPrint</em> corpus.</p>
+			    <p>Designed and implemented by John Ladd and Steve Pentecost.</p>
+			    <p><em>n.b. The colors used in this graph are colorblind safe, but there are too many distinct terms for the number of possible colors. Colors will repeat.</em></p>
+		    </div>
+	    </div>
+	    <div class="loader loader-default is-active" data-half></div>
+
+	    <div id="title"><strong>Topic Model Scatter Plot</strong> <a id="what" href="javascript:showAbout();">What is this?</a></div>
+            <div id="checkboxes"> </div>
+	<div id="search">
+		<input class="typeahead" type="text" placeholder="Search by Title or Author">
+	</div>
+	<div id="pointInfo">
+		Click a point to get more information, or use the search box above.<br><br>
+		<em>Scroll to zoom. Click and drag to pan.</em>
+	</div>
+	<canvas width="1000" height="1000"></canvas>
+        <div id="tooltip"></div>
