@@ -13,7 +13,7 @@ var EEBO_SAVE_REQUEST_FROM_CLIENT = '';
 var EEBO_SAVE_LINE_WIDTH = '';
 
 //var EEBO_URL_PREFIX = '/eebospellingbrowserv3/';
-var EEBO_URL_PREFIX = 'https://earlyprint.wustl.edu/proxy_ngrams.php?url=https://earlyprint.wustl.edu/eebospellingbrowserv3_test/';
+var EEBO_URL_PREFIX = 'https://earlyprint.wustl.edu/proxy_ngrams.php?url=https://earlyprint.wustl.edu/eebospellingbrowserv3_old/';
 
 var EEBO_PREV_STYLE = '';
 var EEBO_MOUSEOVER_LINE = false;
@@ -99,7 +99,7 @@ function handle_document_load() {
 
     if (GLOBAL_URL_PARAMS.has('requestFromClient') == false) {
         
-        window.location.assign('/lab/test_ngram_browser.html?requestFromClient={"1":{"spe":"love,loue","reg":"","lem":"","pos":"","originalPos":""},"2":{"spe":"","reg":"","lem":"","pos":"","originalPos":""},"3":{"spe":"","reg":"","lem":"","pos":"","originalPos":""},"databaseType":"unigrams","smoothing":"True","rollingAverage":"20_year", "instructionToggle": "show"}');
+        window.location.assign('/lab/old_ngram_browser.html?requestFromClient={"1":{"spe":"love,loue","reg":"","lem":"","pos":"","originalPos":""},"2":{"spe":"","reg":"","lem":"","pos":"","originalPos":""},"3":{"spe":"","reg":"","lem":"","pos":"","originalPos":""},"databaseType":"unigrams","smoothing":"True","rollingAverage":"20_year", "instructionToggle": "show"}');
     }
     
             
@@ -1216,7 +1216,7 @@ function linkToGrok(word, corpus) {
         blacklab_field = 'lemma';
     }
     
-    window.open('http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/eebotcp/search/hits?number=20&first=0&patt=[' + 
+    window.open('http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/hits?number=20&first=0&patt=[' + 
                     blacklab_field + '="' + word + '"]');
 }
 

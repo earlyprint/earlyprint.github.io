@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  The Discovery Engine
-date:   2018-12-01 10:00:00 -0500
+title:  OLD Discovery Engine
+date:   2020-10-13 10:00:00 -0500
 tags: 
-summary: An experimental tool for discovering similarities between texts
+summary: A previous version of an experimental tool for discovering similarities between texts
 categories: Lab
 ---
 

@@ -73,7 +73,7 @@ function handle_button(n) {
         GLOBAL_URL_PARAMS.set('tag_weight', '6');
     }
 
-    window.location.assign('/lab/tool_discovery_engine.html?' + GLOBAL_URL_PARAMS.toLocaleString());
+    window.location.assign('/lab/discovery_engine.html?' + GLOBAL_URL_PARAMS.toLocaleString());
 }
 
 function handle_link(tcp_id) {

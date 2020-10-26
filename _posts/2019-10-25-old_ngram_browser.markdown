@@ -1,9 +1,9 @@
 ---
 layout: page
-title:  N-gram Browser
+title:  OLD N-gram Browser
 date:   2014-01-17 10:00:00 -0500
 tags:
-summary: EEBO-TCP N-gram Browser
+summary: OLD EEBO-TCP N-gram Browser
 categories: Lab
 ---
 
@@ -393,6 +393,6 @@ zz -- unknown or unparsable token<br/>
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script type="text/javascript" src="/assets/tools/js/tinycolor.js?v=1501"></script>
 <script type="text/javascript" src="/assets/tools/js/nupos.js?v=1501"></script>
-<script type="text/javascript" src="/assets/tools/js/eeboSpellingBrowser.js?v=1501"></script>
+<script type="text/javascript" src="/assets/tools/js/old_eeboSpellingBrowser.js?v=1501"></script>
 <script type="text/javascript" src="/assets/tools/js/shorten_link.js?v=1501"></script>
 <link rel="stylesheet" type="text/css" href="/assets/tools/css/common_tool_styles.css?v=1501"/>

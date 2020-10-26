@@ -27,7 +27,7 @@ $( document ).ready(function() {
 
         $('#results').html('<h2 style="color:blue;">Working . . . </h2>');
 
-        $.get(HOSTNAME + '/test_all_3_prototype/run_query.php?' + GLOBAL_URL_PARAMS.toLocaleString())
+        $.get(HOSTNAME + '/old_all_3_prototype/run_query.php?' + GLOBAL_URL_PARAMS.toLocaleString())
             .done(
                 function(data) {
 
@@ -73,7 +73,7 @@ function handle_button(n) {
         GLOBAL_URL_PARAMS.set('tag_weight', '6');
     }
 
-    window.location.assign('/lab/test_discovery_engine.html?' + GLOBAL_URL_PARAMS.toLocaleString());
+    window.location.assign('/lab/old_discovery_engine.html?' + GLOBAL_URL_PARAMS.toLocaleString());
 }
 
 function handle_link(tcp_id) {

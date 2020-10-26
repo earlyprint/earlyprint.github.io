@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  TEST
+title:  The Discovery Engine
 date:   2018-12-01 10:00:00 -0500
 tags: 
-summary: TEST
+summary: An experimental tool for discovering similarities between texts
 categories: Lab
 ---
 
-<h3>TEST</h3>
+<h3>An experimental tool for discovering similarities between texts</h3>
 
 <div id="page_controls">
 <div class="controls_1">

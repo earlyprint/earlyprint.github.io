@@ -27,24 +27,16 @@ pairs with the Corpus Search tool.</p>
 
 <div class="float_image_div">
 
-    <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/"><img class="thumbnail" src="/assets/thumbs/phase_I_II.png" alt="Corpus Search -- phase I and II" title="Corpus Search -- phase I and II"/></a>
-
-    <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/am_ix/search/"><img class="thumbnail" src="/assets/thumbs/phase_I.png" alt="Corpus Search -- phase I" title="Corpus Search -- phase I"/></a>
+    <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/eebotcp/search/"><img class="thumbnail" src="/assets/thumbs/phase_I_II.png" alt="Corpus Search" title="Corpus Search"/></a>
 
 </div>
 
-<p>We offer a Corpus Search tool which allows the researcher to search
+<p>We offer <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/eebotcp/search/">a Corpus Search tool</a> which allows the researcher to search
 by individual word or by phrase. This tool allows search by original or
 regularized spelling, by lemma or by part-of-speech; searches can also
 be filtered by date, author, and title. The tool includes a query
 builder that will allow the curious researcher to construct searches
-that capture complex rhetorical patterns. 
-
-We provide two instances of
-the Corpus Search tool: <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/">the first instance</a> queries a corpus of
-roughly 61,000 texts corresponding to EEBO-TCP Phases I and II; <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/am_ix/search/">the
-second instance</a> queries the smaller Phase I corpus. This smaller corpus
-is a more polished textual resource.</p>
+that capture complex rhetorical patterns.</p>
 
 <div style="clear:both;"></div>
 
