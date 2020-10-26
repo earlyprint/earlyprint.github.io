@@ -1,7 +1,7 @@
 ---
 layout: page
-title: EarlyPrint Library
-permalink: /libprototype/
+title: EarlyPrint Lab
+permalink: /labprototype/
 ---
 
 <p><b>Welcome to EarlyPrint Library, a resource for reading a digital library of 25,000 English books published before 1700. In a few weeks, that digital library will more than double in size, so that it will represent virtually the entire corpus of early English print.</b> (The full surviving corpus of English printed books numbers roughly 110,000 books, but many of these are second and subsequent editions of books available in EarlyPrint.)</p>
