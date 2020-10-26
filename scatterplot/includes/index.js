@@ -120,9 +120,11 @@ $( document ).ready(function() {
         const padding = 0;
 
         canvas = d3.select("canvas").on("click", onClick).call(d3.zoom().scaleExtent([1, 8]).on("zoom", zoom).on("end", zoomEnd));
-        width = canvas.property("width");
-        height = canvas.property("height");
-        
+        width = window.innerWidth;//canvas.property("width");
+        height = window.innerWidth;//canvas.property("height");
+	let canvas_el = document.getElementById("graph");
+	canvas_el.width = width;
+	canvas_el.height = height;
         context = canvas.node().getContext("2d");
         
         let xScale = d3.scaleLinear()
