@@ -20,7 +20,10 @@ permalink: /scatterplot/
 	    <div class="loader loader-default is-active" data-half></div>
 
 	    <div id="title"><strong>Topic Model Scatter Plot</strong> <a id="what" href="javascript:showAbout();">What is this?</a></div>
-            <div id="checkboxes"> </div>
+            <div id="checkboxes">
+		    <input type="text" id="subjectFilter" onkeyup="filterSubject()" placeholder="Filter subject terms..." />
+		    <ul id="checkbox-list"></ul>
+	    </div>
 	<div id="search">
 		<input class="typeahead" type="text" placeholder="Search by Title or Author">
 	</div>

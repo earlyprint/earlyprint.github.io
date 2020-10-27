@@ -67,7 +67,7 @@ function drawPoint(point, transform) {
 
 
 function append_checkbox(id_no, checkbox_type, checkbox_value_count, checkbox_value) {
-    $('#checkboxes').append(`<div id="container_${id_no}"><input type="checkbox" name="${checkbox_type}_${id_no}" id="${checkbox_type}_${id_no}"  name="${checkbox_type}_${id_no}" onchange="javascript:handle_checkbox('${checkbox_type}_${id_no}', '${checkbox_type}', '${checkbox_value}');"><label for="${checkbox_type}_${id_no}">${checkbox_value} (${checkbox_value_count})</label></div>`);
+    $('#checkbox-list').append(`<li id="container_${id_no}"><input type="checkbox" name="${checkbox_type}_${id_no}" id="${checkbox_type}_${id_no}"  name="${checkbox_type}_${id_no}" onchange="javascript:handle_checkbox('${checkbox_type}_${id_no}', '${checkbox_type}', '${checkbox_value}');"><label for="${checkbox_type}_${id_no}">${checkbox_value} (${checkbox_value_count})</label></li>`);
     if (metadata_values.indexOf(checkbox_value) > -1) {
 	    $(`#${checkbox_type}_${id_no}`).attr('checked', true);
 	    $(`#container_${id_no}`).css('background-color', color(checkbox_value));
@@ -99,6 +99,25 @@ function handle_checkbox(id, metadata_type, metadata_value) {
     }
     var transform = d3.zoomTransform(canvas.node());
     draw(transform);
+}
+
+function filterSubject() {
+  // Declare variables
+  let input = document.getElementById('subjectFilter');
+  let filter = input.value.toUpperCase();
+  let ul = document.getElementById("checkbox-list");
+  let li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (let i = 0; i < li.length; i++) {
+    let label = li[i].getElementsByTagName("label")[0];
+    let txtValue = label.textContent || label.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
 }
 
 function showAbout() {

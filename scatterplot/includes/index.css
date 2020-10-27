@@ -62,10 +62,35 @@ a#what {
     padding-top: 5px;
 }
 
-input {
+#checkbox-list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#checkbox-list li {
+	margin-top: 5px;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+input.typeahead {
     padding-left: 10px;
 }
 
+input#subjectFilter {
+	width: 100%;
+	margin-top: 5px;
+}
+
+li label {
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+input[type=checkbox] {
+	vertical-align: middle;
+}
 
 #search {
 	width: 290px;
@@ -107,13 +132,8 @@ canvas {
 	position: fixed;
 	z-index: -2;
 }
-/*
-.standard_label {
-    vertical-align: top;
-    display: inline-block;
-    width: 100px;
-}
-*/
+
+
 
 /*
 #search_box {
