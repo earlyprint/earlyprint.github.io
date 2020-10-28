@@ -138,7 +138,7 @@ $( document ).ready(function() {
         let graph_data = map_data[0];
         const padding = 0;
 
-        canvas = d3.select("canvas").on("click", onClick).call(d3.zoom().scaleExtent([1, 8]).on("zoom", zoom).on("end", zoomEnd));
+        canvas = d3.select("canvas").on("click", onClick).call(d3.zoom().scaleExtent([0.4, 20]).on("zoom", zoom).on("end", zoomEnd));
         width = window.innerWidth;//canvas.property("width");
         height = window.innerWidth;//canvas.property("height");
 	let canvas_el = document.getElementById("graph");
