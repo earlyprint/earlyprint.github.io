@@ -197,7 +197,7 @@ $( document ).ready(function() {
             new_data[selectedPoint].selected = false;
         }
 	if (item) {
-	    let newHTML = `TCP ID Number: ${item.id}<br/><b>${item.title}</b><br/>${item.author}<br/>${item.year}<br/>Subject Headings:<br/>${item.subject}`;
+	    let newHTML = `<em>TCP ID Number:</em> ${item.id}<br/><b>${item.title}</b><br/><br/><em>Author(s):</em><br/>${item.author}<br/><em>Publication date:</em> ${item.year}<br/><br><em>Subject Headings:</em><br/>${item.subject}`;
 	    infoBox.html(newHTML);
             item.selected = true;
             selectedPoint = item.i;	
