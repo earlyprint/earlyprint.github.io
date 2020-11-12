@@ -59,54 +59,86 @@
     line-height: $base-line-height;
     text-decoration: none;
   }
-
-  .dropdown {
-    float: left;
-    overflow: hidden;
+  .active-page {
+	  background-color: #f9f9f9;
+	  color: $text-color;
+	  div a:visited {color: $text-color;}
+	  div a:hover {color: #f9f9f9;}
   }
 
-  .dropdown .dropbtn {
-    // font-size: 16px;
-    border: none;
-    outline: none;
-    // color: $grey-color-light;
-    padding: 14px 16px;
-    // background-color: inherit;
-    font-family: inherit;
+/* The root */
+.p-nested-dropdowns {
+    /* Border */
+    display: flex;
+
+    /* Reset list styles */
+    list-style-type: none;
     margin: 0;
-  }
+    padding: 0;
+}
 
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    // right: 0;
-  }
+.p-nested-dropdowns li {
+    /* Spacing */
+    padding: 0px 8px;
+    margin: 0;
 
-  .dropdown-content a {
-    float: none;
-    color: black;
-    padding: 2px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
+    /* Used to position the sub dropdown */
+    position: relative;
+}
 
-  .dropdown-content a:hover {
-    background-color: #ddd;
-  }
-
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-
-  .dropdown:hover .dropbtn {
+/* The sub dropdown */
+.p-nested-dropdowns ul {
+    /* Border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
     background-color: #f9f9f9;
     color: $text-color;
-  }
+
+    /* Hidden by default */
+    //display: none;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 1s, max-height 0.25s ease-in, opacity 0.25s ease-in;
+
+    /* Absolute position */
+    left: 0;
+    position: absolute;
+    top: 100%;
+
+    /* Reset styles */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    /* Width */
+    width: 175px;
+}
+
+/* The second level sub dropdown */
+.p-nested-dropdowns ul ul {
+    left: -100%;
+    position: absolute;
+    top: 0;
+}
+
+/* Change background color of list item when being hovered */
+.p-nested-dropdowns li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Show the direct sub dropdown when hovering the list item */
+.p-nested-dropdowns li:hover > ul {
+    visibility: visible;
+    max-height: 1000px;
+    opacity: 1;
+    transition: visibility 1s, opacity 0.5s ease-in 0.5s, max-height 0.5s ease-in 0.5s;
+    //display: block;
+}
+
+.p-nested-dropdown a {
+	text-decoration: none;
+	color: black;
+}
 
   @include media-query($on-palm) {
     position: absolute;
@@ -140,12 +172,12 @@
       }
     }
 
-    input ~ .trigger {
+    input ~ .p-nested-dropdowns {
       clear: both;
       display: none;
     }
 
-    input:checked ~ .trigger {
+    input:checked ~ .p-nested-dropdowns {
       display: block;
       padding-bottom: 5px;
     }
@@ -154,11 +186,11 @@
       display: none;
     }
 
-    .dropdown .dropbtn {
+    .p-nested-dropdowns {
       padding: 0px 0px;
     }
 
-    .page-link, .dropdown {
+    .page-link, .p-nested-dropdowns {
       display: block;
       padding: 5px 10px;
       float: none;
