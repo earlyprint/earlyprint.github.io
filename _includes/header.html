@@ -4,7 +4,7 @@
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
     {% assign page_url = page.url | split:"/" %}
-    <a class="site-title i" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }} {% if page_url[1] == 'lab' %}<span class="fs-normal f4 ml1 light-blue sans-serif">Lab</span>{% endif %}</a>
+    <a class="site-title i" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }} {% if page_url[1] == 'lab' %}<span class="ml1 light-blue">Lab</span>{% endif %}</a>
 
       <nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
