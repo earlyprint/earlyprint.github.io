@@ -7,7 +7,7 @@ summary: Search for variants of a phrase
 categories: Lab
 ---
 
-<small>This simple interface allows you to search for a phrase by translating your text into the corpus query language syntax used by *EarlyPrint*'s [Corpus Search](http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/). Typing a phrase will create two unique search queries: one that looks for phrases of similar **content** and another that looks for phrases of similar **form**. For more detailed exploration of these patterns, use this interface as a starting point for a closer look from within [Corpus Search](http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/).</small>
+<small>This simple interface allows you to search for a phrase by translating your text into the corpus query language syntax used by *EarlyPrint*'s [Corpus Search](http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/eebotcp/search/). Typing a phrase will create two unique search queries: one that looks for phrases of similar **content** and another that looks for phrases of similar **form**. For more detailed exploration of these patterns, use this interface as a starting point for a closer look from within [Corpus Search](http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/eebotcp/search/).</small>
 
 <form class="bg-light-blue h4 mw7 center pa4 br2-ns ba b--black-10">
       <input class="f6 f5-l input-reset bn fl black-80 bg-white pa3 lh-solid w-100 w-75-m w-80-l br2-ns br--left-ns" type="text" placeholder="Type any phrase, e.g. 'for whom the bell tolls'" id="searchBox" />
@@ -32,7 +32,7 @@ categories: Lab
   const resultsTemplate = (pattern, hits, docInfos) =>
     html`<p>Results based on this query:</p>
     <p class="ma3 pa3 br2 ba b--black-30">${pattern}</p>
-    <a class="fr f6 link dim br2 ph3 pv2 mb2 dib white bg-dark-blue" href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/hits?number=20&first=0&patt=${encodeURIComponent(pattern)}" target="_blank">Go to full results</a>
+    <a class="fr f6 link dim br2 ph3 pv2 mb2 dib white bg-dark-blue" href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/eebotcp/search/hits?number=20&first=0&patt=${encodeURIComponent(pattern)}" target="_blank">Go to full results</a>
     <h4 class="fl w-100">First 20 results:</h4>
     <ul class="list f6 center">
       ${hits.map(h => html`
@@ -45,10 +45,10 @@ categories: Lab
     `;
   const errorTemplate = () =>
   html`<p>No results! Try a different phrase.</p>
-  <p>Sometimes an alternate spelling may work. If you're having trouble, use the more detailed <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/" target="_blank">Corpus Search</a> interface.</p>`;
+  <p>Sometimes an alternate spelling may work. If you're having trouble, use the more detailed <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/eebotcp/search/" target="_blank">Corpus Search</a> interface.</p>`;
   const singleWordTemplate = () =>
   html`<p>Your search has too few words!</p>
-  <p> You've either entered just one word, or else your phrase doesn't contain enough distinct nouns or verbs to be searchable. If you'd like to search for a single word or a more specific phrase, use the detailed <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/all/search/" target="_blank">Corpus Search</a> interface.</p>`;
+  <p> You've either entered just one word, or else your phrase doesn't contain enough distinct nouns or verbs to be searchable. If you'd like to search for a single word or a more specific phrase, use the detailed <a href="http://ada.artsci.wustl.edu:8080/corpus-frontend-1.2/eebotcp/search/" target="_blank">Corpus Search</a> interface.</p>`;
   const formResults = document.getElementById('formResults');
   const contentResults = document.getElementById('contentResults');
 
@@ -58,7 +58,7 @@ categories: Lab
     } else {
     let pattern = string.split(" ").map(word => `[reg="${word}"]`).join("");
 
-    let request = new Request(`https://ada.artsci.wustl.edu/proxy_blacklab/all/hits?number=20&patt=${pattern}&outputformat=json`);
+    let request = new Request(`https://ada.artsci.wustl.edu/proxy_blacklab/eebotcp/hits?number=20&patt=${pattern}&outputformat=json`);
     fetch(request)
     .then(response => {
       if (response.status === 200) {
@@ -73,7 +73,7 @@ categories: Lab
       } else {
         let match = response.hits[0].match;
         let new_pattern = match.pos.map(p => {if (p === "xx") { return "[]"} else { return `[pos="${p}"]`}}).join("");
-        let request = new Request(`https://ada.artsci.wustl.edu/proxy_blacklab/all/hits?number=20&patt=${new_pattern}&outputformat=json`);
+        let request = new Request(`https://ada.artsci.wustl.edu/proxy_blacklab/eebotcp/hits?number=20&patt=${new_pattern}&outputformat=json`);
         fetch(request)
         .then(response => {
           if (response.status === 200) {
@@ -100,7 +100,7 @@ categories: Lab
   const searchByContent = (string) => {
     let pattern = string.split(" ").map(word => `[reg="${word}"]`).join("");
 
-    let request = new Request(`https://ada.artsci.wustl.edu/proxy_blacklab/all/hits?number=20&patt=${pattern}&outputformat=json`);
+    let request = new Request(`https://ada.artsci.wustl.edu/proxy_blacklab/eebotcp/hits?number=20&patt=${pattern}&outputformat=json`);
     fetch(request)
     .then(response => {
       if (response.status === 200) {
@@ -123,7 +123,7 @@ categories: Lab
         let combos = Array.from(alphabet).slice(0,imp_words.length).map((a,i,arr) => arr.slice(i+1).map(b => [a, b])).flat(1)
         let patt_2 = combos.map(c => `${c[0]}.lemma != ${c[1]}.lemma`).join(" & ");
         let new_pattern = `${patt_1} :: ${patt_2}`
-        let request = new Request(`https://ada.artsci.wustl.edu/proxy_blacklab/all/hits?number=20&patt=${encodeURIComponent(new_pattern)}&outputformat=json`);
+        let request = new Request(`https://ada.artsci.wustl.edu/proxy_blacklab/eebotcp/hits?number=20&patt=${encodeURIComponent(new_pattern)}&outputformat=json`);
         fetch(request)
         .then(response => {
           if (response.status === 200) {
