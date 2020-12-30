@@ -8,8 +8,6 @@ summary: An introduction to Lingustic Search, powered by Blacklab
 categories: [How-To, Intros]
 ---
 
-## Introduction to Corpus Search
-
 Corpus Search is powered by BlackLab, a tool for finding words or
 sequences of words in EEBO-TCP texts. In BlackLab, a “word” is more than
 just the letters from which it was formed: associated with a “word” are
