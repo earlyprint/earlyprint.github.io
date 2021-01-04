@@ -13,21 +13,26 @@ In the following paragraphs, "TCP" refers to texts created by the Text Creation 
 **The basic transformations** wrought on TCP texts as they pass to
 EarlyPrint include
 
-1. Standardize text
-    1.  long ‘s’ is replaced with the standard ‘s’.
-    2.  line-breaking hyphens are removed, unless the hyphen is clearly part of a hyphenated word.
-    3.  expand macron and other abbreviations (e.g., the symbol for 'abque').
-2. Adjust tags for font changes
-3. Refine tagging of
-    4.  foreign language strings
-    5.  structure,
-    6.  punctuation,
-    7.  lacunae
-4. Tokenize
-5. Identify abbreviations
-6. Assign token IDs
-7. “Adorn” with regularized spelling, POS, and lemma
-
+<ol class="decimal_list">
+    <li>Standardize text
+    <ol class="alpha_list">
+        <li>long ‘s’ is replaced with the standard ‘s’.</li>
+        <li>line-breaking hyphens are removed, unless the hyphen is clearly part of a hyphenated word.</li>
+        <li>expand macron and other abbreviations (e.g., the symbol for 'abque').</li>
+    </ol></li>
+    <li>Adjust tags for font changes</li>
+    <li>Refine tagging of
+    <ol class="alpha_list">
+        <li>foreign language strings</li>
+        <li>structure,</li>
+        <li>punctuation,</li>
+        <li>lacunae</li>
+    </ol></li>
+    <li>Tokenize</li>
+    <li>dentify abbreviations</li>
+    <li>Assign token IDs</li>
+    <li>“Adorn” with regularized spelling, POS, and lemma</li>
+</ol>
 
 ***1\. Standardize text***
 

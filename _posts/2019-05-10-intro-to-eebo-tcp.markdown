@@ -119,8 +119,8 @@ Read more on XML: “[XML](https://en.wikipedia.org/wiki/XML)”
 
 
 **EEBO-TCP Phase 1**:
-The first phase of the EEBO-TCP work ran from 2000 to 2009 and resulted in the successful conversion of 25,363 selected texts from the EEBO corpus. “Since January 2015 these EEBO-TCP Phase I texts became freely available on the websites of the University of Michigan Library and the Bodleian Libraries at the University of Oxford.” (About EEBO)
+The first phase of the EEBO-TCP work ran from 2000 to 2009 and resulted in the successful conversion of 25,363 selected texts from the EEBO corpus. “Since January 2015 these EEBO-TCP Phase I texts became freely available on the websites of the University of Michigan Library and the Bodleian Libraries at the University of Oxford.”
 
 
 **EEBO-TCP Phase 2:**
-EEBO-TCP Phase 2 begun in 2010 seeking “to convert each unique first edition in EEBO: around 45,000 books on top of the 25,000 completed in Phase I.” (About TCP-EEBO) Starting July 1, 2015, ProQuest will have the rights to distribute EEBO-TCP Phase II texts for five years. Until the texts pass into the public domain in 2020, they are accessible to subscribing users and partner libraries.
+In 2010 EEBO-TCP entered Phase 2, an effort “to convert each unique first edition in EEBO: around 45,000 books on top of the 25,000 completed in Phase I.” ProQuest had the sole right to distribute EEBO-TCP Phase II texts for five years, from July 1, 2015; they are now in the public domain.

@@ -310,20 +310,21 @@ pre {
  * Added by SMP: Nested lists
  */
 
-/*div > ol > li> ol {
-    list-style-type: lower-alpha;
-}*/
-
-div > ol > li> ol {
-    counter-reset: list;
+ol.decimal_list {
+    counter-reset: decimal;
 }
-div > ol > li> ol > li {
+ol.alpha_list {
+    counter-reset: alpha;
+}
+ol li {
     list-style: none;
     position: relative;
 }
-div > ol > li> ol > li:before {
-    counter-increment: list;
-    content: counter(list, lower-alpha) ") ";
-    position: absolute;
-    left: -1.4em;
+ol.decimal_list > li:before {
+    counter-increment: decimal;
+    content: counter(decimal, decimal)") "
+}
+ol.alpha_list > li:before {
+    counter-increment: alpha;
+    content: counter(alpha, lower-alpha)") "
 }
