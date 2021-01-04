@@ -29,7 +29,7 @@ EarlyPrint include
         <li>lacunae</li>
     </ol></li>
     <li>Tokenize</li>
-    <li>dentify abbreviations</li>
+    <li>Identify abbreviations</li>
     <li>Assign token IDs</li>
     <li>“Adorn” with regularized spelling, POS, and lemma</li>
 </ol>
