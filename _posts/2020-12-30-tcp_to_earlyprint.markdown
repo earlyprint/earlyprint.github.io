@@ -8,39 +8,24 @@ summary: A summary of the conversion of texts from TCP to EarlyPrint
 categories: Intros
 ---
 
-In the following paragraphs, TCP refers to texts created by the Text
-Creation Partnership and EarlyPrint refers to versions of those texts
-corrected and enriched by various post-processing routines.
+In the following paragraphs, "TCP" refers to texts created by the Text Creation Partnership and "EarlyPrint" refers to versions of those texts corrected and enriched by various post-processing routines. Martin Mueller's more detailed account of the processing, reflecting some of the misgivings that haunted his editorial decisions, is available here.  Mueller explains that the TCP files were originally encoded in SGML according to an adaptation of the P3 TEI guidelines, that these files were converted to XML and adjusted to comply with P5 guidelines.
 
 **The basic transformations** wrought on TCP texts as they pass to
 EarlyPrint include
 
 1. Standardize text
-
-    a)  long ‘s’ is replaced with the standard ‘s’.
-
-    b)  line-breaking hyphens are removed, unless the hyphen is clearly part of a hyphenated word.
-
-    c)  expand macron and other abbreviations (e.g., the symbol for 'abque').
-
+    1.  long ‘s’ is replaced with the standard ‘s’.
+    2.  line-breaking hyphens are removed, unless the hyphen is clearly part of a hyphenated word.
+    3.  expand macron and other abbreviations (e.g., the symbol for 'abque').
 2. Adjust tags for font changes
-
 3. Refine tagging of
-
-    a)  foreign language strings
-
-    b)  structure,
-
-    c)  punctuation,
-
-    d)  lacunae
-
+    4.  foreign language strings
+    5.  structure,
+    6.  punctuation,
+    7.  lacunae
 4. Tokenize
-
 5. Identify abbreviations
-
 6. Assign token IDs
-
 7. “Adorn” with regularized spelling, POS, and lemma
 
 

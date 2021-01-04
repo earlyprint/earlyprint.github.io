@@ -305,3 +305,25 @@ pre {
  .block-link {
    background-color: $brand-color;
  }
+
+/**
+ * Added by SMP: Nested lists
+ */
+
+/*div > ol > li> ol {
+    list-style-type: lower-alpha;
+}*/
+
+div > ol > li> ol {
+    counter-reset: list;
+}
+div > ol > li> ol > li {
+    list-style: none;
+    position: relative;
+}
+div > ol > li> ol > li:before {
+    counter-increment: list;
+    content: counter(list, lower-alpha) ") ";
+    position: absolute;
+    left: -1.4em;
+}
