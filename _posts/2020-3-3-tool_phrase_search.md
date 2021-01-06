@@ -87,6 +87,7 @@ categories: Lab
         return response.json();
       } else {
         throw new Error('Something went wrong on api server!');
+        render(errorTemplate(), formResults);
       }
     })
     .then(response => {
@@ -101,6 +102,7 @@ categories: Lab
 
     }).catch(error => {
       console.error(error);
+      render(errorTemplate(), formResults);
     });
   }
   }
@@ -115,6 +117,7 @@ categories: Lab
         return response.json();
       } else {
         throw new Error('Something went wrong on api server!');
+        render(errorTemplate(), contentResults);
       }
     })
     .then(response => {
@@ -138,6 +141,7 @@ categories: Lab
 
     }).catch(error => {
       console.error(error);
+      render(errorTemplate(), contentResults);
     });
   }
 
@@ -149,15 +153,17 @@ categories: Lab
             return response.json();
           } else {
             throw new Error('Something went wrong on api server!');
+	    render(errorTemplate(), container);
           }
         })
         .then(response => {
           if (response.hits.length > 0) {
 	  console.log(response.docInfos);
           render(resultsTemplate(type, pattern, response.hits, response.docInfos), container);
-          } else { render(errorTemplate(), formResults) }
+          } else { render(errorTemplate(), container) }
         }).catch(error => {
           console.error(error);
+	  render(errorTemplate(), container);
         });
   }
 
