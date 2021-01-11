@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Introduction to Discovery Engine: His Noble Numbers"
+title:  "Introduction to Discovery Engine"
 date:   2019-05-24 09:28:16 -0500
 author: Alireza Taheri Araghi et al.
 tags: [ep-lab, eebo-tcp]
