@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Curation and Quality Assurance"
-date:   2019-07-11 11:12:00
+date:   2020-10-01 00:00:00
 author: Martin Mueller
 tags: quality assurance tcp
 summary: A short history and overview of the accuracy of TCP texts

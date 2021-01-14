@@ -1,11 +1,11 @@
 ---
 layout: post
 title:  "Encoding and Linguistic Annotation"
-date:   2013-07-11 11:12:00
+date:   2020-12-01 00:00:00
 author: Martin Mueller
 tags: tcp
 summary: A brief introduction to the linguistic annotation of EarlyPrint texts
-categories: [Intros, Posts]
+categories: Posts
 ---
 
 Written language is segmented in various ways. White space separates one

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Using the N-gram Browser"
-date:   2014-10-20 10:00:00 -0500
+date:   2020-12-01 10:00:00 -0500
 author: Anupam Basu
 tags: ep-lab
 summary: A basic tutorial for the EEBO N-gram Browser

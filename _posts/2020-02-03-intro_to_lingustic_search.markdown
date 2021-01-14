@@ -1,11 +1,11 @@
 ---
 layout: post
 title:  "Introduction to Corpus Search"
-date:   2020-02-03 09:30:00 -0500
+date:   2020-10-01 10:00:00 -0500
 author: Stephen Pentecost
 tags: [ep-lab, lingustic-search, blacklab, cql]
 summary: An introduction to Lingustic Search, powered by Blacklab
-categories: [How-To, Intros]
+categories: How-To
 ---
 
 Corpus Search is powered by BlackLab, a tool for finding words or

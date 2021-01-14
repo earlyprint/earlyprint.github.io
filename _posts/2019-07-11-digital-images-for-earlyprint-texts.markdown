@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Digital Images for EarlyPrint Texts"
-date:   2019-07-11 09:39:16
+date:   2020-11-01 00:00:00
 author: Martin Mueller
 tags: eebo-tcp
 summary: A short history of TCP texts and the imperfections in them caused by the process

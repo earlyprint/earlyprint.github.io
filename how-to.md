@@ -4,11 +4,11 @@ title: Tutorials and How-Tos
 permalink: /how-to/
 ---
 
-## Lab
+### Lab
 
 {% for category in site.categories %}
   {% if category[0] == "How-To" %}
-  <ul class="post-list">
+  <ul class="post-list indentedUL">
     {%- for post in category[1] -%}
     {% if post.tags[0] == "ep-lab" %}
     <li>
@@ -25,19 +25,43 @@ permalink: /how-to/
     </li>
     {% endif %}
     {%- endfor -%}
+    
+    <li>
+      <h3 class="mb0">
+        <a class="post-link fell f4 near-black link dim" href="https://earlyprint.org//jupyterbook/ep_xml.html">
+          How to Work Directly with EarlyPrint XML
+        </a>
+      </h3>
+      <span class="post-meta">Parse EarlyPrint XML Texts in Python</span>
+    </li>
+    
+    <li>
+      <h3 class="mb0">
+        <a class="post-link fell f4 near-black link dim" href="https://earlyprint.org//jupyterbook/tf_idf.html">
+          Exploring Vocabulary Using Tf-Idf
+        </a>
+      </h3>
+      <span class="post-meta">Examine the vocabulary in EarlyPrint texts using Tf-Idf: Term Frequency–Inverse Document Frequency.</span>
+    </li>
+    
+    <li>
+      <h3 class="mb0">
+        <a class="post-link fell f4 near-black link dim" href="https://earlyprint.org//jupyterbook/metadata.html">
+          Working with Metadata
+        </a>
+      </h3>
+      <span class="post-meta">Use Python to download and parse EarlyPrint metadata.</span>
+    </li>
+    
   </ul>
   {% endif %}
 {% endfor %}
 
-## <a class="fell near-black link dim" target="_blank" href="https://earlyprint.org/jupyterbook/intro.html"><em>EarlyPrint</em> + Python</a>
-
-<span class="post-meta">Additional tutorials for analyzing our data using a programming language in the <a class="near-black link dim" target="_blank" href="https://earlyprint.org/jupyterbook/intro.html">*EarlyPrint* + Python</a> Jupyter book.</span>
-
-## Library
+### Library
 
 {% for category in site.categories %}
   {% if category[0] == "How-To" %}
-  <ul class="post-list">
+  <ul class="post-list indentedUL">
     {%- for post in category[1] -%}
     {% if post.tags[0] == "ep-library" %}
     <li>

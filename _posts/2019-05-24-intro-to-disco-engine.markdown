@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Introduction to Discovery Engine"
-date:   2019-05-24 09:28:16 -0500
+title:  "Introduction to the Discovery Engine"
+date:   2020-09-01 10:00:00 -0500
 author: Alireza Taheri Araghi et al.
 tags: [ep-lab, eebo-tcp]
 summary: An introduction to the Discovery Engine, which allows you to probe similarities between texts in the EEBO-TCP corpus
-categories: [Intros, How-To]
+categories: How-To
 ---
 
 Let’s say you are interested in _The Shepheardes Calender_ and you are wondering whether there are other early modern English texts similar to Spenser’s odd, but not entirely idiosyncratic work. Scholars of Spenser, of the history of pastoral, and of Elizabethan literary culture have unearthed a dozen or so sources and perhaps a couple of dozen analogues, but might that list be supplemented? Might one uncover unexpected similarities in texts scattered across a corpus of early printed books that contains more than 60,000 texts, many of them unfamiliar and under-investigated?

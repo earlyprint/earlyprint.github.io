@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "About the EarlyPrint Texts"
+title:  "The TCP Texts and their Shortcomings"
 author: Martin Mueller
 date:   2019-11-15 10:00:00 -0500
-tags: ep-library
+tags: InnerWorkingsIntros ep-library
 categories: Intros
 summary: A discussion of the method by which EarlyPrint texts are derived from TCP texts
 ---

@@ -1,14 +1,12 @@
 ---
 layout: post
-title:  "Introduction to the N-gram Browser"
-date:   2014-10-20 10:00:00 -0500
+title:  "Why N-grams?"
+date:   2020-11-01 10:00:00 -0500
 author: Anupam Basu
 tags: ep-lab
-summary: An introduction to the N-gram Browser
-categories: Intros
+summary:
+categories: How-To
 ---
-
-## Why N-grams?
 
 N-grams are contiguous sequences of tokens extracted from text where ‘N’
 denotes the number of tokens. In the most common instance, tokens are

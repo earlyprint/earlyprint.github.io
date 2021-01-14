@@ -3,7 +3,7 @@ layout: post
 title:  "From TCP to EarlyPrint: the conversion process"
 date:   2020-12-30 09:00:00 -0500
 author: Joseph Loewenstein
-tags: eebo-tcp
+tags: InnerWorkingsIntros eebo-tcp
 summary: A summary of the conversion of texts from TCP to EarlyPrint
 categories: Intros
 ---
