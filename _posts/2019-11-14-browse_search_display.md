@@ -9,7 +9,7 @@ summary: An overview of basic navigation for the Library section of the site
 
 ### Introduction
 
-The URL of EarlyPrint takes you to its home page. Clicking on **Browse**
+The URL of EarlyPrint takes you to its home page. Clicking on **Texts**
 takes you inside, where you find your way around by using two search
 tools separately or in combination. One of them is a list of texts with
 a filter form for restricting which texts are listed, hereafter called

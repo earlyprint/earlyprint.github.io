@@ -16,7 +16,7 @@ corrections on them, and also allows annotators to keep track of the
 status of their own suggestions. The list appears in the center of the
 page, with a **Text Filter** form on the left, and an **Annotation
 Filter** on the right. The **Text Filter** is identical to the one on
-the **Browse** page, and you will find more about it how it works
+the **Texts** page, and you will find more about it how it works
 [here](/how-to/browse_search_display.html).
 
 The **Annotation Filter** allows you to filter which annotations are
