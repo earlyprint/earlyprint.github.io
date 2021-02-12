@@ -46,7 +46,7 @@ categories: Lab
 </style>
 
 <script type="module">
-  import {html, render} from 'https://unpkg.com/lit-html?module';
+  import {html, render} from 'https://unpkg.com/lit-html@1.2.0/lit-html.js?module';
 
   const mainForm = document.getElementById("mainSearch"); //Full form for phrase search
   const contentForm = document.getElementById("contentQuery");
@@ -158,7 +158,6 @@ categories: Lab
         })
         .then(response => {
           if (response.hits.length > 0) {
-	  console.log(response.docInfos);
           render(resultsTemplate(type, pattern, response.hits, response.docInfos), container);
           } else { render(errorTemplate(), container) }
         }).catch(error => {
