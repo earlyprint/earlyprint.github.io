@@ -138,7 +138,8 @@ $( document ).ready(function() {
         let graph_data = map_data[0];
         const padding = 0;
 
-        canvas = d3.select("canvas").on("click", onClick).call(d3.zoom().scaleExtent([0.4, 20]).on("zoom", zoom).on("end", zoomEnd));
+	var zoom = d3.zoom().scaleExtent([0.4, 20]).on("zoom", zoomGo).on("end", zoomEnd);
+        canvas = d3.select("canvas").on("click", onClick).call(zoom);
         width = window.innerWidth;//canvas.property("width");
         height = window.innerWidth;//canvas.property("height");
 	let canvas_el = document.getElementById("graph");
@@ -200,11 +201,18 @@ $( document ).ready(function() {
 	    let newHTML = `<em>TCP ID Number:</em> ${item.id}<br/><b>${item.title}</b><br/><br/><em>Author(s):</em><br/>${item.author}<br/><em>Publication date:</em> ${item.year}<br/><br><em>Subject Headings:</em><br/>${item.subject}`;
 	    infoBox.html(newHTML);
             item.selected = true;
-            selectedPoint = item.i;	
+            selectedPoint = item.i;
 	} else {
             infoBox.html("Click a point to get more information, or use the search box above.<br><br><em>Scroll to zoom. Click and drag to pan.</em>");
 	}
 	draw(transform);
+	//let d = transform.apply([item.x, item.y]);
+	//let t = d3.zoomIdentity.translate(width/2-item.x,height/4-item.y).scale(5);
+	//canvas.transition().duration(750).call(zoom.transform, t);
+	if (item) {
+	    zoom.translateTo(canvas, item.x, item.y, [width/2,height/4]);
+	    zoom.scaleTo(canvas.transition().duration(750), 5, [width/2,height/4]);
+	}
     }
 
 
@@ -219,7 +227,7 @@ $( document ).ready(function() {
 	selectItem(closest);
     }
 
-    function zoom() {
+    function zoomGo() {
         context.clearRect(0, 0, width, height);
         draw(d3.event.transform, limit);
     }
