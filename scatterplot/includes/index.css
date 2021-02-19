@@ -74,9 +74,6 @@ a#what {
 	padding: 5px;
 }
 
-input.typeahead {
-    padding-left: 10px;
-}
 
 input#subjectFilter {
 	width: 100%;
@@ -93,10 +90,28 @@ input[type=checkbox] {
 }
 
 #search {
-	width: 290px;
-	right: 0;
+	width: 50vw;
+/*	right: 0;*/
+	left: 310px;
 	position: fixed;
-	margin-right: 10px;
+}
+
+input.typeahead {
+    padding-left: 10px;
+}
+
+.twitter-typeahead, .tt-hint {
+	width: 100%;
+}
+.tt-hint {
+	padding: 10px;
+}
+
+.tt-input { /*, .tt-input, .tt-hint {*/
+	width: 100%;
+	text-align: center;
+	border-radius:.25rem;
+	padding:10px;
 }
 
 .tt-suggestion {
@@ -106,9 +121,6 @@ input[type=checkbox] {
 }
 
 .tt-dataset {
-	overflow-y: scroll;
-	height: 500px;
-	border: 1px solid gray;
 	border-radius: 5px;
 }
 
@@ -122,7 +134,6 @@ input[type=checkbox] {
     padding: 12px;
     background-color: white;
     right: 0;
-    top: 150px;
     position: fixed;
     margin-right: 10px;
     z-index: -1;
@@ -132,14 +143,6 @@ canvas {
 	position: fixed;
 	z-index: -2;
 }
-
-
-
-/*
-#search_box {
-    width: 180px;
-}
-*/
 
 .highlight_scroll {
     display: inline-block;
