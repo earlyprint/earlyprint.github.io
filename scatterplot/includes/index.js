@@ -125,6 +125,21 @@ function showAbout() {
     about.classList.remove("hide-about");
 }
 
+function searchNearby(quadtree, xmin, ymin, xmax, ymax) {
+  const results = [];
+  quadtree.visit(function(node, x1, y1, x2, y2) {
+    if (!node.length) {
+      do {
+        var d = node.data;
+        if (d.x >= xmin && d.x < xmax && d.y >= ymin && d.y < ymax) {
+          results.push(d);
+        }
+      } while (node = node.next);
+    }
+    return x1 >= xmax || y1 >= ymax || x2 < xmin || y2 < ymin;
+  });
+  return results;
+}
 
 $( document ).ready(function() {
     d3.json('map_data.js').then(function( data ) {
@@ -201,10 +216,17 @@ $( document ).ready(function() {
             new_data[selectedPoint].selected = false;
         }
 	if (item) {
-	    let newHTML = `<em>TCP ID Number:</em> ${item.id}<br/><b>${item.title}</b><br/><br/><em>Author(s):</em><br/>${item.author}<br/><em>Publication date:</em> ${item.year}<br/><br><em>Subject Headings:</em><br/>${item.subject}<br/><br/><a href="https://ada.artsci.wustl.edu/catalog/doc/${item.id}.xml" target="_blank">View more info</a><br><a href="https://texts.earlyprint.org/works/${item.id}.xml" target="_blank">Read this text</a>`;
-	    infoBox.html(newHTML);
+	    let newHTML = `<em>TCP ID Number:</em> ${item.id}<br/><b>${item.title}</b><br/><br/><em>Author(s):</em><br/>${item.author}<br/><em>Publication date:</em> ${item.year}<br/><br><em>Subject Headings:</em><br/>${item.subject}<br/><br/><a href="https://ada.artsci.wustl.edu/catalog/doc/${item.id}.xml" target="_blank">View more info</a><br><a href="https://texts.earlyprint.org/works/${item.id}.xml" target="_blank">Read this text</a><br/><br/><strong>Nearby texts:</strong>`;
             item.selected = true;
             selectedPoint = item.i;
+	    let r = 5;
+	    let nearbyPoints = searchNearby(quadTree, item.x-r, item.y-r, item.x+r, item.y+r);
+	    nearbyPoints.forEach(n => {
+		    if (n.id !== item.id) {
+		      newHTML = newHTML + `<br/><br/><em>${n.id} ${n.author}</em><br><em><a href="https://ada.artsci.wustl.edu/catalog/doc/${item.id}.xml" target="_blank">${n.title.slice(0,50)}...</a></em>`
+		    }
+	    });
+	    infoBox.html(newHTML);
 	} else {
             infoBox.html("Click a point to get more information, or use the search box above.<br><br><em>Scroll to zoom. Click and drag to pan.</em>");
 	}
