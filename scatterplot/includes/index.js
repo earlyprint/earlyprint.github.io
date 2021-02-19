@@ -188,7 +188,10 @@ $( document ).ready(function() {
       display: (d) => { return `${d.title}\n${d.author}`;}
     });
     $('.typeahead').bind('typeahead:select', function(ev, suggestion) {
-      selectItem(new_data[suggestion.i]);
+      let item = new_data[suggestion.i]
+      selectItem(item);
+      zoom.translateTo(canvas, item.x, item.y, [width/2,height/4]);
+      zoom.scaleTo(canvas.transition().duration(750), 5, [width/2,height/4]);
     });
 
     function selectItem(item) {
@@ -198,7 +201,7 @@ $( document ).ready(function() {
             new_data[selectedPoint].selected = false;
         }
 	if (item) {
-	    let newHTML = `<em>TCP ID Number:</em> ${item.id}<br/><b>${item.title}</b><br/><br/><em>Author(s):</em><br/>${item.author}<br/><em>Publication date:</em> ${item.year}<br/><br><em>Subject Headings:</em><br/>${item.subject}`;
+	    let newHTML = `<em>TCP ID Number:</em> ${item.id}<br/><b>${item.title}</b><br/><br/><em>Author(s):</em><br/>${item.author}<br/><em>Publication date:</em> ${item.year}<br/><br><em>Subject Headings:</em><br/>${item.subject}<br/><br/><a href="https://ada.artsci.wustl.edu/catalog/doc/${item.id}.xml" target="_blank">View more info</a><br><a href="https://texts.earlyprint.org/works/${item.id}.xml" target="_blank">Read this text</a>`;
 	    infoBox.html(newHTML);
             item.selected = true;
             selectedPoint = item.i;
@@ -206,13 +209,6 @@ $( document ).ready(function() {
             infoBox.html("Click a point to get more information, or use the search box above.<br><br><em>Scroll to zoom. Click and drag to pan.</em>");
 	}
 	draw(transform);
-	//let d = transform.apply([item.x, item.y]);
-	//let t = d3.zoomIdentity.translate(width/2-item.x,height/4-item.y).scale(5);
-	//canvas.transition().duration(750).call(zoom.transform, t);
-	if (item) {
-	    zoom.translateTo(canvas, item.x, item.y, [width/2,height/4]);
-	    zoom.scaleTo(canvas.transition().duration(750), 5, [width/2,height/4]);
-	}
     }
 
 
