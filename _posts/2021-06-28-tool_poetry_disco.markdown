@@ -58,6 +58,6 @@ categories: Lab
 <link rel="stylesheet" type="text/css" href="/assets/tools/css/disco_engine.css?v=1501"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://d3js.org/d3.v5.min.js"></script>
-<script src="/assets/tools/js/disco_engine.js?v=1501"></script>
+<script src="/assets/tools/js/poetry_disco.js?v=1501"></script>
 <script type="text/javascript" src="/assets/tools/js/shorten_link.js?v=1501"></script>
 <link rel="stylesheet" type="text/css" href="/assets/tools/css/common_tool_styles.css?v=1501"/>
