@@ -907,6 +907,15 @@ function actuallyDrawTheGraph(isRedraw) {
     svg.append("g")
         .attr("class", "y axis")
         .call(d3.axisLeft(yScale));
+        
+    svg.append("text")
+        .attr("class", "y label")
+        .attr("text-anchor", "end")
+        .attr("y", 6)
+        .attr("dy", ".75em")
+        .attr("font-size", "1.25em")
+        .attr("transform", "rotate(-90)")
+        .text("relative frequency");
 
     var color = d3.scaleOrdinal(d3.schemeCategory10);
 
