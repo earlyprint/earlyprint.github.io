@@ -59,7 +59,7 @@ Searching for words at line-endings of verse could be a useful
 jumping-off point for an inquiry into rhyme and, especially, for the
 investigation of eye-rhyme.
 
-***Be bold!***
+<p style="font-weight:bold; font-style:italics; padding-left:3em;">Be bold!</p>
 
 Our BlackLab index offers discrete tags for many textual units:
 sentences (“&lt;s/&gt;”), paragraphs (“&lt;p/&gt;”), words or passages
