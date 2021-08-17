@@ -46,13 +46,7 @@ syntax.)
 
 ***Lo . . . maske,***
 
-Because of the way our search engine indexes the TCP corpus, we can
-search for words or word forms at beginning and end positions of
-elements formally encoded in the TCP XML. In the conventions of our CQL,
-&lt;l&gt; indicates the start of a line, &lt;/l&gt; indicates a line-end
-and &lt;l/&gt; indicates the line-element itself. The syntax for
-**searching for “Lo” (and not “Loe”) appearing at the beginning of a
-line of verse and followed by a pronoun** is
+Because of the way our search engine indexes the TCP corpus, we can search for words or word forms at beginning and end positions of elements formally encoded in the TCP XML. In the conventions of our CQL, &lt;l&gt; indicates the start of a line, &lt;/l&gt; indicates a line-end and &lt;l/&gt; indicates the line-element itself. The syntax for **searching for “Lo” (and not “Loe”) appearing at the beginning of a line of verse and followed by a pronoun** is
 
 &lt;l&gt; "Lo" \[pos='\^pn.\*'\]
 
@@ -68,8 +62,8 @@ investigation of eye-rhyme.
 ***Be bold!***
 
 Our BlackLab index offers discrete tags for many textual units:
-sentences (“&lt;s/&gt;”), paragraphs (“&lt;p/”&gt;), words or passages
-set off by font changes (“&lt;hi/&gt;), words in foreign languages
+sentences (“&lt;s/&gt;”), paragraphs (“&lt;p/&gt;”), words or passages
+set off by font changes (“&lt;hi/&gt;”), words in foreign languages
 (“&lt;foreign/&gt;”), stanzas (“&lt;lg/&gt;”), front matter
 (“&lt;front/&gt;”). For more ideas on how to investigate the corpus by
 leveraging its tagging, consult [*“Matching XML
