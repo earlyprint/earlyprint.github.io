@@ -44,7 +44,7 @@ difference between searching for the word and searching for the line
 that contains the word, but we wanted to expose the difference in
 syntax.)
 
-***Lo . . . maske,***
+<p style="margin-left:3em;"><strong><em>Lo . . . maske,</em></strong></p>
 
 Because of the way our search engine indexes the TCP corpus, we can
 search for words or word forms at beginning and end positions of
@@ -65,7 +65,7 @@ Searching for words at line-endings of verse could be a useful
 jumping-off point for an inquiry into rhyme and, especially, for the
 investigation of eye-rhyme.
 
-***Be bold!***
+<p style="margin-left:3em;"><strong><em>Be bold!</em></strong></p>
 
 Our BlackLab index offers discrete tags for many textual units:
 sentences (“<s/>”), paragraphs (“<p/”>), words or passages
@@ -79,7 +79,7 @@ engine that underpins corpus query in the EarlyPrint Lab. These tags,
 and others, can enable the ingenious researcher to make some revealing
 forays into the interaction of diction and structure across the corpus.
 
-***Be not too bold!***
+<p style="margin-left:3em;"><strong><em>Be not too bold!</em></strong></p>
 
 Yet those who performed the encoding could be somewhat inconsistent in
 the handling of these tags – more inconsistent than they were in marking
