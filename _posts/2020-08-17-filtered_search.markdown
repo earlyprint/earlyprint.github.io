@@ -27,51 +27,51 @@ ensnaring prose.
 
 If you go to the CQL (i.e. Corpus Query Language) tab in the “Corpus
 Search” tool on the Lab, you can enter search queries that take
-advantage of the <l/> tagging in the TCP. For example, **to find
+advantage of the &lt;l/&gt; tagging in the TCP. For example, **to find
 instances of the odd form “wordly” in lines of verse distributed across
 the TCP one can enter**
 
-    "wordly" within <l/>
+"wordly" within &lt;l/&gt;
 
 in the search box. (The results returned suggest that “wordly” is a not
 uncommon typographical error for “worldly”.) Alternatively one can
 **search for the lines of verse that contain this odd form by entering**
 
-    <l/> containing "wordly"
+&lt;l/&gt; containing "wordly"
 
 (Since our interface gives search results in context there’s not a huge
 difference between searching for the word and searching for the line
 that contains the word, but we wanted to expose the difference in
 syntax.)
 
-<p style="margin-left:3em;"><strong><em>Lo . . . maske,</em></strong></p>
+***Lo . . . maske,***
 
 Because of the way our search engine indexes the TCP corpus, we can
 search for words or word forms at beginning and end positions of
 elements formally encoded in the TCP XML. In the conventions of our CQL,
-<l> indicates the start of a line, </l> indicates a line-end
-and <l/> indicates the line-element itself. The syntax for
+&lt;l&gt; indicates the start of a line, &lt;/l&gt; indicates a line-end
+and &lt;l/&gt; indicates the line-element itself. The syntax for
 **searching for “Lo” (and not “Loe”) appearing at the beginning of a
 line of verse and followed by a pronoun** is
 
-    <l> "Lo" [pos='^pn.*']
+&lt;l&gt; "Lo" \[pos='\^pn.\*'\]
 
 **To find “mask” (or “maske” or “masque”) at the end of a line**, the
 syntax is
 
-    [reg="mask"] </l>
+\[reg="mask"\] &lt;/l&gt;
 
 Searching for words at line-endings of verse could be a useful
 jumping-off point for an inquiry into rhyme and, especially, for the
 investigation of eye-rhyme.
 
-<p style="margin-left:3em;"><strong><em>Be bold!</em></strong></p>
+***Be bold!***
 
 Our BlackLab index offers discrete tags for many textual units:
-sentences (“<s/>”), paragraphs (“<p/”>), words or passages
-set off by font changes (“<hi/>), words in foreign languages
-(“<foreign/>”), stanzas (“<lg/>”), front matter
-(“<front/>”). For more ideas on how to investigate the corpus by
+sentences (“&lt;s/&gt;”), paragraphs (“&lt;p/”&gt;), words or passages
+set off by font changes (“&lt;hi/&gt;), words in foreign languages
+(“&lt;foreign/&gt;”), stanzas (“&lt;lg/&gt;”), front matter
+(“&lt;front/&gt;”). For more ideas on how to investigate the corpus by
 leveraging its tagging, consult [*“Matching XML
 elements,”*](http://inl.github.io/BlackLab/corpus-query-language.html#matching-xml-elements)
 part of the documentation provided by the developers of BlackLab, the
@@ -79,7 +79,7 @@ engine that underpins corpus query in the EarlyPrint Lab. These tags,
 and others, can enable the ingenious researcher to make some revealing
 forays into the interaction of diction and structure across the corpus.
 
-<p style="margin-left:3em;"><strong><em>Be not too bold!</em></strong></p>
+***Be not too bold!***
 
 Yet those who performed the encoding could be somewhat inconsistent in
 the handling of these tags – more inconsistent than they were in marking
