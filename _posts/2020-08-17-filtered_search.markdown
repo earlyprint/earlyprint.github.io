@@ -31,13 +31,13 @@ advantage of the &lt;l/&gt; tagging in the TCP. For example, **to find
 instances of the odd form “wordly” in lines of verse distributed across
 the TCP one can enter**
 
-    "wordly" within &lt;l/&gt;
+    "wordly" within <l/>
 
 in the search box. (The results returned suggest that “wordly” is a not
 uncommon typographical error for “worldly”.) Alternatively one can
 **search for the lines of verse that contain this odd form by entering**
 
-    &lt;l/&gt; containing "wordly"
+    <l/> containing "wordly"
 
 (Since our interface gives search results in context there’s not a huge
 difference between searching for the word and searching for the line
@@ -48,12 +48,12 @@ syntax.)
 
 Because of the way our search engine indexes the TCP corpus, we can search for words or word forms at beginning and end positions of elements formally encoded in the TCP XML. In the conventions of our CQL, &lt;l&gt; indicates the start of a line, &lt;/l&gt; indicates a line-end and &lt;l/&gt; indicates the line-element itself. The syntax for **searching for “Lo” (and not “Loe”) appearing at the beginning of a line of verse and followed by a pronoun** is
 
-    &lt;l&gt; "Lo" \[pos='\^pn.\*'\]
+    <l> "Lo" [pos='^pn.*']
 
 **To find “mask” (or “maske” or “masque”) at the end of a line**, the
 syntax is
 
-    \[reg="mask"\] &lt;/l&gt;
+    [reg="mask"] </l>
 
 Searching for words at line-endings of verse could be a useful
 jumping-off point for an inquiry into rhyme and, especially, for the
