@@ -44,7 +44,7 @@ difference between searching for the word and searching for the line
 that contains the word, but we wanted to expose the difference in
 syntax.)
 
-***Lo . . . maske,***
+<p style="font-weight:bold; font-style:italic; padding-left:3em;">Lo . . . maske,</p>
 
 Because of the way our search engine indexes the TCP corpus, we can search for words or word forms at beginning and end positions of elements formally encoded in the TCP XML. In the conventions of our CQL, &lt;l&gt; indicates the start of a line, &lt;/l&gt; indicates a line-end and &lt;l/&gt; indicates the line-element itself. The syntax for **searching for “Lo” (and not “Loe”) appearing at the beginning of a line of verse and followed by a pronoun** is
 
@@ -59,7 +59,7 @@ Searching for words at line-endings of verse could be a useful
 jumping-off point for an inquiry into rhyme and, especially, for the
 investigation of eye-rhyme.
 
-<p style="font-weight:bold; font-style:italics; padding-left:3em;">Be bold!</p>
+<p style="font-weight:bold; font-style:italic; padding-left:3em;">Be bold!</p>
 
 Our BlackLab index offers discrete tags for many textual units:
 sentences (“&lt;s/&gt;”), paragraphs (“&lt;p/&gt;”), words or passages
@@ -73,7 +73,7 @@ engine that underpins corpus query in the EarlyPrint Lab. These tags,
 and others, can enable the ingenious researcher to make some revealing
 forays into the interaction of diction and structure across the corpus.
 
-***Be not too bold!***
+<p style="font-weight:bold; font-style:italic; padding-left:3em;">Be not too bold!</p>
 
 Yet those who performed the encoding could be somewhat inconsistent in
 the handling of these tags – more inconsistent than they were in marking
