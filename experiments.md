@@ -6,3 +6,16 @@ permalink: /experiments/
 
 Links to various experimental interfaces and approaches, none of which is ready for the public.
 
+[Text reuse pages](https://earlyprint.org/textreuse/).
+
+[Solr chunk search](https://ada.artsci.wustl.edu/solr_chunks/).
+
+[Solr-Word2Vec chunk search](https://ada.artsci.wustl.edu/solr_word2vec_chunks/).  There's also [another version](https://ada.artsci.wustl.edu/solr_word2vec_chunks.V2/).  I'm not sure how they're different.
+
+[A list of what I think rhymes with what](https://ada.artsci.wustl.edu/terminal_phonemes/).  This is quite old . . . 
+
+[Topic modeling the poetry corpus](https://ada.artsci.wustl.edu/poetry.mallet_report.html).
+
+[Rhyme finder output from October, 2021](https://ada.artsci.wustl.edu/find_rhymes_results/).
+
+Two topic modeling reports, [one for 100 topics](https://ada.artsci.wustl.edu/mallet_report.20000.100.html), and [one for tem topics](https://ada.artsci.wustl.edu/mallet_report.33000.10.html).
