@@ -79,7 +79,7 @@ categories: Lab
       render(singleWordTemplate(), formResults);
     } else {
     let pattern = string.split(" ").map(word => `[reg="${word}"]`).join("");
-    let request = new Request(`https://eplab.artsci.wustl.edu/proxy_blacklab/eebotcp/hits?number=20&patt=${encodeURIComponent(pattern)}&outputformat=json`);
+    let request = new Request(`https://eplab.artsci.wustl.edu/blacklab-server-1.7.3/eebotcp/hits?number=20&patt=${encodeURIComponent(pattern)}&outputformat=json`);
     return fetch(request)
     .then(response => {
       if (response.status === 200) {
@@ -108,7 +108,7 @@ categories: Lab
 
   const getContentQuery = (string) => {
     let pattern = string.split(" ").map(word => `[reg="${word}"]`).join("");
-    let request = new Request(`https://eplab.artsci.wustl.edu/proxy_blacklab/eebotcp/hits?number=20&patt=${encodeURIComponent(pattern)}&outputformat=json`);
+    let request = new Request(`https://eplab.artsci.wustl.edu/blacklab-server-1.7.3/eebotcp/hits?number=20&patt=${encodeURIComponent(pattern)}&outputformat=json`);
     return fetch(request)
     .then(response => {
       if (response.status === 200) {
@@ -144,7 +144,7 @@ categories: Lab
   }
 
   const returnSearchResult = (type,pattern,container) => {
-	let request = new Request(`https://eplab.artsci.wustl.edu/proxy_blacklab/eebotcp/hits?number=20&patt=${encodeURIComponent(pattern)}&outputformat=json`);
+	let request = new Request(`https://eplab.artsci.wustl.edu/blacklab-server-1.7.3/eebotcp/hits?number=20&patt=${encodeURIComponent(pattern)}&outputformat=json`);
         fetch(request)
         .then(response => {
           if (response.status === 200) {
