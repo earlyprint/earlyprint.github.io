@@ -180,7 +180,7 @@ The **Filter by** option restricts the search to a single text.  Simply enter th
 identifier of a single document before executing a search, and only results from that one
 text will be returned.  More sophisticated filters are planned but not yet implemented.
 
-The **Sorty by** option dictates the order in which results are displayed: "Title," "Author,"
+The **Sort by** option dictates the order in which results are displayed: "Title," "Author,"
 "Hits per document," or "Year." The default sort order it by title.
 
 The **Per page** option allows you to specify the number of documents to display per page
