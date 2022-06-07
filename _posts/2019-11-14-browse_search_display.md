@@ -11,7 +11,7 @@ summary: An overview of basic navigation for the Library section of the site
 
 The URL of EarlyPrint takes you to its home page. Clicking on **Texts**
 takes you inside, where you find your way around by using two search
-tools separately or in combination. One of them is a list of texts with
+tools. One of them is a list of texts with
 a filter form for restricting which texts are listed, hereafter called
 the **Text Filter**, and the other is a **Text Search** form. For our
 purposes, filtering texts refers to choosing which texts are listed
@@ -21,7 +21,7 @@ words within the texts.
 
 ### The Text Filter
 
-By default, all available texts will be listed; to restrict that list,
+By default, all available texts will be listed, ordered by title; to restrict that list,
 use the form near the top left of your screen that looks like this:
 
 ![](/assets/img/filterdoc.png)
@@ -137,97 +137,59 @@ For more detail, see <a href="/posts/curation-and-quality-assurance.html">Curati
 A corpus in this context is simply a grouping of texts falling within a particular area of interest.  A text may be a member of any number of corpora.  Currently "Drama" and "English Civil War" are available; other areas of interest will certainly emerge as we add more texts.
                             </td>
                         </tr>
-
-                    </tbody></table>
+                    </tbody>
+</table>
 
 ### Text Search
 
-If you have not entered any filter criteria in the **Text Filter**, the
-application shows you all the documents in no particular order. Once you
-filter the list as described above, you can then open a particular
-document and work with it, or you can run **Text Search** across the
-subset of texts retrieved by **Text Filter**.
-
-**Text Search** is a complex tool, and takes a little practice to become
-familiar with its tricks. It shows up as a tall and narrow image on the
-right side of the screen, and its top looks like this:
+**Text Search** allows searching for a word or phrase and provides several
+options governing how the search will be executed:
 
 ![](/assets/img/textsearch.png)
 
-You enter your search term(s) on the line with the greyed-out text
-"search for". If you click the line with the legend "Any Search Term",
-it expands to a dropdown menu from which you choose the type of search
-you will use. The line with the legend "Search Sections" expands to a
-choice between searching in text or in headings and other forms of
-paratext.
+You enter your search term(s) on the line labeled **Search for** and then either
+hit the return key or click the search button at the right end of that line to
+initiate the search. Results will appear in a collapsible window immediatelay
+below the list of texts; you may switch back and forth between the text list
+and the search results by expanding and collapsing the relevant panels of the
+accordion.
 
-Text Search lets you search for words or phrases in various ways but
-none of them are case sensitive. Here are the different ways of looking
-for 'love' and 'death':
+In the search results panel, the first five hits for each document will be shown
+in context.  If you click on the link in one of the matches, you will be taken to
+a separate browser tab where the match on which you clicked will be highlighted,
+and any other matches on the same page will also be highlighted.  You may then
+navigate through all of the matches in that document using the match navigation
+buttons at the right end of the top menu bar.
 
--   Entering 'love' and 'death' with **Any Search Term** retrieves 7268
-    hits in documents that contain either 'love' or 'death'.
--   Entering 'love' and 'death' with **All Search Terms** retrieves 2494
-    hits in documents that contain both 'love' and 'death'.
--   Entering 'love' and 'death' with **Phrase Search** retrieves 11 hits
-    in documents that contain the sequence 'love death' with no
-    intervening words but ignoring punctuation.
--   Entering 'love' and 'death' with **Proximity Search (ordered)**
-    retrieves 141 hits in documents where 'death' follows 'love' with or
-    without intervening words.
--   Entering 'love' and 'death' with **Proximity Search (unordered)**
-    retrieves 222 hits in documents where both 'death' and 'love' occur
-    in any order and with no or some words intervening.
+By default, searches match based on "Standard Spelling," the initial setting of
+the **Search by** selector. This means that "king of england" will match both
+"king of england" and "kyng of englonde." If you want only the latter, specify
+"Original Spelling" for **Search by**. 
 
-In addition to that list **Text Search** also offers 'fuzzy', 'regex'
-and 'Ngram' search options, each of which deserves a little explanation.
+The third option offered by **Search by** is "Lemma."  The lemma is the uninflected
+form of a word, most easily thought of as the dictionary head word.  If you do a
+lemma search on "winter be come," you will get "winter is coming," "winter is come,"
+"winter being come," and "winter was come," among others.
 
-**Fuzzy searching**. 'Edit distance' is a usefuly concept for
-establishing how close words are to each other. 'Cat' is one edit
-distance away from 'Hat', two from 'Hit', and three from 'Hid'. 'Fuzzy'
-searching is a way of looking for spellings whose edit distance stays
-within some range. Fuzzy searching works much better with long than with
-short words. Most of the time, however, you will be better off with the
-regex search described in the next paragraph.
+The final option under **Search by** is "Direct CQL Query." CQL stands for
+Corpus Query Language.  Its details are outside the scope of this document,
+but suffice it to say that you many enter arbitrarily complex queries in a
+powerful search language; read more about it [here](https://inl.github.io/BlackLab/corpus-query-language.html).
 
-**Regex searching** "Regular expression" is the name of a very powerful
-and widely-used pattern matching language. If you know how to use it you
-will often wonder how you ever got along without it. If you don't know
-it and looking for words or phrases is what you often do, it is well
-worth your while learning about it, and even a little knowledge of it
-goes quite a ways. Microsoft's Regular Expression Language-Quick
-Reference offers a clear introduction.
+The **Filter by** option restricts the search to a single text.  Simply enter the TCP
+identifier of a single document before executing a search, and only results from that one
+text will be returned.  More sophisticated filters are planned but not yet implemented.
 
-The word 'love' is typically spelled 'loue' before 1630. The search term
-'lo\[uv\]e' lets you look for either spelling. The square brackets are
-'metacharacters' in regular expressions. The characters inside them are
-alternatives. So the regular expression 'lo\[uv\]e' will retrieve any
-spelling that begins with 'lo', ends with 'e' and has 'u' or 'v' in the
-middle. This search retrieves 7570 hits. Having half a dozen regex
-tricks up your sleeve will make you a much more sophisticated searcher.
+The **Sorty by** option dictates the order in which results are displayed: "Title," "Author,"
+"Hits per document," or "Year." The default sort order it by title.
 
-The regex engine in this site has some limitations. It does not
-recognize the non-alphabetic unicode characters that are used in
-EarlyPrint for unknown characters.
+The **Per page** option allows you to specify the number of documents to display per page
+of results.  It defaults to 10.
 
-**Ngram searching** Ngram is the term for a sequence of n words or
-characters. There are unigrams, bigrams, trigrams, tetragrams etc. In
-this environment, 'ngrams' refers to a sequence of characters whether or
-not they are complete words. In most circumtances, regex searches will
-be more useful, but because of limitations in the regex engine you must
-use the Ngram search if you want to look for words that contain the
-non-alphbetical characters. Use the following Ngram searches for
-different categories of defective words:
+### Gap Search
 
--   The black circle '●' (\\u25cf) is the symbol for an untranscribed
-    alphanumerical character. The Ngram search with that search term
-    willl return 2617 hits.
--   The black small square '▪' (\\u25aa) is the symbol for an undefined
-    punctuation mark. The Ngram search with that search term willl
-    return 1659 hits.
--   The lozenge '◊' (\\u25ca) is the symbol for a missing word. The
-    Ngram search with that search term will return 976 hits.
--   A horizontal ellipsis within mathematical angle brackets '⟨…⟩'
-    (\\u27e8, \\u2026,\\u27e9 ) is the symbol for a missing 'span' or
-    short passage of undefined length. The Ngram search with that search
-    term returns only one hit.
+The **Gap Search** feature is a shortcut that sidesteps the need to enter the unusual characters
+used to record gaps of a letter, a word, or an unspecified span.  Simply select the type of
+gap you wish to find and click the adjacent search button.  The **Gap Search** honors the 
+**Filter by**, **Sort by**, and **Per page** options from **Text Search**.  Correcting gaps 
+is described further in [How to Correct Gaps](/how-to/howto_correct_gaps.html).
