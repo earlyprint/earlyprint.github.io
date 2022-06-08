@@ -125,11 +125,11 @@ function draw_scatter_plot(id) {
 	*/	
 
     var xScale = d3.scaleLog()
-        .domain([0, d3.max(graph_data, function(d) { return d[scale_index]; }) + 0.05])
+        .domain([1, d3.max(graph_data, function(d) { return d[scale_index]; }) + 0.05])
         .range([padding, w - padding]);
         
     var yScale = d3.scaleLog()
-        .domain([0, d3.max(graph_data, function(d) { return d[scale_index]; }) + 0.05])
+        .domain([1, d3.max(graph_data, function(d) { return d[scale_index]; }) + 0.05])
         .range([h - padding, padding]);
         
     var xAxis = d3.axisBottom().scale(xScale).ticks(5);
