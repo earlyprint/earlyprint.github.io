@@ -61,7 +61,7 @@ categories: Lab
         <li class="fl w-100 lh-copy pv1 ba bl-0 bt-0 br-0 b--dotted b--black-30 gray">
         <div class="b fl w-80 black">${h.match.reg.join(" ")}</div>
         <div class="fl w-20 tr">${docInfos[h.docPid].display_year}</div>
-        <div class="fl w-100"><strong>${docInfos[h.docPid].author}</strong> | ${docInfos[h.docPid].display_title.substring(0,50)}...</div>
+        <div class="fl w-100"><strong>${docInfos[h.docPid].author}</strong> | ${docInfos[h.docPid].display_title[0].substring(0,50)}...</div>
         </li>`)}
     </ul>
     `;
