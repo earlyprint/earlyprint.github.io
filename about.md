@@ -28,23 +28,15 @@ permalink: /about/
 
 ## Additional Credits
 
-Each text is derived from an EEBO-TCP transcription. Most of the texts
-come from the TCP Phase 1 project. Proquest graciously gave permission
-to add some three dozen plays from TCP Phase 2 to the *Shakespeare His
-Contemporaries* Project, a pilot effort now subsumed within *EarlyPrint*.
-All texts in this corpus are covered by a [Creative Commons
-Attribution-NonCommercial 3.0 Unported
-license](http://creativecommons.org/licenses/by-nc/3.0/legalcode) . See
-the [short
-summary](http://creativecommons.org/licenses/by-nc/3.0/deed.en_US) of
-how the license affects your use of the texts.
+Each text is derived from a transcription produced by the [Text Creation
+Partnership](https://textcreationpartnership.org).
 
 The texts were converted from their original SGML format to at TEI P5
 with [Abbot](https://github.com/CDRH/abbot), written by Brian
 Pytlik-Zillig and Stephen Ramsay at the Center for Digital Research in
 the Humanities at the University of Nebraska-Lincoln.
 
-All of the texts underwent collaborative curation by undergraduates. At
+Many of the texts underwent collaborative curation by undergraduates. At
 Northwestern these included Nayoon Ahn, Hannah Bredar, Madeline Burg,
 Nicole Sheriko, Melina Yeh, Sally Moore Hausken, Irina Huang, Yue Hu,
 Ashley Guo, Anelia Kudin, and Katherine Elizabeth Poland. At Washington
@@ -58,7 +50,7 @@ Yi. Over a period of three weeks in January 2016 they corrected many
 textual defects in 118 plays, consulting printed originals at Smith
 College and the Houghton Library.
 
-*EarlyPrint*'s improvements to the EEBO-TCP archive would not be possible without the time and effort of the many contributors who have submitted annotations and corrections via the EP Library site.
+*EarlyPrint*'s improvements to the EEBO-TCP archive would not be possible without the time and effort of the many contributors who have submitted annotations and corrections via the *EarlyPrint Library* site.
 
 Craig Berry designed and built the correction tool
 [Annolex](http://annolex.at.northwestern.edu). Annolex was a prototype
@@ -68,7 +60,8 @@ The texts were tokenized and linguistically annotated with
 [MorphAdorner](http://morphadorner.northwestern.edu/morphadorner), a
 Natural Language Processing toolkit developed by Philip R. Burns at
 Northwestern University. Burns also developed the website for
-*Shakespeare His Contemporaries* using the [TEI Simple PM
+*Shakespeare His Contemporaries*, a pilot project now subsumed by the *EarlyPrint
+Library*, using the [TEI Simple PM
 toolkit](https://github.com/wolfgangmm/tei-simple-pm) written by
 Wolfgang Meier.
 
@@ -92,7 +85,7 @@ Work bearing on *EarlyPrint* has been generously supported by five grants from t
 
 ## Licenses
 
-### Texts
+### Transcribed Texts
 
 All texts in the *EarlyPrint* Library corpus are covered by a [Creative
 Commons Attribution-NonCommercial 3.0 Unported
@@ -102,6 +95,16 @@ summary](http://creativecommons.org/licenses/by-nc/3.0/deed.en_US) of
 how the license affects your use of the texts. If you are interested in
 licensing the texts for commercial use, please contact Martin Mueller at
 <martinmueller@northwestern.edu> .
+
+### Images
+
+Page images are linked via the [International Image Interoperability Framework
+(IIIF)](https://iiif.io) to image servers at institutions around the world. We
+have made a sincere effort to display the origin of each image on the page in
+which it appears and to provide only images that are free for non-commercial
+use. The precise terms of use vary by image provider. If you have questions or
+concerns about the use or provenance of the images to which we link, please
+write us at <editors@earlprint.org>.
 
 ### Software
 
@@ -138,18 +141,8 @@ software, even if advised of the possibility of such damage.
 
 ## Bugs and Known Limitations
 
-The current release of the Library site has some bugs and weaknesses.
-
--   When generating a PDF or EPUB, you cannot exclude the
-    machine-generated castlist or the list of corrections, nor can you
-    extract particular acts or scenes.
--   When searching for a phrase by enclosing the search terms in quote
-    marks, you may not find all the instances because the standard
-    spelling may intrude between the words you specify. Select the
-    proximity search type instead.
--   At present you cannot search for lemmata or parts of speech even
-    though these are encoded in the texts.
-
+The current release of the Library site has some bugs and weaknesses, currently
+tracked in our issue tracker on [Bitbucket](https://bitbucket.org/shcdemo/annopub/issues).
 We expect to correct these deficiences as time goes on.
 
 Please report any other bugs you find to <editors@earlyprint.org>
