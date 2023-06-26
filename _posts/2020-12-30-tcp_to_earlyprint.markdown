@@ -8,7 +8,7 @@ summary: A summary of the conversion of texts from TCP to EarlyPrint
 categories: Intros
 ---
 
-In the following paragraphs, "TCP" refers to texts created by the Text Creation Partnership and "EarlyPrint" refers to versions of those texts corrected and enriched by various post-processing routines. Martin Mueller's more detailed account of the processing, reflecting some of the misgivings that haunted his editorial decisions, is available here.  Mueller explains that the TCP files were originally encoded in SGML according to an adaptation of the P3 TEI guidelines, that these files were converted to XML and adjusted to comply with P5 guidelines.
+In the following paragraphs, "TCP" refers to texts created by the Text Creation Partnership and "EarlyPrint" refers to versions of those texts corrected and enriched by various post-processing routines. Martin Mueller's more detailed account of the processing, reflecting some of the misgivings that haunted his editorial decisions, is available [here](https://earlyprint.org/intros/about-ep-texts.html).  Mueller explains that the TCP files were originally encoded in SGML according to an adaptation of the P3 TEI guidelines, that these files were converted to XML and adjusted to comply with P5 guidelines.
 
 **The basic transformations** wrought on TCP texts as they pass to
 EarlyPrint include
@@ -254,10 +254,10 @@ second person singular. Benson's tag set has a useful "used as" feature
 that allows you to analyze cases in which a word is used in a different
 class from its ordinary use--e.g. 'Ifs and buts' where the conjunctions
 are used "as" nouns. The use of plural adjectives as nouns
-('necessaries') if a fairly common case. So are the nominal or
+('necessaries') is a fairly common case. So are the nominal or
 adjectival uses of participial forms.
 
-The NUPOS has undergone some simplification. The original set used 'acp'
+The NUPOS tag set has undergone some simplification. The original set used 'acp'
 with -p, 'av', and 'cs' flags to distinguish between different uses of
 words like 'since' and 'as'. We determined that it was virtually
 impossible to maintain those distinctions across close to two billion
@@ -265,4 +265,4 @@ words and have therefore dropped the flags for 'acp' words, as well as
 for 'crq' or 'wh' words like 'when', 'how', and 'why'. Some names have
 been changed to make typing easier: 'n1-nn' is now 'nn1'.
 
-For more on the NUPOS tag set, [see this speadsheet](https://docs.google.com/spreadsheets/d/1JnqWYgpUe_LZYSzxE0abW3mk6XShg4wD7i2WxMCJcz8/edit#gid=0).
+For more on the NUPOS tag set, [see this spreadsheet](https://docs.google.com/spreadsheets/d/1JnqWYgpUe_LZYSzxE0abW3mk6XShg4wD7i2WxMCJcz8/edit#gid=0).
