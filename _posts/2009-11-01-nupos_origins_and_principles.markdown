@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "NUPOS History and Principles"
+title:  "NUPOS Origins and Principles"
 date:   2009-11-01 00:00:00 -0500
 author: Martin Mueller
 tags: InnerWorkingsIntros eebo-tcp
-summary: A detailed description of NUPOS principles
+summary: An in-depth account of NUPOS principles
 categories: Intros
 ---
 
