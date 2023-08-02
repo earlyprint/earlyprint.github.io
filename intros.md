@@ -59,7 +59,7 @@ permalink: /intros/
           The NUPOS tag set
         </a>
       </h3>
-      <span class="post-meta">Complete documention for NUPOS.</span>
+      <span class="post-meta">MorphAdorner documention for NUPOS.</span>
     </li>
   </ul>
 {% endif %}
