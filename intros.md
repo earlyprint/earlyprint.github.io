@@ -53,14 +53,6 @@ permalink: /intros/
     </li>
     {% endif %}
     {%- endfor -%}
-    <li>
-      <h3 class="mb0">
-        <a class="post-link fell f4 near-black link dim" href="http://morphadorner.northwestern.edu/morphadorner/documentation/nupos/">
-          The NUPOS tag set
-        </a>
-      </h3>
-      <span class="post-meta">MorphAdorner documention for NUPOS.</span>
-    </li>
   </ul>
 {% endif %}
   

@@ -265,4 +265,4 @@ words and have therefore dropped the flags for 'acp' words, as well as
 for 'crq' or 'wh' words like 'when', 'how', and 'why'. Some names have
 been changed to make typing easier: 'n1-nn' is now 'nn1'.
 
-For more on the NUPOS tag set, [see this spreadsheet](https://docs.google.com/spreadsheets/d/1JnqWYgpUe_LZYSzxE0abW3mk6XShg4wD7i2WxMCJcz8/edit#gid=0).
+For more on the NUPOS tag set, [see this page](/intros/nupos_tag_set.html).
