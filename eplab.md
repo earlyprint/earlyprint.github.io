@@ -23,7 +23,7 @@ permalink: /lab/
 
 <div class="dt fl w-25-ns w-100 pa2">
   <div class="dtc search-link tc pa2 f3 ba br3 b--gray ph2 bg-blue white shadow-4">
-    <a class="link dim underline fell white" href="https://ada.artsci.wustl.edu/catalog/">Catalog Search</a>
+    <a class="link dim underline fell white" _href="https://ada.artsci.wustl.edu/catalog/">Catalog Search [temporarily offline]</a>
     <p class="f5">Find a text to read, correct, or explore.</p>
   </div>
 </div>
