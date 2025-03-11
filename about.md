@@ -12,19 +12,13 @@ permalink: /about/
 
 **Joseph Loewenstein, co-PI,** specializes in the relation between the book trade and the field of literary practice.  The author of *Ben Jonson and Possessive Authorship*, *The Author’s Due: Printing and the Prehistory of Copyright*, and *Responsive Readings: Versions of Echo in Pastoral, Epic, and the Jonsonian Masque*.  Professor Loewenstein was a contributing editor to *The Cambridge Ben Jonson* and is one of the editors of the *Oxford Edition of the Collected Works of Edmund Spenser*.  He directs the Humanities Digital Workshop at Washington University in St. Louis as well as the university’s Interdisciplinary Project in the Humanities.
 
-**Anupam Basu** is an assistant professor of English at Washington University in Saint Louis. An early-modernist working on print culture and drama, his work has increasingly succumbed to the seductions of scale as he develops techniques to make the entire EEBO-TCP corpus tractable for search and analysis. Anupam has used the data behind EarlyPrint to explore the standardization of English orthography and Spenser's archaism. He is currently working on a monograph on form and scale that asks how we might rethink literary forms through computational analysis. He has also published on the representation of poverty, vagrancy, and criminality in popular literature.
+**Anupam Basu** is an early-modernist working on print culture and drama; his work has increasingly succumbed to the seductions of scale as he develops techniques to make the entire EEBO-TCP corpus tractable for search and analysis. Anupam has used the data behind EarlyPrint to explore the standardization of English orthography and Spenser's archaism. He is currently working on a monograph on form and scale that asks how we might rethink literary forms through computational analysis. He has also published on the representation of poverty, vagrancy, and criminality in popular literature.
 
 **John R. Ladd** is Assistant Professor in Computing and Information Studies at Washington & Jefferson College. His current project, *Network Poetics: Studies in Early Modern Literary Collaboration*, argues that despite the rise of authorial individuation throughout the early modern period, collaborative, networked forms of writing persist and continue to take new shapes even after the Restoration. John's writing has appeared in *Milton Studies*, *The Spenser Review*, and *The Programming Historian*, and he previously worked as research fellow for the [Six Degrees of Francis Bacon](http://sixdegreesoffrancisbacon.com/) digital project and a postdoctoral fellow at the Kaplan Institute for the Humanities at Northwestern University.
 
 **Craig A. Berry** is a Software Project Manager and independent scholar who holds a Ph.D. in English from Northwestern University. He has published numerous articles, mostly on Chaucer and Spenser, one of which won the 1995 Isabel MacCaffrey Prize from the International Spenser Society. He has served as Secretary-Treasurer of the Spenser Society and Digital Projects Editor at *The Spenser Review*. His digital work includes contributions to *The Chicago Homer* and preparing the text of *The Variorum Spenser* for the WordHoard database. He currently maintains the software behind the EarlyPrint Library.
 
-**Philip R. "Pib" Burns**, before his death in late 2022, worked for over fifty years in humanities computing, natural language processing, databases, statistical analysis guidance, and computer programming in support of research and educational activities. In addition to EarlyPrint, he has participated in the Mellon-funded WordHoard, Monk, MorphAdorner, and Bamboo humanities computing projects. Philip's educational background was in mathematics, computer science, and English literature. His MorphAdorner suite provides the bulk of the natural language processing for EarlyPrint.
-
 **Douglas Knox** is assistant director of the Humanities Digital Workshop at Washington University in St. Louis. He has worked with dozens of projects across disciplines including history, literature, classics, art history, and music. He enjoys thinking creatively about exploratory data analysis and critically about methodology. Before coming to Wash U he directed digital publication projects at the Newberry Library in Chicago. He was managing editor of the *Encyclopedia of Chicago* and led the project that created a full-text digital version of the [Chicago Foreign Language Press Survey](http://flps.newberry.org).
-
-**Stephen Pentecost** is Senior Digital Humanities Specialist at Washington University in St. Louis, where he supports projects in textual editing, archive creation, textual criticism, and musical composition.
-
-**Kate Needham** is a Ph.D candidate in English Literature at Yale University studying early modern English translators. She began working on the project as an undergraduate research assistant and has now led undergraduate workshops on the EarlyPrint Library, supervised teams of summer interns, and planned classroom activities using Early Print tools.
 
 ## Additional Credits
 
@@ -50,7 +44,16 @@ Yi. Over a period of three weeks in January 2016 they corrected many
 textual defects in 118 plays, consulting printed originals at Smith
 College and the Houghton Library.
 
-*EarlyPrint*'s improvements to the EEBO-TCP archive would not be possible without the time and effort of the many contributors who have submitted annotations and corrections via the *EarlyPrint Library* site.
+Kate Needham began working on the project as an undergraduate research
+assistant and continued while a graduate student at Yale. Kate led
+undergraduate workshops on the EarlyPrint Library, supervised teams of
+summer interns, and planned classroom activities using Early Print
+tools.
+
+*EarlyPrint*'s improvements to the EEBO-TCP archive would not be
+possible without the time and effort of the many contributors who have
+submitted annotations and corrections via the *EarlyPrint Library*
+site.
 
 Craig Berry designed and built the correction tool
 [Annolex](http://annolex.at.northwestern.edu). Annolex was a prototype
@@ -65,12 +68,29 @@ Library*, using the [TEI Simple PM
 toolkit](https://github.com/wolfgangmm/tei-simple-pm) written by
 Wolfgang Meier.
 
+**Philip R. "Pib" Burns**, before his death in late 2022, worked for
+over fifty years in humanities computing, natural language processing,
+databases, statistical analysis guidance, and computer programming in
+support of research and educational activities. In addition to
+EarlyPrint, he participated in the Mellon-funded WordHoard, Monk,
+MorphAdorner, and Bamboo humanities computing projects. Philip's
+educational background was in mathematics, computer science, and
+English literature. His MorphAdorner suite provides the bulk of the
+natural language processing for EarlyPrint.
+
+**Stephen Pentecost**, before retirement, was Senior Digital
+Humanities Specialist at Washington University in St. Louis, where he
+supported projects in textual editing, archive creation, textual
+criticism, and musical composition.
+
 We are grateful to the Andrew W. Mellon Foundation for funding various
 aspects of the *EarlyPrint* project and in particular the Annotation
 Module, which was built by [eXist Solutions
 GmbH](http://www.existsolutions.com).
 
-Work bearing on *EarlyPrint* has been generously supported by five grants from the Andrew W. Mellon Foundation and a Digital Extension grant from the American Council of Learned Societies.
+Work bearing on *EarlyPrint* has been generously supported by five
+grants from the Andrew W. Mellon Foundation and a Digital Extension
+grant from the American Council of Learned Societies.
 
 <article class="pv4 bt bb b--black-10 ph3 ph0-l">
     <div class="flex flex-column flex-row-ns">
