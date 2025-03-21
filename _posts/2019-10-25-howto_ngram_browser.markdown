@@ -303,17 +303,19 @@ Between 3 and 6 of a
 
 #### Searching Parts of Speech with Regular Expressions
 
-The standardized spelling databases allow searching for parts of speech
-using regular expressions. The basic format for searching for a word
-combined with a part-of-speech is “word\_pos” so that we might search
-for “army\_n1” etc. We use the NU-POS tagset developed by Martin Mueller
-and used by Morphadorner to tag the corpus. Thus a word like “man” would
-be tagged “n1” as a singular noun while men would be tagged “n2” (plural
-noun). If we wanted either word used as nouns (as opposed to, for
-example, “man the post”), we could use the following regular expression:
-“/m[ae]n\_n.+/”. This specifies that the second character of the match
-could either be “a” or “e” and the part of speech should begin with “n”
-and have exactly one character after that.
+The standardized spelling databases allow searching for parts of
+speech using regular expressions. The basic format for searching for a
+word combined with a part-of-speech is “word\_pos” so that we might
+search for “army\_n1” etc. We use the [NUPOS
+tagset](/intros/nupos_tag_set.html) developed by Martin Mueller and
+used by Phil Burns's Morphadorner to tag the corpus. Thus a word like
+“man” would be tagged “n1” as a singular noun while men would be
+tagged “n2” (plural noun). If we wanted either word used as nouns (as
+opposed to, for example, “man the post”), we could use the following
+regular expression: “/m[ae]n\_n.+/”. This specifies that the second
+character of the match could either be “a” or “e” and the part of
+speech should begin with “n” and have exactly one character after
+that. This search captures singular and plural noun forms of “man” (n1, n2), but note that NUPOS also includes additional noun classifications such as ng1 (genitive singular) and ng2 (genitive plural). For more advanced searches, users can also query contractions (e.g., searching for "don’t" as a modal verb negation: /vvb[x]?/), or find explicitly unclassified cases such as "zz" (unparseable tokens).
 
 Using the POS search facility effectively can lead to really powerful
 queries and insights but it does take a bit of getting used to. One

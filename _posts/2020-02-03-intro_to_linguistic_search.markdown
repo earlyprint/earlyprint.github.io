@@ -3,7 +3,7 @@ layout: post
 title:  "Introduction to Corpus Search"
 date:   2020-10-01 10:00:00 -0500
 author: Stephen Pentecost
-tags: [ep-lab, lingustic-search, blacklab, cql]
+tags: [ep-lab, linguistic-search, blacklab, cql]
 summary: An introduction to Lingustic Search, powered by Blacklab
 categories: How-To
 ---
@@ -16,13 +16,16 @@ the word, its part of speech) which can be used in addition to or
 instead of the original spelling.
 
 For example, suppose we’re interested in the word which was originally
-spelled “louing.” We could search for “louing,” of course. We could also
-search for “loving” (its regularized spelling), “love” (its lemmatized,
-or dictionary headword, form). We could even search for the regularized
-form “loving” where its part of speech is “vvg” (the code for “verb,
-present participle”): in this case, we’d be searching for “loving” no
-matter how it was originally spelled, but only when it was used as a
-verb.
+spelled “louing.” We could search for “louing,” of course. We could
+also search for “loving” (its regularized spelling), “love” (its
+lemmatized, or dictionary headword, form). We could even search for
+the regularized form “loving” where its part of speech is “vvg” (the
+code for “verb, present participle”): in this case, we’d be searching
+for “loving” no matter how it was originally spelled, but only when it
+was used as a verb. For a full list of POS tags, refer to
+[EarlyPrint’s NUPOS tag set](/intros/nupos_tag_set.html). The NUPOS
+tag set is used across EarlyPrint to standardize part-of-speech
+annotations and ensure consistency in linguistic searches.
 
 Corpus Search also makes it possible to search for sequences of
 words. For example, it’s quite easy to search for sequences of words
@@ -165,3 +168,9 @@ Those familiar with CQL can compose their queries directly via the
 CQL queries may be entered as plain text strings inside the large Corpus
 Query Language text box (**<span style="color:red">O</span>**). CQL queries can be Filtered and their
 results Grouped as with searches instigated on the other tabs.
+Users can also search using regular expressions to match multiple POS tags, e.g., /n.*/ to find all nouns or /v.*/ for all verbs. This allows for greater flexibility in identifying word patterns across texts.
+
+POS searches work similarly in Corpus Search and in the N-gram Browser. Both tools allow searching by part-of-speech tags using the NUPOS tag set. The syntax for POS searches is identical in both tools:
+To search for all nouns, use /n.*/
+To find all verbs, use /v.*/
+To locate all adjectives, use /j.*/

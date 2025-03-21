@@ -16,7 +16,7 @@ an ever-larger body of Early English from multiple centuries. This page lists
 the current tags.  For the origins and principles of NUPOS, see
 [this link](/intros/nupos_origins_and_principles.html) instead.
 
-**NUPOS Tag**|**Description**|**Example**|**Word classs**
+**NUPOS Tag**|**Description**|**Example**|**Word class**
 -----|----------|-------|----------:
   -z|This flag is introduced to mark some dialect forms or forms mangled by foreign speakers |'pody' for 'body', 'de' for 'the'|
 ab|abbreviations|Gen., Cor. Aen.|ab

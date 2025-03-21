@@ -20,6 +20,12 @@ permalink: /about/
 
 **Douglas Knox** is assistant director of the Humanities Digital Workshop at Washington University in St. Louis. He has worked with dozens of projects across disciplines including history, literature, classics, art history, and music. He enjoys thinking creatively about exploratory data analysis and critically about methodology. Before coming to Wash U he directed digital publication projects at the Newberry Library in Chicago. He was managing editor of the *Encyclopedia of Chicago* and led the project that created a full-text digital version of the [Chicago Foreign Language Press Survey](http://flps.newberry.org).
 
+**Kate Needham** is began working on the project as an undergraduate research
+assistant at WashU and continued while a graduate student at Yale. Kate led
+undergraduate workshops on the EarlyPrint Library, supervised teams of
+summer interns, and planned classroom activities using Early Print
+tools. Dr. Needham now teaches and researches early modern British literature, Shakespeare and drama, translation, classical reception, literary style and artifice at the University of Mississippi.
+
 ## Additional Credits
 
 Each text is derived from a transcription produced by the [Text Creation
@@ -43,12 +49,6 @@ three students, Heejin \"Gabby\" Ro, Yixin \"Arthur\" Xiao, and Keren
 Yi. Over a period of three weeks in January 2016 they corrected many
 textual defects in 118 plays, consulting printed originals at Smith
 College and the Houghton Library.
-
-Kate Needham began working on the project as an undergraduate research
-assistant and continued while a graduate student at Yale. Kate led
-undergraduate workshops on the EarlyPrint Library, supervised teams of
-summer interns, and planned classroom activities using Early Print
-tools.
 
 *EarlyPrint*'s improvements to the EEBO-TCP archive would not be
 possible without the time and effort of the many contributors who have
