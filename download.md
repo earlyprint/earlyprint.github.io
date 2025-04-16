@@ -6,7 +6,7 @@ permalink: /download/
 
 Search to filter the table, and click on a link to download any of the corrected and linguisticaly-annotated *EarlyPrint* XML texts, or the *Oxford Text Archive* (OTA) downloadable XML, HTML, and EPUB files, which include the original *Text Creation Partnership* XML. Some fields have been truncated for space, but the full field is available on mouseover and when searching and downloading the data. We provide Library of Congress Subject Headings when available, in the "Keywords" column. Keep in mind that only a portion of the texts have been assigned subject headings.
 
-If you want to download the entire *EarlyPrint* corpus, the texts are available on our [public Bitbucket repository](https://bitbucket.org/eplib/eebotcp/src/master/).
+If you want to download the entire *EarlyPrint* corpus, the EEBO texts are available on our [public Bitbucket repository](https://bitbucket.org/eads004/eebotcp), with additional collections of [ECCO](https://bitbucket.org/eads004/eccotcp) and [Evans](https://bitbucket.org/eads004/evanstcp), and a [small repository](https://bitbucket.org/eads004/eptexts) for convenient symbolic linking if you have all three.
 
 <!-- <form class="fr">
   <label>Search in:</label>
@@ -43,7 +43,7 @@ var columns = [
       var list = data.split(/ ; |, no\. /);
       var textId = list[2].replace(')','');
       if (type === 'display') {
-	return `<div><a href='https://texts.earlyprint.org/works/${textId}.xml' target='_blank'>${ textId }</a></div><div><a href='https://bitbucket.org/eplib/${ textId.slice(0,3) }/raw/master/${ textId }.xml' target='_blank'>EP XML</a></div><div><a href='https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/${textId}' target='_blank'>OTA Files</a></div>`
+	return `<div><a href='https://texts.earlyprint.org/works/${textId}.xml' target='_blank'>${ textId }</a></div><div><a href='https://bitbucket.org/eads004/${ textId.slice(0,3) }/raw/master/${ textId }.xml' target='_blank'>EP XML</a></div><div><a href='https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/${textId}' target='_blank'>OTA Files</a></div>`
       } else { return textId; }
     },
     width: '80px'

@@ -9,7 +9,7 @@ categories: How-To
 
 The EarlyPrint project offers an <a href="/assets/xsl/plaintext_from_epxml.xsl" download>XSLT script</a> to extract plain text from EarlyPrint XML. One can use Python to work with XML files, but at the scale of all the EarlyPrint files it can be slow to process everything. XSLT is a programming language in which the programs are XML files that transform other XML files. You won't need to learn XSLT to run the script, although if you know or want to learn some XSLT you could adapt it for your own purposes.
 
-To run the script, you will need to be somewhat comfortable navigating the [command line](https://programminghistorian.org/en/lessons/intro-to-bash) in the terminal or console, and will need to get a [Java Runtime Environment](https://openjdk.java.net/install/) if you don't have Java already on your system. You will also need a local copy of the [EarlyPrint XML](https://bitbucket.org/eplib/eebotcp/) repository. And, of course, you'll need to download a copy of the [XSLT script](/assets/xsl/plaintext_from_epxml.xsl).
+To run the script, you will need to be somewhat comfortable navigating the [command line](https://programminghistorian.org/en/lessons/intro-to-bash) in the terminal or console, and will need to get a [Java Runtime Environment](https://openjdk.java.net/install/) if you don't have Java already on your system. You will also need a local copy of the [EarlyPrint XML](https://bitbucket.org/eads004/eebotcp/) repository. And, of course, you'll need to download a copy of the [XSLT script](/assets/xsl/plaintext_from_epxml.xsl).
 
 We recommend using the Java-based [Saxon](https://www.saxonica.com/download/java.xml) engine to run XSLT. You can download a recent version of the Saxon-HE edition for free.
 
