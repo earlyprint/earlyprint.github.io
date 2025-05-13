@@ -1225,7 +1225,7 @@ function linkToGrok(word, corpus) {
         blacklab_field = 'lemma';
     }
     
-    window.open('https://eplab.artsci.wustl.edu/corpus-frontend-1.2/eebotcp/search/hits?number=20&first=0&patt=%5B' + 
+    window.open('https://eplab.artsci.wustl.edu/corpus-frontend-3.1.1-SNAPSHOT/earlyprint/search/hits?number=20&first=0&patt=%5B' + 
                     blacklab_field + '="' + word + '"%5D');
 }
 
