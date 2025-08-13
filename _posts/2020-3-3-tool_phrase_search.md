@@ -9,7 +9,7 @@ categories: Lab
 
 <div class="background bg-white min-vh-75">
 <h1 class="pl3">Phrase Search</h1>
-<small class="db w-80 center">This simple interface allows you to search for a phrase by translating your text into the corpus query language syntax used by <em>EarlyPrint</em>'s <a href="https://eplab.artsci.wustl.edu/corpus-frontend-3.1.1-SNAPSHOT/earlyprint/search/">Corpus Search</a>. Typing a phrase will create two unique search queries: one that looks for phrases of similar <strong>content</strong> and another that looks for phrases of similar <strong>form</strong>. For more detailed exploration of these patterns, use this interface as a starting point for a closer look from within <a href="https://eplab.artsci.wustl.edu/corpus-frontend-3.1.1-SNAPSHOT/earlyprint/search/">Corpus Search</a>.</small>
+<small class="db w-80 center">This simple interface allows you to search for a phrase by translating your text into the corpus query language syntax used by <em>EarlyPrint</em>'s <a href="https://eplab.artsci.wustl.edu/blacklab-frontend-4.0.1-SNAPSHOT/earlyprint/search/">Corpus Search</a>. Typing a phrase will create two unique search queries: one that looks for phrases of similar <strong>content</strong> and another that looks for phrases of similar <strong>form</strong>. For more detailed exploration of these patterns, use this interface as a starting point for a closer look from within <a href="https://eplab.artsci.wustl.edu/blacklab-frontend-4.0.1-SNAPSHOT/earlyprint/search/">Corpus Search</a>.</small>
 
 <div class="cf h-auto bg-light-blue mw7 center pa4 br2-ns ba b--black-10">
   <div class="fl w-100 tc mb1">Search for a phrase...</div>
@@ -54,7 +54,7 @@ categories: Lab
   const searchInput = document.getElementById("searchBox") //Input box for phrase
   const resultsTemplate = (type, pattern, hits, docInfos) =>
     html`<h2 class="fl">Results by ${type}</h2>
-    <a class="fr f6 link dim br2 ph3 pv2 mb2 dib white bg-dark-blue" href="https://eplab.artsci.wustl.edu/corpus-frontend-3.1.1-SNAPSHOT/earlyprint/search/hits?number=20&first=0&patt=${encodeURIComponent(pattern)}" target="_blank">Go to full results</a>
+    <a class="fr f6 link dim br2 ph3 pv2 mb2 dib white bg-dark-blue" href="https://eplab.artsci.wustl.edu/blacklab-frontend-4.0.1-SNAPSHOT/earlyprint/search/hits?number=20&first=0&patt=${encodeURIComponent(pattern)}" target="_blank">Go to full results</a>
     <h4 class="fl w-100">First 20 results:</h4>
     <ul class="list f6 center">
       ${hits.map(h => html`
@@ -67,10 +67,10 @@ categories: Lab
     `;
   const errorTemplate = () =>
   html`<p>No results! Try a different phrase.</p>
-  <p>Sometimes an alternate spelling may work. If you're having trouble, use the more detailed <a href="https://eplab.artsci.wustl.edu/corpus-frontend-3.1.1-SNAPSHOT/earlyprint/search/" target="_blank">Corpus Search</a> interface.</p>`;
+  <p>Sometimes an alternate spelling may work. If you're having trouble, use the more detailed <a href="https://eplab.artsci.wustl.edu/blacklab-frontend-4.0.1-SNAPSHOT/earlyprint/search/" target="_blank">Corpus Search</a> interface.</p>`;
   const singleWordTemplate = () =>
   html`<p>Your search has too few words!</p>
-  <p> You've either entered just one word, or else your phrase doesn't contain enough distinct nouns or verbs to be searchable. If you'd like to search for a single word or a more specific phrase, use the detailed <a href="https://eplab.artsci.wustl.edu/corpus-frontend-3.1.1-SNAPSHOT/earlyprint/search/" target="_blank">Corpus Search</a> interface.</p>`;
+  <p> You've either entered just one word, or else your phrase doesn't contain enough distinct nouns or verbs to be searchable. If you'd like to search for a single word or a more specific phrase, use the detailed <a href="https://eplab.artsci.wustl.edu/blacklab-frontend-4.0.1-SNAPSHOT/earlyprint/search/" target="_blank">Corpus Search</a> interface.</p>`;
   const formResults = document.getElementById('formResults');
   const contentResults = document.getElementById('contentResults');
 
