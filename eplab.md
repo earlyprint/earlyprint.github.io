@@ -30,7 +30,7 @@ permalink: /lab/
 
 <div class="dt fl w-25-ns w-100 pa2">
   <div class="dtc search-link tc pa2 f3 ba br3 b--gray ph2 bg-blue white shadow-4">
-    <a class="link dim underline fell white" href="https://eplab.artsci.wustl.edu/blacklab-frontend-4.0.1-SNAPSHOT/earlyprint/search/" >Corpus Search</a>
+    <a class="link dim underline fell white" href="https://eplab.artsci.wustl.edu/blacklab-frontend/earlyprint/search/" >Corpus Search</a>
     <p class="f5">Search for words, phrases, or linguistic patterns. You can also explore text reuse with <a class="link dim underline white" href="/lab/tool_phrase_search.html">Phrase Search</a>.</p>
   </div>
 </div>
