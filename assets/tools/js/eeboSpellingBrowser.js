@@ -788,7 +788,7 @@ function getDataFromServer(requestFromClient) {
         }
     }
     catch(err) {
-        $('#errorMessages').html('Server error processing query.  For support, please email spenteco@wustl.edu.');
+        $('#errorMessages').html('Server error processing query. If the problem persists, please email hdw@wustl.edu.');
     }
 }
 
