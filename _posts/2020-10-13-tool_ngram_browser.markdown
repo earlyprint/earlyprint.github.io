@@ -9,8 +9,6 @@ categories: Lab
 
 <div id="eeboFrame" width="100%">
 
-<div class="banner">September 25, 2025: The server that supports the n-gram browser is down for maintenance. We hope to have it back soon.</div>
-
 <!-- COPY HTML FROM THE APPLICATION -->
 
 <div class="hideShow"><a id="instructionToggle" href="javascript:showHideInstructions();">show instructions</a></div>
