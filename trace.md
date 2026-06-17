@@ -1,23 +1,23 @@
 ---
 layout: page
-title: TRACE
+title: "TRACE: <small>Tools and Resources for Analysis of Content in EEBO</small>"
 permalink: /trace/
 ---
-
-## Tools and Resources for Analysis of EEBO
 
 ### About TRACE
 
 TRACE is a collaboration between the [*Linguistic Data Consortium*](https://www.ldc.upenn.edu/) (University of Pennsylvania) and the [*EarlyPrint Lab*](https://earlyprint.org/lab/) (Washington University in St. Louis; Washington & Jefferson College) to extend the annotation of the [EEBO-TCP corpus](/intros/intro-to-eebo-and-eebo-tcp.html) to include **syntactic structure, named entities, and word senses**.
 
-With funding from the National Science Foundation, TRACE will **annotate 1.5 billion words of historical English** with: (1) POS tags, (2) syntactic structure, (3) lemmas and word senses, and (4) coreference/entity linking to a knowledge base. Texts will be drawn from the *EarlyPrint*'s collection of approximately 60,000 books spanning 1475 to 1700. 
+With [funding from the National Science Foundation](https://www.nsf.gov/awardsearch/show-award?AWD_ID=2523498), TRACE will **annotate 1.5 billion words of historical English** with: (1) POS tags, (2) syntactic structure, (3) lemmas and word senses, and (4) coreference/entity linking to a knowledge base. Texts will be drawn from *EarlyPrint*'s collection of approximately 60,000 books spanning 1475 to 1700. 
 
 We will also provide users with **tools for interacting with these resources**, consisting of: (1) an updated version of [Corpus Search](https://eplab.artsci.wustl.edu/blacklab-frontend/earlyprint/search/), a tool for identifying and counting lexical and syntactic terms, (2) programming tools for extracting semantic triples for use in network analysis, in keeping with our work on the [EarlyPrint + Python notebooks](/jupyterbook). These annotations will be both released by LDC and integrated into the *EarlyPrint* website.
 
 ### Recent Updates and Posts
 
+Coming soon...
+
 {% for category in site.categories %}
-  {% if category[0] == "How-To" %}
+  {% if category[0] == "TRACE" %}
   <ul class="post-list indentedUL">
     {%- for post in category[1] -%}
     <li>
