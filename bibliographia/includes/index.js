@@ -1,266 +1,328 @@
-let map_data = [];
-let metadata = {};
-let metadata_values = ['Bible', 'Poetry', 'Civil War, 1642-1649'];
-let radius = 3;
-let limit = 2500;
-let context,
-    canvas,
-    circles,
-    width,
-    height,
-    new_data,
-    selectedPoint;
+const { Deck, OrthographicView, ScatterplotLayer, LinearInterpolator } = deck;
 
-const color = d3.scaleOrdinal(['#4477AA','#EE6677','#228833','#CCBB44','#66CCEE','#AA3377']);
+const PALETTE = [
+  [86, 143, 204],
+  [242, 118, 134],
+  [45, 168, 65],
+  [228, 208, 78],
+  [118, 220, 245],
+  [200, 65, 143],
+];
 
-function draw(transform, limit) {
-    context.clearRect(0, 0, width, height);
-    let active;
-    if (limit) {
-	limited = new_data.slice(limit,limit*2);
-        limited.forEach(function(point) {
-    	    drawPoint(point, transform);
-		if(!point.selected) {
-                    drawPoint(point, transform);
-                }
-                else {
-                    active = point;
-                }
-        });
-    } else {
-        new_data.forEach(function(point) {
-		if(!point.selected) {
-                    drawPoint(point, transform);
-                }
-                else {
-                    active = point;
-                }
-        });
-    }
+let new_data = [];
+let metadata_values = ['Sermons, English', 'Poetry', 'Civil War, 1642-1649'];
+let colorDomain = [];
+let hoveredIndex = null;
+let selectedIndex = null;
+let deckInstance = null;
 
-
-    if(active) {
-            context.strokeStyle = 'red';
-	    context.lineWidth = 2;
-            drawPoint(active, transform);
-            context.strokeStyle = '#999';
-	    context.lineWidth = 1;
-        }
+function rgbToHex(rgb) {
+  return '#' + rgb.map(v => v.toString(16).padStart(2, '0')).join('');
 }
 
-function drawPoint(point, transform) {
-	let d = transform.apply([point.x, point.y]);
-        context.beginPath();
-	context.globalAlpha = 0.5;
-        context.fillStyle = '#DDD';
-	metadata_values.forEach(m => {
-	    if (point.subject.indexOf(m) > -1) {
-		context.globalAlpha = 1;
-		context.fillStyle = color(m);
-	    } 
-	});
-	context.arc(d[0], d[1], radius, 0, 2*Math.PI);
-	context.closePath();
-	context.stroke();
-	context.fill();
+function getPointColor(point) {
+  const subject = point.subject;
+  for (let i = 0; i < colorDomain.length; i++) {
+    if (metadata_values.includes(colorDomain[i]) && subject.includes(colorDomain[i])) {
+      return [...PALETTE[i % PALETTE.length], 255];
+    }
+  }
+  return [120, 130, 150, 100];
 }
 
-
-function append_checkbox(id_no, checkbox_type, checkbox_value_count, checkbox_value) {
-    $('#checkbox-list').append(`<li id="container_${id_no}"><input type="checkbox" name="${checkbox_type}_${id_no}" id="${checkbox_type}_${id_no}"  name="${checkbox_type}_${id_no}" onchange="javascript:handle_checkbox('${checkbox_type}_${id_no}', '${checkbox_type}', '${checkbox_value}');"><label for="${checkbox_type}_${id_no}">${checkbox_value} (${checkbox_value_count})</label></li>`);
-    if (metadata_values.indexOf(checkbox_value) > -1) {
-	    $(`#${checkbox_type}_${id_no}`).attr('checked', true);
-	    $(`#container_${id_no}`).css('background-color', color(checkbox_value));
-    }
+// 60k-point base layer — never re-evaluates colors for hover/select changes
+function makeBaseLayer() {
+  return new ScatterplotLayer({
+    id: 'scatter',
+    data: new_data,
+    getPosition: d => [d.x, d.y],
+    getRadius: 4,
+    radiusUnits: 'pixels',
+    getFillColor: d => getPointColor(d),
+    stroked: false,
+    filled: true,
+    pickable: true,
+    onHover: handleHover,
+    updateTriggers: {
+      getFillColor: [metadata_values.join(',')],
+    },
+  });
 }
 
-function add_drop_downs() {
-    color_domain = [];
-    for (var a = 5; a < map_data[2].length; a++) {
-	color_domain.push(map_data[2][a][0]);
-    }
-    color.domain(color_domain);
-    for (var a = 5; a < map_data[2].length; a++) {
-        append_checkbox(a, 'NA', map_data[2][a][0], map_data[2][a][1]);
-    }
+// 1–2 point overlay layer for hover and selection highlights
+function makeHighlightLayer() {
+  const items = [];
+  if (selectedIndex !== null) {
+    items.push({ point: new_data[selectedIndex], type: 'selected' });
+  }
+  if (hoveredIndex !== null && hoveredIndex !== selectedIndex) {
+    items.push({ point: new_data[hoveredIndex], type: 'hover' });
+  }
+  if (items.length === 0) return null;
+
+  return new ScatterplotLayer({
+    id: 'scatter-highlight',
+    data: items,
+    getPosition: d => [d.point.x, d.point.y],
+    getRadius: d => d.type === 'selected' ? 10 : 7,
+    radiusUnits: 'pixels',
+    getFillColor: d => {
+      const base = getPointColor(d.point);
+      return [base[0], base[1], base[2], 255];
+    },
+    getLineColor: d => d.type === 'selected' ? [235, 242, 255, 235] : [210, 220, 240, 200],
+    lineWidthUnits: 'pixels',
+    lineWidthMinPixels: 2,
+    stroked: true,
+    filled: true,
+    pickable: false,
+  });
 }
 
-function handle_checkbox(id, metadata_type, metadata_value) {
-
-    var turn_on_nodes = $(`#${id}`).is(':checked');
-
-    if (turn_on_nodes === true) {
-    	metadata_values.push(metadata_value);
-	$(`#container_${id.split('_')[1]}`).css('background-color', color(metadata_value));
-    } else {
-	var i = metadata_values.indexOf(metadata_value);
-	metadata_values.splice(i, 1);
-	$(`#container_${id.split('_')[1]}`).css('background-color', 'inherit');
-    }
-    var transform = d3.zoomTransform(canvas.node());
-    draw(transform);
+function makeLayers() {
+  return [makeBaseLayer(), makeHighlightLayer()].filter(Boolean);
 }
 
-function filterSubject() {
-  // Declare variables
-  let input = document.getElementById('subjectFilter');
-  let filter = input.value.toUpperCase();
-  let ul = document.getElementById("checkbox-list");
-  let li = ul.getElementsByTagName('li');
+function redraw() {
+  deckInstance.setProps({ layers: makeLayers() });
+}
 
-  // Loop through all list items, and hide those who don't match the search query
-  for (let i = 0; i < li.length; i++) {
-    let label = li[i].getElementsByTagName("label")[0];
-    let txtValue = label.textContent || label.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
-    } else {
-      li[i].style.display = "none";
-    }
+function handleHover(info) {
+  const newHovered = info.object ? info.object.i : null;
+  if (newHovered === hoveredIndex) return;
+  hoveredIndex = newHovered;
+  updatePanel();
+  deckInstance.setProps({ layers: makeLayers() });
+}
+
+function updatePanel() {
+  const panel = document.getElementById('pointInfo');
+
+  if (hoveredIndex !== null && hoveredIndex !== selectedIndex) {
+    panel.classList.add('visible');
+    panel.classList.remove('is-selected');
+    showInfo(new_data[hoveredIndex]);
+  } else if (selectedIndex !== null) {
+    panel.classList.add('visible', 'is-selected');
+    showInfo(new_data[selectedIndex]);
+  } else {
+    panel.classList.remove('visible', 'is-selected');
   }
 }
 
-function showAbout() {
-    let about = document.querySelector("#about");
-    about.classList.remove("hide-about");
-}
-
-function searchNearby(quadtree, xmin, ymin, xmax, ymax) {
-  const results = [];
-  quadtree.visit(function(node, x1, y1, x2, y2) {
-    if (!node.length) {
-      do {
-        var d = node.data;
-        if (d.x >= xmin && d.x < xmax && d.y >= ymin && d.y < ymax) {
-          results.push(d);
-        }
-      } while (node = node.next);
-    }
-    return x1 >= xmax || y1 >= ymax || x2 < xmin || y2 < ymin;
+function showInfo(item) {
+  const nearby = searchNearby(item.x, item.y, 5).filter(n => n.id !== item.id);
+  let nearbyHtml = '';
+  nearby.forEach(n => {
+    const truncTitle = n.title.length > 65 ? n.title.slice(0, 65) + '…' : n.title;
+    nearbyHtml +=
+      `<div class="nearby-item">` +
+      `<div class="nearby-id">${n.id}</div>` +
+      `<a href="#" onclick="event.preventDefault();selectItem(new_data[${n.i}])">${truncTitle}</a>` +
+      `<div class="nearby-author">${n.author}</div>` +
+      `</div>`;
   });
-  return results;
+
+  document.getElementById('info-body').innerHTML =
+    `<span class="field-label">TCP ID</span>` +
+    `<div class="info-id">${item.id}</div>` +
+    `<div class="info-title">${item.title}</div>` +
+    `<span class="field-label">Author(s)</span>` +
+    `<div class="info-value">${item.author}</div>` +
+    `<span class="field-label">Year</span>` +
+    `<div class="info-value">${item.year}</div>` +
+    `<span class="field-label">Subject Headings</span>` +
+    `<div class="info-value info-subjects">${item.subject}</div>` +
+    `<div class="info-links">` +
+    `<a href="https://texts.earlyprint.org/works/${item.id}.xml" target="_blank">Read this text ↗</a>` +
+    `</div>` +
+    (nearby.length > 0 ? `<span class="field-label">Nearby texts</span>${nearbyHtml}` : '');
+  document.getElementById('info-body').scrollTop = 0;
 }
 
-$( document ).ready(function() {
-    d3.json('map_data.js').then(function( data ) {
-        map_data = data;
-        add_drop_downs();
-        
-        for (var a = 0; a < map_data[0].length; a++) {
-            metadata[map_data[0][a][0]] = map_data[0][a][4];
-        }
-        
-        let graph_data = map_data[0];
-        const padding = 0;
+function updateUrl(id) {
+  const url = id ? `${location.pathname}?id=${encodeURIComponent(id)}` : location.pathname;
+  history.replaceState(null, '', url);
+}
 
-	var zoom = d3.zoom().scaleExtent([0.4, 20]).on("zoom", zoomGo).on("end", zoomEnd);
-        canvas = d3.select("canvas").on("click", onClick).call(zoom);
-        width = window.innerWidth;//canvas.property("width");
-        height = window.innerWidth;//canvas.property("height");
-	let canvas_el = document.getElementById("graph");
-	canvas_el.width = width;
-	canvas_el.height = height;
-        context = canvas.node().getContext("2d");
-        
-        let xScale = d3.scaleLinear()
-            .domain([d3.min(graph_data, function(d) { return d[1]; }) - 1.0, 
-                     d3.max(graph_data, function(d) { return d[1]; }) + 1.0])
-            .range([padding, width - padding]);
-        
-        let yScale = d3.scaleLinear()
-            .domain([d3.min(graph_data, function(d) { return d[2]; }) - 1.0, 
-                     d3.max(graph_data, function(d) { return d[2]; }) + 1.0])
-            .range([height - padding, padding]);
-        
-	new_data = graph_data.map((d,i) => { return {'i': i, 'id': d[0], 'x': xScale(d[1]), 'y': yScale(d[2]), 'title': d[3].title, 'author': d[3].author, 'year': d[3].year, 'subject': d[3].subject }});
-//        graph_data.forEach(v => {
-//            v[1] = xScale(v[1]);
-//            v[2] = yScale(v[2]);
-//	    map_data[v[0]] = v.slice(1);
-//        })
-    
-    function x(d) { return d.x; };
-    function y(d) { return d.y; };
+function selectItem(item) {
+  selectedIndex = item.i;
+  document.getElementById('hint').classList.add('hidden');
+  updateUrl(item.id);
+  updatePanel();
+  redraw();
+}
 
-    let quadTree = d3.quadtree(new_data, x, y);
+function closeInfoPanel() {
+  selectedIndex = null;
+  updateUrl(null);
+  updatePanel();
+  redraw();
+}
 
-    let searchData = new_data.map(d => {return {'i': d.i, 'title': d.title, 'author': d.author};});
-    searchData = new Bloodhound({
-      datumTokenizer: Bloodhound.tokenizers.obj.whitespace('title', 'author'),
-      queryTokenizer: Bloodhound.tokenizers.whitespace,
-      identify: function(obj) { return obj.i; },
-      local: searchData 
-    });
-    
-    $('#search .typeahead').typeahead({
-      hint: true,
-      highlight: true,
-      minLength: 1
-    },
-    {
-      name: 'searchData',
-      source: searchData,
-      display: (d) => { return `${d.title}\n${d.author}`;}
-    });
-    $('.typeahead').bind('typeahead:select', function(ev, suggestion) {
-      let item = new_data[suggestion.i]
-      selectItem(item);
-      zoom.translateTo(canvas, item.x, item.y, [width/2,height/4]);
-      zoom.scaleTo(canvas.transition().duration(750), 5, [width/2,height/4]);
-    });
+function searchNearby(x, y, r) {
+  return new_data.filter(d => Math.abs(d.x - x) < r && Math.abs(d.y - y) < r);
+}
 
-    function selectItem(item) {
-        let transform = d3.zoomTransform(canvas.node());
-	let infoBox = d3.select('#pointInfo')
-        if(selectedPoint) {
-            new_data[selectedPoint].selected = false;
-        }
-	if (item) {
-	    let newHTML = `<em>TCP ID Number:</em> ${item.id}<br/><b>${item.title}</b><br/><br/><em>Author(s):</em><br/>${item.author}<br/><em>Publication date:</em> ${item.year}<br/><br><em>Subject Headings:</em><br/>${item.subject}<br/><br/><a href="https://ada.artsci.wustl.edu/catalog/doc/${item.id}.xml" target="_blank">View more info</a><br><a href="https://texts.earlyprint.org/works/${item.id}.xml" target="_blank">Read this text</a><br/><br/><strong>Nearby texts:</strong>`;
-            item.selected = true;
-            selectedPoint = item.i;
-	    let r = 5;
-	    let nearbyPoints = searchNearby(quadTree, item.x-r, item.y-r, item.x+r, item.y+r);
-	    nearbyPoints.forEach(n => {
-		    if (n.id !== item.id) {
-		      newHTML = newHTML + `<br/><br/><em>${n.id} ${n.author}</em><br><em><a href="https://ada.artsci.wustl.edu/catalog/doc/${item.id}.xml" target="_blank">${n.title.slice(0,50)}...</a></em>`
-		    }
-	    });
-	    infoBox.html(newHTML);
-	} else {
-            infoBox.html("Click a point to get more information, or use the search box above.<br><br><em>Scroll to zoom. Click and drag to pan.</em>");
-	}
-	draw(transform);
+function appendCheckbox(idNo, value, count) {
+  const colorIdx = colorDomain.indexOf(value);
+  const checked = metadata_values.includes(value);
+  const swatchStyle = checked ? ` style="background:${rgbToHex(PALETTE[colorIdx % PALETTE.length])}"` : '';
+  const li = document.createElement('li');
+  li.id = `container_${idNo}`;
+  li.innerHTML =
+    `<label for="NA_${idNo}">` +
+    `<input type="checkbox" id="NA_${idNo}" ${checked ? 'checked' : ''}>` +
+    `<span class="swatch"${swatchStyle}></span>` +
+    `<span>${value} <span class="subject-count">(${count})</span></span>` +
+    `</label>`;
+  li.querySelector('input').addEventListener('change', e => {
+    handleCheckbox(e.target.checked, value, colorIdx, li);
+  });
+  document.getElementById('checkbox-list').appendChild(li);
+}
+
+function handleCheckbox(checked, value, colorIdx, container) {
+  if (checked) {
+    metadata_values.push(value);
+    container.querySelector('.swatch').style.background = rgbToHex(PALETTE[colorIdx % PALETTE.length]);
+  } else {
+    metadata_values = metadata_values.filter(v => v !== value);
+    container.querySelector('.swatch').style.background = '';
+  }
+  redraw();
+}
+
+function addDropDowns(map_data) {
+  colorDomain = map_data[2].slice(5).map(d => d[1]);
+  map_data[2].slice(5).forEach((item, idx) => {
+    appendCheckbox(idx + 5, item[1], item[0]);
+  });
+}
+
+function filterSubject() {
+  const filter = document.getElementById('subjectFilter').value.toUpperCase();
+  Array.from(document.getElementById('checkbox-list').querySelectorAll('li')).forEach(li => {
+    const text = (li.querySelector('label').textContent || '').toUpperCase();
+    li.style.display = text.includes(filter) ? '' : 'none';
+  });
+}
+
+$(document).ready(function () {
+  document.getElementById('sidebar-toggle').addEventListener('click', () => {
+    document.getElementById('sidebar').classList.toggle('collapsed');
+  });
+
+  document.getElementById('info-close').addEventListener('click', closeInfoPanel);
+
+  document.getElementById('about-btn').addEventListener('click', () => {
+    document.getElementById('about').classList.remove('hide-about');
+  });
+
+  document.getElementById('about-close').addEventListener('click', () => {
+    document.getElementById('about').classList.add('hide-about');
+  });
+
+  document.getElementById('about').addEventListener('click', function (e) {
+    if (e.target === this) this.classList.add('hide-about');
+  });
+
+  document.getElementById('subjectFilter').addEventListener('input', filterSubject);
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      closeInfoPanel();
+      document.getElementById('about').classList.add('hide-about');
     }
+  });
 
+  fetch('map_data.js')
+    .then(r => r.json())
+    .then(data => {
+      const graph_data = data[0];
+      const W = window.innerWidth;
 
-    function onClick() {
-	$('.typeahead').typeahead('val', '');
-        let mouse = d3.mouse(this);
-        let transform = d3.zoomTransform(canvas.node());
-	let d = transform.invert([mouse[0], mouse[1]]);
+      let xMin = Infinity, xMax = -Infinity, yMin = Infinity, yMax = -Infinity;
+      graph_data.forEach(d => {
+        if (d[1] < xMin) xMin = d[1];
+        if (d[1] > xMax) xMax = d[1];
+        if (d[2] < yMin) yMin = d[2];
+        if (d[2] > yMax) yMax = d[2];
+      });
+      const xRange = xMax - xMin, yRange = yMax - yMin;
 
-        // find the closest point in the dataset to the clicked point
-	let closest = quadTree.find(d[0],d[1],radius);
-	selectItem(closest);
-    }
+      new_data = graph_data.map((d, i) => ({
+        i,
+        id: d[0],
+        x: (d[1] - xMin) / xRange * W,
+        y: (d[2] - yMin) / yRange * W,
+        title: d[3].title || '',
+        author: d[3].author || '',
+        year: d[3].year || '',
+        subject: d[3].subject || '',
+      }));
 
-    function zoomGo() {
-        context.clearRect(0, 0, width, height);
-        draw(d3.event.transform, limit);
-    }
-    function zoomEnd() {
-        context.clearRect(0, 0, width, height);
-        draw(d3.event.transform);
-    }
-    
-    context.strokeStyle = '#999';
-    draw(d3.zoomIdentity);
-    let progress = document.querySelector(".loader");
-    progress.classList.remove("is-active");
+      addDropDowns(data);
 
-    d3.select('#about').on('click', function() {
-	    this.classList.add('hide-about');
-    });
+      const searchData = new_data.map(d => ({ i: d.i, title: d.title, author: d.author }));
+      let searchInitialized = false;
+
+      function initSearch() {
+        if (searchInitialized) return;
+        searchInitialized = true;
+
+        const bloodhound = new Bloodhound({
+          datumTokenizer: Bloodhound.tokenizers.obj.whitespace('title', 'author'),
+          queryTokenizer: Bloodhound.tokenizers.whitespace,
+          identify: obj => obj.i,
+          local: searchData,
+        });
+
+        $('#search .typeahead').typeahead(
+          { hint: true, highlight: true, minLength: 1 },
+          { name: 'searchData', source: bloodhound, display: d => `${d.title}\n${d.author}` }
+        );
+
+        $('.typeahead').bind('typeahead:select', function (ev, suggestion) {
+          const item = new_data[suggestion.i];
+          selectItem(item);
+          deckInstance.setProps({
+            initialViewState: {
+              target: [item.x, item.y, 0],
+              zoom: 2,
+              transitionDuration: 750,
+              transitionInterpolator: new LinearInterpolator(['target', 'zoom']),
+            },
+          });
+        });
+      }
+
+      document.querySelector('#search .typeahead').addEventListener('focus', initSearch);
+
+      deckInstance = new Deck({
+        canvas: 'graph',
+        width: W,
+        height: W,
+        views: [new OrthographicView({ id: 'ortho' })],
+        controller: true,
+        initialViewState: {
+          target: [W / 2, W / 2, 0],
+          zoom: 0,
+          minZoom: -4,
+          maxZoom: 15,
+        },
+        parameters: { clearColor: [0.118, 0.141, 0.2, 1] },
+        getCursor: ({ isHovering }) => isHovering ? 'pointer' : 'default',
+        onClick: info => { if (info.object) selectItem(info.object); else closeInfoPanel(); },
+        layers: makeLayers(),
+      });
+
+      const idParam = new URLSearchParams(location.search).get('id');
+      if (idParam) {
+        const item = new_data.find(d => d.id === idParam);
+        if (item) selectItem(item);
+      }
+
+      document.querySelector('.loader').classList.remove('is-active');
     });
 });
