@@ -10,8 +10,15 @@ const PALETTE = [
 ];
 
 let new_data = [];
-let metadata_values = ['Sermons, English', 'Poetry', 'Civil War, 1642-1649'];
+let metadata_values = ['Sermons, English', 'Ballads', 'Controversial literature'];
 let colorDomain = [];
+let termCat = {};
+let activeCategory = 'all';
+let inRangePoints = [];
+let activeSubjectPoints = [];
+let yearRange = [null, null];
+let dataYearRange = [null, null];
+let yearFreqs = {};
 let hoveredIndex = null;
 let selectedIndex = null;
 let deckInstance = null;
@@ -21,20 +28,20 @@ function rgbToHex(rgb) {
 }
 
 function getPointColor(point) {
-  const subject = point.subject;
+  const terms = [...point.topical, ...point.corporate, ...point.geography, ...point.personal, ...point.form_genre, ...point.event];
   for (let i = 0; i < colorDomain.length; i++) {
-    if (metadata_values.includes(colorDomain[i]) && subject.includes(colorDomain[i])) {
+    if (metadata_values.includes(colorDomain[i]) && terms.includes(colorDomain[i])) {
       return [...PALETTE[i % PALETTE.length], 255];
     }
   }
   return [120, 130, 150, 100];
 }
 
-// 60k-point base layer — never re-evaluates colors for hover/select changes
-function makeBaseLayer() {
+// In-range points — data changes when yearRange changes, forcing full re-evaluation
+function makeInRangeLayer() {
   return new ScatterplotLayer({
-    id: 'scatter',
-    data: new_data,
+    id: 'scatter-inrange',
+    data: inRangePoints,
     getPosition: d => [d.x, d.y],
     getRadius: 4,
     radiusUnits: 'pixels',
@@ -79,8 +86,41 @@ function makeHighlightLayer() {
   });
 }
 
+function makeSubjectLayer() {
+  if (activeSubjectPoints.length === 0) return null;
+  return new ScatterplotLayer({
+    id: 'scatter-subject',
+    data: activeSubjectPoints,
+    getPosition: d => [d.x, d.y],
+    getRadius: 4,
+    radiusUnits: 'pixels',
+    getFillColor: d => getPointColor(d),
+    stroked: false,
+    filled: true,
+    pickable: true,
+    onHover: handleHover,
+    updateTriggers: {
+      getFillColor: [metadata_values.join(',')],
+    },
+  });
+}
+
 function makeLayers() {
-  return [makeBaseLayer(), makeHighlightLayer()].filter(Boolean);
+  return [makeInRangeLayer(), makeSubjectLayer(), makeHighlightLayer()].filter(Boolean);
+}
+
+function updateInRangePoints() {
+  inRangePoints = new_data.filter(d => {
+    const yr = parseInt(d.year);
+    return !validYear(yr) || (yr >= yearRange[0] && yr <= yearRange[1]);
+  });
+}
+
+function updateActiveSubjectPoints() {
+  activeSubjectPoints = metadata_values.length === 0 ? [] : inRangePoints.filter(d => {
+    const terms = [...d.topical, ...d.corporate, ...d.geography, ...d.personal, ...d.form_genre, ...d.event];
+    return metadata_values.some(mv => terms.includes(mv));
+  });
 }
 
 function redraw() {
@@ -164,15 +204,45 @@ function searchNearby(x, y, r) {
   return new_data.filter(d => Math.abs(d.x - x) < r && Math.abs(d.y - y) < r);
 }
 
-function appendCheckbox(idNo, value, count) {
+const CAT_LABELS = {
+  topical: 'Topical', corporate: 'Corporate', geography: 'Geography',
+  personal: 'Personal', form_genre: 'Form/Genre',
+};
+
+function addToSelected(value, colorIdx) {
+  if (document.getElementById(`sel_${colorIdx}`)) return;
+  const color = PALETTE[colorIdx % PALETTE.length];
+  const li = document.createElement('li');
+  li.id = `sel_${colorIdx}`;
+  li.innerHTML =
+    `<span class="swatch" style="background:${rgbToHex(color)}"></span>` +
+    `<span class="selected-term">${value}</span>` +
+    `<span class="selected-cat-badge">${CAT_LABELS[termCat[value]] || ''}</span>` +
+    `<button class="selected-remove" aria-label="Remove">×</button>`;
+  li.querySelector('.selected-remove').addEventListener('click', () => {
+    const input = document.querySelector(`#checkbox-list input[data-value="${CSS.escape(value)}"]`);
+    if (input) { input.checked = false; input.dispatchEvent(new Event('change')); }
+  });
+  document.getElementById('selected-list').appendChild(li);
+  document.getElementById('selected-section').classList.add('has-items');
+}
+
+function removeFromSelected(colorIdx) {
+  document.getElementById(`sel_${colorIdx}`)?.remove();
+  if (!document.getElementById('selected-list').hasChildNodes())
+    document.getElementById('selected-section').classList.remove('has-items');
+}
+
+function appendCheckbox(idNo, value, count, category) {
   const colorIdx = colorDomain.indexOf(value);
   const checked = metadata_values.includes(value);
   const swatchStyle = checked ? ` style="background:${rgbToHex(PALETTE[colorIdx % PALETTE.length])}"` : '';
   const li = document.createElement('li');
   li.id = `container_${idNo}`;
+  li.dataset.category = category;
   li.innerHTML =
     `<label for="NA_${idNo}">` +
-    `<input type="checkbox" id="NA_${idNo}" ${checked ? 'checked' : ''}>` +
+    `<input type="checkbox" id="NA_${idNo}" data-value="${value}" ${checked ? 'checked' : ''}>` +
     `<span class="swatch"${swatchStyle}></span>` +
     `<span>${value} <span class="subject-count">(${count})</span></span>` +
     `</label>`;
@@ -186,25 +256,132 @@ function handleCheckbox(checked, value, colorIdx, container) {
   if (checked) {
     metadata_values.push(value);
     container.querySelector('.swatch').style.background = rgbToHex(PALETTE[colorIdx % PALETTE.length]);
+    addToSelected(value, colorIdx);
   } else {
     metadata_values = metadata_values.filter(v => v !== value);
     container.querySelector('.swatch').style.background = '';
+    removeFromSelected(colorIdx);
   }
+  updateActiveSubjectPoints();
   redraw();
 }
 
-function addDropDowns(map_data) {
-  colorDomain = map_data[2].slice(5).map(d => d[1]);
-  map_data[2].slice(5).forEach((item, idx) => {
-    appendCheckbox(idx + 5, item[1], item[0]);
+function addDropDowns(graph_data) {
+  const catNames = ['topical', 'corporate', 'geography', 'personal', 'form_genre'];
+  const catFreqs = {};
+  catNames.forEach(cat => { catFreqs[cat] = {}; });
+
+  graph_data.forEach(d => {
+    catNames.forEach(cat => {
+      (d[4][cat] || []).forEach(v => {
+        catFreqs[cat][v] = (catFreqs[cat][v] || 0) + 1;
+      });
+    });
+  });
+
+  // Assign each term to exactly one category; later entries in catNames override earlier,
+  // so form_genre and corporate win over topical for the ~20 overlapping terms.
+  termCat = {};
+  const termCount = {};
+  catNames.forEach(cat => {
+    Object.entries(catFreqs[cat]).forEach(([term, count]) => {
+      termCat[term] = cat;
+      termCount[term] = count;
+    });
+  });
+
+  colorDomain = Object.entries(termCount).sort((a, b) => b[1] - a[1]).map(e => e[0]);
+
+  Object.entries(termCount)
+    .sort((a, b) => b[1] - a[1])
+    .forEach(([term, count], idx) => {
+      appendCheckbox(idx, term, count, termCat[term]);
+    });
+}
+
+function applyFilters() {
+  const textFilter = document.getElementById('subjectFilter').value.toUpperCase();
+  Array.from(document.getElementById('checkbox-list').querySelectorAll('li')).forEach(li => {
+    const catMatch = activeCategory === 'all' || li.dataset.category === activeCategory;
+    const textMatch = !textFilter || (li.querySelector('label').textContent || '').toUpperCase().includes(textFilter);
+    li.style.display = catMatch && textMatch ? '' : 'none';
   });
 }
 
-function filterSubject() {
-  const filter = document.getElementById('subjectFilter').value.toUpperCase();
-  Array.from(document.getElementById('checkbox-list').querySelectorAll('li')).forEach(li => {
-    const text = (li.querySelector('label').textContent || '').toUpperCase();
-    li.style.display = text.includes(filter) ? '' : 'none';
+function drawHistogram() {
+  const canvas = document.getElementById('date-histogram');
+  const ctx = canvas.getContext('2d');
+  const W = canvas.clientWidth;
+  const H = canvas.clientHeight;
+  canvas.width = W;
+  canvas.height = H;
+  ctx.clearRect(0, 0, W, H);
+  const [minYr, maxYr] = dataYearRange;
+  const span = maxYr - minYr;
+  const maxCount = Math.max(...Object.values(yearFreqs));
+  for (let yr = minYr; yr <= maxYr; yr++) {
+    const count = yearFreqs[yr] || 0;
+    const barH = Math.round((count / maxCount) * H);
+    const x = Math.round((yr - minYr) / span * W);
+    const w = Math.max(1, Math.round(W / span));
+    const inRange = yr >= yearRange[0] && yr <= yearRange[1];
+    ctx.fillStyle = inRange ? 'rgba(68,119,170,0.4)' : 'rgba(150,150,150,0.15)';
+    ctx.fillRect(x, H - barH, w, barH);
+  }
+}
+
+function updateSliderFill() {
+  const [minYr, maxYr] = dataYearRange;
+  const span = maxYr - minYr;
+  const leftPct = (yearRange[0] - minYr) / span * 100;
+  const rightPct = (maxYr - yearRange[1]) / span * 100;
+  const fill = document.getElementById('range-fill');
+  fill.style.left = leftPct + '%';
+  fill.style.right = rightPct + '%';
+}
+
+function setYearRange(min, max) {
+  yearRange = [min, max];
+  document.getElementById('date-min-slider').value = min;
+  document.getElementById('date-max-slider').value = max;
+  document.getElementById('date-min-input').value = min;
+  document.getElementById('date-max-input').value = max;
+  updateSliderFill();
+  drawHistogram();
+  updateInRangePoints();
+  updateActiveSubjectPoints();
+  redraw();
+}
+
+function validYear(yr) {
+  return !isNaN(yr) && yr >= 1400 && yr <= 1710;
+}
+
+function initDateFilter() {
+  yearFreqs = {};
+  new_data.forEach(d => {
+    const yr = parseInt(d.year);
+    if (validYear(yr)) yearFreqs[yr] = (yearFreqs[yr] || 0) + 1;
+  });
+  const years = Object.keys(yearFreqs).map(Number);
+  dataYearRange = [Math.min(...years), Math.max(...years)];
+  yearRange = [...dataYearRange];
+  const [minYr, maxYr] = dataYearRange;
+  ['date-min-slider', 'date-max-slider'].forEach(id => {
+    const el = document.getElementById(id);
+    el.min = minYr; el.max = maxYr;
+  });
+  document.getElementById('date-min-slider').value = minYr;
+  document.getElementById('date-max-slider').value = maxYr;
+  ['date-min-input', 'date-max-input'].forEach(id => {
+    const el = document.getElementById(id);
+    el.min = minYr; el.max = maxYr;
+  });
+  document.getElementById('date-min-input').value = minYr;
+  document.getElementById('date-max-input').value = maxYr;
+  requestAnimationFrame(() => {
+    drawHistogram();
+    updateSliderFill();
   });
 }
 
@@ -227,7 +404,42 @@ $(document).ready(function () {
     if (e.target === this) this.classList.add('hide-about');
   });
 
-  document.getElementById('subjectFilter').addEventListener('input', filterSubject);
+  document.getElementById('date-min-slider').addEventListener('input', () => {
+    let min = parseInt(document.getElementById('date-min-slider').value);
+    if (min >= yearRange[1]) min = yearRange[1] - 1;
+    setYearRange(min, yearRange[1]);
+  });
+
+  document.getElementById('date-max-slider').addEventListener('input', () => {
+    let max = parseInt(document.getElementById('date-max-slider').value);
+    if (max <= yearRange[0]) max = yearRange[0] + 1;
+    setYearRange(yearRange[0], max);
+  });
+
+  document.getElementById('date-min-input').addEventListener('change', () => {
+    const [dataMin] = dataYearRange;
+    let min = parseInt(document.getElementById('date-min-input').value);
+    min = Math.max(dataMin, Math.min(min, yearRange[1] - 1));
+    setYearRange(min, yearRange[1]);
+  });
+
+  document.getElementById('date-max-input').addEventListener('change', () => {
+    const [, dataMax] = dataYearRange;
+    let max = parseInt(document.getElementById('date-max-input').value);
+    max = Math.min(dataMax, Math.max(max, yearRange[0] + 1));
+    setYearRange(yearRange[0], max);
+  });
+
+  document.getElementById('subjectFilter').addEventListener('input', applyFilters);
+
+  document.querySelectorAll('.cat-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.cat-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeCategory = btn.dataset.cat;
+      applyFilters();
+    });
+  });
 
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
@@ -236,7 +448,7 @@ $(document).ready(function () {
     }
   });
 
-  fetch('map_data.js')
+  fetch('map_data_tfidf.js')
     .then(r => r.json())
     .then(data => {
       const graph_data = data[0];
@@ -260,9 +472,22 @@ $(document).ready(function () {
         author: d[3].author || '',
         year: d[3].year || '',
         subject: d[3].subject || '',
+        topical: d[4].topical || [],
+        corporate: d[4].corporate || [],
+        geography: d[4].geography || [],
+        personal: d[4].personal || [],
+        form_genre: d[4].form_genre || [],
+        event: d[4].event || [],
       }));
 
-      addDropDowns(data);
+      initDateFilter();
+      updateInRangePoints();
+      addDropDowns(graph_data);
+      metadata_values.forEach(v => {
+        const idx = colorDomain.indexOf(v);
+        if (idx >= 0) addToSelected(v, idx);
+      });
+      updateActiveSubjectPoints();
 
       const searchData = new_data.map(d => ({ i: d.i, title: d.title, author: d.author }));
       let searchInitialized = false;
