@@ -1,0 +1,628 @@
+---
+layout: page
+title: N-gram Browser
+permalink: /ngram/
+---
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15/dist/nouislider.min.css">
+<script src="https://cdn.jsdelivr.net/npm/nouislider@15/dist/nouislider.min.js"></script>
+
+<style>
+  /* ── Tighten page-layout whitespace ─────────────────────────── */
+  .post { padding-top: 0.5rem; }
+  .post-header { margin-bottom: 0.4rem; }
+  .post-title { font-size: 1.6rem; letter-spacing: 0; margin-bottom: 0.2rem; }
+
+  /* ── Container ──────────────────────────────────────────────── */
+  #ngram-container {
+    background: #fff;
+    margin-bottom: 2rem;
+  }
+
+  #tool-description {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.88rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  #tool-description code {
+    font-size: 0.82rem;
+    background: #f2f2f2;
+    padding: 1px 4px;
+    border-radius: 3px;
+  }
+
+  /* ── Instructions toggle ────────────────────────────────────── */
+  #instructions-toggle {
+    margin-bottom: 1.25rem;
+  }
+
+  #instructions-toggle summary {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.85rem;
+    color: #2a7ae2;
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  #instructions-toggle summary::-webkit-details-marker { display: none; }
+
+  #instructions-toggle summary::before {
+    content: "▶";
+    font-size: 0.6rem;
+    transition: transform 0.15s;
+  }
+
+  #instructions-toggle[open] summary::before {
+    transform: rotate(90deg);
+  }
+
+  #instructions-toggle summary:hover {
+    text-decoration: underline;
+  }
+
+  /* ── Controls panel ──────────────────────────────────────────── */
+  #controls-panel {
+    background: #f7f8f9;
+    border: 1px solid #e3e5e8;
+    border-radius: 4px;
+    padding: 0.6rem 1.25rem 0.75rem;
+    margin-bottom: 0.6rem;
+  }
+
+  #search-row {
+    display: flex;
+    gap: 0.6rem;
+    align-items: flex-end;
+    margin-bottom: 0.5rem;
+  }
+
+  #text-input-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .ctrl-label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.78rem;
+    color: #555;
+    letter-spacing: 0.02em;
+  }
+
+  #text-input {
+    width: 100%;
+    font-size: 0.97rem;
+    padding: 5px 9px;
+    border: 1px solid #c8cdd3;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  #text-input:focus {
+    outline: none;
+    border-color: #2a7ae2;
+    box-shadow: 0 0 0 2px rgba(42, 122, 226, 0.18);
+  }
+
+  #draw-btn {
+    padding: 6px 18px;
+    background: #2a7ae2;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.88rem;
+    white-space: nowrap;
+    line-height: 1.6;
+    transition: background 0.15s;
+  }
+
+  #draw-btn:hover {
+    background: #1a5cb0;
+  }
+
+  #options-row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  #options-row label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.78rem;
+    color: #555;
+  }
+
+  #rolling-input {
+    width: 160px;
+    cursor: pointer;
+    accent-color: #2a7ae2;
+  }
+
+  #spelling-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.78rem;
+    color: #555;
+  }
+
+  .radio-label {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    cursor: pointer;
+  }
+
+  .radio-label input {
+    accent-color: #2a7ae2;
+    cursor: pointer;
+  }
+
+  #rolling-display {
+    font-weight: 600;
+    color: #2a7ae2;
+    min-width: 1.5ch;
+    display: inline-block;
+  }
+
+  #year-range-container {
+    margin: 0.75rem 0 1.5rem;
+  }
+
+  /* noUiSlider brand color overrides */
+  .noUi-horizontal .noUi-tooltip {
+    bottom: auto;
+    top: 120%;
+  }
+
+  .noUi-connect {
+    background: #2a7ae2;
+  }
+
+  .noUi-handle {
+    border-color: #2a7ae2;
+  }
+
+  .noUi-handle:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(42, 122, 226, 0.25);
+  }
+
+  /* ── Status / spinner ────────────────────────────────────────── */
+  #status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.84rem;
+    color: #888;
+    margin: 0.4rem 0 0.25rem;
+  }
+
+  .spinner {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #dde1e7;
+    border-top-color: #2a7ae2;
+    border-radius: 50%;
+    animation: spin 0.75s linear infinite;
+    flex-shrink: 0;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  /* ── Query info ─────────────────────────────────────────────── */
+  #query-info {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.82rem;
+    color: #555;
+    margin: 0 0 0.6rem;
+    min-height: 1.2em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.75rem;
+    align-items: center;
+  }
+
+  #query-info code {
+    font-size: 0.8rem;
+    background: #f2f2f2;
+    padding: 1px 5px;
+    border-radius: 3px;
+    color: #333;
+  }
+
+  #query-info a {
+    color: #2a7ae2;
+    text-decoration: none;
+  }
+
+  #query-info a:hover {
+    text-decoration: underline;
+  }
+
+  /* ── Plots ───────────────────────────────────────────────────── */
+  #plots-area {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  #line-area {
+    flex: 3;
+    min-width: 0;
+  }
+
+  #bar-chart {
+    flex: 0 0 160px;
+  }
+
+  @media (max-width: 640px) {
+    #plots-area {
+      flex-direction: column;
+    }
+
+    #bar-chart {
+      flex: 0 0 auto;
+      width: 100%;
+    }
+
+    #options-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+
+    #search-row {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    #draw-btn {
+      width: 100%;
+    }
+  }
+</style>
+
+<div id="ngram-container">
+
+  <div id="tool-header">
+    <details id="instructions-toggle">
+      <summary>Instructions</summary>
+      <p id="tool-description">
+        Track how often words or phrases appear across the <em>EarlyPrint</em> corpus (1473–1700).
+        Enter comma-separated terms to compare multiple patterns, or use CQL syntax
+        (e.g., <code>[reg="love"]</code>, <code>[reg="lo.*e"]</code>) for advanced queries. To search for a part of speech, add a term to your CQL pattern (e.g., <code>[reg="love" & pos="v.*]</code>). For more on CQL, see the <a href="https://blacklab.ivdnt.org/guide/query-language/token-based.html">BlackLab documentation</a> and our <a href="/how-to/intro_to_linguistic_search.html">Introduction to Corpus Search</a>.
+      </p>
+    </details>
+  </div>
+
+  <div id="controls-panel">
+    <div id="search-row">
+      <div id="text-input-wrapper">
+        <span class="ctrl-label">Search individual words, phrases or CQL patterns separated by commas</span>
+        <input type="text" id="text-input" value="love,loue">
+      </div>
+      <button id="draw-btn">Draw Graph</button>
+    </div>
+
+    <div id="options-row">
+      <div id="spelling-control">
+        <span class="ctrl-label">Spelling:</span>
+        <label class="radio-label"><input type="radio" name="spelling" value="word" checked> Original</label>
+        <label class="radio-label"><input type="radio" name="spelling" value="reg"> Regularized</label>
+        <label class="radio-label"><input type="radio" name="spelling" value="lemma"> Lemmas</label>
+      </div>
+      <label>
+        Rolling average:&nbsp;<span id="rolling-display">20</span>&nbsp;yrs
+        <input type="range" id="rolling-input" min="1" max="25" step="1" value="20">
+      </label>
+    </div>
+  </div>
+
+  <div id="status"></div>
+  <div id="query-info"></div>
+
+  <div id="plots-area">
+    <div id="line-area">
+      <div id="main-plot"></div>
+      <div id="year-range-container">
+        <div class="ctrl-label" style="margin-bottom: 0.5rem;">Date range</div>
+        <div id="year-range-slider"></div>
+      </div>
+    </div>
+    <div id="bar-chart"></div>
+  </div>
+
+</div>
+
+<script type="module">
+  import * as Plot from "https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm";
+
+  let currentData = null;
+  let currentQueries = [];
+  let currentYearRange = [1550, 1700];
+  let currentSearchText = "";
+  let currentSpelling = "word";
+  let isRestoring = false;
+
+  const statusEl    = document.getElementById("status");
+  const queryInfoEl = document.getElementById("query-info");
+  const mainPlotEl = document.getElementById("main-plot");
+  const barChartEl = document.getElementById("bar-chart");
+  const textInputEl    = document.getElementById("text-input");
+  const rollingInputEl = document.getElementById("rolling-input");
+  const rollingDisplayEl = document.getElementById("rolling-display");
+  const sliderEl = document.getElementById("year-range-slider");
+  const yearRangeContainer = document.getElementById("year-range-container");
+  const lineAreaEl = document.getElementById("line-area");
+
+  window.noUiSlider.create(sliderEl, {
+    start: [1550, 1700],
+    connect: true,
+    step: 1,
+    range: { min: 1473, max: 1700 },
+    tooltips: [true, true],
+    format: { to: v => Math.round(v), from: v => Number(v) }
+  });
+
+  function updateURL(push = false) {
+    if (!currentSearchText) return;
+    const params = new URLSearchParams();
+    params.set("q", currentSearchText);
+    params.set("spelling", currentSpelling);
+    params.set("from", currentYearRange[0]);
+    params.set("to", currentYearRange[1]);
+    params.set("avg", rollingInputEl.value);
+    const url = "?" + params.toString();
+    if (push) history.pushState(null, "", url);
+    else history.replaceState(null, "", url);
+  }
+
+  function readURLParams() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.has("q"))       textInputEl.value = params.get("q");
+    if (params.has("spelling")) {
+      const radio = document.querySelector(`input[name="spelling"][value="${params.get("spelling")}"]`);
+      if (radio) radio.checked = true;
+    }
+    if (params.has("from") && params.has("to")) {
+      const from = parseInt(params.get("from"));
+      const to   = parseInt(params.get("to"));
+      sliderEl.noUiSlider.set([from, to]);
+      currentYearRange = [from, to];
+    }
+    if (params.has("avg")) {
+      rollingInputEl.value = params.get("avg");
+      rollingDisplayEl.textContent = params.get("avg");
+    }
+    return params.has("q");
+  }
+
+  function setLoading(on) {
+    statusEl.innerHTML = on
+      ? '<div class="spinner"></div><span>Loading&hellip;</span>'
+      : "";
+  }
+
+  async function getData(pattStr) {
+    const url = `https://morphadorner.northwestern.edu/blacklab/earlyprint/hits?first=0&number=500&group=${encodeURIComponent("field:search_year:i")}&patt=${encodeURIComponent(pattStr)}&adjusthits=yes&outputformat=json&maxretrieve=-1&maxcount=-1`;
+    const json = await (await fetch(url)).json();
+    let label = json.summary.searchParam.patt;
+    label = [...label.matchAll(/\"([\w'\-\.\*]+)\"/g)].map(p => p[1]).join(" ");
+    const rows = json.hitGroups
+      .map(h => ({
+        year: parseInt(h.identityDisplay),
+        size: h.size,
+        numberOfDocs: h.numberOfDocs,
+        documents: h.subcorpusSize.documents,
+        tokens: h.subcorpusSize.tokens,
+        patt: label,
+        relFreq: h.size / h.subcorpusSize.tokens
+      }))
+      .filter(h => !isNaN(h.year) && h.year < 1700)
+      .sort((a, b) => a.year - b.year);
+    return { rows, label, cql: pattStr };
+  }
+
+  async function handleInput(text) {
+    text = text.replace(/[''""'']/g, '"');
+    const spellingField = document.querySelector('input[name="spelling"]:checked').value;
+    const terms = text.split(",").map(q => q.trim()).filter(Boolean);
+    const results = await Promise.all(terms.map(async q => {
+      if (!q.startsWith("[")) {
+        q = q.split(/\s+/).map(w => `[${spellingField}="${w}"]`).join("");
+      }
+      return getData(q);
+    }));
+    return {
+      data: results.flatMap(r => r.rows).sort((a, b) => a.year - b.year),
+      queries: results.map(r => ({ label: r.label, cql: r.cql }))
+    };
+  }
+
+  function updateQueryInfo() {
+    queryInfoEl.innerHTML = "";
+    const label = document.createElement("span");
+    label.textContent = "Searched for these CQL patterns:";
+    label.style.color = "#888";
+    queryInfoEl.append(label);
+    const base = "https://eplab.artsci.wustl.edu/blacklab-frontend/earlyprint/search/hits";
+    const staticParams = "first=0&number=20&sort=field%3Asearch_year&adjusthits=true&withspans=false&interface=%7B%22form%22%3A%22search%22%2C%22patternMode%22%3A%22extended%22%7D";
+    currentQueries.forEach((q, i) => {
+      if (i > 0) queryInfoEl.append(" · ");
+      const code = document.createElement("code");
+      code.textContent = q.cql;
+      const a = document.createElement("a");
+      a.href = `${base}?${staticParams}&patt=${encodeURIComponent(q.cql)}`;
+      a.target = "_blank";
+      a.rel = "noopener";
+      a.textContent = "Corpus Search ↗";
+      const span = document.createElement("span");
+      span.append(code, " ", a);
+      queryInfoEl.append(span);
+    });
+  }
+
+  function render() {
+    if (!currentData) return;
+
+    const width = lineAreaEl.clientWidth || 960;
+    const k = Number(rollingInputEl.value);
+    const [lowYear, highYear] = currentYearRange;
+
+    const filtered = currentData.filter(d => d.year > lowYear && d.year < highYear);
+
+    mainPlotEl.innerHTML = "";
+    barChartEl.innerHTML = "";
+
+    const mainPlot = Plot.plot({
+      style: "overflow: visible;",
+      x: { label: "Year", tickFormat: d => String(d) },
+      y: { label: "Relative term frequency" },
+      stroke: { scheme: "tableau10", label: "Search term or pattern" },
+      width,
+      marks: [
+        Plot.ruleY([0]),
+        Plot.lineY(filtered, {
+          x: "year", y: "relFreq", z: "patt", stroke: "patt",
+          strokeOpacity: 0.2, strokeWidth: 3
+        }),
+        Plot.lineY(filtered, Plot.windowY({
+          x: "year", y: "relFreq", z: "patt", k,
+          reduce: "mean", stroke: "patt", strokeWidth: 3,
+          channels: {
+            "Search term": "patt",
+            "Year": d => String(d.year),
+            "Number of documents": "numberOfDocs",
+            "Number of occurrences": "size",
+            "Relative frequency": d => d.relFreq.toLocaleString(undefined, { maximumFractionDigits: 8 })
+          },
+          tip: { format: { x: false, y: false, stroke: false, z: false } }
+        })),
+        Plot.text(filtered, Plot.selectLast({
+          x: "year", y: "relFreq", z: "patt", text: "patt",
+          textAnchor: "start", dx: 3
+        })),
+        Plot.dot(filtered, Plot.pointerX(Plot.windowY({
+          x: "year", y: "relFreq", z: "patt", k,
+          reduce: "mean", stroke: "patt"
+        }))),
+        Plot.ruleX(filtered, Plot.pointerX({
+          x: "year", py: "relFreq", stroke: "patt"
+        }))
+      ]
+    });
+    mainPlotEl.append(mainPlot);
+
+    // Align the year-range slider with the plot's inner data area
+    const clipRect = mainPlot.querySelector("clipPath rect");
+    if (clipRect) {
+      const ml = parseFloat(clipRect.getAttribute("x")) || 0;
+      const mr = (parseFloat(mainPlot.getAttribute("width")) || width)
+                 - ml - parseFloat(clipRect.getAttribute("width"));
+      yearRangeContainer.style.paddingLeft  = ml + "px";
+      yearRangeContainer.style.paddingRight = mr + "px";
+    }
+
+    const barWidth = barChartEl.clientWidth || 200;
+    const mobile = window.innerWidth <= 640;
+    barChartEl.append(mobile
+      ? Plot.plot({
+          style: "overflow: visible;",
+          x: { label: "Total occurrences" },
+          y: { label: null },
+          color: { scheme: "tableau10" },
+          width: barWidth,
+          marks: [
+            Plot.barX(filtered, Plot.groupY(
+              { x: "sum" },
+              { x: "size", y: "patt", fill: "patt", fillOpacity: 0.85, sort: { y: "x", reverse: true }, tip: true }
+            )),
+            Plot.ruleX([0])
+          ]
+        })
+      : Plot.plot({
+          style: "overflow: visible;",
+          x: { label: null },
+          y: { label: "Total occurrences" },
+          color: { scheme: "tableau10" },
+          width: barWidth,
+          marks: [
+            Plot.barY(filtered, Plot.groupX(
+              { y: "sum" },
+              { x: "patt", y: "size", fill: "patt", fillOpacity: 0.85, sort: { x: "y", reverse: true }, tip: true }
+            )),
+            Plot.ruleY([0])
+          ]
+        })
+    );
+
+    updateURL();
+  }
+
+  async function fetchAndRender() {
+    const val = textInputEl.value.trim();
+    if (!val) return;
+    currentSearchText = val;
+    currentSpelling = document.querySelector('input[name="spelling"]:checked').value;
+    setLoading(true);
+    try {
+      const result = await handleInput(val);
+      currentData = result.data;
+      currentQueries = result.queries;
+      setLoading(false);
+      updateQueryInfo();
+      if (!isRestoring) updateURL(true);
+      render();
+    } catch (err) {
+      statusEl.textContent = `Error: ${err.message}`;
+      console.error(err);
+    }
+  }
+
+  document.getElementById("draw-btn").addEventListener("click", fetchAndRender);
+  textInputEl.addEventListener("keydown", e => { if (e.key === "Enter") fetchAndRender(); });
+  rollingInputEl.addEventListener("input", () => {
+    rollingDisplayEl.textContent = rollingInputEl.value;
+    render();
+  });
+  sliderEl.noUiSlider.on("update", values => {
+    currentYearRange = values.map(Number);
+    render();
+  });
+
+  let resizeTimer;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(render, 150);
+  });
+
+  window.addEventListener("popstate", async () => {
+    isRestoring = true;
+    readURLParams();
+    await fetchAndRender();
+    isRestoring = false;
+  });
+
+  readURLParams();
+  fetchAndRender();
+</script>
