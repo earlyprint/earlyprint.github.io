@@ -17,7 +17,6 @@ permalink: /bibliographia/
     <p>The Bibliographia is an interactive map of the texts in the <em>EarlyPrint</em> archive. In this experimental visualization, each point represents a distinct <em>EarlyPrint</em> text. The position of the points is based on <a href="https://programminghistorian.org/en/lessons/common-similarity-measures">word-level TF-IDF features</a> that have been visualized using t-SNE, t-distributed Stochastic Neighbor Embedding. This visualization is meant as an illustration of certain clusters in the corpus, but it is <strong>not</strong> a final authority on all possible text clusters.</p>
     <p>You can use the menu on the left to highlight texts that contain specific terms from their Library of Congress subject headings. Note that there is a lot of overlap between the subject headings and the text clusters. This suggests that human catalogers and word-level features are identifying some of the same groupings. If you choose groups of related subject terms (e.g. "Bible," "Sermons," and "Church of England") you'll see that there are large communities and "islands" for common categories of texts in the corpus. There are islands of political texts, religious texts, poetry, drama, and more. We encourage you to use this as an exploratory tool, a first step toward visualizing topics in the <em>EarlyPrint</em> corpus.</p>
     <p>Designed and implemented by John Ladd, with initial inspiration and help from Steve Pentecost.</p>
-    <p><em>n.b. The colors used in this graph are colorblind safe, but there are too many distinct terms for the number of possible colors. Colors will repeat.</em></p>
   </div>
 </div>
 
@@ -57,7 +56,7 @@ permalink: /bibliographia/
       <button class="cat-tab" data-cat="form_genre">Form/Genre</button>
     </div>
     <div id="selected-section">
-      <div class="panel-subheading">Selected</div>
+      <div class="panel-subheading">Selected <span class="selection-limit">(up to 6)</span></div>
       <ul id="selected-list"></ul>
     </div>
     <input type="text" id="subjectFilter" placeholder="Filter subjects…" />
