@@ -297,6 +297,22 @@ canvas#graph {
   accent-color: #4477AA;
 }
 
+#checkbox-list.at-limit li:not(.checked) label {
+  color: #aaa;
+  cursor: default;
+}
+
+#checkbox-list.at-limit li:not(.checked) input[type="checkbox"] {
+  cursor: default;
+  opacity: 0.4;
+}
+
+.selection-limit {
+  font-size: 0.8em;
+  color: #888;
+  font-weight: normal;
+}
+
 .swatch {
   width: 10px;
   height: 10px;

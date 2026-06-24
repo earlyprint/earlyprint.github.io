@@ -11,7 +11,8 @@ const PALETTE = [
 
 let new_data = [];
 let metadata_values = ['Sermons, English', 'Ballads', 'Controversial literature'];
-let colorDomain = [];
+const selectedColors = new Map(); // value → palette index
+const usedPaletteIndices = new Set();
 let termCat = {};
 let activeCategory = 'all';
 let inRangePoints = [];
@@ -27,11 +28,33 @@ function rgbToHex(rgb) {
   return '#' + rgb.map(v => v.toString(16).padStart(2, '0')).join('');
 }
 
+function getAvailableColor() {
+  const available = PALETTE.map((_, i) => i).filter(i => !usedPaletteIndices.has(i));
+  if (available.length === 0) return null;
+  return available[Math.floor(Math.random() * available.length)];
+}
+
+function assignColor(value) {
+  const idx = getAvailableColor();
+  if (idx === null) return null;
+  selectedColors.set(value, idx);
+  usedPaletteIndices.add(idx);
+  return idx;
+}
+
+function releaseColor(value) {
+  const idx = selectedColors.get(value);
+  if (idx !== undefined) {
+    usedPaletteIndices.delete(idx);
+    selectedColors.delete(value);
+  }
+}
+
 function getPointColor(point) {
   const terms = [...point.topical, ...point.corporate, ...point.geography, ...point.personal, ...point.form_genre, ...point.event];
-  for (let i = 0; i < colorDomain.length; i++) {
-    if (metadata_values.includes(colorDomain[i]) && terms.includes(colorDomain[i])) {
-      return [...PALETTE[i % PALETTE.length], 255];
+  for (const [value, paletteIdx] of selectedColors) {
+    if (terms.includes(value)) {
+      return [...PALETTE[paletteIdx], 255];
     }
   }
   return [120, 130, 150, 100];
@@ -209,11 +232,13 @@ const CAT_LABELS = {
   personal: 'Personal', form_genre: 'Form/Genre',
 };
 
-function addToSelected(value, colorIdx) {
-  if (document.getElementById(`sel_${colorIdx}`)) return;
-  const color = PALETTE[colorIdx % PALETTE.length];
+function addToSelected(value) {
+  const paletteIdx = selectedColors.get(value);
+  if (paletteIdx === undefined) return;
+  if (document.getElementById(`sel_${paletteIdx}`)) return;
+  const color = PALETTE[paletteIdx];
   const li = document.createElement('li');
-  li.id = `sel_${colorIdx}`;
+  li.id = `sel_${paletteIdx}`;
   li.innerHTML =
     `<span class="swatch" style="background:${rgbToHex(color)}"></span>` +
     `<span class="selected-term">${value}</span>` +
@@ -227,16 +252,18 @@ function addToSelected(value, colorIdx) {
   document.getElementById('selected-section').classList.add('has-items');
 }
 
-function removeFromSelected(colorIdx) {
-  document.getElementById(`sel_${colorIdx}`)?.remove();
+function removeFromSelected(value) {
+  const paletteIdx = selectedColors.get(value);
+  if (paletteIdx !== undefined) document.getElementById(`sel_${paletteIdx}`)?.remove();
+  releaseColor(value);
   if (!document.getElementById('selected-list').hasChildNodes())
     document.getElementById('selected-section').classList.remove('has-items');
 }
 
 function appendCheckbox(idNo, value, count, category) {
-  const colorIdx = colorDomain.indexOf(value);
   const checked = metadata_values.includes(value);
-  const swatchStyle = checked ? ` style="background:${rgbToHex(PALETTE[colorIdx % PALETTE.length])}"` : '';
+  const paletteIdx = selectedColors.get(value);
+  const swatchStyle = (checked && paletteIdx !== undefined) ? ` style="background:${rgbToHex(PALETTE[paletteIdx])}"` : '';
   const li = document.createElement('li');
   li.id = `container_${idNo}`;
   li.dataset.category = category;
@@ -246,22 +273,40 @@ function appendCheckbox(idNo, value, count, category) {
     `<span class="swatch"${swatchStyle}></span>` +
     `<span>${value} <span class="subject-count">(${count})</span></span>` +
     `</label>`;
+  if (checked) li.classList.add('checked');
   li.querySelector('input').addEventListener('change', e => {
-    handleCheckbox(e.target.checked, value, colorIdx, li);
+    if (e.target.checked && usedPaletteIndices.size >= PALETTE.length) {
+      e.target.checked = false;
+      return;
+    }
+    handleCheckbox(e.target.checked, value, li);
   });
   document.getElementById('checkbox-list').appendChild(li);
 }
 
-function handleCheckbox(checked, value, colorIdx, container) {
+function updateLimitState() {
+  const list = document.getElementById('checkbox-list');
+  if (usedPaletteIndices.size >= PALETTE.length) {
+    list.classList.add('at-limit');
+  } else {
+    list.classList.remove('at-limit');
+  }
+}
+
+function handleCheckbox(checked, value, container) {
   if (checked) {
     metadata_values.push(value);
-    container.querySelector('.swatch').style.background = rgbToHex(PALETTE[colorIdx % PALETTE.length]);
-    addToSelected(value, colorIdx);
+    const idx = assignColor(value);
+    container.querySelector('.swatch').style.background = rgbToHex(PALETTE[idx]);
+    container.classList.add('checked');
+    addToSelected(value);
   } else {
     metadata_values = metadata_values.filter(v => v !== value);
     container.querySelector('.swatch').style.background = '';
-    removeFromSelected(colorIdx);
+    container.classList.remove('checked');
+    removeFromSelected(value);
   }
+  updateLimitState();
   updateActiveSubjectPoints();
   redraw();
 }
@@ -290,7 +335,7 @@ function addDropDowns(graph_data) {
     });
   });
 
-  colorDomain = Object.entries(termCount).sort((a, b) => b[1] - a[1]).map(e => e[0]);
+  metadata_values.forEach(v => { if (termCount[v] !== undefined) assignColor(v); });
 
   Object.entries(termCount)
     .sort((a, b) => b[1] - a[1])
@@ -484,8 +529,7 @@ $(document).ready(function () {
       updateInRangePoints();
       addDropDowns(graph_data);
       metadata_values.forEach(v => {
-        const idx = colorDomain.indexOf(v);
-        if (idx >= 0) addToSelected(v, idx);
+        if (selectedColors.has(v)) addToSelected(v);
       });
       updateActiveSubjectPoints();
 
