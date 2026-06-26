@@ -426,6 +426,8 @@ permalink: /ngram/
   async function getData(pattStr) {
     const url = `https://morphadorner.northwestern.edu/blacklab/earlyprint/hits?first=0&number=500&group=${encodeURIComponent("field:search_year:i")}&patt=${encodeURIComponent(pattStr)}&adjusthits=yes&outputformat=json&maxretrieve=-1&maxcount=-1`;
     const json = await (await fetch(url)).json();
+    if (json.error) throw new Error(json.error.message || "Query error from API");
+    if (!json.summary) throw new Error("Unexpected response from API — the query may not be supported in the Ngram Browser");
     let label = json.summary.searchParam.patt;
     label = [...label.matchAll(/\"([\w'\-\.\*]+)\"/g)].map(p => p[1]).join(" ");
     const rows = json.hitGroups
@@ -446,16 +448,33 @@ permalink: /ngram/
   async function handleInput(text) {
     text = text.replace(/[''""'']/g, '"');
     const spellingField = document.querySelector('input[name="spelling"]:checked').value;
-    const terms = text.split(",").map(q => q.trim()).filter(Boolean);
+    const terms = [];
+    let depth = 0, current = "";
+    for (const ch of text) {
+      if (ch === "{") depth++;
+      else if (ch === "}") depth--;
+      else if (ch === "," && depth === 0) { if (current.trim()) terms.push(current.trim()); current = ""; continue; }
+      current += ch;
+    }
+    if (current.trim()) terms.push(current.trim());
     const results = await Promise.all(terms.map(async q => {
-      if (!q.startsWith("[")) {
+      if (!q.includes("[")) {
         q = q.split(/\s+/).map(w => `[${spellingField}="${w}"]`).join("");
       }
       return getData(q);
     }));
+
+    // If two queries simplify to the same label, use the full CQL so they get distinct chart lines
+    const labelCounts = {};
+    results.forEach(r => { labelCounts[r.label] = (labelCounts[r.label] || 0) + 1; });
+    const resolveLabel = r => labelCounts[r.label] > 1 ? r.cql : r.label;
+
     return {
-      data: results.flatMap(r => r.rows).sort((a, b) => a.year - b.year),
-      queries: results.map(r => ({ label: r.label, cql: r.cql }))
+      data: results.flatMap(r => {
+        const patt = resolveLabel(r);
+        return r.rows.map(row => ({ ...row, patt }));
+      }).sort((a, b) => a.year - b.year),
+      queries: results.map(r => ({ label: resolveLabel(r), cql: r.cql }))
     };
   }
 
@@ -594,6 +613,7 @@ permalink: /ngram/
       if (!isRestoring) updateURL(true);
       render();
     } catch (err) {
+      setLoading(false);
       statusEl.textContent = `Error: ${err.message}`;
       console.error(err);
     }
