@@ -259,6 +259,16 @@ permalink: /ngram/
     text-decoration: underline;
   }
 
+  /* ── Empty state ─────────────────────────────────────────────── */
+  #no-results {
+    display: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    color: #888;
+    padding: 2.5rem 0 1rem;
+    text-align: center;
+  }
+
   /* ── Plots ───────────────────────────────────────────────────── */
   #plots-area {
     display: flex;
@@ -269,6 +279,22 @@ permalink: /ngram/
   #line-area {
     flex: 3;
     min-width: 0;
+  }
+
+  #main-plot {
+    position: relative;
+  }
+
+  #main-plot .plot-legend {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(255,255,255,0.92);
+    border: 1px solid #e3e5e8;
+    border-radius: 4px;
+    padding: 5px 10px;
+    pointer-events: none;
+    font-size: 0.73rem;
   }
 
   #bar-chart {
@@ -340,6 +366,8 @@ permalink: /ngram/
 
   <div id="status"></div>
   <div id="query-info"></div>
+
+  <div id="no-results"></div>
 
   <div id="plots-area">
     <div id="line-area">
@@ -474,7 +502,8 @@ permalink: /ngram/
         const patt = resolveLabel(r);
         return r.rows.map(row => ({ ...row, patt }));
       }).sort((a, b) => a.year - b.year),
-      queries: results.map(r => ({ label: resolveLabel(r), cql: r.cql }))
+      queries: results.map(r => ({ label: resolveLabel(r), cql: r.cql })),
+      emptyQueries: results.filter(r => r.rows.length === 0).map(r => resolveLabel(r))
     };
   }
 
@@ -510,6 +539,23 @@ permalink: /ngram/
 
     const filtered = currentData.filter(d => d.year > lowYear && d.year < highYear);
 
+    const noResultsEl = document.getElementById("no-results");
+    const plotsAreaEl = document.getElementById("plots-area");
+
+    if (filtered.length === 0) {
+      const msg = currentData.length === 0
+        ? "No results found for this search term or pattern."
+        : "No results in the selected date range — try adjusting the year range.";
+      noResultsEl.textContent = msg;
+      noResultsEl.style.display = "block";
+      plotsAreaEl.style.display = "none";
+      updateURL();
+      return;
+    }
+
+    noResultsEl.style.display = "none";
+    plotsAreaEl.style.display = "";
+
     mainPlotEl.innerHTML = "";
     barChartEl.innerHTML = "";
 
@@ -537,10 +583,6 @@ permalink: /ngram/
           },
           tip: { format: { x: false, y: false, stroke: false, z: false } }
         })),
-        Plot.text(filtered, Plot.selectLast({
-          x: "year", y: "relFreq", z: "patt", text: "patt",
-          textAnchor: "start", dx: 3
-        })),
         Plot.dot(filtered, Plot.pointerX(Plot.windowY({
           x: "year", y: "relFreq", z: "patt", k,
           reduce: "mean", stroke: "patt"
@@ -551,6 +593,12 @@ permalink: /ngram/
       ]
     });
     mainPlotEl.append(mainPlot);
+
+    const legend = mainPlot.legend("color");
+    if (legend) {
+      legend.classList.add("plot-legend");
+      mainPlotEl.append(legend);
+    }
 
     // Align the year-range slider with the plot's inner data area
     const clipRect = mainPlot.querySelector("clipPath rect");
@@ -564,6 +612,8 @@ permalink: /ngram/
 
     const barWidth = barChartEl.clientWidth || 200;
     const mobile = window.innerWidth <= 640;
+    const maxLabelLen = Math.max(...[...new Set(filtered.map(d => d.patt))].map(p => p.length));
+    const marginBottom = Math.min(Math.max(40, maxLabelLen * 6), 220);
     barChartEl.append(mobile
       ? Plot.plot({
           style: "overflow: visible;",
@@ -581,10 +631,11 @@ permalink: /ngram/
         })
       : Plot.plot({
           style: "overflow: visible;",
-          x: { label: null },
+          x: { label: null, tickRotate: -90 },
           y: { label: "Total occurrences" },
           color: { scheme: "tableau10" },
           width: barWidth,
+          marginBottom,
           marks: [
             Plot.barY(filtered, Plot.groupX(
               { y: "sum" },
@@ -609,6 +660,10 @@ permalink: /ngram/
       currentData = result.data;
       currentQueries = result.queries;
       setLoading(false);
+      if (result.emptyQueries.length > 0 && currentData.length > 0) {
+        const names = result.emptyQueries.map(q => `"${q}"`).join(", ");
+        statusEl.textContent = `No results found for: ${names}`;
+      }
       updateQueryInfo();
       if (!isRestoring) updateURL(true);
       render();
