@@ -53,9 +53,9 @@ permalink: /lab/
 
 <div class="dt fl w-25-ns w-100 pa2">
   <div class="dtc v-mid search-link tc f3 ba br3 b--gray ph2 shadow-4">
-    <a class="link dim underline dark-gray" href="https://earlyprint.org/lab/tool_ngram_browser.html">
+    <a class="link dim underline dark-gray" href="/ngram">
     <img src="/assets/thumbs/n_gram.png"/>
-    N-gram Viewer
+    N-gram Browser
     </a>
   </div>
 </div>
