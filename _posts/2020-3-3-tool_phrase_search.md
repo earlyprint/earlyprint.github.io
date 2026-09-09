@@ -281,7 +281,7 @@ categories: Lab
   };
 
   const queryTemplate = (type, pattern, description) => {
-    const corpusUrl = `https://eplab.artsci.wustl.edu/blacklab-frontend/earlyprint/search/hits?number=20&first=0&patt=${encodeURIComponent(pattern)}`;
+    const corpusUrl = `https://morphadorner.northwestern.edu/blacklab/earlyprint/search/hits?number=20&first=0&patt=${encodeURIComponent(pattern)}`;
     const ngramUrl = `/ngram?q=${encodeURIComponent(pattern)}`;
     return `
       <p class="desc">${description}</p>
@@ -321,7 +321,7 @@ categories: Lab
   `;
 
   const returnSearchResult = (pattern, container) => {
-    fetch(`https://eplab.artsci.wustl.edu/blacklab-server-1.7.3/eebotcp/hits?number=3&patt=${encodeURIComponent(pattern)}&outputformat=json`)
+    fetch(`https://morphadorner.northwestern.edu/blacklab/earlyprint/hits?number=3&patt=${encodeURIComponent(pattern)}&outputformat=json`)
       .then(r => { if (r.ok) return r.json(); throw new Error(); })
       .then(data => {
         container.innerHTML = data.hits.length > 0
@@ -355,7 +355,7 @@ categories: Lab
 
     const literalPattern = no_punct.split(" ").map(word => `[reg="${word}"]`).join("");
 
-    fetch(`https://eplab.artsci.wustl.edu/blacklab-server-1.7.3/eebotcp/hits?number=20&patt=${encodeURIComponent(literalPattern)}&outputformat=json`)
+    fetch(`https://morphadorner.northwestern.edu/blacklab/earlyprint/hits?number=20&patt=${encodeURIComponent(literalPattern)}&outputformat=json`)
       .then(r => { if (r.ok) return r.json(); throw new Error(); })
       .then(response => {
         setLoading(false);
