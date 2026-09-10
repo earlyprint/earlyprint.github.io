@@ -19,3 +19,132 @@
     width: 50%;
     background: #F0C0C0;
 }
+
+// EarlyPrint Lab tool list (eplab.md) — a plain list of tools/visualizations,
+// each with a small thumbnail and short description, in place of the old
+// square button grid.
+.tool-list {
+    margin: 0 0 1.5em;
+    padding: 0;
+    list-style: none;
+}
+
+.tool-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    padding: 1em 0;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+// Faint serif index numeral — pinned to the left edge on every row,
+// regardless of which side the thumbnail zigzags to.
+.tool-item-num {
+    order: 0;
+    flex: none;
+    width: 2.25em;
+    font-family: "IM Fell English", serif;
+    font-size: 2.25rem;
+    line-height: 1;
+    text-align: right;
+    color: #a9c3e0;
+}
+
+.tool-item-body {
+    order: 1;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.tool-item-eyebrow {
+    display: block;
+    margin-bottom: .15em;
+}
+
+.tool-item-thumb {
+    order: 2;
+    flex: none;
+    display: block;
+
+    img {
+        display: block;
+        width: 200px;
+        max-width: 200px;
+        height: 130px;
+        object-fit: contain;
+        border-radius: .25rem;
+        background: #f4f4f4;
+    }
+}
+
+// Zigzag: swap thumbnail/body sides on every other row. The numeral's
+// order stays fixed at 0, so the index column always reads straight down
+// the left edge.
+.tool-item:nth-child(even) {
+    .tool-item-thumb {
+        order: 1;
+    }
+
+    .tool-item-body {
+        order: 2;
+    }
+}
+
+.tool-list--compact {
+    .tool-item {
+        padding: .5em 0;
+    }
+
+    .tool-item-num {
+        font-size: 1.5rem;
+    }
+
+    .tool-item-thumb img {
+        width: 130px;
+        max-width: 130px;
+        height: 85px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .tool-item {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: .5em;
+    }
+
+    // Drop the zigzag on small screens: numeral + text always first,
+    // thumbnail always last and full-width, regardless of row parity.
+    .tool-item-num,
+    .tool-item:nth-child(even) .tool-item-num {
+        order: 0;
+    }
+
+    .tool-item-body,
+    .tool-item:nth-child(even) .tool-item-body {
+        order: 1;
+    }
+
+    .tool-item-thumb,
+    .tool-item:nth-child(even) .tool-item-thumb {
+        order: 2;
+        width: 100%;
+    }
+
+    .tool-item-thumb img {
+        width: 100%;
+        max-width: 260px;
+        height: auto;
+        max-height: 160px;
+    }
+
+    .tool-list--compact .tool-item-thumb img {
+        max-width: 180px;
+        max-height: 110px;
+    }
+}
