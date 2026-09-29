@@ -281,7 +281,7 @@ categories: Lab
   };
 
   const queryTemplate = (type, pattern, description) => {
-    const corpusUrl = `https://morphadorner.northwestern.edu/blacklab/earlyprint/search/hits?number=20&first=0&patt=${encodeURIComponent(pattern)}`;
+    const corpusUrl = `https://eplab.artsci.wustl.edu/blacklab-frontend/earlyprint/search/hits?number=20&first=0&patt=${encodeURIComponent(pattern)}`;
     const ngramUrl = `/ngram?q=${encodeURIComponent(pattern)}`;
     return `
       <p class="desc">${description}</p>
