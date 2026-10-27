@@ -1,6 +1,6 @@
 
 var GLOBAL_URL_PARAMS = '';
-var HOSTNAME = 'https://talus.artsci.wustl.edu';
+var HOSTNAME = 'https://ada.artsci.wustl.edu';
 //var HOSTNAME = 'http://localhost';
 
 $( document ).ready(function() {
