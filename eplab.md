@@ -15,7 +15,7 @@ permalink: /lab/
   <span class="lh-title ml3">Read more about <a class="link underline dark-blue b dim" href="/trace/">TRACE</a>, <em>our new collaboration with the Linguistic Data Consortium.</em></span>
 </div>
 
-<p class="f6 gray mv3">Quick Links: <a class="link dim blue" href="#corpus-search">Corpus Search</a> &middot; <a class="link dim blue" href="#ngram-viewer">Ngram Viewer</a> &middot; <a class="link dim blue" href="#phrase-search">Phrase Search</a> &middot; <a class="link dim blue" href="#bibliographia">Bibliographia</a> &middot; <a class="link dim blue" href="#download">Download</a> &middot; <a class="link dim blue" href="#discovery-engine">Discovery Engine</a></p>
+<p class="f6 gray mv3">Quick Links: <a class="link dim blue" href="#corpus-search">Corpus Search</a> &middot; <a class="link dim blue" href="#ngram-viewer">Ngram Viewer</a> &middot; <a class="link dim blue" href="#phrase-search">Phrase Search</a> &middot; <a class="link dim blue" href="#bibliographia">Bibliographia</a> &middot; <a class="link dim blue" href="#download">Download</a> &middot; <!--<a class="link dim blue" href="#discovery-engine">Discovery Engine</a>--></p>
 
 <ul class="tool-list">
   <li class="tool-item" id="corpus-search">
@@ -83,6 +83,7 @@ permalink: /lab/
 <h2 class="fell f3 mt4 mb2">More from the Lab</h2>
 
 <ul class="tool-list tool-list--compact">
+<!--
   <li class="tool-item" id="discovery-engine">
     <div class="tool-item-body">
       <span class="tool-item-eyebrow f7 fell-sc blue tracked">Search</span>
@@ -93,6 +94,7 @@ permalink: /lab/
       <img src="/assets/thumbs/disco_new.png" alt="Discovery Engine screenshot">
     </a>
   </li>
+  -->
   <li class="tool-item" id="books-per-year">
     <div class="tool-item-body">
       <span class="tool-item-eyebrow f7 fell-sc blue tracked">Visualize</span>
